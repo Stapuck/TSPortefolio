@@ -1,0 +1,100 @@
+{
+  "Home": {
+    "home_welcome": "Bienvenue sur mon Site",
+    "intro": "Vous trouverez sur ce site plusieurs aspects de ma vie, tant professionnelle que sportive. N'hésitez pas à explorer les différentes sections pour en savoir plus sur mes projets, mes passions et mes réalisations.",
+    "videotext": "Athlète | Ingénieur | Entrepreneur",
+    "videotextbis": "thlète | Ingénieur | Entrepreneu"
+  },
+  "Blog": {
+    "blog_welcome": "📝 Bienvenue sur la page de News",
+    "readmore": "Lire plus →"
+  },
+
+  "Profile": {
+    "profile_welcome": "📝 Bienvenue sur la page de mon profile"
+  },  
+
+  "Sport": {
+    "sport_welcome": " Bienvenue sur la page sport", 
+    "budget": {
+      "helmet": "Casque", 
+      "c1paddle": "pagaie de canoë", 
+      "k1paddle": "pagaie de kayak cross", 
+      "hikospraydeck": "jupe Kway ", 
+      "hikolifejacket": "gilet",
+      "slalomboat": "bateau de slalom",
+      "kayakcrossboat": "bateau de kayak cross",
+      "racerst": "Jupe Kway de course"
+    }
+  },
+
+  "Pro": {
+    "pro_welcome": " Bienvenue sur la page pro"
+  },
+  "Contact": {
+    "contact_welcome": "📬 Bienvenue sur la page de Contact"
+    
+  },
+  
+  "Sidebar": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "sportif": "Sport",
+    "pro": "Pro",
+    "contact": "Contact",
+    "settings": "Reglages",
+    "dark_mode": "Theme Sombre",
+    "language": "Language",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "Countdown": {
+    "title": "Prochain évènement",
+    "location": "Lieu",
+    "event": "Évènement ",
+    "noevent": "Pas d'autre événement pour le moment, revenez plus tard.",
+    "livevideotxt": "Lien vidéo",
+    "liveresulttxt": "Lien Résultat",
+    "days": "Jours",
+    "day": "Jour",
+    "hours": "Heures",
+    "hour": "Heure",
+    "minutes": "Minutes",
+    "minute": "Minute",
+    "seconds": "Secondes",
+    "second": "Seconde",
+    "linkresult": "Lien Résultat",
+    "linkvideo": "Lien Vidéo",
+    "bibs": "Numéros de dossard",
+    "start": "Heure de départ",
+    "now": "Compétition en cours !!",
+    "nowPro": "Événement en cours !!",
+    "linkPagePro": "voir la page Pro",
+    "linkPageSport": "voir la page Sport",
+    "linkhere": "Ici",
+    "upcoming": " Plus d'informatiion 48h avant le début de l'évènement !!"
+  },
+
+  "Accordion": {
+    "question1": "Question 1",
+    "answer1": "Réponse 1",
+    "question2": "Question 2",
+    "answer2": "Réponse 2",
+    "question3": "Question 3",
+    "answer3": "Réponse 3",
+    "question4": "Question 4",
+    "answer4": "Réponse 4"
+  },
+
+  "Footer": {
+    
+  },
+
+  "Experience" : {
+    "formation": "Formation", 
+    "pro": "Experience Professionnelle"
+
+  }
+
+
+}
