@@ -7,7 +7,7 @@ import Pro from "./pages/Pro";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "./i18n";
-import About from "./pages/Profile";
+import Profile from "./pages/Profile";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
           <Route path="/sport" element={<Sportif />} />
           <Route path="/pro" element={<Pro />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

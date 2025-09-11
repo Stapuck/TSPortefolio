@@ -33,7 +33,9 @@
   --color-text-muted-dark: #cccccc;
 } */
 
-.block-container .btn-back {
+
+
+/* .block-container .btn-back {
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -50,6 +52,8 @@
 .block-container .btn-back-red {
   background: linear-gradient(135deg, #ff4b1f -20%, #ff9068 120%);
 } 
+
+
 
 /* 
 
@@ -77,7 +81,7 @@
   background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
 } */
 
-.block-container .btn-front {
+/* .block-container .btn-front {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -98,4 +102,45 @@
 
 .block-container:hover > .btn-front {
   transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+} */ 
+
+
+/* big calendar */
+.rbc-toolbar {
+  @apply flex justify-between items-center p-2 bg-gray-100 rounded-md;
 }
+
+.rbc-btn-group button {
+  @apply px-3 py-1 rounded-lg border border-gray-300 text-sm hover:bg-gray-200 transition my-2;
+}
+
+.rbc-event {
+  @apply bg-blue-500 text-white font-semibold rounded-md px-2 py-1;
+}
+
+.rbc-today {
+  @apply bg-blue-100;
+}
+
+.rbc-toolbar-label {
+  @apply font-semibold text-lg text-gray-700;
+}
+
+
+
+/* full calendar */
+/* .fc .fc-toolbar {
+  @apply flex justify-between items-center bg-gray-100 p-2 rounded-md;
+}
+
+.fc .fc-button {
+  @apply px-3 py-1 rounded-lg border border-gray-300 text-sm hover:bg-gray-200 transition;
+}
+
+.fc .fc-daygrid-event {
+  @apply bg-blue-500 text-white font-semibold rounded-md px-2 py-1;
+}
+
+.fc .fc-day-today {
+  @apply bg-blue-100;
+} */

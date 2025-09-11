@@ -1,7 +1,4 @@
 export const experiences_fr = [
-
-  // plus récent au plus vieux 
-  
   {
     etablissement: "Safran Helicopter Engines",
     titre: "Alternance Développeur Web",
@@ -11,21 +8,14 @@ export const experiences_fr = [
       "Gestion de projet",
       "",
     ],
-    type: "experiencepro"
-
+    type: "experiencepro",
   },
   {
     etablissement: "Cesi Pau",
     titre: "Cycle ingénieur",
     periode: "09/2023 - maintenant ",
-    details: [
-      "alternance avec safran ",
-      "dev web ",
-      "management ",
-      "big data",
-    ],
-    type: "formation"
-
+    details: ["alternance avec safran ", "dev web ", "management ", "big data"],
+    type: "formation",
   },
   {
     etablissement: "Université technologique de Pula",
@@ -36,7 +26,7 @@ export const experiences_fr = [
       "découverte culturel",
       "CNC machining test sur machine",
     ],
-    type: "experiencepro"
+    type: "experiencepro",
   },
   {
     etablissement: "Octopeek (part of Mazars)",
@@ -47,7 +37,7 @@ export const experiences_fr = [
       "Analyse de données sur l’explicabilité des performances dans le sport",
       "Relation client pour améliorer l’utilisation des données collectées",
     ],
-    type: "experiencepro"
+    type: "experiencepro",
   },
   {
     etablissement: "Hermès, tellier ? textile ? ",
@@ -60,8 +50,7 @@ export const experiences_fr = [
       "Stagiaire : projet de gestion de données",
       "Prestataire : développeur full-stack (PHP Symfony)",
     ],
-    type: "experiencepro"
-
+    type: "experiencepro",
   },
   {
     etablissement: "Fédération Canadienne de Kayak",
@@ -73,43 +62,28 @@ export const experiences_fr = [
       "Coaching de l’équipe jeune",
       "parallele des etudes",
     ],
-    type: "experiencepro"
+    type: "experiencepro",
   },
-{
+  {
     etablissement: "CESI, Pau",
     titre: "Cycle préparatoire",
     periode: "09/2021 - 07/2023",
-    details: [
-      "",
-      "",
-      "",
-    ],
-    type: "formation"
-
+    details: ["", "", ""],
+    type: "formation",
   },
- {
+  {
     etablissement: "",
     titre: "Année sadbatique",
     periode: "09/2020 - 09/2021",
-    details: [
-      "",
-      "section sportif ",
-      "bac S ",
-    ],
-    type: "experiencepro"
-
+    details: ["", "section sportif ", "bac S "],
+    type: "experiencepro",
   },
   {
     etablissement: "Lycée Grandmont",
     titre: "Années Lycée",
     periode: "09/2017 - 04/2020",
-    details: [
-      "",
-      "section sportif ",
-      "bac S ",
-    ],
-    type: "formation"
-
+    details: ["", "section sportif ", "bac S "],
+    type: "formation",
   },
   {
     etablissement: "Scalway",
@@ -120,8 +94,7 @@ export const experiences_fr = [
       "découverte du domaine informatique avec une entreprise d'hebergement",
       "sous plusieurs angles ",
     ],
-    type: "experiencepro"
-
+    type: "experiencepro",
   },
 ];
 
@@ -141,5 +114,48 @@ export const accordionDatafr = [
   {
     title: "Le sport et ses opportunités",
     text: "Le sport est non seulement un moyen d’épanouissement personnel, mais aussi une source d’opportunités. Il m’ouvre des perspectives de rencontres, d’expériences et de développement qui dépassent le simple cadre de la performance.",
+  },
+
+
+  // {
+  //   title: "D'où viens tu ? ",
+  //   text: "Avec des origines Mauriciennes, je vis en France depuis toujours, d'abord de Tours où j'ai passé mes années lycée ainsi que mon bac et ensuite dans le sud, sur Pau pour continuer ma pratique sportive et mes études.",
+  // },
+  // {
+  //   title: "Si tu devais choisir un autre sport que la Canoë-Kayak, lequel choisirais-tu ? ",
+  //   text: "Je pense que je me serais tourné vers la course à pied / trail pour le coté dépassement de soi, sinon le surf ou le hockey sur glace.",
+  // },
+
+  // {
+  //   title: "Qu'est ce qui te pousse à te lever le matin",
+  //   text: "Les plaisirs de la vie que ça soit dans le quotidien, la famille, les amis. Ou encore l'évolution perpetuelle, devenir une meilleur personne (sportif et pro). Repousser mes limites. ou juste connaitre à l'avance le repas du soir suffit parfois ;)"
+  // },
+
+  //  {
+  //   title: "La clès de la réussite selon toi ? ",
+  //   text: "Dans mon cas, je dirais la polyvalence et la résilience. Mais la réussite est tellement subjectif et peut varier d'un jour à l'autre que juste se sentir épanouie sera ma réponse finale."
+  // },
+
+  // {
+  //   title: "",
+  //   text: ""
+  // },
+
+];
+
+//todo : mettre plus
+export const sportobjectif_fr = [
+  {
+    title: "Championnat du monde 2026",
+    description: "Top 10 mondial et qualification pour la finale.",
+  },
+  {
+    title: "Programme d'entrainement pour les jeunes",
+    description: "Lancer un programme pour former les jeunes kayakistes.",
+  },
+  {
+    title: "Compétitions Eco Responsable",
+    description:
+      "Participer et promouvoir des événements respectueux de l’environnement.",
   },
 ];

@@ -1,7 +1,9 @@
 import { next_date, type EventType } from "../medias/databases/index-global.ts";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const EventList = () => {
+  const { t } = useTranslation();
   const [openMenu, setOpenMenu] = useState(null);
 
   const toggleMenu = (menu: any) => {
@@ -73,13 +75,11 @@ const EventList = () => {
   );
   return (
     <div className="space-y-4 text-gray-700">
-      {/* todo : revoir pour le cursor si pas de course */}
-
       <p className="text-center font-medium text-gray-600">
         {upcomingEvents.length > 1
-          ? `${upcomingEvents.length} événements à venir 🚀 dans l'année `
-          : `${upcomingEvents.length} événement à venir 🚀 dans l'année `}
-        {upcomingEvents.length === 0 ? "Pas d'evenement à venir " : ""}
+          ? `${upcomingEvents.length} ${t("Sport.incommingeventyears")}  `
+          : `${upcomingEvents.length} ${t("Sport.incommingeventyear")}`}
+        {upcomingEvents.length === 0 ?  t("Sport.noincommingeventyear") : ""}
       </p>
 
       {/* Course Nationale */}
@@ -96,7 +96,7 @@ const EventList = () => {
                         : "hover:bg-gray-200"
                     }`}
         >
-          <span>Course Nationale</span>
+          <span> {t("EventList.nationalrace")}</span>
           <span
             className={`text-xs font-bold px-2 py-1 rounded-full ${
               nationalEvents.length === 0
@@ -124,7 +124,7 @@ const EventList = () => {
                         : "hover:bg-gray-200"
                     }`}
         >
-          <span>Coupe du monde</span>
+          <span>{t("EventList.worldcup")}</span>
           <span
             className={`text-xs font-bold px-2 py-1 rounded-full ${
               worldCupEvents.length === 0
@@ -153,7 +153,7 @@ const EventList = () => {
                       // ? "hidden"  : "block"
                     }`}
         >
-          <span>Championnat du monde</span>
+          <span>{t("EventList.worldchampionship")}</span>
           <span
             className={`text-xs font-bold px-2 py-1 rounded-full ${
               worldChampEvents.length === 0
@@ -181,7 +181,7 @@ const EventList = () => {
                         : "hover:bg-gray-200"
                     }`}
         >
-          <span>Stage </span>
+          <span>{t("EventList.trainingcamp")}</span>
           <span
             className={`text-xs font-bold px-2 py-1 rounded-full ${
               trainingCamp.length === 0
@@ -209,7 +209,7 @@ const EventList = () => {
                         : "hover:bg-gray-200"
                     }`}
         >
-          <span>Evenement Pro et autre event </span>
+          <span>{t("EventList.pro&other")} </span>
           <span
             className={`text-xs font-bold px-2 py-1 rounded-full ${
               eventPro.length === 0
@@ -224,12 +224,13 @@ const EventList = () => {
       </div>
 
       {/* See all -> ouvre la modal */}
-      <div className="flex justify-end">
+      <div className="flex justify-center mt-4">
         <button
           onClick={() => setShowModal(true)}
           className="text-blue-600 hover:underline"
         >
-          See all →
+          {t("EventList.seeall")}
+          
         </button>
       </div>
       {/* ---- MODAL EN PLEIN ÉCRAN ---- */}
@@ -243,7 +244,8 @@ const EventList = () => {
             {/* Header */}
             <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b bg-white/90 backdrop-blur">
               <h2 className="text-xl md:text-2xl font-bold">
-                📜 Tous les événements
+                {t("EventList.allevents")}
+                
               </h2>
               <div className="flex items-center gap-2">
                 <button
@@ -254,7 +256,7 @@ const EventList = () => {
                       : "hover:bg-gray-100"
                   }`}
                 >
-                  All
+                  {t("EventList.all")}
                 </button>
                 <button
                   onClick={() => setModalFilter("sport")}
@@ -264,7 +266,7 @@ const EventList = () => {
                       : "hover:bg-gray-100"
                   }`}
                 >
-                  Sport
+                  {t("EventList.sport")}
                 </button>
                 <button
                   onClick={() => setModalFilter("pro")}
@@ -274,14 +276,14 @@ const EventList = () => {
                       : "hover:bg-gray-100"
                   }`}
                 >
-                  Pro
+                  {t("EventList.pro")}
                 </button>
               </div>
               <button
                 onClick={() => setShowModal(false)}
                 className="ml-4 inline-flex items-center gap-2 px-3 py-2 rounded-lg border hover:bg-gray-50 active:scale-[0.98] transition"
               >
-                ✕ Fermer
+                {t("EventList.close")}
               </button>
             </div>
 
@@ -311,14 +313,24 @@ const EventList = () => {
                         <table className="w-full text-left text-sm md:text-base">
                           <thead className="bg-gray-100">
                             <tr>
-                              <th className="p-2 md:p-3 border-r">Date</th>
-                              <th className="p-2 md:p-3 border-r">Lieu</th>
                               <th className="p-2 md:p-3 border-r">
-                                Type évènement
+                                {t("EventList.date")}
                               </th>
-                              <th className="p-2 md:p-3 border-r">Type</th>
-                              <th className="p-2 md:p-3 border-r">Résultat</th>
-                              <th className="p-2 md:p-3">Vidéo</th>
+                              <th className="p-2 md:p-3 border-r">
+                                {t("EventList.place")}
+                              </th>
+                              <th className="p-2 md:p-3 border-r">
+                                {t("EventList.event_type")}
+                              </th>
+                              <th className="p-2 md:p-3 border-r">
+                                {t("EventList.type")}
+                              </th>
+                              <th className="p-2 md:p-3 border-r">
+                                {t("EventList.result")}
+                              </th>
+                              <th className="p-2 md:p-3">
+                                {t("EventList.video")}
+                              </th>
                             </tr>
                           </thead>
                           <tbody>
@@ -349,28 +361,28 @@ const EventList = () => {
                                     {event.type || "-"}
                                   </td>
                                   <td className="p-2 md:p-3">
-                                    {event.live_result ? (
+                                    {event.link_result ? (
                                       <a
-                                        href={event.live_result}
+                                        href={event.link_result}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-blue-600 hover:underline"
                                       >
-                                        Résultats
+                                        {t("EventList.result")}
                                       </a>
                                     ) : (
                                       <span className="opacity-80">-</span>
                                     )}
                                   </td>
                                   <td className="p-2 md:p-3">
-                                    {event.live_video ? (
+                                    {event.link_video ? (
                                       <a
-                                        href={event.live_video}
+                                        href={event.link_video}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-blue-600 hover:underline"
                                       >
-                                        Vidéo
+                                        {t("EventList.video")}
                                       </a>
                                     ) : (
                                       <span className="opacity-60">-</span>

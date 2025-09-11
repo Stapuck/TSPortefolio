@@ -5,8 +5,10 @@ import { LuLinkedin } from "react-icons/lu";
 import { LuYoutube } from "react-icons/lu";
 import { FaStrava } from "react-icons/fa6";
 import { LiaWikipediaW } from 'react-icons/lia';
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const {t} =useTranslation();
   return (
     <footer className="bg-gray-700/95 text-white mt-18 pt-2">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -21,13 +23,14 @@ export default function Footer() {
             </span>
           </h3>
           <p className="mt-3 text-sm text-slate-300">
-            {`Ingénieur Informatique • Sportif • Entrepreneur`}
+            {t('Footer.txt')}
+           
           </p>
         </div>
 
         {/* Bloc navigation */}
         <div className="flex flex-col space-y-2 text-slate-200">
-          <h4 className="text-lg font-semibold ">Navigation</h4>
+          <h4 className="text-lg font-semibold "> {t('Footer.navigation')}</h4>
           <Link to="/pro" className="hover:text-blue-400 transition">
             Pro
           </Link>
@@ -44,7 +47,7 @@ export default function Footer() {
 
         {/* Bloc social */}
         <div className="flex flex-col space-y-3">
-          <h4 className="text-lg font-semibold ">Réseaux</h4>
+          <h4 className="text-lg font-semibold "> {t('Footer.social')}</h4>
           <div className="flex space-x-4">
             <a
               href="https://www.instagram.com/terence__srmndf/"
@@ -100,11 +103,10 @@ export default function Footer() {
       {/* Bas du footer */}
       <div className="border-t border-gray-600 py-4 text-center text-sm text-slate-400 space-y-1">
         <div>
-          © {new Date().getFullYear()} Terence Saramandif — Tous droits
-          réservés.
+          © {new Date().getFullYear()} Terence Saramandif —  {t('Footer.allrights')}
         </div>
         {/* revoir last update ou info up to date */}
-        <div className="text-xs text-gray-500">V3.1.2 - Last update: 10/09/2025</div>
+        <div className="text-xs text-gray-500">V3.1.2 -  {t('Footer.lastupdate')}: 10/09/2025</div>
       </div>
     </footer>
   );

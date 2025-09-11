@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Download } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 // Importe tes fichiers PDF
 import pdfCV_FR from "../medias/pdfs/TS_CV_FR.pdf";
@@ -22,16 +23,14 @@ import pdfSponsor_EN from "../medias/pdfs/racun-en.pdf";
 interface DownloadButtonProps {
   fileChoice: "CV" | "Budget" | "Sponsor";
 }
-// todo : revoir la langue au refresh ?? je sais pas pourquoi ça ne fonctionne pas.
 
 const DownloadButton: React.FC<DownloadButtonProps> = ({ fileChoice }) => {
-  const [lang, setLang] = useState<string>("fr"); // Par défaut français
+  const [lang, setLang] = useState<string>("fr"); 
+  const { t } = useTranslation();
 
   useEffect(() => {
-    // Initialisation avec la langue actuelle
     setLang(document.documentElement.lang || "fr");
 
-    // Observer les changements de langue
     const observer = new MutationObserver(() => {
       const newLang = document.documentElement.lang || "fr";
       setLang(newLang);
@@ -87,8 +86,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ fileChoice }) => {
       {/* Tooltip */}
       <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 px-2 py-1 text-xs rounded bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
       {/* <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 text-xs rounded bg-gray-900 text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap"> */}
-        Télécharger 
-
+        {t('DownloadBtn.download')} 
         {fileChoice === "CV" ? " CV ": ""}
         {fileChoice === "Budget" ? " Budget ": ""}
         {fileChoice === "Sponsor" ? " Sponsor ": ""}

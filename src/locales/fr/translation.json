@@ -3,50 +3,107 @@
     "home_welcome": "Bienvenue sur mon Site",
     "intro": "Vous trouverez sur ce site plusieurs aspects de ma vie, tant professionnelle que sportive. N'hésitez pas à explorer les différentes sections pour en savoir plus sur mes projets, mes passions et mes réalisations.",
     "videotext": "Athlète | Ingénieur | Entrepreneur",
-    "videotextbis": "thlète | Ingénieur | Entrepreneu"
+    "by": "par",
+    "pro&sport": "Pro & Sport",
+    "myprofile": "Mon Profil",
+    "pro": "Pro",
+    "sport": "Sport",
+    "blog": "Blog",
+    "see": "→ Voir",
+    "lastarticle": "Derniers articles"
   },
   "Blog": {
     "blog_welcome": "📝 Bienvenue sur la page de News",
-    "readmore": "Lire plus →"
+    "txtintro": "Ici je partage mes expériences entre sport de haut niveau et études en informatique. Vous trouverez des passages médias, mes articles personnels et des réflexions sur mon parcours.",
+    "readmore": "Lire plus →",
+    "all": "📚 Tous mes Articles & Médias",
+    "alltxt": "Parcourez l’ensemble de mes contenus, filtrez par type ou découvrez dans l’ordre chronologique.",
+    "specialnews": "⚡ News Spéciales",
+    "lastarticle": " 🆕 Dernier Article",
+    "toparticle": "⭐ Top Articles Sportifs",
+    "important": "Annonce Importante",
+    "importanttxt": "Une nouvelle excitante concernant ma prochaine compétition internationale ! Plus de détails arrivent bientôt.",
+    "alls": "Tous",
+    "medias": "Médias",
+    "articles": "Mes Articles"
   },
 
   "Profile": {
     "profile_welcome": "📝 Bienvenue sur la page de mon profile"
-  },  
+  },
 
   "Sport": {
-    "sport_welcome": " Bienvenue sur la page sport", 
+    "sport_welcome": " Bienvenue sur la page sport",
     "budget": {
-      "helmet": "Casque", 
-      "c1paddle": "pagaie de canoë", 
-      "k1paddle": "pagaie de kayak cross", 
-      "hikospraydeck": "jupe Kway ", 
+      "helmet": "Casque",
+      "c1paddle": "pagaie de canoë",
+      "k1paddle": "pagaie de kayak cross",
+      "hikospraydeck": "jupe Kway ",
       "hikolifejacket": "gilet",
       "slalomboat": "bateau de slalom",
       "kayakcrossboat": "bateau de kayak cross",
-      "racerst": "Jupe Kway de course"
-    }
+      "racerst": "Jupe Kway de course",
+      "seasonbudget": "💰 Budget de saison",
+      "training&race": "Stages & Compétitions",
+      "sum&info": "📊 Récapitulatif & Infos",
+      "equippement": "Équipement",
+      "travel": "Déplacement",
+      "totalglo": "Total Global :",
+      "total": "Total :"
+    },
+    "deplacement": {
+      "registrationfee":"Frais d'inscription",
+      "coaching":"Coaching",
+      "accomodation":"Hébergement",
+      "food":"Repas",
+      "transport":"Transport",
+      "other":"Autres",
+      "":""
+    },
+    "projet&objectif": "🎯 Projets & Objectifs",
+    "incomingevent": "📅 Événements à venir !",
+    "calendarreduce": "Réduire le calendrier",
+    "calendargrowth": "Agrandir le calendrier",
+    "career": "🏆 Palmarès & Carrière",
+    "moreinfo": "📂 Pour plus d'informations",
+    "moreinfotxt": "Téléchargez mes fichiers budget et sponsoring pour tout savoir :", 
+    "budgetsimple":"Budget", 
+    "sponsor":"sponsoring",
+    "incommingeventyears":"événements à venir 🚀 dans l'année",
+    "incommingeventyear":"événement à venir 🚀 dans l'année",
+    "noincommingeventyear":"Pas d'evenement à venir ",
+
+
+    "citation":" « La performance commence par une bonne préparation et un budget maîtrisé. »"
   },
 
   "Pro": {
-    "pro_welcome": " Bienvenue sur la page pro"
+    "pro_welcome": " Bienvenue sur la page pro", 
+
+
+
+
+
+
+    
+    "citation": "« L’expérience et la formation sont les fondations sur lesquelles se construisent les projets ambitieux. »"
   },
   "Contact": {
     "contact_welcome": "📬 Bienvenue sur la page de Contact"
-    
   },
-  
-  "Sidebar": {
+
+  "SideBar": {
     "home": "Accueil",
-    "blog": "Blog",
-    "sportif": "Sport",
+    "news": "Nouveautés",
+    "sport": "Sport",
     "pro": "Pro",
+    "profile": "Profil",
     "contact": "Contact",
-    "settings": "Reglages",
-    "dark_mode": "Theme Sombre",
+    "theme": "Thème",
+
     "language": "Language",
-    "fr": "FR",
-    "en": "EN"
+    "dark_mode": "Theme Sombre",
+    "settings": "Reglages"
   },
   "Countdown": {
     "title": "Prochain évènement",
@@ -87,14 +144,56 @@
   },
 
   "Footer": {
-    
+    "txt": "Athlète | Ingénieur | Entrepreneur",
+    "navigation": "Navigation",
+    "social": "Réseaux",
+    "allrights": "Tous droits réservés.",
+    "lastupdate": "Dernières mise à jour"
   },
 
-  "Experience" : {
-    "formation": "Formation", 
+  "Experience": {
+    "formation": "Formation",
     "pro": "Experience Professionnelle"
+  },
 
+  "NotFound": {
+    "oups": "Oups 😅 Vous pagayez dans une zone inconnue du web.",
+    "retour": "Retour à l’accueil"
+  },
+
+  "AchievementR": {
+    "medal&race": "Médailles & Courses",
+    "worldrankingsla": "Classement Mondial Canoë Slalom",
+    "senior": "Sénior",
+    "continentalranking": "Classement Continental",
+    "worldrankingkx": "Classement Mondial Kayak Cross"
+  },
+
+  "Calendar": {
+    "interactif": "Calendrier Interactif"
+  },
+
+  "DownloadBtn": {
+    "download": "Télécharger"
+  },
+
+  "EventList": {
+    "seeall": "See all →",
+    "allevent": "📜 Tous les événements",
+    "close": "✕ Fermer",
+    "result": "Résultat",
+    "video": "Vidéo",
+    "type": "Type",
+    "event_type": "Evènement",
+    "pro&other": "Evenement Pro et autre event",
+    "trainingcamp": "Camp d'entrainement",
+    "nationalrace": "Circuit Français",
+    "all": "Tous",
+    "worldcup": "Circuit Coupe du Monde",
+    "worldchampionship": "Championnat du Monde",
+    "sport": "Sport",
+    "pro": "Pro",
+    "date": "Date",
+    "place": "Lieu"
   }
-
-
 }

@@ -1,18 +1,3 @@
-// import { Link } from "react-router-dom";
-
-// export default function Navbar() {
-//   return (
-//     <nav className="bg-gray-900 text-white p-4 flex gap-6">
-//       <Link to="/" className="hover:text-blue-400">Home</Link>
-//       <Link to="/blog" className="hover:text-blue-400">Blog</Link>
-//       <Link to="/sportif" className="hover:text-blue-400">Sportif</Link>
-//       <Link to="/pro" className="hover:text-blue-400">Pro</Link>
-//       <Link to="/contact" className="hover:text-blue-400">Contact</Link>
-//     </nav>
-//   );
-// }
-
-
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {

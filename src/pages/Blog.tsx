@@ -7,8 +7,10 @@ export default function Blog() {
   const { t } = useTranslation();
   const lg = document.documentElement.lang || "fr";
 
+
   useEffect(() => {
     document.title = "TS - Blog";
+    window.scrollTo(0, 0);
   }, []);
 
   const [filter, setFilter] = useState("all");
@@ -34,6 +36,12 @@ export default function Blog() {
   const medias = articles.filter((e) => e.type === "media");
   const blogs = articles.filter((e) => e.type === "article");
 
+  // Filtrer uniquement les articles
+  const articlesOnly = sortedArticles.filter((item) => item.type === "article");
+
+  // Récupérer le dernier article (si au moins 1 existe)
+  const lastArticle = articlesOnly[0];
+
   return (
     <div className="text-gray-800">
       <HeroSection currentPage={"blog"} />
@@ -43,15 +51,13 @@ export default function Blog() {
         <section className="text-center space-y-4">
           <h1 className="text-3xl font-bold">{t("Blog.blog_welcome")}</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Ici je partage mes expériences entre sport de haut niveau et études
-            en informatique. Vous trouverez des passages médias, mes articles
-            personnels et des réflexions sur mon parcours.
+            {t('Blog.txtintro')}
           </p>
         </section>
 
         {/* Special News */}
         <section className="space-y-8 bg-yellow-50 p-6 rounded-2xl shadow-md">
-          <h2 className="text-2xl font-bold text-center">⚡ News Spéciales</h2>
+          <h2 className="text-2xl font-bold text-center">{t('Blog.specialnews')} </h2>
           <div className="space-y-6">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <img
@@ -60,10 +66,9 @@ export default function Blog() {
                 className="w-full md:w-1/3 h-48 object-cover rounded-2xl shadow"
               />
               <div className="md:w-2/3 space-y-2">
-                <h3 className="text-xl font-semibold">Annonce Importante</h3>
+                <h3 className="text-xl font-semibold">{t('Blog.important')}</h3>
                 <p className="text-gray-600">
-                  Une nouvelle excitante concernant ma prochaine compétition
-                  internationale ! Plus de détails arrivent bientôt.
+                  {t('Blog.importanttxt')}
                 </p>
                 <a
                   href="#"
@@ -81,11 +86,17 @@ export default function Blog() {
         {/* Top Articles Sportifs */}
         <section className="space-y-8">
           <h2 className="text-2xl font-bold text-center">
-            ⭐ Top Articles Sportifs
+            {t('Blog.topsportarticle')}
           </h2>
           <div className="space-y-12">
             {articles
               .filter((a) => a.top_article) // on garde seulement les top
+              .sort((a, b) => {
+                // on choisit la bonne langue
+                const dateA = new Date(a.date_en).getTime();
+                const dateB = new Date(b.date_en).getTime();
+                return dateB - dateA; // du plus récent au plus ancien
+              })
               .slice(0, 4) // max 4
               .map((a, idx) => (
                 <div
@@ -125,57 +136,54 @@ export default function Blog() {
 
         {/* Dernier article */}
         <section className="space-y-8">
-          <h2 className="text-2xl font-bold text-center">🆕 Dernier Article</h2>
-          <div className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-xl transition">
-            <img
-              src={sortedArticles[0].image}
-              alt={
-                lg === "fr"
-                  ? sortedArticles[0].title_fr
-                  : sortedArticles[0].title_en
-              }
-              className="w-full h-72 object-cover"
-            />
-            <div className="p-6 space-y-3">
-              <h3 className="text-xl font-semibold">
-                {sortedArticles[0].title_fr}
-              </h3>
-              <p className="text-sm text-gray-500">
-                {lg === "fr"
-                  ? sortedArticles[0].date_fr
-                  : sortedArticles[0].date_en}
-              </p>
-              <p className="text-gray-700">
-                {lg === "fr"
-                  ? sortedArticles[0].description_fr
-                  : sortedArticles[0].description_en}
-              </p>
-              <a
-                href={sortedArticles[0].link}
-                className="text-blue-600 font-medium hover:underline"
-              >
-                {t("Blog.readmore")}
-              </a>
+          <h2 className="text-2xl font-bold text-center">{t('Blog.lastarticle')}</h2>
+          {lastArticle && (
+            <div className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-xl transition">
+              <img
+                src={lastArticle.image}
+                alt={lg === "fr" ? lastArticle.title_fr : lastArticle.title_en}
+                className="w-full h-72 object-cover"
+              />
+              <div className="p-6 space-y-3">
+                <h3 className="text-xl font-semibold">
+                  {lg === "fr" ? lastArticle.title_fr : lastArticle.title_en}
+                </h3>
+                <p className="text-sm text-gray-500">
+                  {lg === "fr" ? lastArticle.date_fr : lastArticle.date_en}
+                </p>
+                <p className="text-gray-700">
+                  {lg === "fr"
+                    ? lastArticle.description_fr
+                    : lastArticle.description_en}
+                </p>
+                <a
+                  href={lastArticle.link}
+                  className="text-blue-600 font-medium hover:underline"
+                >
+                  {t("Blog.readmore")}
+                </a>
+              </div>
             </div>
-          </div>
+          )}
         </section>
 
         {/* Condensé global avec filtre */}
         <section className="space-y-8">
           <h2 className="text-2xl font-bold text-center">
-            📚 Tous mes Articles & Médias
+            {t('Blog.all')}
+            
           </h2>
           <p className="text-gray-600 text-center max-w-2xl mx-auto">
-            Parcourez l’ensemble de mes contenus, filtrez par type ou découvrez
-            dans l’ordre chronologique.
+            {t('Blog.alltxt')}
+            
           </p>
 
           {/* Filtres */}
           <div className="flex gap-3 justify-center mb-6">
             {[
-              { key: "all", label: "Tous", nbr: articles.length },
-              { key: "media", label: "Médias", nbr: medias.length },
-              { key: "article", label: "Articles", nbr: blogs.length },
+              { key: "all", label: t('Blog.alls'), nbr: articles.length },
+              { key: "media", label: t('Blog.medias'), nbr: medias.length },
+              { key: "article", label: t('Blog.articles'), nbr: blogs.length },
             ].map((f) => (
               <button
                 key={f.key}

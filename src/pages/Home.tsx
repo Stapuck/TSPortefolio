@@ -15,7 +15,7 @@ import AccordionGroup from "../components/AccordionGroup";
 
 export default function Home() {
   const { t } = useTranslation();
-  
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const [sound, setSound] = useState(false);
   const [showFloating, setShowFloating] = useState(true);
@@ -121,7 +121,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="underline text-slate-200 text-xs sm:text-sm whitespace-nowrap"
               >
-                by R.B
+                {t("Home.by")} R.B
               </a>
             </div>
           </div>
@@ -161,143 +161,81 @@ export default function Home() {
         </section>
         <section className="py-4">
           <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center ">
-            Profile
+            {t("Home.myprofile")}
           </h2>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-5 bg-gray-700/95 rounded-lg shadow-lg">
-            <p
-              className="text-base sm:text-lg text-white leading-relaxed"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              malesuada, nunc at varius lacinia, sem lectus viverra nisi, ac
-              aliquet est nulla a lorem. Phasellus vel diam nec velit pretium
-              tincidunt. Sed ultricies libero a mi laoreet, vel interdum elit
-              iaculis. Curabitur rutrum, nisl in hendrerit posuere, est orci
-              feugiat felis, sit amet dictum nisl lectus a risus. Pellentesque
-              elementum posuere fermentum. In hac habitasse platea dictumst. Sed
-              maximus tortor ac purus viverra, at pharetra odio feugiat.
+            <p className="text-base sm:text-lg text-white leading-relaxed">
+            Information simple mais éfficace à mon sujet 
             </p>
           </div>
         </section>
         {/* Section Pro + Sport */}
         <section>
           <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center ">
-            Pro & Sport
+            {t("Home.pro&sport")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Bloc Pro */}
-            {/* <div className="p-6 bg-white rounded-xl shadow"> */}
             <div className="p-6 bg-gray-700/95 rounded-xl shadow">
-              <h3 className="text-xl font-semibold text-blue-600">Pro</h3>
+              <h3 className="text-xl font-semibold text-blue-600">{t("Home.seepro")}</h3>
               <div className="mt-3 text-white">
-                Ressources, articles et actualités pour les professionnels de
-                l’informatique et du développement web. Découvrez des astuces,
-                bonnes pratiques et retours d’expérience.
-                {[...Array(2)].map((_, i) => (
-                  <p
-                    key={i}
-                    className="text-base sm:text-lg text-white leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque malesuada, nunc at varius lacinia, sem lectus
-                    viverra nisi, ac aliquet est nulla a lorem. Phasellus vel
-                    diam nec velit pretium tincidunt. Sed ultricies libero a mi
-                    laoreet, vel interdum elit iaculis. Curabitur rutrum, nisl
-                    in hendrerit posuere, est orci feugiat felis, sit amet
-                    dictum nisl lectus a risus. Pellentesque elementum posuere
-                    fermentum. In hac habitasse platea dictumst. Sed maximus
-                    tortor ac purus viverra, at pharetra odio feugiat.
-                  </p>
-                ))}
+                Ici c'est background professionnel, project auquel j'ai participé ou encore un échantillons de skill developper pdt mon cycle ingé 
               </div>
               <div className="mt-4 text-right">
                 <Link
                   to="/pro"
                   className="text-blue-500 hover:text-blue-700 font-medium"
                 >
-                  → Voir Pro
+                  {t("Home.see")}{t("Home.pro")}
                 </Link>
               </div>
             </div>
 
             {/* Bloc Sport */}
             <div className="p-6 bg-gray-700/95 rounded-xl shadow">
-              <h3 className="text-xl font-semibold text-green-600">Sport</h3>
+              <h3 className="text-xl font-semibold text-green-600">{t("Home.sport")}</h3>
               {/* <p className="mt-3 text-gray-600"> */}
               <div className="mt-3 text-white">
-                Articles et infos autour du canoë-kayak, entraînements,
-                compétitions, et passion de la rivière. Naviguez avec nous à
-                travers nos contenus sportifs.fake texte pour tester un truc.
-                {[...Array(2)].map((_, i) => (
-                  <p
-                    key={i}
-                    className="text-base sm:text-lg text-white leading-relaxed"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque malesuada, nunc at varius lacinia, sem lectus
-                    viverra nisi, ac aliquet est nulla a lorem. Phasellus vel
-                    diam nec velit pretium tincidunt. Sed ultricies libero a mi
-                    laoreet, vel interdum elit iaculis. Curabitur rutrum, nisl
-                    in hendrerit posuere, est orci feugiat felis, sit amet
-                    dictum nisl lectus a risus. Pellentesque elementum posuere
-                    fermentum. In hac habitasse platea dictumst. Sed maximus
-                    tortor ac purus viverra, at pharetra odio feugiat.
-                  </p>
-                ))}
+              infos autour du canoë-kayak, entraînements, compétitions, budget d'une saison. 
               </div>
               <div className="mt-4 text-right">
                 <Link
                   to="/sport"
                   className="text-green-500 hover:text-green-700 font-medium"
                 >
-                  → Voir Sport
+                  {t("Home.see")}{t("Home.sport")}
                 </Link>
               </div>
             </div>
           </div>
         </section>
-        {/* Faux contenu pour scroll */}
-        {[...Array(4)].map((_, i) => (
-          <p
-            key={i}
-            className="text-base sm:text-lg text-gray-700 leading-relaxed"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            malesuada, nunc at varius lacinia, sem lectus viverra nisi, ac
-            aliquet est nulla a lorem. Phasellus vel diam nec velit pretium
-            tincidunt. Sed ultricies libero a mi laoreet, vel interdum elit
-            iaculis. Curabitur rutrum, nisl in hendrerit posuere, est orci
-            feugiat felis, sit amet dictum nisl lectus a risus. Pellentesque
-            elementum posuere fermentum. In hac habitasse platea dictumst. Sed
-            maximus tortor ac purus viverra, at pharetra odio feugiat.
-          </p>
-        ))}
+        
         {/* Section Blog */}
         <section>
           <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center ">
-            Blog
+            {t("Home.blog")}
           </h2>
           <div className="p-6 bg-gray-700/95 rounded-xl shadow">
             <h3 className="text-xl font-semibold text-purple-600">
-              Derniers articles
+              {t("Home.lastarticle")}
             </h3>
             <p className="mt-3 text-white">
-              Retrouvez nos billets de blog mélangeant passion pour le
-              canoë-kayak et expertise en développement web. Des histoires
-              inspirantes et des conseils techniques réunis au même endroit.
+              Entre Article de presse, interview ou encore ma section blog, il ne manque pas de quoi lire sur cette page, cliquez pour découvrir plus ;)
             </p>
             <div className="mt-4 text-right">
               <Link
                 to="/news"
                 className="text-purple-500 hover:text-purple-700 font-medium"
               >
-                → Voir Blog
+                {t("Home.see")}{t("Home.blog")}
               </Link>
             </div>
           </div>
         </section>
         {/* Section FAQ Accordion*/}{" "}
         {/* revoir pour pk anglais au refresh et voir pour avoir plus dans la liste mais que 3 ou 4 d'afficher ++ faire un compposant accoridon list.   */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-5 bg-gray-700/95 rounded-lg shadow-lg">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4 bg-gray-700/95 rounded-lg shadow-lg">
+        <h3 className="text-xl font-semibold text-white"> FAQ :  </h3>
           <AccordionGroup />
         </section>
       </section>
@@ -306,10 +244,7 @@ export default function Home() {
 }
 
 //todo : revoir responsiv entre le btn sound and le menu flottant sidebar !
-
 //todo : revoir plus de video et systeme de bg video aléatoire
-
 //todo : revoir le bg de la section accordion et countdown
 //todo : revoir le texte intro
-
 //todo : revoir responsive en md entre sidebar et le reste de la page

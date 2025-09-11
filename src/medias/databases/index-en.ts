@@ -100,3 +100,18 @@ export const accordionDataen = [
     text: "Sports are not only a source of personal fulfillment but also a gateway to opportunities. They open perspectives for encounters, experiences, and development that go far beyond mere performance.",
   },
 ];
+
+export const sportobjectif_en = [
+ {
+  title : " World Championship 2026", 
+  description : "Top 10 and qualification for the final."
+ },
+ {
+  title : "Youth Training Program", 
+  description : "Help Youth to get in the adventure of canoe kayak all around the world"
+ },
+ {
+  title : "Eco-friendly Competitions", 
+  description : "take part and promove Competition with environnement thinking"
+ },
+]

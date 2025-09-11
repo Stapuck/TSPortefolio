@@ -32,30 +32,6 @@ const Experiences = () => {
     return () => observer.disconnect();
   }, []);
 
-  // useEffect(() => {
-  //   const observer = new MutationObserver(() => {
-  //     const lang = document.documentElement.lang;
-  //     const newExperiences = lang === "en" ? experiences_en : experiences_fr;
-
-  //     // Cherche si l'expérience sélectionnée existe dans le nouveau tableau
-  //     const currentSelected = newExperiences.find(
-  //       (exp) =>
-  //         exp.etablissement === selected.etablissement &&
-  //         exp.periode === selected.periode
-  //     );
-
-  //     setExperiences(newExperiences);
-  //     setSelected(currentSelected || newExperiences[0]); // garde l'expérience sélectionnée si possible
-  //   });
-
-  //   observer.observe(document.documentElement, {
-  //     attributes: true,
-  //     attributeFilter: ["lang"],
-  //   });
-
-  //   return () => observer.disconnect();
-  // }, [selected]);
-
   return (
     <>
       {/* lg: sidebar + content */}
@@ -132,7 +108,7 @@ const Experiences = () => {
 
         {/* Contenu affiché quand un bouton est sélectionné */}
         <div className="bg-gray-200 p-5 rounded-lg shadow-md ">
-          {/* todo revoir agencement de formation */}
+          {/* todo revoir agencement  */}
           <div className="text-blue-500 font-semibold text-xl uppercase">
             {selected.type == "formation"
               ? t("Experience.formation")

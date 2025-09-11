@@ -26,8 +26,8 @@ export interface EventType {
   lieu_en: string;
   event_en: string;
   event_fr: string;
-  live_result?: string;
-  live_video?: string;
+  link_result?: string;
+  link_video?: string;
   bibs?: string;
   start?: string;
   type: string;
@@ -35,7 +35,9 @@ export interface EventType {
   type_event?: string;
 }
 
-// todo : renomme live_ ... into link
+
+//todo : retrouver toutes les courses, 
+//  todo : mettre la semaine à Prague et tacen de cette année. 
 export const next_date: EventType[] = [
   {
     date: "July 05, 2026 12:00",
@@ -44,8 +46,8 @@ export const next_date: EventType[] = [
     lieu_en: "Liptovsky Mikulas, Slovakia",
     event_en: "WorldChampionship U23",
     event_fr: "Championnat du monde U23",
-    live_result: "link",
-    live_video: "link",
+    link_result: "link",
+    link_video: "link",
     bibs: "18",
     start: "12h15",
     type: "pro",
@@ -60,8 +62,8 @@ export const next_date: EventType[] = [
     date_fin: "October 17, 2025 18:00",
     event_en: "WC",
     event_fr: "Coupe du monde",
-    live_result: "link",
-    live_video: "link",
+    link_result: "link",
+    link_video: "link",
     bibs: "18",
     start: "12h15",
     type: "sport",
@@ -77,8 +79,8 @@ export const next_date: EventType[] = [
     date_fin: "September 27, 2024 18:00",
     event_en: "WC",
     event_fr: "Coupe du monde",
-    live_result: "link1",
-    live_video: "link2",
+    link_result: "link1",
+    link_video: "link2",
     bibs: "18",
     start: "12h15",
     type: "sport",
@@ -93,9 +95,9 @@ export const next_date: EventType[] = [
     date_fin: "September 08, 2025 08:37",
     event_en: "World Cup Final",
     event_fr: "Final du circuit coupe du monde",
-    live_result:
+    link_result:
       "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2025/results",
-    live_video:
+    link_video:
       "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
     bibs: "18",
     start: "12h15",
@@ -111,9 +113,9 @@ export const next_date: EventType[] = [
     date_fin: "October 03, 2025 16:05",
     event_en: "world championship Senior 2026",
     event_fr: "Championnat du monde senior 2026",
-    live_result:
+    link_result:
       "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    live_video:
+    link_video:
       "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
     bibs: "11",
     start: "11",
@@ -129,9 +131,9 @@ export const next_date: EventType[] = [
     date_fin: "January 17, 2026 16:05",
     event_en: "World Cup Final test",
     event_fr: "Final du circuit coupe du monde test",
-    live_result:
+    link_result:
       "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    live_video:
+    link_video:
       "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
     bibs: "19",
     start: "11h49",
@@ -159,8 +161,8 @@ export const next_date: EventType[] = [
     date_fin: "November 23, 2025 18:00",
     event_en: " Pula Internship",
     event_fr: " stage Pula",
-    live_result: "link",
-    live_video: "link",
+    link_result: "link",
+    link_video: "link",
     bibs: " 18",
     start: "12h15",
     type: "pro",
@@ -205,8 +207,8 @@ export const next_date: EventType[] = [
     date_fin: "April 30, 2026 18:00",
     event_en: "training camp",
     event_fr: "stage entrainement",
-    live_result: "",
-    live_video: "",
+    link_result: "",
+    link_video: "",
     bibs: "",
     start: "",
     type: "sport",
@@ -222,8 +224,8 @@ export const next_date: EventType[] = [
     date_fin: "April 21, 2026 18:00",
     event_en: "Graduation",
     event_fr: "diplome d'ingénieur",
-    live_result: "link",
-    live_video: "link",
+    link_result: "link",
+    link_video: "link",
     bibs: "00",
     start: "12h15",
     type: "sport",
@@ -373,6 +375,7 @@ import photo32 from "../images/news/articles/32.jpg";
 import photo34 from "../images/news/articles/34.jpg";
 // import photo35 from "../images/news/articles/35.";
 import photo36 from "../images/news/articles/36.jpg";
+import photo37 from "../images/news/articles/37.webp";
 
 // revoir pour images
 // import photo100 from "../images/news/blogs/100";
@@ -380,6 +383,7 @@ import photo36 from "../images/news/articles/36.jpg";
 // import photo102 from "../images/news/blogs/102";
 
 export const articles = [
+  //1
   {
     id: 1,
     type: "media",
@@ -394,6 +398,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //2
   {
     id: 2,
     type: "media",
@@ -408,6 +413,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //3
   {
     id: 3,
     type: "media",
@@ -422,6 +428,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //4
   {
     id: 4,
     type: "media",
@@ -436,6 +443,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //5
   {
     id: 5,
     type: "media",
@@ -450,6 +458,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //6
   {
     id: 6,
     type: "media",
@@ -464,6 +473,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //7
   {
     id: 7,
     type: "media",
@@ -478,6 +488,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //8
   {
     id: 8,
     type: "media",
@@ -494,6 +505,7 @@ export const articles = [
     top_article: false,
     journal: "Le Mauricien",
   },
+  //9
   {
     id: 9,
     type: "media",
@@ -509,6 +521,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //10
   {
     id: 10,
     type: "media",
@@ -523,6 +536,7 @@ export const articles = [
     top_article: false,
     journal: "Renaissance Lochoise",
   },
+  //11
   {
     id: 11,
     type: "media",
@@ -539,6 +553,7 @@ export const articles = [
     top_article: false,
     journal: "Defimedia",
   },
+  //12
   {
     id: 12,
     type: "media",
@@ -553,6 +568,7 @@ export const articles = [
     top_article: false,
     journal: "ICF",
   },
+  //13
   {
     id: 13,
     type: "media",
@@ -567,6 +583,7 @@ export const articles = [
     top_article: true,
     journal: "Olympic",
   },
+  //14
   {
     id: 14,
     type: "media",
@@ -583,6 +600,7 @@ export const articles = [
     top_article: false,
     journal: "Ionnews.mu",
   },
+  //15
   {
     id: 15,
     type: "media",
@@ -599,6 +617,7 @@ export const articles = [
     top_article: false,
     journal: "Le Mauricien",
   },
+  //16
   {
     id: 16,
     type: "media",
@@ -615,6 +634,7 @@ export const articles = [
     top_article: false,
     journal: "Defimedia",
   },
+  //17
   {
     id: 17,
     type: "media",
@@ -629,6 +649,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //18
   {
     id: 18,
     type: "media",
@@ -645,6 +666,7 @@ export const articles = [
     top_article: false,
     journal: "L'Express Maurice",
   },
+  //19
   {
     id: 19,
     type: "media",
@@ -660,6 +682,7 @@ export const articles = [
     top_article: false,
     journal: "Le Vick",
   },
+  //20
   {
     id: 20,
     type: "media",
@@ -676,7 +699,7 @@ export const articles = [
     top_article: false,
     journal: "Le Mauricien",
   },
-
+  //21
   {
     id: 21,
     type: "media",
@@ -691,6 +714,7 @@ export const articles = [
     top_article: true,
     journal: "Le Vick",
   },
+  //22
   {
     id: 22,
     type: "media",
@@ -707,6 +731,7 @@ export const articles = [
     top_article: false,
     journal: "Le Mauricien",
   },
+  //23
   {
     id: 23,
     type: "media",
@@ -721,6 +746,7 @@ export const articles = [
     top_article: false,
     journal: "L'Express Maurice",
   },
+  //24
   {
     id: 24,
     type: "media",
@@ -735,6 +761,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //25
   {
     id: 25,
     type: "media",
@@ -749,6 +776,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //26
   {
     id: 26,
     type: "media",
@@ -763,6 +791,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //27
   {
     id: 27,
     type: "media",
@@ -777,6 +806,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //28
   {
     id: 28,
     type: "media",
@@ -791,6 +821,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //29
   {
     id: 29,
     type: "media",
@@ -807,6 +838,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //30
   {
     id: 30,
     type: "media",
@@ -823,6 +855,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //31
   {
     id: 31,
     type: "media",
@@ -837,6 +870,7 @@ export const articles = [
     top_article: false,
     journal: "ESS 2024",
   },
+  //32
   {
     id: 32,
     type: "media",
@@ -851,6 +885,7 @@ export const articles = [
     top_article: false,
     journal: "Renaissance Lochoise",
   },
+  //33
   {
     id: 33,
     type: "media",
@@ -865,6 +900,7 @@ export const articles = [
     top_article: false,
     journal: "Val de Loire TV",
   },
+  //34
   {
     id: 34,
     type: "media",
@@ -881,6 +917,7 @@ export const articles = [
     top_article: false,
     journal: "La Nouvelle République",
   },
+  //35
   {
     id: 35,
     type: "media",
@@ -895,6 +932,7 @@ export const articles = [
     top_article: false,
     journal: "Olympic",
   },
+  //36
   {
     id: 36,
     type: "media",
@@ -909,8 +947,34 @@ export const articles = [
     top_article: true,
     journal: "CESI",
   },
+  //37
+  {
+    id: 37,
+    type: "media",
+    title_fr: "Canoë-kayak : Thomas Ukalovic et Terence Saramandif ambitieux pour leurs derniers Mondiaux U23",
+    title_en: "Canoe-kayak : Thomas Ukalovic and Terence Saramandif ambitious for their last U23 world championship",
+    description_en: "U23 world in Foix",
+    date_en: "2025-07-07",
+    date_fr: "07/07/2025",
+    description_fr: "Championnat du monde U23 Foix",
+    image: photo37,
+    link: "https://www.lanouvellerepublique.fr/indre-et-loire/commune/veigne/canoe-kayak-thomas-ukalovic-et-terence-saramandif-ambitieux-pour-leurs-derniers-mondiaux-u23-1751911788",
+    top_article: false,
+    journal: "NR",
+  },
+  //38
+
+  //39
+  //40
+  //41
+  //42
+  //43
+  //44
+
+  
 
   // blog
+  // 100
   {
     id: 100,
     type: "article",
@@ -925,6 +989,7 @@ export const articles = [
     top_article: false,
     journal: "Blog Personnel",
   },
+  //101
   {
     id: 101,
     type: "article",
@@ -939,6 +1004,7 @@ export const articles = [
     top_article: false,
     journal: "Blog Personnel",
   },
+  //102
   {
     id: 102,
     type: "article",
@@ -953,6 +1019,12 @@ export const articles = [
     top_article: false,
     journal: "Blog Personnel",
   },
+
+  //103
+  //104
+  //105
+  //106
+  //107
 
   // revoir 2 photo 33 et 35
   // changer photo pour incubateur.

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { next_date, type EventType } from "../medias/databases/index-global";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 interface TimeLeft {
   days: number;
@@ -26,6 +27,7 @@ const Countdown = () => {
 
   const { t } = useTranslation();
   const lg = document.documentElement.lang || "fr";
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Recherche du prochain événement
@@ -35,13 +37,12 @@ const Countdown = () => {
       let closestTimeDiff = Infinity;
 
       (next_date as EventType[]).forEach((event: EventType) => {
-
         // Validation date_fin
         if (event.date_fin) {
           const start = new Date(event.date).getTime();
           const end = new Date(event.date_fin).getTime();
           if (end < start) {
-            event.date_fin = ""; // ou undefined
+            event.date_fin = "";
           }
         }
 
@@ -50,7 +51,6 @@ const Countdown = () => {
           ? new Date(event.date_fin).getTime()
           : eventDate + 12 * 60 * 60 * 1000; // 12h si pas de date_fin
 
-        // On prend le prochain événement dont la fin est dans le futur
         if (eventEnd > now && eventDate - now < closestTimeDiff) {
           closestDate = event;
           closestTimeDiff = eventDate - now;
@@ -68,7 +68,6 @@ const Countdown = () => {
 
     // todo : rajouter react toastify : https://chatgpt.com/share/68c01ab2-3834-8012-8069-26939887d70b
 
-    // Initialisation
     findNextEvent();
 
     const interval = setInterval(() => {
@@ -79,7 +78,8 @@ const Countdown = () => {
         return;
       }
 
-      // Calcul de la fin effective
+
+      // todo : revoir code doublons ici 
       const eventEnd = nextEvent.date_fin
         ? new Date(nextEvent.date_fin).getTime()
         : countDate + 12 * 60 * 60 * 1000; // 12h si pas de date_fin
@@ -121,9 +121,12 @@ const Countdown = () => {
     return () => clearInterval(interval);
   }, [nextEvent, countDate]);
 
-
   const getLabel = (value: number, singularKey: string, pluralKey: string) =>
     value === 0 || value === 1 ? t(singularKey) : t(pluralKey);
+
+  const goToCalendar = () => {
+    navigate("/sport#calendar");
+  };
 
   return (
     <section
@@ -132,7 +135,6 @@ const Countdown = () => {
     >
       {/* Overlay noir */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/70 to-black/80 z-0 rounded-3xl"></div>
-
 
       <div className="relative text-center">
         {/* Titre */}
@@ -236,9 +238,9 @@ const Countdown = () => {
                   <span className="block text-slate-300 font-semibold mb-2">
                     {t("Countdown.linkresult")}
                   </span>
-                  {nextEvent.live_result ? (
+                  {nextEvent.link_result ? (
                     <a
-                      href={nextEvent.live_result}
+                      href={nextEvent.link_result}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:underline text-lg"
@@ -254,9 +256,9 @@ const Countdown = () => {
                   <span className="block text-slate-300 font-semibold mb-2">
                     {t("Countdown.linkvideo")}
                   </span>
-                  {nextEvent.live_video ? (
+                  {nextEvent.link_video ? (
                     <a
-                      href={nextEvent.live_video}
+                      href={nextEvent.link_video}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:underline text-lg"
@@ -293,25 +295,36 @@ const Countdown = () => {
         )}
 
         {nextEvent && (
-          <div className="mt-8 flex justify-center lg:justify-end">
+          <div className="mt-8 flex flex-col sm:flex-col md:flex-row justify-center md:justify-between gap-3 lg:gap-4">
+            {/* Bouton voir le calendrier */}
+            <div className="text-center">
+              <button
+                onClick={goToCalendar}
+                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-blue-500 hover:text-white w-full md:w-auto"
+              >
+                Voir le calendrier
+              </button>
+            </div>
+
+            {/* Bouton page sport */}
             {nextEvent.type === "sport" && (
               <a
                 href="/sport"
-                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-green-500 hover:text-white"
+                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-green-500 hover:text-white w-full md:w-auto"
               >
                 {t("Countdown.linkPageSport")}
               </a>
             )}
+
+            {/* Bouton page pro */}
             {nextEvent.type === "pro" && (
               <a
                 href="/pro"
-                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-blue-500 hover:text-white"
+                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-blue-500 hover:text-white w-full md:w-auto"
               >
                 {t("Countdown.linkPagePro")}
               </a>
             )}
-
-            {/*  todo : both case, rajouter un btn voir le calendrier. où le mettre ?  */}
           </div>
         )}
       </div>

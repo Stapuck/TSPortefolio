@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const AchievementRanking = () => {
-
+  const {t} = useTranslation();
   const [flipped, setFlipped] = useState(false);
 
   return (
     <div className="grid md:grid-cols-2 gap-8">
             {/* Achievements */}
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold">Médailles & Courses</h3>
+              <h3 className="text-xl font-semibold">{t('AchievementR.medal&race')}</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-700">
+                {/* todo : faire une liste en local ou gloable ?  */}
                 <li>
                   2025 Continental Championship KX1 time trial - Gold Medal
                 </li>
@@ -22,7 +24,6 @@ const AchievementRanking = () => {
             </div>
 
             {/* Classement */}
-            {/* todo : faire un composant  */}
             <div
               className="w-full cursor-pointer perspective transform transition-transform duration-300 hover:scale-105 "
               onClick={() => setFlipped(!flipped)}
@@ -46,31 +47,33 @@ const AchievementRanking = () => {
                 }`}
               >
                 {/* Face avant */}
-                <div className="absolute w-full rounded-lg p-6 shadow-md space-y-4 bg-blue-50 backface-hidden">
+                <div className="absolute w-full rounded-lg p-6 shadow-md space-y-4 bg-blue-100 backface-hidden">
                   <h3 className="font-semibold text-xl">
-                    Classements Mondiaux C1 slalom
+                    {t('AchievementR.worldrankingsla')}
                   </h3>
                   <div className="flex justify-between">
-                    <span>Senior:</span>
+                    <span>{t('AchievementR.senior')} :</span>
                     <span>#85</span>
                   </div>
+                  {/* todo : enlever U23 en 2026 */}
+                  {/* mettre les vrais valeurs de ranking  */}
                   <div className="flex justify-between">
                     <span>U23:</span>
                     <span>#27</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Continental:</span>
+                    <span>{t('AchievementR.continentalranking')} :</span>
                     <span>#3</span>
                   </div>
                 </div>
 
-                {/* Face arrière todo: revoir couleur bg  */}
-                <div className="absolute w-full rounded-lg p-6 shadow-md space-y-4 bg-green-50 backface-hidden rotate-y-180">
+                {/* Face arrière */}
+                <div className="absolute w-full rounded-lg p-6 shadow-md space-y-4 bg-green-100 backface-hidden rotate-y-180">
                   <h3 className="font-semibold text-xl">
-                    Classements Mondiaux Kayak Cross
+                    {t('AchievementR.worldrankingkx')}
                   </h3>
                   <div className="flex justify-between">
-                    <span>Senior:</span>
+                    <span>{t('AchievementR.senior')} :</span>
                     <span>#12</span>
                   </div>
                   <div className="flex justify-between">
@@ -78,7 +81,7 @@ const AchievementRanking = () => {
                     <span>#5</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Continental:</span>
+                    <span>{t('AchievementR.continentalranking')} :</span>
                     <span>#1</span>
                   </div>
                 </div>
