@@ -107,6 +107,7 @@ const BudgetMaterial = () => {
   return (
     <section className="space-y-8 m text-center flex flex-col items-center">
       <h2 className="text-3xl font-bold"> {t("Sport.budget.seasonbudget")}</h2>
+      <h3 className="text-2xl font-bold"> {t("Sport.budget.material")}</h3>
 
       {/* grid avec les 2 photos */}
       <div className="grid md:grid-cols-2 gap-8">
@@ -156,11 +157,11 @@ const BudgetMaterial = () => {
           </div>*/}
 
       {/* nouvelle div full width pour infos stages / compétitions */}
+      <h3 className="text-2xl font-bold my-4 text-center">
+        {t("Sport.budget.training&race")}
+      </h3>
       <div className="w-full bg-white rounded-2xl shadow-md p-6 mt-8">
         {/* Titre principal */}
-        <h3 className="text-2xl font-bold mb-6 text-center">
-          {t("Sport.budget.training&race")}
-        </h3>
 
         {/* Introduction */}
         <p className=" text-gray-700 text-center">

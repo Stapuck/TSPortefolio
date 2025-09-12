@@ -76,9 +76,9 @@ import DownloadButton from "../components/DownloadBtn";
 import HeroSection from "../components/HeroSection.tsx";
 
 //todo composant et mettre ça dans index-global
-import CV from "../medias/images/CV.jpg";
-import Budget from "../medias/images/budget.jpg";
-import Sponsor from "../medias/images/sponsor-license.jpg";
+import CV from "../medias/images/contact/CV.jpg";
+import Budget from "../medias/images/contact/budget.jpg";
+import Sponsor from "../medias/images/contact/sponsor-license.jpg";
 
 // Liste des items
 const items = [

@@ -7,10 +7,13 @@
     "pro&sport": "Pro & Sport",
     "myprofile": "Mon Profil",
     "pro": "Pro",
+    "profile": "Profil",
     "sport": "Sport",
     "blog": "Blog",
-    "see": "→ Voir",
+    "see": "→ Voir ",
     "lastarticle": "Derniers articles"
+    
+    
   },
   "Blog": {
     "blog_welcome": "📝 Bienvenue sur la page de News",
@@ -20,7 +23,7 @@
     "alltxt": "Parcourez l’ensemble de mes contenus, filtrez par type ou découvrez dans l’ordre chronologique.",
     "specialnews": "⚡ News Spéciales",
     "lastarticle": " 🆕 Dernier Article",
-    "toparticle": "⭐ Top Articles Sportifs",
+    "topsportarticle": "⭐ Top Articles Sportifs",
     "important": "Annonce Importante",
     "importanttxt": "Une nouvelle excitante concernant ma prochaine compétition internationale ! Plus de détails arrivent bientôt.",
     "alls": "Tous",
@@ -29,11 +32,13 @@
   },
 
   "Profile": {
-    "profile_welcome": "📝 Bienvenue sur la page de mon profile"
+    "profile_welcome": "📝 Bienvenue sur la page de mon profile",
+    "faq": "Foire aux questions :"
   },
 
   "Sport": {
     "sport_welcome": " Bienvenue sur la page sport",
+    "join": "Déja dans l'aventure : ",
     "budget": {
       "helmet": "Casque",
       "c1paddle": "pagaie de canoë",
@@ -49,7 +54,8 @@
       "equippement": "Équipement",
       "travel": "Déplacement",
       "totalglo": "Total Global :",
-      "total": "Total :"
+      "total": "Total :",
+      "material":"Matériels"
     },
     "deplacement": {
       "registrationfee":"Frais d'inscription",
@@ -79,6 +85,15 @@
 
   "Pro": {
     "pro_welcome": " Bienvenue sur la page pro", 
+
+    "background":"Parcours & Formations",
+    "skills":"Skills",
+    "project":"Projects",
+
+
+
+
+
 
 
 

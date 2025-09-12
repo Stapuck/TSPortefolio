@@ -12,7 +12,7 @@ const AccordionSchool: React.FC<AccordionSchoolProps> = ({
   const [accordionOpen, setaccordionOpen] = useState(false);
 
   return (
-    <div className="bg-slate-600 rounded-xl p-4 m-2 my-4">
+    <div className="bg-slate-500 rounded-xl p-4 m-2 my-4">
       <button
         onClick={() => setaccordionOpen(!accordionOpen)}
         className="flex justify-between w-full "

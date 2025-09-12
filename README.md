@@ -1,69 +1,52 @@
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
 Currently, two official plugins are available:
-
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## do the read_me 
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+we are back on this project 
+mettre le probleme jsx du calendar. 
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Koyeb ou vercel pour la mise en ligne 
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+faire un vrai read me 
+
+rajouter // revoir.
+
+# 🏀 Mon Portfolio – Pro / Sportif / Média
+
+Un site personnel développé **en 2 semaine** pour présenter mon profil professionnel et sportif, partager des articles de blog/média, et publier mes projets personnels.
+
+## ✨ Fonctionnalités
+- **Présentation perso, pro & sportive** : parcours, expériences, projets.
+- **Blog / Média** : articles que je rédige et publie moi-même.
+- **Internationalisation** : site multilingue grâce à [i18next](https://www.i18next.com/).
+- **Animations fluides** avec [Framer Motion](https://www.framer.com/motion/).
+- **Calendrier interactif** (événements, planning) via [React Big Calendar](https://github.com/jquense/react-big-calendar).
+- **Notifications** avec [React-Toastify](https://fkhadra.github.io/react-toastify/).
+<!-- - **** -->
+
+## 🛠️ Stack technique
+- **Framework** : [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build** : SWC / Vite
+- **Style** : [Tailwind CSS](https://tailwindcss.com/)
+- **Routing** : [React Router](https://reactrouter.com/)
+- **Icons** : [Lucide React](https://lucide.dev/icons/) & [React Icons](https://react-icons.github.io/react-icons/)
+
+
+
+
+
+
+
+
+📜 Licence
+
+Projet personnel – libre de consultation mais pas de réutilisation commerciale sans accord.

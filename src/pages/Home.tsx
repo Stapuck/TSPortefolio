@@ -11,7 +11,6 @@ import {
   CircleChevronUp,
 } from "lucide-react";
 import Countdown from "../components/Countdown";
-import AccordionGroup from "../components/AccordionGroup";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -163,10 +162,20 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center ">
             {t("Home.myprofile")}
           </h2>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-5 bg-gray-700/95 rounded-lg shadow-lg">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-5 pb-5  bg-gray-700/95 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-teal-600 mb-4">{t("Home.profile")}</h3>
+
             <p className="text-base sm:text-lg text-white leading-relaxed">
             Information simple mais éfficace à mon sujet 
             </p>
+            <div className="mt-4 text-right">
+                <Link
+                  to="/profile"
+                  className="text-teal-500 hover:text-green-700 font-medium"
+                >
+                  {t("Home.see")}{t("Home.profile")}
+                </Link>
+              </div>
           </div>
         </section>
         {/* Section Pro + Sport */}
@@ -177,7 +186,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Bloc Pro */}
             <div className="p-6 bg-gray-700/95 rounded-xl shadow">
-              <h3 className="text-xl font-semibold text-blue-600">{t("Home.seepro")}</h3>
+              <h3 className="text-xl font-semibold text-blue-600">{t("Home.pro")}</h3>
               <div className="mt-3 text-white">
                 Ici c'est background professionnel, project auquel j'ai participé ou encore un échantillons de skill developper pdt mon cycle ingé 
               </div>
@@ -232,12 +241,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Section FAQ Accordion*/}{" "}
-        {/* revoir pour pk anglais au refresh et voir pour avoir plus dans la liste mais que 3 ou 4 d'afficher ++ faire un compposant accoridon list.   */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4 bg-gray-700/95 rounded-lg shadow-lg">
-        <h3 className="text-xl font-semibold text-white"> FAQ :  </h3>
-          <AccordionGroup />
-        </section>
+        {/* Section FAQ Accordion*/}
+        
       </section>
     </>
   );

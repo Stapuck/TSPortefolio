@@ -371,9 +371,9 @@ import photo29 from "../images/news/articles/29.jpg";
 import photo30 from "../images/news/articles/30.jpg";
 import photo31 from "../images/news/articles/31.png";
 import photo32 from "../images/news/articles/32.jpg";
-// import photo33 from "../images/news/articles/33.";
+import photo33 from "../images/news/articles/33.png";
 import photo34 from "../images/news/articles/34.jpg";
-// import photo35 from "../images/news/articles/35.";
+import photo35 from "../images/news/articles/35.png";
 import photo36 from "../images/news/articles/36.jpg";
 import photo37 from "../images/news/articles/37.webp";
 
@@ -895,7 +895,7 @@ export const articles = [
     date_en: "2021-04-19",
     date_fr: "19/04/2021",
     description_fr: "Passage sur Val de Loire TV.",
-    image: "photo33",
+    image: photo33,
     link: "https://www.valdeloire.tv/video/qlz3vu5/",
     top_article: false,
     journal: "Val de Loire TV",
@@ -927,7 +927,7 @@ export const articles = [
     date_en: "2022-08-01",
     date_fr: "01/08/2022",
     description_fr: "Documentaire Olympic TV.",
-    image: "photo35",
+    image: photo35,
     link: "https://www.olympics.com/en/video/meet-the-history-making-siblings-from-mauritius",
     top_article: false,
     journal: "Olympic",

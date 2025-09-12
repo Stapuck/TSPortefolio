@@ -22,14 +22,14 @@ export default function Pro() {
         {/* Parcours & Formations */}
         <section>
           <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            Parcours & Formations
+            {t('Pro.background')}
           </h2>
           <Experiences />
         </section>
 
         {/* Skills todo : faire un component */}
         <section className="">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">Skills</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">{t('Pro.skills')}</h2>
 
           <div>text en despi : </div>
           <p>
@@ -70,7 +70,7 @@ export default function Pro() {
 
         {/* Projects */}
         <section id="projects">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">{t('Pro.project')}</h2>
 
           {/* todo :  faire un json
             

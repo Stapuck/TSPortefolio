@@ -99,42 +99,42 @@ export const experiences_fr = [
 ];
 
 export const accordionDatafr = [
-  {
-    title: "Mon rythme de vie et organisation d'un double projet",
-    text: "Depuis la classe de 4e, j’ai pris l’habitude d’organiser ma vie autour de mes études et de ma pratique sportive. Le sport est rapidement devenu une composante essentielle de mon quotidien. Jongler efficacement entre ces deux projets n’a pas toujours été évident : il a fallu faire des compromis et accepter certains sacrifices, mais toujours dans l’objectif de me rapprocher de mon but final. Cela m’a conduit à optimiser au maximum mon temps.",
-  },
-  {
-    title: "Mes facteurs de succès",
-    text: "Pour moi, la diversification, le dépassement de soi et la persévérance sont des éléments essentiels pour atteindre le succès. L’aléatoire reste une variable incontrôlable, mais le travail fourni permet de réduire au maximum son impact, tant dans la performance que dans la réussite.",
-  },
-  {
-    title: "Ma gestion de la santé mentale",
-    text: "Un aspect qui me tient particulièrement à cœur est ma santé mentale. Bien que je pratique avant tout par plaisir, je pense que la diversification sportive que je m’impose au quotidien m’aide à éviter toute pression excessive. Tout comme un équilibre entre vie professionnelle et vie personnelle est nécessaire, je veille à bien distinguer ma pratique sportive des autres aspects de ma vie. J’ai remarqué que lorsque mon quotidien est équilibré et que mes différentes sphères de vie fonctionnent bien, mes performances sportives suivent naturellement. Enfin, j’accorde une grande importance à ne pas me comparer aux autres athlètes, car ma situation est particulière et implique des différences de quotidien et d’opportunités.",
-  },
-  {
-    title: "Le sport et ses opportunités",
-    text: "Le sport est non seulement un moyen d’épanouissement personnel, mais aussi une source d’opportunités. Il m’ouvre des perspectives de rencontres, d’expériences et de développement qui dépassent le simple cadre de la performance.",
-  },
-
-
   // {
-  //   title: "D'où viens tu ? ",
-  //   text: "Avec des origines Mauriciennes, je vis en France depuis toujours, d'abord de Tours où j'ai passé mes années lycée ainsi que mon bac et ensuite dans le sud, sur Pau pour continuer ma pratique sportive et mes études.",
+  //   title: "Mon rythme de vie et organisation d'un double projet",
+  //   text: "Depuis la classe de 4e, j’ai pris l’habitude d’organiser ma vie autour de mes études et de ma pratique sportive. Le sport est rapidement devenu une composante essentielle de mon quotidien. Jongler efficacement entre ces deux projets n’a pas toujours été évident : il a fallu faire des compromis et accepter certains sacrifices, mais toujours dans l’objectif de me rapprocher de mon but final. Cela m’a conduit à optimiser au maximum mon temps.",
   // },
   // {
-  //   title: "Si tu devais choisir un autre sport que la Canoë-Kayak, lequel choisirais-tu ? ",
-  //   text: "Je pense que je me serais tourné vers la course à pied / trail pour le coté dépassement de soi, sinon le surf ou le hockey sur glace.",
+  //   title: "Mes facteurs de succès",
+  //   text: "Pour moi, la diversification, le dépassement de soi et la persévérance sont des éléments essentiels pour atteindre le succès. L’aléatoire reste une variable incontrôlable, mais le travail fourni permet de réduire au maximum son impact, tant dans la performance que dans la réussite.",
   // },
-
   // {
-  //   title: "Qu'est ce qui te pousse à te lever le matin",
-  //   text: "Les plaisirs de la vie que ça soit dans le quotidien, la famille, les amis. Ou encore l'évolution perpetuelle, devenir une meilleur personne (sportif et pro). Repousser mes limites. ou juste connaitre à l'avance le repas du soir suffit parfois ;)"
+  //   title: "Ma gestion de la santé mentale",
+  //   text: "Un aspect qui me tient particulièrement à cœur est ma santé mentale. Bien que je pratique avant tout par plaisir, je pense que la diversification sportive que je m’impose au quotidien m’aide à éviter toute pression excessive. Tout comme un équilibre entre vie professionnelle et vie personnelle est nécessaire, je veille à bien distinguer ma pratique sportive des autres aspects de ma vie. J’ai remarqué que lorsque mon quotidien est équilibré et que mes différentes sphères de vie fonctionnent bien, mes performances sportives suivent naturellement. Enfin, j’accorde une grande importance à ne pas me comparer aux autres athlètes, car ma situation est particulière et implique des différences de quotidien et d’opportunités.",
+  // },
+  // {
+  //   title: "Le sport et ses opportunités",
+  //   text: "Le sport est non seulement un moyen d’épanouissement personnel, mais aussi une source d’opportunités. Il m’ouvre des perspectives de rencontres, d’expériences et de développement qui dépassent le simple cadre de la performance.",
   // },
 
-  //  {
-  //   title: "La clès de la réussite selon toi ? ",
-  //   text: "Dans mon cas, je dirais la polyvalence et la résilience. Mais la réussite est tellement subjectif et peut varier d'un jour à l'autre que juste se sentir épanouie sera ma réponse finale."
-  // },
+
+  {
+    title: "D'où viens tu ? ",
+    text: "Avec des origines Mauriciennes, je vis en France depuis toujours, d'abord de Tours où j'ai passé mes années lycée ainsi que mon bac et ensuite dans le sud, sur Pau pour continuer ma pratique sportive et mes études.",
+  },
+  {
+    title: "Si tu devais choisir un autre sport que la Canoë-Kayak, lequel choisirais-tu ? ",
+    text: "Je pense que je me serais tourné vers la course à pied / trail pour le coté dépassement de soi, sinon le surf ou le hockey sur glace.",
+  },
+
+  {
+    title: "Qu'est ce qui te pousse à te lever le matin",
+    text: "Les plaisirs de la vie que ça soit dans le quotidien, la famille, les amis. Ou encore l'évolution perpetuelle, devenir une meilleur personne (sportif et pro). Repousser mes limites. ou juste connaitre à l'avance le repas du soir suffit parfois ;)"
+  },
+
+   {
+    title: "La clès de la réussite selon toi ? ",
+    text: "Dans mon cas, je dirais la polyvalence et la résilience. Mais la réussite est tellement subjectif et peut varier d'un jour à l'autre que juste se sentir épanouie sera ma réponse finale."
+  },
 
   // {
   //   title: "",

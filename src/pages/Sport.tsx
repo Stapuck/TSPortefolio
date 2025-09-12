@@ -208,9 +208,8 @@ export default function Sport() {
         <BudgetMaterial />
 
         {/* Call-to-action / téléchargement */}
-        <div className="mt-8 p-6 bg-blue-50 rounded-2xl shadow-md text-center">
-          <h3 className="text-2xl font-bold mb-2">{t("Sport.moreinfo")}</h3>
-          <p className="text-gray-700 mb-4">{t("Sport.moreinfotxt")}</p>
+          <h3 className="text-2xl font-bold mb-2 text-center">{t("Sport.moreinfo")}</h3>
+          <p className="text-gray-700 mb-4 text-center">{t("Sport.moreinfotxt")}</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <div className="flex flex-col items-center bg-white rounded-xl shadow p-4 w-40 hover:scale-105 transition-transform duration-300">
@@ -224,7 +223,17 @@ export default function Sport() {
               <DownloadButton fileChoice={"Sponsor"} />
             </div>
           </div>
-        </div>
+
+            <section>
+              <h3 className="text-2xl font-bold mb-2 text-center">{t("Sport.join")}</h3>
+
+            {/* faire card  */}
+
+            {/* mettre fédé, MOC, Ministere Mauricien */}
+
+            </section>
+            
+
 
         <div className="mt-6 text-center text-gray-700 italic">
           {t("Sport.citation")}
