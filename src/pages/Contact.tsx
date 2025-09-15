@@ -79,22 +79,27 @@ import HeroSection from "../components/HeroSection.tsx";
 import CV from "../medias/images/contact/CV.jpg";
 import Budget from "../medias/images/contact/budget.jpg";
 import Sponsor from "../medias/images/contact/sponsor-license.jpg";
+import  DownloadSection  from "../components/DownloadSection.tsx";
+// import DownloadButton from "../components/DownloadBtn";
 
 // Liste des items
 const items = [
   {
+    title: "Sponsor", 
     label: "Sponsor",
     text: "Notre sponsor principal accompagne nos projets innovants 🚀",
     image: Sponsor,
     fileChoice: "Sponsor" as const,
   },
   {
+    title: "Budget", 
     label: "Budget",
     text: "Découvrez notre budget transparent et détaillé 💰",
     image: Budget,
     fileChoice: "Budget" as const,
   },
   {
+    title: "CV", 
     label: "CV",
     text: "Téléchargez mon CV pour en savoir plus sur mon parcours 📄",
     image: CV,
@@ -124,9 +129,7 @@ const Contact: React.FC = () => {
       <HeroSection currentPage={"contact"} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-8">
-        <h1 className="flex justify-center text-3xl font-bold">
-          📩 Page Contact
-        </h1>
+   
 
         {/* todo : faire component   */}
         {/* Onglets */}
@@ -159,22 +162,14 @@ const Contact: React.FC = () => {
 
           {/* Texte + bouton */}
           <div className="flex flex-col items-center justify-center space-y-6 p-6 text-center">
-            <p className="text-lg">{current.text}</p>
-            <DownloadButton fileChoice={current.fileChoice} />
+            {/* <p className="text-lg">{current.text}</p> */}
+            <DownloadButton title={current.title} description={current.text} fileChoice={current.fileChoice} />
           </div>
         </div>
 
-        {/* Petits points indicateurs */}
-        {/* <div className="flex justify-center space-x-2 mt-4">
-        {items.map((_, i) => (
-          <span
-          key={i}
-          className={`w-3 h-3 rounded-full ${
-            i === index ? "bg-black" : "bg-gray-400"
-            }`}
-            />
-            ))}
-            </div> */}
+     
+
+            <DownloadSection/>
       </div>
     </>
   );

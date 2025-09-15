@@ -252,6 +252,7 @@ const BudgetMaterial = () => {
             <span className="relative group cursor-pointer text-blue-600 font-semibold ml-3">
               1250€
               <span className="absolute bottom-full right-17.5 mb-2 hidden group-hover:block w-64 bg-gray-800 text-white text-sm p-2 rounded-lg shadow-lg">
+                {/* Abonnement annuel des séances, coaching, accès salle de muscul */}
                 Abonnement annuel
               </span>
             </span>

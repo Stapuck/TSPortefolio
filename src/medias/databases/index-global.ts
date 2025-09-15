@@ -35,9 +35,8 @@ export interface EventType {
   type_event?: string;
 }
 
-
-//todo : retrouver toutes les courses, 
-//  todo : mettre la semaine à Prague et tacen de cette année. 
+//todo : retrouver toutes les courses,
+//  todo : mettre la semaine à Prague et tacen de cette année.
 export const next_date: EventType[] = [
   {
     date: "July 05, 2026 12:00",
@@ -237,103 +236,208 @@ export const next_date: EventType[] = [
 
 // skills
 
+// export const skills = [
+//   {
+//     imageUrl: css,
+//     name: "CSS",
+//     type: "Frontend",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: backend, //express
+//     name: "Express",
+//     type: "Backend",
+//     color: "green",
+//   },
+//   {
+//     imageUrl: git,
+//     name: "Git",
+//     type: "Version Control",
+//     color: "black",
+//   },
+//   {
+//     imageUrl: github,
+//     name: "GitHub",
+//     type: "Version Control",
+//     color: "pink",
+//   },
+//   {
+//     imageUrl: html,
+//     name: "HTML",
+//     type: "Frontend",
+//     color: "yellow",
+//   },
+//   {
+//     imageUrl: javascript,
+//     name: "JavaScript",
+//     type: "Frontend",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: mongodb,
+//     name: "MongoDB",
+//     type: "Database",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: backend, //motion,
+//     name: "Motion",
+//     type: "Animation",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: backend, //mui
+//     name: "UX/UI",
+//     type: "Frontend",
+//     color: "orange",
+//   },
+//   {
+//     imageUrl: backend, //mui
+//     // imageUrl: nextjs,
+//     name: "Next.js",
+//     type: "Frontend",
+//     color: "blue",
+//   },
+//   {
+//     imageUrl: nodejs,
+//     name: "Node.js",
+//     type: "Backend",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: reactjs,
+//     name: "React",
+//     type: "Frontend",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: redux,
+//     name: "Redux",
+//     type: "State Management",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: backend, //sass
+//     name: "Sass",
+//     type: "Frontend",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: tailwind,
+//     name: "Tailwind",
+//     type: "Frontend",
+//     color: "red",
+//   },
+//   {
+//     imageUrl: typescript,
+//     name: "TypeScript",
+//     type: "Frontend",
+//     color: "red",
+//   },
+// ];
+
+export interface Skills {
+  name: string;
+  imageUrl: string;
+  category: string;
+  level: string;
+}
 export const skills = [
   {
-    imageUrl: css,
     name: "CSS",
-    type: "Frontend",
-    color: "red",
+    imageUrl: css,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: backend, //express
     name: "Express",
-    type: "Backend",
-    color: "green",
+    imageUrl: backend,
+    category: "Backend",
+    level: "5",
   },
   {
-    imageUrl: git,
     name: "Git",
-    type: "Version Control",
-    color: "black",
+    imageUrl: git,
+    category: "Version Control",
+    level: "5",
   },
   {
-    imageUrl: github,
     name: "GitHub",
-    type: "Version Control",
-    color: "pink",
+    imageUrl: github,
+    category: "Version Control",
+    level: "5",
   },
   {
-    imageUrl: html,
     name: "HTML",
-    type: "Frontend",
-    color: "yellow",
+    imageUrl: html,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: javascript,
     name: "JavaScript",
-    type: "Frontend",
-    color: "red",
+    imageUrl: javascript,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: mongodb,
     name: "MongoDB",
-    type: "Database",
-    color: "red",
+    imageUrl: mongodb,
+    category: "Database",
+    level: "5",
   },
   {
-    imageUrl: backend, //motion,
     name: "Motion",
-    type: "Animation",
-    color: "red",
+    imageUrl: backend,
+    category: "Animation",
+    level: "5",
   },
   {
-    imageUrl: backend, //mui
     name: "UX/UI",
-    type: "Frontend",
-    color: "orange",
+    imageUrl: backend,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: backend, //mui
-    // imageUrl: nextjs,
     name: "Next.js",
-    type: "Frontend",
-    color: "blue",
+    imageUrl: backend,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: nodejs,
     name: "Node.js",
-    type: "Backend",
-    color: "red",
+    imageUrl: nodejs,
+    category: "Backend",
+    level: "5",
   },
   {
-    imageUrl: reactjs,
     name: "React",
-    type: "Frontend",
-    color: "red",
+    imageUrl: reactjs,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: redux,
     name: "Redux",
-    type: "State Management",
-    color: "red",
+    imageUrl: redux,
+    category: "State Management",
+    level: "5",
   },
   {
-    imageUrl: backend, //sass
     name: "Sass",
-    type: "Frontend",
-    color: "red",
+    imageUrl: backend,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: tailwind,
     name: "Tailwind",
-    type: "Frontend",
-    color: "red",
+    imageUrl: tailwind,
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: typescript,
     name: "TypeScript",
-    type: "Frontend",
-    color: "red",
+    imageUrl: typescript,
+    category: "Frontend",
+    level: "5",
   },
 ];
 
@@ -376,6 +480,7 @@ import photo34 from "../images/news/articles/34.jpg";
 import photo35 from "../images/news/articles/35.png";
 import photo36 from "../images/news/articles/36.jpg";
 import photo37 from "../images/news/articles/37.webp";
+import photo38 from "../images/news/articles/38.png";
 
 // revoir pour images
 // import photo100 from "../images/news/blogs/100";
@@ -951,8 +1056,10 @@ export const articles = [
   {
     id: 37,
     type: "media",
-    title_fr: "Canoë-kayak : Thomas Ukalovic et Terence Saramandif ambitieux pour leurs derniers Mondiaux U23",
-    title_en: "Canoe-kayak : Thomas Ukalovic and Terence Saramandif ambitious for their last U23 world championship",
+    title_fr:
+      "Canoë-kayak : Thomas Ukalovic et Terence Saramandif ambitieux pour leurs derniers Mondiaux U23",
+    title_en:
+      "Canoe-kayak : Thomas Ukalovic and Terence Saramandif ambitious for their last U23 world championship",
     description_en: "U23 world in Foix",
     date_en: "2025-07-07",
     date_fr: "07/07/2025",
@@ -963,6 +1070,23 @@ export const articles = [
     journal: "NR",
   },
   //38
+  {
+    id: 38,
+    type: "media",
+    title_fr:
+      "Célébrer le kayak africain lors de l'événement spécial Course Kayak Cross continental",
+    title_en:
+      "Celebrating African paddling at the special Kayak Cross continental racing event",
+    description_en: "Kayak Cross Africa Race",
+    date_en: "2025-06-08",
+    date_fr: "08/06/2025",
+    description_fr: "Championnat de kayak cross Africain",
+    image: photo38,
+    link: "https://www.youtube.com/watch?v=GViXMLPtJh0", //course
+    // link: "https://www.youtube.com/watch?v=6MwnOIMZMz0" //interview
+    top_article: true,
+    journal: "ICF",
+  },
 
   //39
   //40
@@ -970,8 +1094,6 @@ export const articles = [
   //42
   //43
   //44
-
-  
 
   // blog
   // 100

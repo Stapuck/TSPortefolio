@@ -8,7 +8,7 @@ import EventList from "../components/EventList.tsx";
 import AchievementRanking from "../components/AchievementRanking.tsx";
 // import TooltipPoint from "../components/ToolTipPoint.tsx";
 
-import { Maximize2, Minimize2 } from "lucide-react";
+import { Maximize2, Minimize2, DollarSign , Users } from "lucide-react";
 import BudgetMaterial from "../components/BudgetMaterial.tsx";
 
 // import { useInView } from "react-intersection-observer";
@@ -136,7 +136,7 @@ export default function Sport() {
   //   }).format(val);
 
   return (
-    <div className="text-gray-800">
+    <div className="">
       <HeroSection currentPage={"sport"} />
 
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
@@ -208,32 +208,41 @@ export default function Sport() {
         <BudgetMaterial />
 
         {/* Call-to-action / téléchargement */}
-          <h3 className="text-2xl font-bold mb-2 text-center">{t("Sport.moreinfo")}</h3>
-          <p className="text-gray-700 mb-4 text-center">{t("Sport.moreinfotxt")}</p>
+        <h3 className="text-2xl font-bold mb-2 text-center">
+          {t("Sport.moreinfo")}
+        </h3>
+        <p className="text-gray-700 mb-4 text-center">
+          {t("Sport.moreinfotxt")}
+        </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <div className="flex flex-col items-center bg-white rounded-xl shadow p-4 w-40 hover:scale-105 transition-transform duration-300">
-              <span className="text-3xl mb-2">💰</span>
-              <p className="font-semibold mb-2">{t("Sport.budgetsimple")}</p>
-              <DownloadButton fileChoice={"Budget"} />
-            </div>
-            <div className="flex flex-col items-center bg-white rounded-xl shadow p-4 w-40 hover:scale-105 transition-transform duration-300">
-              <span className="text-3xl mb-2">🤝</span>
-              <p className="font-semibold mb-2">{t("Sport.sponsor")}</p>
-              <DownloadButton fileChoice={"Sponsor"} />
-            </div>
-          </div>
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <DownloadButton
+            fileChoice={"Budget"}
+            title={"Budget"}
+            description={"découvrer mes dépenses "}
+            icon= {<DollarSign className="w-8 h-8 text-blue-600" />}
+            variant={"primary"}
+          />
 
-            <section>
-              <h3 className="text-2xl font-bold mb-2 text-center">{t("Sport.join")}</h3>
+          <DownloadButton
+            fileChoice={"Sponsor"}
+            title={"Sponsor"}
+            description={"rejoignez l'aventure"}
+            icon={<Users className="w-8 h-8 text-blue-600" />}
+            variant={"primary"}
+          />
+        
+        </div>
 
-            {/* faire card  */}
+        <section>
+          <h3 className="text-2xl font-bold mb-2 text-center">
+            {t("Sport.join")}
+          </h3>
 
-            {/* mettre fédé, MOC, Ministere Mauricien */}
+          {/* faire card  */}
 
-            </section>
-            
-
+          {/* mettre fédé, MOC, Ministere Mauricien */}
+        </section>
 
         <div className="mt-6 text-center text-gray-700 italic">
           {t("Sport.citation")}
