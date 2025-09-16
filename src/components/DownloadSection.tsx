@@ -17,7 +17,10 @@ const DownloadSection: React.FC = () => {
     {
       fileChoice: "Budget" as const,
       title: "Budget",
-      description: t("Download.budgetDescription", "Détail budgétaire du projet"),
+      description: t(
+        "Download.budgetDescription",
+        "Détail budgétaire du projet"
+      ),
       icon: <DollarSign className="w-8 h-8 text-green-600" />,
       variant: "secondary" as const,
     },
@@ -38,7 +41,10 @@ const DownloadSection: React.FC = () => {
         </h2>
         <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div>
         <p className="text-gray-600 max-w-lg mx-auto">
-          {t("Download.description", "Découvrez mes documents officiels et informations détaillées")}
+          {t(
+            "Download.description",
+            "Découvrez mes documents officiels et informations détaillées"
+          )}
         </p>
       </div>
 
@@ -62,14 +68,9 @@ const DownloadSection: React.FC = () => {
           </div>
           <div className="text-sm text-blue-800">
             <p className="font-medium mb-1">
-              {t("Download.noteTitle", "Information")}
+              {t("DownloadBtn.noteTitle")}
             </p>
-            <p className="text-blue-700">
-              {t(
-                "Download.noteText",
-                "Les documents sont automatiquement téléchargés dans la langue sélectionnée sur le site."
-              )}
-            </p>
+            <p className="text-blue-700">{t("DownloadBtn.noteText")}</p>
           </div>
         </div>
       </div>

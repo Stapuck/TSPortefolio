@@ -296,17 +296,15 @@ const Countdown = () => {
 
         {nextEvent && (
           <div className="mt-8 flex flex-col sm:flex-col md:flex-row justify-center md:justify-between gap-3 lg:gap-4">
-            {/* Bouton voir le calendrier */}
             <div className="text-center">
               <button
                 onClick={goToCalendar}
                 className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-blue-500 hover:text-white w-full md:w-auto"
               >
-                Voir le calendrier
+                {t('Countdown.linkCalendar')}
               </button>
             </div>
 
-            {/* Bouton page sport */}
             {nextEvent.type === "sport" && (
               <a
                 href="/sport"
@@ -316,7 +314,6 @@ const Countdown = () => {
               </a>
             )}
 
-            {/* Bouton page pro */}
             {nextEvent.type === "pro" && (
               <a
                 href="/pro"

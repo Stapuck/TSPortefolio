@@ -139,14 +139,14 @@ export default function Sport() {
     <div className="">
       <HeroSection currentPage={"sport"} />
 
-      <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
+      <main className="max-w-6xl mx-auto px-6 py-12 space-y-10">
         {/* Projects / Objectives */}
-        <section className="space-y-8">
-          <h2 className="text-3xl font-bold text-center">
+        {/* <section className="space-y-8"> */}
+          {/* <h2 className="text-3xl font-bold text-center">
             {t("Sport.projet&objectif")}
-          </h2>
+          </h2> */}
           <SportObjectif />
-        </section>
+        {/* </section> */}
 
         {/* Calendar / Events */}
 

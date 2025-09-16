@@ -10,7 +10,8 @@
     "profile": "Profil",
     "sport": "Sport",
     "blog": "Blog",
-    "see": "→ Voir ",
+    "see": "Voir ",
+    "seebis": "→ Voir ",
     "lastarticle": "Derniers articles"
     
     
@@ -33,7 +34,11 @@
 
   "Profile": {
     "profile_welcome": "📝 Bienvenue sur la page de mon profile",
-    "faq": "Foire aux questions :"
+    "faq": "Foire aux questions :",
+    "faqtxt": "Découvrez les réponses aux questions les plus courantes",
+    "french":"Français",
+    "english":"Anglais",
+    "years":"ans"
   },
 
   "Sport": {
@@ -44,17 +49,18 @@
       "c1paddle": "pagaie de canoë",
       "k1paddle": "pagaie de kayak cross",
       "hikospraydeck": "jupe Kway ",
+      "kayakcrossdeck": "jupe Kway de kayak cross",
       "hikolifejacket": "gilet",
       "slalomboat": "bateau de slalom",
       "kayakcrossboat": "bateau de kayak cross",
       "racerst": "Jupe Kway de course",
       "seasonbudget": "💰 Budget de saison",
       "training&race": "Stages & Compétitions",
-      "sum&info": "📊 Récapitulatif & Infos",
+      "sum&info": "📊 Récapitulatif & Infos",      
       "equippement": "Équipement",
       "travel": "Déplacement",
-      "totalglo": "Total Global :",
-      "total": "Total :",
+      "totalglo": "Budget Global :",
+      "total": "Budget :",
       "material":"Matériels"
     },
     "deplacement": {
@@ -141,8 +147,9 @@
     "start": "Heure de départ",
     "now": "Compétition en cours !!",
     "nowPro": "Événement en cours !!",
-    "linkPagePro": "voir la page Pro",
-    "linkPageSport": "voir la page Sport",
+    "linkPagePro": "Voir la page Pro",
+    "linkPageSport": "Voir la page Sport",
+    "linkCalendar":"Voir le Calendrier",
     "linkhere": "Ici",
     "upcoming": " Plus d'informatiion 48h avant le début de l'évènement !!"
   },
@@ -163,12 +170,21 @@
     "navigation": "Navigation",
     "social": "Réseaux",
     "allrights": "Tous droits réservés.",
-    "lastupdate": "Dernières mise à jour"
+    "lastupdate": "Dernières mise à jour", 
+    "news": "Média"
   },
 
   "Experience": {
     "formation": "Formation",
     "pro": "Experience Professionnelle"
+  },
+
+  "Skills" : {
+    "noteTitle":"Information",
+    "noteText":"1 = begginer (< 2h) / 2 = intermédaire ( < 5h )/ 3 = ?? ( entre 5h et 10h) / 4 = advanced (> 10h) / 5 = expert (> 20h)  ",
+    "e":"",
+    "r":"",
+    "t":""
   },
 
   "NotFound": {
@@ -189,11 +205,13 @@
   },
 
   "DownloadBtn": {
-    "download": "Télécharger"
+    "download": "Télécharger", 
+    "noteTitle":"Information",
+    "noteText":"Les documents sont automatiquement téléchargés dans la langue sélectionnée sur le site."
   },
 
   "EventList": {
-    "seeall": "See all →",
+    "seeall": "Voir Tout →",
     "allevent": "📜 Tous les événements",
     "close": "✕ Fermer",
     "result": "Résultat",

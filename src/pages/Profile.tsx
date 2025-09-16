@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import AccordionGroup from "../components/AccordionGroup";
 import { useTranslation } from "react-i18next";
-// import pp from "../medias/images/profile/pp.jpg";
 import pp2 from "../medias/images/profile/pp2.jpg";
 import HeroSection from "../components/HeroSection";
 import { MapPin, Calendar, Globe, Code, Award, Zap, Heart } from "lucide-react";
-import { BiWorld } from 'react-icons/bi';
 
 export default function Profile() {
   const { t } = useTranslation();
@@ -43,8 +41,8 @@ export default function Profile() {
             />
           </div>
         </div>
-        <div className="mt-47 flex flex-col items-center text-center">
-          <h1 className="text-3xl font-bold">Terence Saramandif</h1>
+        <div className="mt-47 flex flex-col items-center text-center bg-white rounded-2xl w-fit px-6 py-4 mx-auto">
+          <h1 className="text-3xl font-bold">Terence SARAMANDIF</h1>
           <p className="text-gray-600 mt-2">
             Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur
           </p>
@@ -55,11 +53,15 @@ export default function Profile() {
             </div>
             <div className="flex items-center space-x-1">
               <Calendar className="w-4 h-4" />
-              <span>{years.toFixed(8)} ans</span>
+              <span>
+                {years.toFixed(8)} {t("Profile.years")}
+              </span>
             </div>
             <div className="flex items-center space-x-1">
               <Globe className="w-4 h-4" />
-              <span>Français, Anglais</span>
+              <span>
+                {t("Profile.french")}, {t("Profile.english")}
+              </span>
             </div>
           </div>
         </div>
@@ -204,30 +206,8 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-          <div className="flex items-center mb-6">
-            <div className="p-3 bg-pink-100 rounded-xl mr-4">
-              <BiWorld className="w-6 h-6 text-pink-600" />
-            </div>
-            <h2 className="text-2xl font-bold text-gray-800">Reseau</h2>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            mettre reseaux comme footer ? 
-          </div>
-        </div>
-
         {/* FAQ */}
-        <section className="bg-white shadow-md rounded-2xl p-6 max-w-7xl mx-auto space-y-4 item-center">
-          <h3 className="text-xl font-semibold text-center mb-4">
-            {t("Profile.faq")}
-          </h3>
-          <AccordionGroup />
-          <p className="flex justify-center font-thin">
-            {" "}
-            D'autres questions ? N'hésitez pas à me contacter pour en savoir
-            plus{" "}
-          </p>
-        </section>
+        <AccordionGroup />
 
         {/* Citation finale */}
         <div className="text-center text-gray-600 italic mt-6">
@@ -238,191 +218,3 @@ export default function Profile() {
     </div>
   );
 }
-
-//test claude
-
-// import { useEffect, useState } from "react";
-// import { MapPin, Calendar, Globe, Award, Code, Zap, Heart, Mail, Linkedin, Github } from "lucide-react";
-// import pp from "../medias/images/profile/pp.jpg";
-// import baniere from "../medias/images/profile/terence-11.jpg";
-// import AccordionGroup from "../components/AccordionGroup";
-
-//   return (
-//     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-//       <div className="max-w-6xl mx-auto">
-//         {/* Hero Section avec bannière */}
-//         <div className="relative h-80 mb-20">
-//           {/* Bannière avec overlay gradient */}
-//           <div className="relative h-full rounded-b-3xl overflow-hidden">
-//             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-//             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-//             <img
-//               src={baniere}
-//               alt="bannière"
-//               className="w-full h-full object-cover"
-//             />
-//           </div>
-
-//           {/* Photo de profil avec animation */}
-//           <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-20">
-//             <div className="relative">
-//               <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
-//               <img
-//                 src={pp}
-//                 alt="Photo de profil"
-//                 className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-2xl"
-//               />
-//               <div className="absolute bottom-2 right-2 w-6 h-6 bg-green-500 border-2 border-white rounded-full"></div>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div className="px-6">
-//           {/* Section présentation */}
-//           <div className="text-center mb-12">
-//             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
-//               Terence Saramandif
-//             </h1>
-//             <p className="text-xl text-gray-600 mb-4">
-//               Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur
-//             </p>
-//             <div className="flex justify-center items-center space-x-6 text-sm text-gray-500">
-//               <div className="flex items-center space-x-1">
-//                 <MapPin className="w-4 h-4" />
-//                 <span>Pau, France</span>
-//               </div>
-//               <div className="flex items-center space-x-1">
-//                 <Calendar className="w-4 h-4" />
-//                 <span>{years.toFixed(1)} ans</span>
-//               </div>
-//               <div className="flex items-center space-x-1">
-//                 <Globe className="w-4 h-4" />
-//                 <span>Français, Anglais</span>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Stats avec animations */}
-//           <div className="grid md:grid-cols-4 gap-6 mb-16">
-//             {[
-//               { icon: "⚡", number: "8+", label: "Années d'expérience", color: "from-yellow-400 to-orange-500" },
-//               { icon: "🏆", number: "1st", label: "Champion Olympique", color: "from-yellow-500 to-yellow-600" },
-//               { icon: "💻", number: "15+", label: "Projets réalisés", color: "from-blue-500 to-blue-600" },
-//               { icon: "🚀", number: "3", label: "Startups lancées", color: "from-purple-500 to-pink-500" }
-//             ].map((stat, index) => (
-//               <div key={index} className="group relative overflow-hidden">
-//                 <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-300"
-//                      style={{background: `linear-gradient(135deg, var(--tw-gradient-stops))`}}></div>
-//                 <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-//                   <div className="text-center">
-//                     <div className="text-3xl mb-3">{stat.icon}</div>
-//                     <div className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-//                       {stat.number}
-//                     </div>
-//                     <div className="text-sm text-gray-600 mt-2">{stat.label}</div>
-//                   </div>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-
-//           {/* Sections principales avec design cards */}
-//           <div className="grid lg:grid-cols-2 gap-8 mb-16">
-//             {/* Parcours académique */}
-//             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-//               <div className="flex items-center mb-6">
-//                 <div className="p-3 bg-blue-100 rounded-xl mr-4">
-//                   <Code className="w-6 h-6 text-blue-600" />
-//                 </div>
-//                 <h2 className="text-2xl font-bold text-gray-800">Parcours Tech</h2>
-//               </div>
-//               <p className="text-gray-700 leading-relaxed mb-4">
-//                 Étudiant en ingénierie informatique, passionné par le développement web et l'IA.
-//                 Spécialisé en React, Node.js et technologies cloud.
-//               </p>
-//               <div className="flex flex-wrap gap-2">
-//                 {["React", "TypeScript", "Node.js", "Python", "AWS"].map((tech) => (
-//                   <span key={tech} className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
-//                     {tech}
-//                   </span>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Carrière sportive */}
-//             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-//               <div className="flex items-center mb-6">
-//                 <div className="p-3 bg-green-100 rounded-xl mr-4">
-//                   <Award className="w-6 h-6 text-green-600" />
-//                 </div>
-//                 <h2 className="text-2xl font-bold text-gray-800">Carrière Sportive</h2>
-//               </div>
-//               <p className="text-gray-700 leading-relaxed mb-4">
-//                 Athlète en canoë slalom depuis plus de 10 ans. Titres régionaux et participations nationales.
-//                 Le sport m'a forgé discipline et résilience.
-//               </p>
-//               <div className="flex items-center space-x-4 text-sm text-gray-600">
-//                 <span className="flex items-center">🏅 5 titres régionaux</span>
-//                 <span className="flex items-center">⏱️ 10+ ans d'expérience</span>
-//               </div>
-//             </div>
-
-//             {/* Entrepreneuriat */}
-//             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-//               <div className="flex items-center mb-6">
-//                 <div className="p-3 bg-purple-100 rounded-xl mr-4">
-//                   <Zap className="w-6 h-6 text-purple-600" />
-//                 </div>
-//                 <h2 className="text-2xl font-bold text-gray-800">Entrepreneuriat</h2>
-//               </div>
-//               <p className="text-gray-700 leading-relaxed mb-4">
-//                 Développement de projets innovants mêlant tech et sport.
-//                 Objectif : révolutionner l'entraînement sportif par la technologie.
-//               </p>
-//               <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-//                 <div className="bg-purple-500 h-2 rounded-full w-3/4"></div>
-//               </div>
-//               <p className="text-sm text-gray-600">Progression du projet : 75%</p>
-//             </div>
-
-//             {/* Passions */}
-//             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-//               <div className="flex items-center mb-6">
-//                 <div className="p-3 bg-pink-100 rounded-xl mr-4">
-//                   <Heart className="w-6 h-6 text-pink-600" />
-//                 </div>
-//                 <h2 className="text-2xl font-bold text-gray-800">Autres Passions</h2>
-//               </div>
-//               <div className="grid grid-cols-2 gap-3">
-//                 {[
-//                   { icon: "👨‍👩‍👧‍👦", text: "Famille" },
-//                   { icon: "🎵", text: "Musique" },
-//                   { icon: "🎮", text: "Jeux vidéo" },
-//                   { icon: "🥾", text: "Randonnée" }
-//                 ].map((passion, index) => (
-//                   <div key={index} className="flex items-center space-x-2 p-3 bg-gray-50 rounded-xl">
-//                     <span className="text-xl">{passion.icon}</span>
-//                     <span className="text-gray-700 font-medium">{passion.text}</span>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Citation finale avec design moderne */}
-//           <div className="text-center mb-12">
-//             <div className="relative inline-block">
-//               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-xl"></div>
-//               <blockquote className="relative text-2xl font-medium text-gray-700 italic px-8 py-6 bg-white rounded-2xl shadow-lg">
-//                 « Discipline, curiosité et persévérance guident chacun de mes projets. »
-//                 <div className="text-right text-sm font-normal not-italic text-gray-500 mt-2">
-//                   - Terence Saramandif
-//                 </div>
-//               </blockquote>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
