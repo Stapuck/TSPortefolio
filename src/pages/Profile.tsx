@@ -41,7 +41,7 @@ export default function Profile() {
             />
           </div>
         </div>
-        <div className="mt-47 flex flex-col items-center text-center bg-white rounded-2xl w-fit px-6 py-4 mx-auto">
+        <div className="mt-47  flex flex-col items-center text-center bg-white rounded-2xl w-fit px-6 py-4 mx-auto shadow-lg">
           <h1 className="text-3xl font-bold">Terence SARAMANDIF</h1>
           <p className="text-gray-600 mt-2">
             Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur

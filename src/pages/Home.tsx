@@ -26,7 +26,7 @@ export default function Home() {
 
     const handleScroll = () => {
       const y = window.scrollY;
-      setShowFloating(y < 100); 
+      setShowFloating(y < 100);
       setShowScrollUp(y > 1000);
     };
 
@@ -78,7 +78,7 @@ export default function Home() {
               </span>
             </h1>
             <div className="h-1 w-32 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mt-6 text-white/95 drop-shadow-lg max-w-4xl mx-auto">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mt-2 text-white/95 drop-shadow-lg max-w-4xl mx-auto">
               {t("Home.videotext")}
             </p>
           </div>
@@ -102,15 +102,15 @@ export default function Home() {
           {/* todo : revoir reaction hover  */}
           <div className="group fixed bottom-16 right-4 sm:right-8 z-30">
             <div
-              className=" flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
+              // className=" group-hover:hidden flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
-              <button
-                className=" flex items-center justify-center w-8 h-8 text-white transition-transform duration-300 hover:scale-110"
-              >
+              <button className=" flex items-center justify-center w-8 h-8 text-white transition-transform duration-300 hover:scale-110">
                 <CircleHelp size={24} />
               </button>
             </div>
 
+            {/* try absolute pour le mettre.  */}
             <div className="hidden group-hover:flex flex-col items-center mt-3 animate-fade-in">
               <div className="px-3 py-2 bg-black/80 backdrop-blur-sm rounded-lg border border-white/20">
                 <a
@@ -189,7 +189,7 @@ export default function Home() {
                   {t("Home.profile")}
                 </h3>
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  Information simple mais éfficace à mon sujet
+                  {t("Home.profiletxt")}
                 </p>
                 <div className="flex justify-end">
                   <Link
@@ -223,9 +223,8 @@ export default function Home() {
                     {t("Home.pro")}
                   </h3>
                   <p className="text-gray-700 text-base leading-relaxed mb-6 flex-grow">
-                    Ici c'est background professionnel, project auquel j'ai
-                    participé ou encore un échantillons de skill developper pdt
-                    mon cycle ingé
+                    {t("Home.protxt")}
+                    
                   </p>
                   <div className="flex justify-end">
                     <Link
@@ -248,8 +247,8 @@ export default function Home() {
                     {t("Home.sport")}
                   </h3>
                   <p className="text-gray-700 text-base leading-relaxed mb-6 flex-grow">
-                    infos autour du canoë-kayak, entraînements, compétitions,
-                    budget d'une saison.
+                    {t("Home.sporttxt")}
+                   
                   </p>
                   <div className="flex justify-end">
                     <Link
@@ -282,9 +281,7 @@ export default function Home() {
                   {t("Home.lastarticle")}
                 </h3>
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  Entre Article de presse, interview ou encore ma section blog,
-                  il ne manque pas de quoi lire sur cette page, cliquez pour
-                  découvrir plus ;)
+                {t("Home.blogtxt")}
                 </p>
                 <div className="flex justify-end">
                   <Link

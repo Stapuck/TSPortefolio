@@ -6,34 +6,12 @@ import CalendarSection from "../components/CalendarSection.tsx";
 import SportObjectif from "../components/SportObjectif.tsx";
 import EventList from "../components/EventList.tsx";
 import AchievementRanking from "../components/AchievementRanking.tsx";
-// import TooltipPoint from "../components/ToolTipPoint.tsx";
 
-import { Maximize2, Minimize2, DollarSign , Users } from "lucide-react";
+import { Maximize2, Minimize2, DollarSign, Users } from "lucide-react";
 import BudgetMaterial from "../components/BudgetMaterial.tsx";
-
-// import { useInView } from "react-intersection-observer";
-// import { useCountUp } from "../hooks/useCountUp"; // ton hook créé juste au-des
-
-// import hikospraydeck from "../medias/images/budget/hiko_spraydeck.png";
-// // import hikolifejacket from "../medias/images/budget/hiko_lifejacket.png";
-// import racerst from "../medias/images/budget/racerst.png";
-// import kayakcrosshelmet from "../medias/images/budget/kayakcross_helmet.png";
-// import vadjahelmet from "../medias/images/budget/vajda_helmet.png";
-
-// import k1paddle from "../medias/images/budget/k1_paddle.png";
-// import c1paddle from "../medias/images/budget/c1_paddle.png";
-
-// import slalomboat from "../medias/images/budget/slalom_boat.png";
-// import kayakcrossboat from "../medias/images/budget/kayakcross_boat.png";
-
-// // import imagetest from "../medias/images/DSC04086.png"
-// import kayakCross from "../medias/images/budget/Foix_kayakCross.jpg";
-// import canoeslalom from "../medias/images/budget/Foix_slalom.jpg";
-// import canoeslalom from "../medias/images/Capture d'écran 2025-09-11 103259.png";
 
 export default function Sport() {
   const { t } = useTranslation();
-  // const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   const [expanded, setExpanded] = useState(false);
   useEffect(() => {
@@ -50,168 +28,87 @@ export default function Sport() {
     }
   }, [location]);
 
-  //todo : gerer trad dans toute la page.  modal inclus
-  // mettre dans index- global // revoir pour la traduction ? ou faire trad avec les 2 fichier index ??
-  // const photos = [
-  //   {
-  //     src: canoeslalom,
-  //     alt: "Canoe Slalom",
-  //     tooltips: [
-  //       {
-  //         x: "45%",
-  //         y: "38%",
-  //         img: vadjahelmet,
-  //         price: 240,
-  //         text: t("Sport.budget.helmet"),
-  //       },
-  //       {
-  //         x: "37%",
-  //         y: "72%",
-  //         img: c1paddle,
-  //         price: 360,
-  //         text: t("Sport.budget.c1paddle"),
-  //       },
-  //       {
-  //         x: "65%",
-  //         y: "68%",
-  //         img: slalomboat,
-  //         price: 2500,
-  //         text: t("Sport.budget.slalomboat"),
-  //       },
-  //       {
-  //         x: "50%",
-  //         y: "60%",
-  //         img: racerst,
-  //         price: 320,
-  //         text: t("Sport.budget.racerst"),
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     src: kayakCross,
-  //     alt: "Kayak Cross",
-  //     tooltips: [
-  //       {
-  //         x: "53%",
-  //         y: "39%",
-  //         img: kayakcrosshelmet,
-  //         price: 120,
-  //         text: t("Sport.budget.helmet"),
-  //       },
-  //       {
-  //         x: "40%",
-  //         y: "54%",
-  //         img: k1paddle,
-  //         price: 500,
-  //         text: t("Sport.budget.k1paddle"),
-  //       },
-  //       {
-  //         x: "30%",
-  //         y: "70%",
-  //         img: kayakcrossboat,
-  //         price: 2000,
-  //         text: t("Sport.budget.kayakcrossboat"),
-  //       },
-  //     ],
-  //   },
-  // ];
-
-  // calculer les totaux par sport
-  // const totals = photos.map((p) =>
-  //   p.tooltips.reduce((sum, item) => sum + item.price, 0)
-  // );
-
-  // // total global
-  // const globalTotal = totals.reduce((a, b) => a + b, 0);
-
-  // const equipement = useCountUp(inView ? globalTotal : 0);
-  // const deplacement = useCountUp(inView ? 14550 : 0);
-  // const total = useCountUp(inView ? 20590 : 0);
-
-  // const formatPrice = (val: number) =>
-  //   new Intl.NumberFormat("fr-FR", {
-  //     style: "currency",
-  //     currency: "EUR",
-  //     minimumFractionDigits: 0,
-  //   }).format(val);
-
   return (
     <div className="">
       <HeroSection currentPage={"sport"} />
 
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-10">
-        {/* Projects / Objectives */}
-        {/* <section className="space-y-8"> */}
-          {/* <h2 className="text-3xl font-bold text-center">
-            {t("Sport.projet&objectif")}
-          </h2> */}
-          <SportObjectif />
-        {/* </section> */}
+        <SportObjectif />
 
-        {/* Calendar / Events */}
+        <section id="calendar" className="space-y-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">
+              Calendrier et Événements
+            </h2>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              Explorez mon calendrier sportif et professionnel de manière
+              interactive. Cliquez sur un événement pour plus de détails.
+            </p>
+          </div>
 
-        <section id="calendar" className="space-y-8">
-          <h2 className="text-3xl font-bold text-center">
-            {t("Sport.incomingevent")}
-          </h2>
+          {/* Legend */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+            <h4 className="text-sm font-semibold text-gray-700 mb-4">
+              Légende
+            </h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-4">
+              {[
+                { type: "worldcup", color: "#F59E0B", label: "Coupe du Monde" },
+                {
+                  type: "worldchamp",
+                  color: "#8B5CF6",
+                  label: "Championnat du Monde",
+                },
+                {
+                  type: "national",
+                  color: "#3B82F6",
+                  label: "Course Nationale",
+                },
+                { type: "training", color: "#10B981", label: "Stage" },
+                { type: "pro", color: "#6B7280", label: "Professionnel" },
+              ].map((item) => (
+                <div key={item.type} className="flex items-center gap-3">
+                  <div
+                    className="w-4 h-4 rounded-full shrink-0"
+                    style={{ backgroundColor: item.color }}
+                  />
+                  <span className="text-sm text-gray-700">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
-          {/* Bouton d’agrandissement */}
-          {/* revoir le placement du btn  */}
+          {/* Toggle Button */}
           <div className="flex justify-center">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition flex flex-row"
+              className="flex items-center gap-2 px-4 py-2 mt-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
             >
               {expanded ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
-              {/* {expanded ? t('Sport.calendarreduce') : t('Sport.calendargrowth') } */}
             </button>
           </div>
-
-          {/* <button
-            onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
-          >
-            {expanded ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
-            {expanded ? "Réduire" : "Agrandir"}
-          </button> */}
-
-          {/* Layout responsive selon l’état */}
           <div
-            className={`grid gap-8 shadow-md transition-all duration-300 ${
+            className={`bg-gray-200 rounded-lg grid gap-6 transition-all duration-300 ${
               expanded ? "grid-cols-1" : "md:grid-cols-2"
             }`}
           >
-            <div
-              className={`bg-gray-100 rounded-lg p-3 transition-all duration-300 ${
-                expanded ? "col-span-1 w-full" : "w-full"
-              }`}
-            >
-              <CalendarSection />
-            </div>
-
-            {/* En mode expanded, EventList passe en dessous */}
-            <div className={`${expanded ? "col-span-1" : ""}`}>
-              <EventList />
-            </div>
+            <CalendarSection />
+            <EventList />
           </div>
         </section>
+
         {/* Palmarès / Carrière */}
         <section className="space-y-8">
-          <h2 className="text-3xl font-bold text-center">
+          <h2 className="text-3xl font-bold text-center dark:text-white">
             {t("Sport.career")}
           </h2>
           <AchievementRanking />
         </section>
-
-        {/* Budget / Sponsorship */}
-        {/* revoir responsiv telephone  */}
         <BudgetMaterial />
-
-        {/* Call-to-action / téléchargement */}
-        <h3 className="text-2xl font-bold mb-2 text-center">
+        <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
           {t("Sport.moreinfo")}
         </h3>
-        <p className="text-gray-700 mb-4 text-center">
+        <p className="text-gray-700 mb-4 text-center dark:text-white">
           {t("Sport.moreinfotxt")}
         </p>
 
@@ -219,42 +116,32 @@ export default function Sport() {
           <DownloadButton
             fileChoice={"Budget"}
             title={"Budget"}
-            description={"découvrer mes dépenses "}
-            icon= {<DollarSign className="w-8 h-8 text-blue-600" />}
+            description={t("DownloadBtn.budgetdescription")}
+            icon={<DollarSign className="w-8 h-8 text-blue-600" />}
             variant={"primary"}
           />
 
           <DownloadButton
             fileChoice={"Sponsor"}
             title={"Sponsor"}
-            description={"rejoignez l'aventure"}
+            description={t("DownloadBtn.sponsordescription")}
             icon={<Users className="w-8 h-8 text-blue-600" />}
             variant={"primary"}
           />
-        
         </div>
 
         <section>
-          <h3 className="text-2xl font-bold mb-2 text-center">
+          <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
             {t("Sport.join")}
           </h3>
 
           {/* faire card  */}
-
           {/* mettre fédé, MOC, Ministere Mauricien */}
         </section>
 
-        <div className="mt-6 text-center text-gray-700 italic">
+        <div className="mt-6 text-center text-gray-700 italic dark:text-slate-200">
           {t("Sport.citation")}
         </div>
-
-        {/* todo : revoir un truc avec motion framer pour au scroll afficher les différents equippement a droite et gauche de la photo plutot ?  */}
-
-        {/* <section className="space-y-12">
-          <h2 className="text-3xl font-bold text-center">
-            Déjà dans l’aventure
-          </h2>
-        </section> */}
       </main>
     </div>
   );

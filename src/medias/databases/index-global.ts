@@ -32,7 +32,8 @@ export interface EventType {
   start?: string;
   type: string;
   photobg?: string;
-  type_event?: string;
+  type_event_en?: string;
+  type_event_fr?: string;
 }
 
 //todo : retrouver toutes les courses,
@@ -50,7 +51,8 @@ export const next_date: EventType[] = [
     bibs: "18",
     start: "12h15",
     type: "pro",
-    type_event: "exam",
+    type_event_en: "exam",
+    type_event_fr: "examen",
     photobg:
       "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
   },
@@ -66,7 +68,8 @@ export const next_date: EventType[] = [
     bibs: "18",
     start: "12h15",
     type: "sport",
-    type_event: "worldcup",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
 
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
@@ -83,7 +86,9 @@ export const next_date: EventType[] = [
     bibs: "18",
     start: "12h15",
     type: "sport",
-    type_event: "worldcup",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+
     photobg:
       "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
   },
@@ -101,7 +106,9 @@ export const next_date: EventType[] = [
     bibs: "18",
     start: "12h15",
     type: "sport",
-    type_event: "worldchamp",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+
     photobg:
       "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
   },
@@ -119,7 +126,9 @@ export const next_date: EventType[] = [
     bibs: "11",
     start: "11",
     type: "sport",
-    type_event: "worldchamp",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
@@ -137,7 +146,9 @@ export const next_date: EventType[] = [
     bibs: "19",
     start: "11h49",
     type: "sport",
-    type_event: "worldchamp",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
@@ -149,7 +160,9 @@ export const next_date: EventType[] = [
     event_en: "Pula semi Marathon",
     event_fr: "Semi Marathon de Pula",
     type: "pro",
-    type_event: "Course",
+    type_event_en: "Course",
+    type_event_fr: "Race",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
@@ -165,7 +178,9 @@ export const next_date: EventType[] = [
     bibs: " 18",
     start: "12h15",
     type: "pro",
-    type_event: "stage",
+    type_event_en: "internship",
+    type_event_fr: "stage",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
@@ -179,7 +194,9 @@ export const next_date: EventType[] = [
     bibs: "00",
     start: "12h15",
     type: "sport",
-    type_event: "national",
+    type_event_en: "national",
+    type_event_fr: "course national",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
@@ -194,7 +211,9 @@ export const next_date: EventType[] = [
     bibs: "00",
     start: "12h15",
     type: "pro",
-    type_event: "diplome",
+    type_event_en: "graduation",
+    type_event_fr: "diplome",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
@@ -211,7 +230,9 @@ export const next_date: EventType[] = [
     bibs: "",
     start: "",
     type: "sport",
-    type_event: "training",
+    type_event_en: "training",
+    type_event_fr: "entrainement",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
@@ -228,7 +249,9 @@ export const next_date: EventType[] = [
     bibs: "00",
     start: "12h15",
     type: "sport",
-    type_event: "national",
+    type_event_en: "national",
+    type_event_fr: "course national",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },

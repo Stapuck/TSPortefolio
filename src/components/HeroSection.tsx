@@ -1,19 +1,14 @@
 import React from "react";
-import {
-  Trophy,
-  Target,
-  Briefcase,
-  Code,
-  Tv,
-  Mic,
-} from "lucide-react";
+import { Trophy, Target, Briefcase, Code, Tv, Mic } from "lucide-react";
 import baniere from "../medias/images/profile/terence-11.jpg";
+import { useTranslation } from "react-i18next";
 
 type HeroSectionProps = {
   currentPage: "sport" | "pro" | "contact" | "profile" | "blog";
 };
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
+  const { t } = useTranslation();
   // Couleur par défaut (pour pages génériques)
   let bgColor = "bg-gray-100 dark:bg-gray-800";
   switch (currentPage) {
@@ -50,16 +45,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
 
         <div className="relative container mx-auto px-6 py-6 text-center">
           <p className="text-xl md:text-2xl mb-6">
-            Athlète Semi-Professionnel • Canoë Slalom & Kayak Cross
+            {t("HeroSection.sporttitle")}
           </p>
           <div className="flex justify-center items-center space-x-6 text-gray-200 dark:text-gray-300">
             <div className="flex items-center space-x-2">
               <Trophy size={20} />
-              <span>Médaillé International</span>
+              <span> {t("HeroSection.sporttxt1")}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Target size={20} />
-              <span>Top 100 Mondial</span>
+              <span> {t("HeroSection.sporttxt2")}</span>
             </div>
           </div>
         </div>
@@ -79,16 +74,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
 
         <div className="relative container mx-auto px-6 py-6 text-center">
           <p className="text-xl md:text-2xl mb-6 text-blue-100 dark:text-blue-200">
-            Ingénieur IT • Développeur Web
+            {t('HeroSection.protitle')}
           </p>
           <div className="flex justify-center items-center space-x-6 text-blue-200 dark:text-blue-300">
             <div className="flex items-center space-x-2">
               <Briefcase size={20} />
-              <span>Expérience Full-Stack</span>
+              <span>{t('HeroSection.protxt1')}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Code size={20} />
-              <span>Projets Cloud & IA</span>
+              <span>{t('HeroSection.protxt2')}</span>
             </div>
           </div>
         </div>
@@ -108,16 +103,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
 
         <div className="relative container mx-auto px-6 py-6 text-center">
           <p className="text-xl md:text-2xl mb-6">
-            Article de presse • TV • Radio • Blog
+            {t('HeroSection.blogtitle')}
           </p>
           <div className="flex justify-center items-center space-x-6 text-gray-200 dark:text-gray-300">
             <div className="flex items-center space-x-2">
               <Tv size={20} />
-              <span>30 min de temps d'écran</span>
+              <span>{t('HeroSection.blogtxt1')}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mic size={20} />
-              <span>Interview</span>
+              <span>{t('HeroSection.blogtxt2')}</span>
             </div>
           </div>
         </div>
@@ -136,13 +131,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
         </div>
 
         <div className="relative container mx-auto px-6 py-6 text-center">
-          <p className="text-2xl md:text-2xl mb-6">
-            Restons en Contact
-          </p>
+          <p className="text-2xl md:text-2xl mb-6">{t('HeroSection.contacttitle')}</p>
           <div className="flex justify-center items-center space-x-6 text-gray-200 dark:text-gray-300">
-            Que ce soit pour une collaboration professionnelle, un partenariat
-            sportif, ou simplement échanger sur nos passions communes, n'hésitez
-            pas à me contacter !
+             {t('HeroSection.contacttxt1')}
           </div>
         </div>
       </section>
@@ -165,15 +156,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
   }
 
   /** ===== Générique ===== */
-  return (
-    <section
-      className={`relative ${bgColor} text-white dark:text-gray-100 h-[10vh] flex items-center justify-center`}
-    >
-      <div className="text-center px-4">
-        <h1 className="text-3xl font-semibold capitalize">{currentPage} Page</h1>
-      </div>
-    </section>
-  );
+  // return (
+  //   <section
+  //     className={`relative ${bgColor} text-white dark:text-gray-100 h-[10vh] flex items-center justify-center`}
+  //   >
+  //     <div className="text-center px-4">
+  //       <h1 className="text-3xl font-semibold capitalize">
+  //         {currentPage} Page
+  //       </h1>
+  //     </div>
+  //   </section>
+  // );
 };
 
 export default HeroSection;

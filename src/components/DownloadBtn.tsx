@@ -210,12 +210,12 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
           {isDownloading ? (
             <>
               <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-              <span>{t("DownloadBtn.downloading", "Téléchargement...")}</span>
+              <span>{t("DownloadBtn.downloading")}</span>
             </>
           ) : (
             <>
               <Download className="w-4 h-4" />
-              <span>{t("DownloadBtn.download", "Télécharger")}</span>
+              <span>{t("DownloadBtn.download")}</span>
             </>
           )}
         </button>

@@ -4,14 +4,14 @@
 
 
 /* https://chatgpt.com/c/68c962c2-9d60-832c-8ab2-cbc4408895db */
-/* 
+
 @theme {
   /*  Font  */
-  /* --font-poppins: "Poppins", "sans-serif";
+  --font-poppins: "Poppins", "sans-serif";
   --font-quattrocento: "Quattrocento Sans", sans-serif;
-  --font-rem: "REM", "sans-serif"; */
+  --font-rem: "REM", "sans-serif"; 
 
-  /* light mode
+  /* light mode*/
   --color-primary: #1483d5;
   --color-bg: #ffffff;
   --color-bg-secondary: #f3f9fd;
@@ -23,9 +23,10 @@
   --color-text: #0d0d0d;
   --color-text-muted: #4d4d4d;
 
-  /* darkmode 
+  /* darkmode */
   --color-primary-dark: #48a7ee;
-  --color-bg-dark: #191919;
+  --color-bg-dark: #191919; 
+  /* sky-950 */
   --color-bg-secondary-dark: #191919;
   --color-bg-light-dark: #262626;
   --color-hover-bg-light-dark: #343434;
@@ -34,7 +35,7 @@
   --color-bg-light-secondary-dark: #262626;
   --color-text-dark: #f2f2f2;
   --color-text-muted-dark: #cccccc;
-} */
+} 
 
 
 

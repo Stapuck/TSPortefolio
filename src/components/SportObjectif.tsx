@@ -42,55 +42,78 @@
 // import { useState, useEffect } from "react";
 import { useState } from "react";
 import { Target, Trophy, Users, Leaf, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
+// // import { sportobjectif_en } from "../medias/databases/index-en";
+// // import { sportobjectif_fr } from "../medias/databases/index-fr";
+
 
 const SportObjectif = () => {
+  const initialLang = document.documentElement.lang || "fr";
   const [currentSlide, setCurrentSlide] = useState(0);
+  const {t} = useTranslation();
 
+  // todo :  mettre dans index global rajouter au mien 
   const objectives = [
     {
       icon: Trophy,
       color: "from-yellow-400 to-orange-500",
       bgColor: "bg-yellow-100",
       iconColor: "text-yellow-600",
-      title: "World Championship 2026",
-      description: "Objectif: Top 10 mondial et qualification pour la finale.",
-      details: "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale"
+      title_fr: "World Championship 2026",
+      title_en: "World Championship 2026",
+      description_fr: "Objectif: Top 10 mondial et qualification pour la finale.",
+      description_en: "Objectif: Top 10 mondial et qualification pour la finale.",
+      details_fr: "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
+      details_en: "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale"
     },
     {
       icon: Users,
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-100",
       iconColor: "text-blue-600",
-      title: "Youth Training Program",
-      description: "Lancer un programme pour former les jeunes kayakistes.",
-      details: "Transmettre ma passion et développer la relève du canoë slalom"
+      title_fr: "Youth Training Program",
+      title_en: "Youth Training Program",
+      description_fr: "Lancer un programme pour former les jeunes kayakistes.",
+      description_en: "Lancer un programme pour former les jeunes kayakistes.",
+      details_fr: "Transmettre ma passion et développer la relève du canoë slalom",
+      details_en: "Transmettre ma passion et développer la relève du canoë slalom"
     },
     {
       icon: Leaf,
       color: "from-green-500 to-emerald-600",
       bgColor: "bg-green-100",
       iconColor: "text-green-600",
-      title: "Eco-friendly Competitions",
-      description: "Participer et promouvoir des événements respectueux de l'environnement.",
-      details: "Allier performance sportive et respect de notre terrain de jeu : la nature"
+      title_fr: "Eco-friendly Competitions",
+      title_en: "Eco-friendly Competitions",
+      description_fr: "Participer et promouvoir des événements respectueux de l'environnement.",
+      description_en: "Participer et promouvoir des événements respectueux de l'environnement.",
+      details_fr: "Allier performance sportive et respect de notre terrain de jeu : la nature",
+      details_en: "Allier performance sportive et respect de notre terrain de jeu : la nature"
     },
     {
       icon: Target,
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-100",
       iconColor: "text-purple-600",
-      title: "Coaching Development",
-      description: "Développer mes compétences d'entraîneur et partager mon expérience.",
-      details: "Former la prochaine génération d'athlètes avec une approche moderne"
+      title_fr: "Coaching Development",
+      title_en: "Coaching Development",
+      description_fr: "Développer mes compétences d'entraîneur et partager mon expérience.",
+      description_en: "Développer mes compétences d'entraîneur et partager mon expérience.",
+      details_fr: "Former la prochaine génération d'athlètes avec une approche moderne",
+      details_en: "Former la prochaine génération d'athlètes avec une approche moderne",
     },
     {
       icon: Trophy,
       color: "from-red-500 to-pink-500",
       bgColor: "bg-red-100",
       iconColor: "text-red-600",
-      title: "African Development",
-      description: "Contribuer au développement du canoë slalom en Afrique.",
-      details: "Ouvrir de nouveaux horizons et démocratiser notre sport"
+      title_fr: "African Development",
+      title_en: "African Development",
+      description_fr: "Contribuer au développement du canoë slalom en Afrique.",
+      description_en: "Contribuer au développement du canoë slalom en Afrique.",
+      details_fr: "Ouvrir de nouveaux horizons et démocratiser notre sport",
+      details_en: "Ouvrir de nouveaux horizons et démocratiser notre sport"
     }
   ];
 
@@ -98,7 +121,7 @@ const SportObjectif = () => {
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentSlide((prev) => (prev + 1) % objectives.length);
-  //   }, 4000);
+  //   }, 6000);
   //   return () => clearInterval(interval);
   // }, [objectives.length]);
 
@@ -122,14 +145,12 @@ const SportObjectif = () => {
   return (
     <section className="py-4 px-6 mb-16">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            Mes Objectifs Sportifs
+            {t('Sport.myobjectif')}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Entre performance individuelle et impact collectif, découvrez mes ambitions 
-            pour les années à venir dans le monde du canoë slalom.
+            {t('Sport.myobjectiftxt')}
           </p>
         </div>
 
@@ -179,19 +200,19 @@ const SportObjectif = () => {
                       <Icon className={`w-8 h-8 ${objective.iconColor}`} />
                     </div>
 
-                    {/* Title */}
+                    {/* title_fr */}
                     <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-gray-900">
-                      {objective.title}
+                      {initialLang === "fr" ? objective.title_fr : objective.title_en}
                     </h3>
 
-                    {/* Description */}
+                    {/* description_fr */}
                     <p className="text-gray-600 mb-4 leading-relaxed">
-                      {objective.description}
+                      {initialLang === "fr" ? objective.description_fr : objective.description_en}
                     </p>
 
                     {/* Details */}
                     <p className="text-sm text-gray-500 italic">
-                      {objective.details}
+                      {initialLang === "fr" ? objective.details_fr : objective.details_en}
                     </p>
 
                     {/* Progress Indicator (decorative) */}

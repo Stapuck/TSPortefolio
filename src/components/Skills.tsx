@@ -29,10 +29,9 @@ export default function Skills({ skills }: SkillsProps) {
         </h2>
         <div className="w-15 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          Découvrez les technologies et outils que j'utilise pour créer des
-          solutions innovantes et performantes. Chaque compétence représente une
-          expertise développée à travers des projets concrets et une formation
-          continue.
+          {t("Pro.skillstxt")}
+
+          
         </p>
       </div>
 
