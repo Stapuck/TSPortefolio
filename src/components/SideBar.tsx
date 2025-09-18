@@ -74,8 +74,8 @@ useEffect(() => {
   return (
     <>
       {/* Sidebar toujours visible pour md+ */}
-      {/* <aside className="hidden lg:flex bg-gray-900 dark:bg-gray-700 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"> */}
-      <aside className="hidden lg:flex bg-gray-900 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3">
+      {/* todo : revoir darkmode  */}
+      <aside className="hidden lg:flex  bg-gray-900 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3">
         <nav className="flex flex-col gap-6">
           {links.map((link) => (
             <Link

@@ -138,11 +138,11 @@ const Projects = () => {
   return (
     <section className="w-full max-w-6xl mx-auto p-4">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-slate-100">
           {t("Pro.project")}
         </h2>
         <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed dark:text-slate-200">
           {t("Pro.projecttxt")}
         </p>
       </div>
@@ -156,8 +156,8 @@ const Projects = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? "bg-blue-600 text-white shadow-lg transform scale-105"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md"
+                  ? "bg-blue-600 dark:bg-sky-800 text-white shadow-lg transform scale-105"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-sky-950 dark:text-gray-200 dark:hover:bg-sky-600 hover:shadow-md"
               }`}
             >
               {category.label}
@@ -171,7 +171,7 @@ const Projects = () => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+            className="group bg-white dark:bg-sky-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-500 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             {/* Image */}
@@ -187,8 +187,8 @@ const Projects = () => {
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-medium ${
                     project.domain === "pro"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-purple-100 text-purple-700"
+                      ? "bg-green-100 text-green-700 dark:bg-green-300   dark:text-green-900"
+                      : "bg-purple-100 text-purple-700 dark:bg-purple-300   dark:text-purple-900"
                   }`}
                 >
                   {project.domain === "pro" ? "Professionnel" : "Personnel"}
@@ -247,15 +247,15 @@ const Projects = () => {
 
             {/* Contenu */}
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 dark:text-gray-200 dark:group-hover:text-gray-900 transition-colors">
                 {initialLang === "fr" ? project.title_fr : project.title_en}
               </h3>
 
-              <p className="text-sm text-blue-600 font-medium mb-3">
+              <p className="text-sm text-blue-600 dark:text-slate-300 font-medium mb-3">
                 {initialLang === "fr" ? project.subject_fr : project.subject_en}
               </p>
 
-              <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+              <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">
                 {initialLang === "fr" ? project.description_fr : project.description_en}
               </p>
 
@@ -264,13 +264,13 @@ const Projects = () => {
                 {project.technologies.slice(0, 4).map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium"
+                    className="px-2 py-1 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-slate-200 text-xs rounded-lg font-medium"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.technologies.length > 4 && (
-                  <span className="px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded-lg font-medium">
+                  <span className="px-2 py-1 bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-slate-100 text-xs rounded-lg font-medium">
                     +{project.technologies.length - 4}
                   </span>
                 )}
@@ -283,9 +283,9 @@ const Projects = () => {
       {/* Message si aucun projet */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-12">
-          <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-20 h-20 bg-gray-100 dark:bg-sky-800 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
-              className="w-8 h-8 text-gray-400"
+              className="w-8 h-8 text-gray-400 dark:text-gray-800 "
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -298,43 +298,43 @@ const Projects = () => {
               />
             </svg>
           </div>
-          <p className="text-gray-500">
+          <p className="text-gray-500 dark:text-gray-200">
             {t('Pro.noproject')}
           </p>
         </div>
       )}
 
       {/* Statistiques des projets */}
-      <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 md:p-8">
+      <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-sky-700 dark:via-sky-800 dark:to-sky-700 rounded-2xl p-6 md:p-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-300 mb-2">
               {projects.length}
             </div>
-            <div className="text-sm text-gray-600 font-medium">
+            <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
               {t('Pro.projectnumber')}
               
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-green-600 dark:text-slate-300  mb-2">
               {projects.filter((p) => p.domain === "pro").length}
             </div>
-            <div className="text-sm text-gray-600 font-medium">
+            <div className="text-sm text-gray-600 dark:text-gray-400  font-medium">
               {t('Pro.projectpro')}s
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-slate-300  mb-2">
               {projects.filter((p) => p.domain === "perso").length}
             </div>
-            <div className="text-sm text-gray-600 font-medium">{t('Pro.projectperso')}s</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400  font-medium">{t('Pro.projectperso')}s</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-slate-300  mb-2">
               {projects.filter((p) => p.featured).length}
             </div>
-            <div className="text-sm text-gray-600 font-medium">
+            <div className="text-sm text-gray-600 dark:text-gray-400  font-medium">
                {t('Pro.featuredstat')}
             </div>
           </div>

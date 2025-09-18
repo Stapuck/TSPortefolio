@@ -1,13 +1,11 @@
 // // import { sportobjectif_en } from "../medias/databases/index-en";
 // // import { sportobjectif_fr } from "../medias/databases/index-fr";
 
-
 // const SportObjectif = () => {
 // // const initialLang = document.documentElement.lang || "fr";
 
 // // const sportobjectif = (initialLang === "fr" ? sportobjectif_fr : sportobjectif_en)
-// //  
-
+// //
 
 // return (
 //     <div className="grid md:grid-cols-3 gap-6 mt-6">
@@ -41,19 +39,25 @@
 
 // import { useState, useEffect } from "react";
 import { useState } from "react";
-import { Target, Trophy, Users, Leaf, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Target,
+  Trophy,
+  Users,
+  Leaf,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 // // import { sportobjectif_en } from "../medias/databases/index-en";
 // // import { sportobjectif_fr } from "../medias/databases/index-fr";
 
-
 const SportObjectif = () => {
   const initialLang = document.documentElement.lang || "fr";
   const [currentSlide, setCurrentSlide] = useState(0);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
-  // todo :  mettre dans index global rajouter au mien 
+  // todo :  mettre dans index global rajouter au mien
   const objectives = [
     {
       icon: Trophy,
@@ -62,10 +66,14 @@ const SportObjectif = () => {
       iconColor: "text-yellow-600",
       title_fr: "World Championship 2026",
       title_en: "World Championship 2026",
-      description_fr: "Objectif: Top 10 mondial et qualification pour la finale.",
-      description_en: "Objectif: Top 10 mondial et qualification pour la finale.",
-      details_fr: "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
-      details_en: "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale"
+      description_fr:
+        "Objectif: Top 10 mondial et qualification pour la finale.",
+      description_en:
+        "Objectif: Top 10 mondial et qualification pour la finale.",
+      details_fr:
+        "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
+      details_en:
+        "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
     },
     {
       icon: Users,
@@ -76,8 +84,10 @@ const SportObjectif = () => {
       title_en: "Youth Training Program",
       description_fr: "Lancer un programme pour former les jeunes kayakistes.",
       description_en: "Lancer un programme pour former les jeunes kayakistes.",
-      details_fr: "Transmettre ma passion et développer la relève du canoë slalom",
-      details_en: "Transmettre ma passion et développer la relève du canoë slalom"
+      details_fr:
+        "Transmettre ma passion et développer la relève du canoë slalom",
+      details_en:
+        "Transmettre ma passion et développer la relève du canoë slalom",
     },
     {
       icon: Leaf,
@@ -86,10 +96,14 @@ const SportObjectif = () => {
       iconColor: "text-green-600",
       title_fr: "Eco-friendly Competitions",
       title_en: "Eco-friendly Competitions",
-      description_fr: "Participer et promouvoir des événements respectueux de l'environnement.",
-      description_en: "Participer et promouvoir des événements respectueux de l'environnement.",
-      details_fr: "Allier performance sportive et respect de notre terrain de jeu : la nature",
-      details_en: "Allier performance sportive et respect de notre terrain de jeu : la nature"
+      description_fr:
+        "Participer et promouvoir des événements respectueux de l'environnement.",
+      description_en:
+        "Participer et promouvoir des événements respectueux de l'environnement.",
+      details_fr:
+        "Allier performance sportive et respect de notre terrain de jeu : la nature",
+      details_en:
+        "Allier performance sportive et respect de notre terrain de jeu : la nature",
     },
     {
       icon: Target,
@@ -98,10 +112,14 @@ const SportObjectif = () => {
       iconColor: "text-purple-600",
       title_fr: "Coaching Development",
       title_en: "Coaching Development",
-      description_fr: "Développer mes compétences d'entraîneur et partager mon expérience.",
-      description_en: "Développer mes compétences d'entraîneur et partager mon expérience.",
-      details_fr: "Former la prochaine génération d'athlètes avec une approche moderne",
-      details_en: "Former la prochaine génération d'athlètes avec une approche moderne",
+      description_fr:
+        "Développer mes compétences d'entraîneur et partager mon expérience.",
+      description_en:
+        "Développer mes compétences d'entraîneur et partager mon expérience.",
+      details_fr:
+        "Former la prochaine génération d'athlètes avec une approche moderne",
+      details_en:
+        "Former la prochaine génération d'athlètes avec une approche moderne",
     },
     {
       icon: Trophy,
@@ -113,8 +131,8 @@ const SportObjectif = () => {
       description_fr: "Contribuer au développement du canoë slalom en Afrique.",
       description_en: "Contribuer au développement du canoë slalom en Afrique.",
       details_fr: "Ouvrir de nouveaux horizons et démocratiser notre sport",
-      details_en: "Ouvrir de nouveaux horizons et démocratiser notre sport"
-    }
+      details_en: "Ouvrir de nouveaux horizons et démocratiser notre sport",
+    },
   ];
 
   // Auto-rotate slides
@@ -130,7 +148,9 @@ const SportObjectif = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + objectives.length) % objectives.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + objectives.length) % objectives.length
+    );
   };
 
   const getVisibleObjectives = () => {
@@ -146,11 +166,13 @@ const SportObjectif = () => {
     <section className="py-4 px-6 mb-16">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            {t('Sport.myobjectif')}
+          <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
+            {t("Sport.myobjectif")}
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            {t('Sport.myobjectiftxt')}
+          <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+
+          <p className="text-gray-600 max-w-2xl mx-auto dark:text-slate-300">
+            {t("Sport.myobjectiftxt")}
           </p>
         </div>
 
@@ -178,49 +200,57 @@ const SportObjectif = () => {
             {getVisibleObjectives().map((objective, displayIndex) => {
               const Icon = objective.icon;
               const isCenter = displayIndex === 1;
-              
+
               return (
                 <div
                   key={objective.index}
                   className={`group relative overflow-hidden transition-all duration-500 ${
-                    isCenter 
-                      ? 'transform scale-105 z-10' 
-                      : 'transform scale-95 opacity-75 hover:opacity-100'
+                    isCenter
+                      ? "transform scale-105 z-10"
+                      : "transform scale-95 opacity-75 hover:opacity-100"
                   }`}
                 >
                   {/* Gradient Background */}
-                  <div 
+                  <div
                     className={`absolute inset-0 bg-gradient-to-br ${objective.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                   />
-                  
+
                   {/* Card Content */}
                   <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
                     {/* Icon */}
-                    <div className={`inline-flex p-4 ${objective.bgColor} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`inline-flex p-4 ${objective.bgColor} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
                       <Icon className={`w-8 h-8 ${objective.iconColor}`} />
                     </div>
 
                     {/* title_fr */}
                     <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-gray-900">
-                      {initialLang === "fr" ? objective.title_fr : objective.title_en}
+                      {initialLang === "fr"
+                        ? objective.title_fr
+                        : objective.title_en}
                     </h3>
 
                     {/* description_fr */}
                     <p className="text-gray-600 mb-4 leading-relaxed">
-                      {initialLang === "fr" ? objective.description_fr : objective.description_en}
+                      {initialLang === "fr"
+                        ? objective.description_fr
+                        : objective.description_en}
                     </p>
 
                     {/* Details */}
                     <p className="text-sm text-gray-500 italic">
-                      {initialLang === "fr" ? objective.details_fr : objective.details_en}
+                      {initialLang === "fr"
+                        ? objective.details_fr
+                        : objective.details_en}
                     </p>
 
                     {/* Progress Indicator (decorative) */}
                     <div className="mt-6">
                       <div className="w-full bg-gray-200 rounded-full h-1">
-                        <div 
+                        <div
                           className={`bg-gradient-to-r ${objective.color} h-1 rounded-full transition-all duration-1000 ease-out`}
-                          style={{ width: isCenter ? '75%' : '45%' }}
+                          style={{ width: isCenter ? "75%" : "45%" }}
                         />
                       </div>
                     </div>
@@ -237,9 +267,9 @@ const SportObjectif = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-blue-600 scale-110' 
-                    : 'bg-gray-300 hover:bg-gray-400'
+                  index === currentSlide
+                    ? "bg-blue-600 scale-110"
+                    : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Aller à l'objectif ${index + 1}`}
               />

@@ -41,12 +41,16 @@
     "faqtxt": "Découvrez les réponses aux questions les plus courantes",
     "french": "Français",
     "english": "Anglais",
-    "years": "ans"
+    "years": "ans",
+    "citation" : "« Discipline, curiosité et persévérance guident chacun de mes projets.»"
   },
 
   "Sport": {
     "sport_welcome": " Bienvenue sur la page sport",
     "join": "Déja dans l'aventure : ",
+    "calendarandevent":"Calendrier et Événements",
+    "calendartxt":"Explorez mon calendrier sportif et professionnel de manière interactive. Cliquez sur un événement pour plus de détails.",
+    "legend":"Légende",
     "budget": {
       "helmet": "Casque",
       "c1paddle": "pagaie de canoë",
@@ -57,9 +61,9 @@
       "slalomboat": "bateau de slalom",
       "kayakcrossboat": "bateau de kayak cross",
       "racerst": "Jupe Kway de course",
-      "seasonbudget": "💰 Budget de saison",
+      "seasonbudget": "Budget de saison",
       "training&race": "Stages & Compétitions",
-      "sum&info": "📊 Récapitulatif & Infos",
+      "sum&info": "Récapitulatif & Infos",
       "equippement": "Équipement",
       "travel": "Déplacement",
       "totalglo": "Budget Global :",
@@ -94,12 +98,12 @@
       "dailytxt": "Loyer, Course, Essence, ..."
     },
 
-    "projet&objectif": "🎯 Projets & Objectifs",
-    "incomingevent": "📅 Événements à venir !",
+    "projet&objectif": "Projets & Objectifs",
+    "incomingevent": "Événements à venir !",
     "calendarreduce": "Réduire le calendrier",
     "calendargrowth": "Agrandir le calendrier",
-    "career": "🏆 Palmarès & Carrière",
-    "moreinfo": "📂 Pour plus d'informations",
+    "career": "Palmarès & Carrière",
+    "moreinfo": "Pour plus d'informations",
     "moreinfotxt": "Téléchargez mes fichiers budget et sponsoring pour tout savoir :",
     "budgetsimple": "Budget",
     "sponsor": "sponsoring",
@@ -212,8 +216,10 @@
   },
 
   "NotFound": {
+    "title" : "Page introuvable",
     "oups": "Oups 😅 Vous pagayez dans une zone inconnue du web.",
-    "retour": "Retour à l’accueil"
+    "retour": "Retour à l’accueil", 
+    "or":"Ou explorez directement"
   },
 
   "HeroSection": {
@@ -284,7 +290,7 @@
     "noteTitle": "Information",
     "noteText": "Les documents sont automatiquement téléchargés dans la langue sélectionnée sur le site.",
     "cvdescription": "Mon curriculum vitae complet",
-    "budgetdescription": "Détail budgétaire du projet",
+    "budgetdescription": "Détail budgétaire ",
     "sponsordescription": "Dossier de sponsoring",
     "title": "Téléchargements",
     "description": "Découvrez mes documents officiels et informations détaillées"

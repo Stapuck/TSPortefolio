@@ -37,35 +37,44 @@ export default function Sport() {
 
         <section id="calendar" className="space-y-4">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">
-              Calendrier et Événements
+            <h2 className="text-3xl font-bold text-gray-800 mb-2 dark:text-white">
+              {t("Sport.calendarandevent")}
             </h2>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Explorez mon calendrier sportif et professionnel de manière
-              interactive. Cliquez sur un événement pour plus de détails.
+            <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+
+            <p className="text-gray-600 max-w-xl mx-auto dark:text-slate-300">
+              {t("Sport.calendartxt")}
             </p>
           </div>
 
           {/* Legend */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
             <h4 className="text-sm font-semibold text-gray-700 mb-4">
-              Légende
+              {t("Sport.legend")}
             </h4>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-4">
               {[
-                { type: "worldcup", color: "#F59E0B", label: "Coupe du Monde" },
+                {
+                  type: "worldcup",
+                  color: "#F59E0B",
+                  label: t("Calendar.worldcup"),
+                },
                 {
                   type: "worldchamp",
                   color: "#8B5CF6",
-                  label: "Championnat du Monde",
+                  label: t("Calendar.worldchamp"),
                 },
                 {
                   type: "national",
                   color: "#3B82F6",
-                  label: "Course Nationale",
+                  label: t("Calendar.national"),
                 },
-                { type: "training", color: "#10B981", label: "Stage" },
-                { type: "pro", color: "#6B7280", label: "Professionnel" },
+                {
+                  type: "training",
+                  color: "#10B981",
+                  label: t("Calendar.training"),
+                },
+                { type: "pro", color: "#6B7280", label: t("Calendar.pro") },
               ].map((item) => (
                 <div key={item.type} className="flex items-center gap-3">
                   <div
@@ -98,13 +107,30 @@ export default function Sport() {
         </section>
 
         {/* Palmarès / Carrière */}
-        <section className="space-y-8">
-          <h2 className="text-3xl font-bold text-center dark:text-white">
+        <section className="">
+        {/* <section className="space-y-8"> */}
+          <h2 className="text-3xl font-bold text-center dark:text-white mb-2">
             {t("Sport.career")}
           </h2>
+          <div className="w-50 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <AchievementRanking />
         </section>
+
+        {/* Header */}
+        <section>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+            {t("Sport.budget.seasonbudget")}
+          </h2>
+          <div className="w-50 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+
+          <p className="text-gray-600 dark:text-gray-200 mb-3">
+            {t('Sport.budget.intro')}
+          </p>
+        </div>
         <BudgetMaterial />
+        </section>
         <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
           {t("Sport.moreinfo")}
         </h3>

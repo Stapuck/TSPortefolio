@@ -1,9 +1,8 @@
-// import
+// import global avec index.ts
 
 import {
+  //skills
   css,
-  // docker,
-  // figma,
   git,
   html,
   javascript,
@@ -14,8 +13,53 @@ import {
   tailwind,
   typescript,
   backend,
-  // threejs,
   github,
+
+  //image, next_event pour countdown  :
+
+  //articles
+  photo1,
+  photo2,
+  photo3,
+  photo4,
+  photo5,
+  photo6,
+  photo7,
+  photo8,
+  photo9,
+  photo10,
+  photo11,
+  photo12,
+  photo13,
+  photo14,
+  photo15,
+  photo16,
+  photo17,
+  photo18,
+  photo19,
+  photo20,
+  photo21,
+  photo22,
+  photo23,
+  photo24,
+  photo25,
+  photo26,
+  photo27,
+  photo28,
+  photo29,
+  photo30,
+  photo31,
+  photo32,
+  photo33,
+  photo34,
+  photo35,
+  photo36,
+  photo37,
+  photo38,
+
+  //blog
+
+  //other
 } from "../../medias";
 
 // Next_date
@@ -36,115 +80,21 @@ export interface EventType {
   type_event_fr?: string;
 }
 
-//todo : retrouver toutes les courses,
 //  todo : mettre la semaine à Prague et tacen de cette année.
+// revoir les dates de coupe du monde si mettre lundi ou si rajouter stage d'entrainement à chaque fois ?
+// revoir les liens
+// revoir pour les info starts, bibs, ...
+//revoir telecharger image d'event
 export const next_date: EventType[] = [
-  {
-    date: "July 05, 2026 12:00",
-    date_fin: "July 07, 2026 18:00",
-    lieu_fr: "Liptovsky Mikulas, Slovaquie",
-    lieu_en: "Liptovsky Mikulas, Slovakia",
-    event_en: "WorldChampionship U23",
-    event_fr: "Championnat du monde U23",
-    link_result: "link",
-    link_video: "link",
-    bibs: "18",
-    start: "12h15",
-    type: "pro",
-    type_event_en: "exam",
-    type_event_fr: "examen",
-    photobg:
-      "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
-  },
-  {
-    lieu_fr: "Ivrea, Italie",
-    lieu_en: "Ivrea, Italy",
-    date: "October 11, 2025 12:00",
-    date_fin: "October 17, 2025 18:00",
-    event_en: "WC",
-    event_fr: "Coupe du monde",
-    link_result: "link",
-    link_video: "link",
-    bibs: "18",
-    start: "12h15",
-    type: "sport",
-    type_event_en: "worldcup",
-    type_event_fr: "coupe du monde",
-
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-  {
-    lieu_fr: "Seu d'Urgell, Espagne",
-    lieu_en: "Seu d'Urgell, Spain",
-    date: "September 19, 2024 12:00",
-    date_fin: "September 27, 2024 18:00",
-    event_en: "WC",
-    event_fr: "Coupe du monde",
-    link_result: "link1",
-    link_video: "link2",
-    bibs: "18",
-    start: "12h15",
-    type: "sport",
-    type_event_en: "worldcup",
-    type_event_fr: "coupe du monde",
-
-    photobg:
-      "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
-  },
-  {
-    lieu_fr: "Paris, France",
-    lieu_en: "Paris, France",
-    date: "September 06, 2025  20:00",
-    date_fin: "September 08, 2025 08:37",
-    event_en: "World Cup Final",
-    event_fr: "Final du circuit coupe du monde",
-    link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2025/results",
-    link_video:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    bibs: "18",
-    start: "12h15",
-    type: "sport",
-    type_event_en: "worldchamp",
-    type_event_fr: "championnat du monde",
-
-    photobg:
-      "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
-  },
   {
     lieu_fr: "Penrith, Australie",
     lieu_en: "Penrith, Australia",
-    date: "September 21, 2025  08:15",
+    date: "September 25, 2025  08:15",
     date_fin: "October 03, 2025 16:05",
-    event_en: "world championship Senior 2026",
-    event_fr: "Championnat du monde senior 2026",
+    event_en: "world championship Senior 2025",
+    event_fr: "Championnat du monde senior 2025",
     link_result:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    link_video:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    bibs: "11",
-    start: "11",
-    type: "sport",
-    type_event_en: "worldchamp",
-    type_event_fr: "championnat du monde",
-
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-  {
-    lieu_fr: "Augsburg, Allemagne",
-    lieu_en: "Augsburg, Germany",
-    date: "January 15, 2026  21:01",
-    date_fin: "January 17, 2026 16:05",
-    event_en: "World Cup Final test",
-    event_fr: "Final du circuit coupe du monde test",
-    link_result:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    link_video:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    bibs: "19",
-    start: "11h49",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/sydney-2025/results",
     type: "sport",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
@@ -159,24 +109,21 @@ export const next_date: EventType[] = [
     date_fin: "September 20, 2025 21:00",
     event_en: "Pula semi Marathon",
     event_fr: "Semi Marathon de Pula",
-    type: "pro",
+    type: "other",
     type_event_en: "Course",
     type_event_fr: "Race",
 
     photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
   },
   {
     lieu_fr: "Pula, Croatie",
     lieu_en: "Pula, Croatia",
+    // todo changer date
     date: "November 17, 2025 16:00",
     date_fin: "November 23, 2025 18:00",
     event_en: " Pula Internship",
     event_fr: " stage Pula",
-    link_result: "link",
-    link_video: "link",
-    bibs: " 18",
-    start: "12h15",
     type: "pro",
     type_event_en: "internship",
     type_event_fr: "stage",
@@ -185,31 +132,12 @@ export const next_date: EventType[] = [
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
   {
-    lieu_fr: "Cesi, Pau",
-    lieu_en: "Cesi, Pau",
-    date: "March 05, 2026 16:00",
-    date_fin: "March 05, 2026 18:00",
-    event_en: "Graduation",
-    event_fr: "diplome d'ingénieur",
-    bibs: "00",
-    start: "12h15",
-    type: "sport",
-    type_event_en: "national",
-    type_event_fr: "course national",
-
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-
-  {
-    lieu_fr: "test world cup, Pau",
-    lieu_en: "test world cup, Pau",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
     date: "September 12, 2026 16:00",
     date_fin: "September 13, 2026 18:00",
     event_en: "Graduation",
     event_fr: "diplome d'ingénieur",
-    bibs: "00",
-    start: "12h15",
     type: "pro",
     type_event_en: "graduation",
     type_event_fr: "diplome",
@@ -217,147 +145,598 @@ export const next_date: EventType[] = [
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
-
   {
-    lieu_fr: "Stage, Pau",
-    lieu_en: "Stage, Pau",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
     date: "April 25, 2026 16:00",
     date_fin: "April 30, 2026 18:00",
     event_en: "training camp",
     event_fr: "stage entrainement",
-    link_result: "",
-    link_video: "",
-    bibs: "",
-    start: "",
+    type: "sport",
+    type_event_en: "training",
+    type_event_fr: "entrainement",
+    photobg:
+      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+  },
+  {
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Praha, czech Republic",
+    date: "August 17, 2025  19:00",
+    date_fin: "August 25, 2025 16:00",
+    event_en: "training camp",
+    event_fr: "Camp d'entrainement",
     type: "sport",
     type_event_en: "training",
     type_event_fr: "entrainement",
 
     photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
+  },
+  //  ranger au dessus apres
+  // todo : revoir les quelque probleme de type et rajouter les autres caractéristique // revoir les liens
+  // YOG et YAG type = other à faire
+
+  // 2026
+  {
+    date: "September 11, 2026 08:00",
+    date_fin: "September 13, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'Urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2026 ICF Canoe Slalom World Cup Final La Seu",
+    event_fr: "Coupe du Monde Final 2026 à La Seu",
+    link_result:
+      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-final-la-seu",
+    type_event_en: "worldcup",
+    type_event_fr: "Coupe du monde",
+  },
+  {
+    date: "September 04, 2026 08:00",
+    date_fin: "September 09, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Paris, France",
+    lieu_en: "Paris, France",
+    event_en: "2026 ICF Canoe Slalom World Cup Vaires-sur-Marne",
+    event_fr: "Coupe du monde 4 à Vaires-sur-Marne",
+    link_result:
+      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-vaires-sur-marne",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 21, 2026 08:00",
+    date_fin: "July 26, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Oklahoma City, USA",
+    lieu_en: "Oklahoma City, USA",
+    event_en: "2026 ICF Canoe Slalom World Championships Senior",
+    event_fr: "Championnat du monde Sénior 2026",
+    link_result:
+      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 12, 2026 08:00",
+    date_fin: "June 14, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Augsburg, Allemagne",
+    lieu_en: "Augsburg, Germany",
+    event_en: "2026 ICF Canoe Slalom World Cup Augsburg",
+    event_fr: "Coupe du monde 3 à Augsburg",
+    link_result:
+      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-augsburg",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 05, 2026 08:00",
+    date_fin: "June 07, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Prague, Czech Republic",
+    event_en: "2026 ICF Canoe Slalom World Cup Prague",
+    event_fr: "Coupe du monde 2 à Prague",
+    link_result:
+      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-prague",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "May 29, 2026 08:00",
+    date_fin: "May 31, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2026 ICF Canoe Slalom World Cup Tacen",
+    event_fr: "Coupe du monde 1 à Tacen",
+    link_result:
+      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-tacen",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
   },
 
+  // 2025
   {
-    lieu_fr: "test1, Pau",
-    lieu_en: "test1, Pau",
-    date: "April 20, 2026 16:00",
-    date_fin: "April 21, 2026 18:00",
-    event_en: "Graduation",
-    event_fr: "diplome d'ingénieur",
-    link_result: "link",
-    link_video: "link",
-    bibs: "00",
-    start: "12h15",
+    date: "August 29, 2025 08:00",
+    date_fin: "August 31, 2025 18:00",
     type: "sport",
-    type_event_en: "national",
-    type_event_fr: "course national",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2025 ICF Canoe Slalom World Cup Tacen",
+    event_fr: "4e Coupe du monde 2025",
+    link_result:
+      "https://www.canoeicf.com/2025-icf-canoe-slalom-world-cup-tacen",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 08, 2025 08:00",
+    date_fin: "July 13, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Foix, France",
+    lieu_en: "Foix, France",
+    event_en: "2025 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde U23 2026",
+    link_result:
+      "https://www.canoeicf.com/2025-icf-junior-u23-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 13, 2025 08:00",
+    date_fin: "June 15, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2025 ICF Canoe Slalom World Cup Pau",
+    event_fr: "2e Coupe du monde 2025",
+    link_result: "https://www.canoeicf.com/2025-icf-canoe-slalom-world-cup-pau",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 06, 2025 08:00",
+    date_fin: "June 08, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "African Reference Race",
+    event_fr: "Course Africaine de Référence ",
+    link_result: "https://www.canoeicf.com/african-reference-race",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+    // todo : revoir pour type_event continental
+  },
+  {
+    date: "June 06, 2025 08:00",
+    date_fin: "June 08, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2025 ICF Canoe Slalom World Cup La Seu",
+    event_fr: "1er Coupe du monde 2025",
+    link_result:
+      "https://www.canoeicf.com/2025-icf-canoe-slalom-world-cup-la-seu",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
 
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+  // 2024
+  {
+    date: "September 19, 2024 08:00",
+    date_fin: "September 22, 2024 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2024 ICF Canoe Slalom World Cup Final La Seu",
+    event_fr: "Final du circuit coupe du monde 2024",
+    link_result:
+      "https://www.canoeicf.com/2024-icf-canoe-slalom-world-cup-final-la-seu",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "September 12, 2024 08:00",
+    date_fin: "September 15, 2024 18:00",
+    type: "sport",
+    lieu_fr: "Ivréa, Italie",
+    lieu_en: "Ivrea, Italy",
+    event_en: "2024 ICF Canoe Slalom World Cup Ivrea",
+    event_fr: "4e Coupe du monde 2024",
+    link_result:
+      "https://www.canoeicf.com/2024-icf-canoe-slalom-world-cup-ivrea",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 02, 2024 08:00",
+    date_fin: "July 07, 2024 18:00",
+    type: "sport",
+    lieu_fr: "Liptovsky Mikulas, Slovaquie",
+    lieu_en: "Liptovsky Mikulas, Slovakia",
+    event_en: "2024 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde U23 2024",
+    link_result:
+      "https://www.canoeicf.com/2024-icf-junior-u23-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "February 09, 2024 08:00",
+    date_fin: "February 11, 2024 18:00",
+    type: "sport",
+    lieu_fr: " Île de la Reunion, France",
+    lieu_en: "Reunion Island, France",
+    event_en: "Olympic Qualifier",
+    event_fr: "Championnat d'Afrique &Qualification Olympique",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+  },
+  // 2023
+  {
+    date: "September 19, 2023 08:00",
+    date_fin: "September 24, 2023 18:00",
+    type: "sport",
+    lieu_fr: "Londre, Angleterre",
+    lieu_en: "London, England",
+    event_en: "2023 ICF Canoe Slalom World Championships",
+    event_fr: "Championnat du Monde 2023",
+    link_result:
+      "https://www.canoeicf.com/2023-icf-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "August 31, 2023 08:00",
+    date_fin: "September 03, 2023 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2023 ICF Canoe Slalom World Cup La Seu",
+    event_fr: "4e Coupe du monde 2023",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-d-urgell-2023",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "August 15, 2023 08:00",
+    date_fin: "August 20, 2023 18:00",
+    type: "sport",
+    lieu_fr: "Cracovie, Pologne",
+    lieu_en: "Krakow, Poland",
+    event_en: "2023 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2023",
+    link_result:
+      "https://www.canoeicf.com/2023-icf-junior-u23-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  // 2022
+  {
+    date: "August 26, 2022 08:00",
+    date_fin: "August 28, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2022 ICF Canoe Slalom World Cup Pau",
+    event_fr: "3e Coupe du Monde 2022",
+    link_result: "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-pau",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "September 02, 2022 08:00",
+    date_fin: "September 04, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2022 ICF Canoe Slalom World Cup Final La Seu",
+    event_fr: "Final du circuit Coupe du monde 2022",
+    link_result:
+      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-final-la-seu",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 26, 2022 08:00",
+    date_fin: "July 31, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Augsburg, Allemagne",
+    lieu_en: "Augsburg, Germany",
+    event_en: "2022 ICF Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Sénior 2022",
+    link_result:
+      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "July 05, 2022 08:00",
+    date_fin: "July 07, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Ivréa, Italie",
+    lieu_en: "Ivrea, Italy",
+    event_en: "2022 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2022",
+    link_result:
+      "https://www.canoeicf.com/2022-icf-junior-u23-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 17, 2022 08:00",
+    date_fin: "June 19, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Cracovie, Pologne",
+    lieu_en: "Krakow, Poland",
+    event_en: "2022 ICF Canoe Slalom World Cup Krakow",
+    event_fr: "2e Coupe du monde 2022",
+    link_result:
+      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-krakow",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 10, 2022 08:00",
+    date_fin: "June 12, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Prague, Czech Republic",
+    event_en: "2022 ICF Canoe Slalom World Cup Prague",
+    event_fr: "1er Coupe du monde 2022",
+    link_result:
+      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-prague",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  // 2021
+  {
+    date: "September 10, 2021 08:00",
+    date_fin: "September 12, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2021 ICF Canoe Slalom World Cup Final Pau",
+    event_fr: "Final du circuit Coupe du monde 2021",
+    link_result:
+      "https://www.canoeicf.com/2021-icf-canoe-slalom-world-cup-final-pau",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "September 03, 2021 08:00",
+    date_fin: "September 05, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2021 ICF Canoe Slalom World Cup La Seu",
+    event_fr: "4e Coupe du monde 2021",
+    link_result:
+      "https://www.canoeicf.com/2021-icf-canoe-slalom-world-cup-la-seu",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 20, 2021 08:00",
+    date_fin: "June 25, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Bourg saint maurice, France",
+    lieu_en: "Bourg-Saint-Maurice, France",
+    event_en: "French Championship",
+    event_fr: "Championnat de France 2021",
+    type_event_en: "national",
+    type_event_fr: "national",
+  },
+  {
+    date: "July 06, 2021 08:00",
+    date_fin: "July 11, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2021 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2021",
+    link_result:
+      "https://www.canoeicf.com/2021-icf-junior-u23-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 11, 2021 08:00",
+    date_fin: "June 13, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Prague, Czech Republic",
+    event_en: "2021 ICF Canoe Slalom World Cup Prague",
+    event_fr: "3e Coupe du Monde 2021",
+    link_result:
+      "https://www.canoeicf.com/2021-icf-canoe-slalom-world-cup-prague",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  // 2020
+  {
+    date: "November 06, 2020 08:00",
+    date_fin: "November 08, 2020 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2020 ICF Canoe Slalom World Cup Pau",
+    event_fr: "2e Coupe du monde 2020",
+    link_result: "https://www.canoeicf.com/2020-icf-canoe-slalom-world-cup-pau",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "August 23, 2020 08:00",
+    date_fin: "August 27, 2020 18:00",
+    type: "sport",
+    lieu_fr: "Argentiere, France",
+    lieu_en: "Argentiere, France",
+    event_en: "French Championship",
+    event_fr: "Championnat de France",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+  },
+
+  // 2019
+  {
+    date: "October 25, 2019 08:00",
+    date_fin: "October 27, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Tokyo, Japon",
+    lieu_en: "Tokyo, Japan",
+    event_en: "2019 Canoe Slalom Olympic Test Event",
+    event_fr: "Evenement test pour les JO 2020",
+    link_result:
+      "https://www.canoeicf.com/2019-canoe-slalom-olympic-test-event",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+  },
+  {
+    date: "October 18, 2019 08:00",
+    date_fin: "October 20, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Tokyo, Japon",
+    lieu_en: "Tokyo, Japan",
+    event_en: "NHK Cup",
+    event_fr: "Coupe NHK",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+  },
+  {
+    date: "September 25, 2019 08:00",
+    date_fin: "September 27, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2019 ICF Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Sénior 2019",
+    link_result:
+      "https://www.canoeicf.com/2019-icf-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "July 16, 2019 08:00",
+    date_fin: "July 21, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Cracovie, Pologne",
+    lieu_en: "Krakow, Poland",
+    event_en: "2019 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde junior & U23 2019",
+    link_result:
+      "https://www.canoeicf.com/2019-icf-junior-u23-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 28, 2019 08:00",
+    date_fin: "June 30, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2019 ICF Canoe Slalom World Cup 3",
+    event_fr: "3e Coupe du monde 2019",
+    link_result: "https://www.canoeicf.com/2019-icf-canoe-slalom-world-cup-3",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 21, 2019 08:00",
+    date_fin: "June 23, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Bratislava, Slovaquie",
+    lieu_en: "Bratislava, Slovakia",
+    event_en: "2019 ICF Canoe Slalom World Cup 2",
+    event_fr: "2e Coupe du monde 2019",
+    link_result: "https://www.canoeicf.com/2019-icf-canoe-slalom-world-cup-2",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 14, 2019 08:00",
+    date_fin: "June 16, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Londre, Angleterre",
+    lieu_en: "London, England",
+    event_en: "2019 ICF Canoe Slalom World Cup 1",
+    event_fr: "1er Coupe du monde 2019",
+    link_result: "https://www.canoeicf.com/2019-icf-canoe-slalom-world-cup-1",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  // 2018
+  {
+    date: "October 12, 2018 08:00",
+    date_fin: "October 13, 2018 18:00",
+    type: "sport",
+    lieu_fr: "Buenos Aires, Argentine",
+    lieu_en: "Buenos Aires, Argentina",
+    event_en: "2018 Youth Olympic Games - Canoe Sprint & Slalom",
+    event_fr: "Jeux Olympique de la jeunesse CEL et SL",
+    link_result:
+      "https://www.canoeicf.com/2018-youth-olympic-games-canoe-sprint",
+    type_event_en: "worldchamp",
+    type_event_fr: "Jeux Olympique de la Jeunesse",
+    // todo : revoir pour type_event
+  },
+  {
+    date: "July 23, 2018 08:00",
+    date_fin: "July 27, 2018 18:00",
+    type: "sport",
+    lieu_fr: "Alger, Algérie",
+    lieu_en: "Algiers, Algeria",
+    event_en: "YAG",
+    event_fr: "Jeux African de la jeunesse",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+    //todo : revoir pour type_event
+  },
+  {
+    date: "July 17, 2018 08:00",
+    date_fin: "July 22, 2018 18:00",
+    type: "sport",
+    lieu_fr: "Ivréa, Italie",
+    lieu_en: "Ivrea, Italy",
+    event_en: "2018 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2018",
+    link_result:
+      "https://www.canoeicf.com/2018-icf-junior-u23-canoe-slalom-world-championships",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  // 2017
+  {
+    date: "Septembre 26, 2017 08:00",
+    date_fin: "October 01, 2017 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2017 Canoe Slalom World Championship Slalom & Downriver",
+    event_fr: "Championnat du monde de Slalom et descente 2017",
+    link_result:
+      "https://www.canoeicf.com/2017-canoe-slalom-world-championship-france",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "July 18, 2017 08:00",
+    date_fin: "July 23, 2017 18:00",
+    type: "sport",
+    lieu_fr: "Bratislava, Slovaquie",
+    lieu_en: "Bratislava, Slovakia",
+    event_en: "2017 ICF Canoe Slalom Junior & U23 World Championship",
+    event_fr: "Championnat du monde Junior & U23 2017",
+    link_result:
+      "https://www.canoeicf.com/2017-icf-canoe-slalom-junior-u23-world-championship",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
   },
 ];
 
 // skills
-
-// export const skills = [
-//   {
-//     imageUrl: css,
-//     name: "CSS",
-//     type: "Frontend",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: backend, //express
-//     name: "Express",
-//     type: "Backend",
-//     color: "green",
-//   },
-//   {
-//     imageUrl: git,
-//     name: "Git",
-//     type: "Version Control",
-//     color: "black",
-//   },
-//   {
-//     imageUrl: github,
-//     name: "GitHub",
-//     type: "Version Control",
-//     color: "pink",
-//   },
-//   {
-//     imageUrl: html,
-//     name: "HTML",
-//     type: "Frontend",
-//     color: "yellow",
-//   },
-//   {
-//     imageUrl: javascript,
-//     name: "JavaScript",
-//     type: "Frontend",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: mongodb,
-//     name: "MongoDB",
-//     type: "Database",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: backend, //motion,
-//     name: "Motion",
-//     type: "Animation",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: backend, //mui
-//     name: "UX/UI",
-//     type: "Frontend",
-//     color: "orange",
-//   },
-//   {
-//     imageUrl: backend, //mui
-//     // imageUrl: nextjs,
-//     name: "Next.js",
-//     type: "Frontend",
-//     color: "blue",
-//   },
-//   {
-//     imageUrl: nodejs,
-//     name: "Node.js",
-//     type: "Backend",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: reactjs,
-//     name: "React",
-//     type: "Frontend",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: redux,
-//     name: "Redux",
-//     type: "State Management",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: backend, //sass
-//     name: "Sass",
-//     type: "Frontend",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: tailwind,
-//     name: "Tailwind",
-//     type: "Frontend",
-//     color: "red",
-//   },
-//   {
-//     imageUrl: typescript,
-//     name: "TypeScript",
-//     type: "Frontend",
-//     color: "red",
-//   },
-// ];
 
 export interface Skills {
   name: string;
@@ -464,51 +843,7 @@ export const skills = [
   },
 ];
 
-// articles
-
-import photo1 from "../images/news/articles/1.webp";
-import photo2 from "../images/news/articles/2.webp";
-import photo3 from "../images/news/articles/3.webp";
-import photo4 from "../images/news/articles/4.jpg";
-import photo5 from "../images/news/articles/5.jpg";
-import photo6 from "../images/news/articles/6.webp";
-import photo7 from "../images/news/articles/7.webp";
-import photo8 from "../images/news/articles/8.jpg";
-import photo9 from "../images/news/articles/9.webp";
-import photo10 from "../images/news/articles/10.jpg";
-import photo11 from "../images/news/articles/11.jpg";
-import photo12 from "../images/news/articles/12.jpg";
-import photo13 from "../images/news/articles/13.avif";
-import photo14 from "../images/news/articles/14.jpg";
-import photo15 from "../images/news/articles/15.jpg";
-import photo16 from "../images/news/articles/16.jpg";
-import photo17 from "../images/news/articles/17.webp";
-import photo18 from "../images/news/articles/18.jpg";
-import photo19 from "../images/news/articles/19.jpg";
-import photo20 from "../images/news/articles/20.jpeg";
-import photo21 from "../images/news/articles/21.png";
-import photo22 from "../images/news/articles/22.jpg";
-import photo23 from "../images/news/articles/23.jpg";
-import photo24 from "../images/news/articles/24.webp";
-import photo25 from "../images/news/articles/25.webp";
-import photo26 from "../images/news/articles/26.webp";
-import photo27 from "../images/news/articles/27.jpg";
-import photo28 from "../images/news/articles/28.webp";
-import photo29 from "../images/news/articles/29.jpg";
-import photo30 from "../images/news/articles/30.jpg";
-import photo31 from "../images/news/articles/31.png";
-import photo32 from "../images/news/articles/32.jpg";
-import photo33 from "../images/news/articles/33.png";
-import photo34 from "../images/news/articles/34.jpg";
-import photo35 from "../images/news/articles/35.png";
-import photo36 from "../images/news/articles/36.jpg";
-import photo37 from "../images/news/articles/37.webp";
-import photo38 from "../images/news/articles/38.png";
-
-// revoir pour images
-// import photo100 from "../images/news/blogs/100";
-// import photo101 from "../images/news/blogs/101";
-// import photo102 from "../images/news/blogs/102";
+// articles et blog
 
 export const articles = [
   //1

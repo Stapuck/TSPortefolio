@@ -24,25 +24,29 @@ export default function Skills({ skills }: SkillsProps) {
   return (
     <section className="w-full max-w-6xl mx-auto p-4">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-slate-100">
           {t("Pro.skills")}
         </h2>
         <div className="w-15 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed dark:text-slate-200">
           {t("Pro.skillstxt")}
-
-          
         </p>
       </div>
-
-      <div className="my-8 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+      {/* todo : revoir le bg  */}
+      <div
+        className="my-8 p-4 rounded-xl 
+                bg-blue-50 border border-blue-200 
+                dark:bg-blue-800 dark:border-blue-800"
+      >
         <div className="flex items-start space-x-3">
-          <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+          <div className="w-5 h-5 bg-blue-600 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
             <span className="text-white text-xs font-bold">i</span>
           </div>
-          <div className="text-sm text-blue-800">
+          <div className="text-sm text-blue-800 dark:text-blue-100">
             <p className="font-medium mb-1">{t("Skills.noteTitle")}</p>
-            <p className="text-blue-700">{t("Skills.noteText")}</p>
+            <p className="text-blue-700 dark:text-blue-200">
+              {t("Skills.noteText")}
+            </p>
           </div>
         </div>
       </div>
@@ -52,8 +56,8 @@ export default function Skills({ skills }: SkillsProps) {
         {Object.entries(groupedSkills).map(([category, categorySkills]) => (
           <div key={category} className="mb-12">
             {Object.keys(groupedSkills).length > 1 && (
-              <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-slate-200 mb-6 flex items-center">
+                <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-3 "></span>
                 {category}
               </h3>
             )}
@@ -69,7 +73,7 @@ export default function Skills({ skills }: SkillsProps) {
                   >
                     <div className="relative">
                       {/* Card principal */}
-                      <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200">
+                      <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white dark:bg-sky-800 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200">
                         <img
                           src={skill.imageUrl}
                           alt={skill.name}
@@ -154,33 +158,33 @@ export default function Skills({ skills }: SkillsProps) {
       </div>
 
       {/* Statistiques optionnelles */}
-      <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 md:p-8">
+      <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-sky-700 dark:via-sky-800 dark:to-sky-700 rounded-2xl p-6 md:p-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-300 mb-2">
               {skills.length}
             </div>
-            <div className="text-sm text-gray-600 font-medium">
+            <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
               Technologies
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-slate-300 mb-2">
               {Object.keys(groupedSkills).length}
             </div>
-            <div className="text-sm text-gray-600 font-medium">Catégories</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Catégories</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-green-600 dark:text-slate-300 mb-2">
               3+
             </div>
-            <div className="text-sm text-gray-600 font-medium">Années exp.</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Années exp.</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-600 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-slate-300 mb-2">
               15+
             </div>
-            <div className="text-sm text-gray-600 font-medium">Projets</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Projets</div>
           </div>
         </div>
       </div>

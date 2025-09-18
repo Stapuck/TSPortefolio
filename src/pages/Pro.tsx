@@ -24,17 +24,14 @@ export default function Pro() {
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
         {/* Parcours & Formations */}
         <section>
-
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex justify-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex justify-center dark:text-slate-100">
           {t("Pro.background")}
         </h2>
         <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-    
           <Experiences />
         </section>
 
-        {/* Skills todo : faire un component */}
-        <section className="">
+        <section >
           <Skills skills ={skills} />
         </section>
 
@@ -44,13 +41,12 @@ export default function Pro() {
         </section>
 
       {/* todo : mettre le download btn dans experience sinon nan ?  */}
-
         <div className="flex flex-col sm:flex-row justify-center gap-6">
             <DownloadButton title="CV" description="CV" fileChoice={"CV"} />
         </div>
 
         {/* Petit texte informatif ou citation */}
-        <div className="mt-6 text-center text-gray-700 italic">
+        <div className="mt-6 text-center text-gray-700 italic dark:text-slate-200">
           {t("Pro.citation")}
         </div>
       </main>

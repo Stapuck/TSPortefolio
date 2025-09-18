@@ -210,9 +210,8 @@ export default function Profile() {
         <AccordionGroup />
 
         {/* Citation finale */}
-        <div className="text-center text-gray-600 italic mt-6">
-          « Discipline, curiosité et persévérance guident chacun de mes projets.
-          »
+        <div className="text-center text-gray-600 italic mt-6 dark:text-slate-200">
+          {t('Profile.citation')}
         </div>
       </main>
     </div>

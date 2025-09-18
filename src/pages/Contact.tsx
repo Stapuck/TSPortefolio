@@ -30,7 +30,7 @@ import {
   MapPin, 
   Instagram, 
   Linkedin, 
-  Twitter,
+  // Twitter,
   MessageCircle,
   Clock,
   Globe,
@@ -96,15 +96,15 @@ const Contact: React.FC = () => {
       gradient: "from-blue-600 to-blue-700",
       stats: "500+ connexions"
     },
-    {
-      icon: Twitter,
-      name: "Twitter",
-      handle: "@terence_s_kayak",
-      url: "https://twitter.com/terence_s_kayak",
-      description: "Actualités sport et tech en temps réel",
-      gradient: "from-sky-400 to-sky-600",
-      stats: "1.2k followers"
-    }
+    // {
+    //   icon: Twitter,
+    //   name: "Twitter",
+    //   handle: "@terence_s_kayak",
+    //   url: "https://twitter.com/terence_s_kayak",
+    //   description: "Actualités sport et tech en temps réel",
+    //   gradient: "from-sky-400 to-sky-600",
+    //   stats: "1.2k followers"
+    // }
   ];
 
   const quickInfo = [
@@ -118,7 +118,8 @@ const Contact: React.FC = () => {
       icon: Clock,
       title: "Timezone",
       value: "CET (UTC+1)",
-      description: "Heure de référence pour nos échanges"
+      // description: "Heure de référence pour nos échanges"
+      description: "Référence pour nos échanges"
     },
     {
       icon: Globe,
@@ -149,29 +150,57 @@ const Contact: React.FC = () => {
     }
   ];
 
+
+
   return (
     // <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
     <div className=" min-h-screen">
       <HeroSection currentPage={"contact"} />
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-20">
-        {/* Introduction */}
-        {/* <section className="text-center space-y-8">
-          <div className="space-y-6">
-            {/* <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 bg-clip-text text-transparent">
-              Restons en Contact
-            </h1> 
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Que ce soit pour une collaboration professionnelle, un partenariat sportif, ou simplement échanger sur nos passions communes, n'hésitez pas à me contacter !
-            </p>
-          </div>
-        </section> */}
 
-        {/* Méthodes de Contact Principales */}
+        {/* Informations Pratiques */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
+              Informations Pratiques
+            </h2>
+            <div className="h-1 w-16 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {quickInfo.map((info, idx) => (
+              <div key={idx} className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl transform rotate-2"></div>
+                <div className="relative bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
+                      <info.icon size={24} className="text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-800 mb-1">
+                        {info.title}
+                      </h3>
+                      <p className="text-gray-800 font-semibold">
+                        {info.value}
+                      </p>
+                      <p className="text-gray-600 text-sm">
+                        {info.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        
+
+        {/* Méthodes de Contact Principales */}
+        {/* todo mettre les réseaux, alias mail ?  */}
+        <section className="space-y-12">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
               Comment me Joindre
             </h2>
             <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-green-500 mx-auto rounded-full"></div>
@@ -223,7 +252,7 @@ const Contact: React.FC = () => {
         {/* Réseaux Sociaux */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
               Suivez-moi sur les Réseaux
             </h2>
             <div className="h-1 w-16 bg-gradient-to-r from-pink-500 to-blue-500 mx-auto rounded-full"></div>
@@ -278,7 +307,7 @@ const Contact: React.FC = () => {
         {/* Types de Collaborations */}
         <section className="space-y-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
               Types de Collaborations
             </h2>
             <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-green-500 mx-auto rounded-full"></div>
@@ -306,47 +335,11 @@ const Contact: React.FC = () => {
             ))}
           </div>
         </section>
-
-        {/* Informations Pratiques */}
-        <section className="space-y-12">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Informations Pratiques
-            </h2>
-            <div className="h-1 w-16 bg-gradient-to-r from-cyan-500 to-teal-500 mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {quickInfo.map((info, idx) => (
-              <div key={idx} className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl transform rotate-1"></div>
-                <div className="relative bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
-                      <info.icon size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-gray-800 mb-1">
-                        {info.title}
-                      </h3>
-                      <p className="text-gray-800 font-semibold">
-                        {info.value}
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        {info.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
+        
         {/* Section Download - Repositionnée */}
         <section className="space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
               Ressources et Documents
             </h2>
             <div className="h-1 w-16 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>

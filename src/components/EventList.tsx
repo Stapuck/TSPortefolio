@@ -478,10 +478,11 @@ const EventList = () => {
       color: "green",
       gradient: "from-green-500 to-emerald-500",
     },
+    // todo : revoir pour mettre other en type 
     {
       id: "pro",
       title: t("EventList.pro&other"),
-      events: upcomingEvents.filter((e) => e.type === "pro"),
+      events: upcomingEvents.filter((e) => e.type === "pro" || e.type === "other" ),
       icon: Plane,
       color: "gray",
       gradient: "from-gray-500 to-gray-600",
@@ -521,9 +522,9 @@ const EventList = () => {
             {new Date(event.date).toLocaleDateString()}
           </span>
         </div>
-        {event.type === "pro" && (
+        {event.type && (
           <span className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">
-            Pro
+            {event.type}
           </span>
         )}
       </div>

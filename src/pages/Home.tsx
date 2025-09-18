@@ -20,7 +20,6 @@ export default function Home() {
   const [showFloating, setShowFloating] = useState(true);
   const [showScrollUp, setShowScrollUp] = useState(false);
 
-  // Scroll et gestion icônes flottantes
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -99,11 +98,9 @@ export default function Home() {
           </button>
 
           {/* Info  */}
-          {/* todo : revoir reaction hover  */}
           <div className="group fixed bottom-16 right-4 sm:right-8 z-30">
             <div
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
-              // className=" group-hover:hidden flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
+              className=" group-hover:hidden flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               <button className=" flex items-center justify-center w-8 h-8 text-white transition-transform duration-300 hover:scale-110">
                 <CircleHelp size={24} />
@@ -166,8 +163,8 @@ export default function Home() {
 
           {/* Countdown Section */}
           <section className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl transform rotate-1"></div>
-            <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 ">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl transform rotate-1 dark:from-blue-800 dark:to-purple-800"></div>
+            <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200  dark:border-sky-800 dark:bg-sky-900">
               <Countdown />
             </div>
           </section>
@@ -182,13 +179,13 @@ export default function Home() {
             </div>
 
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300">
-                <h3 className="text-2xl font-semibold text-teal-700 mb-6 flex items-center">
-                  <div className="w-2 h-8 bg-gradient-to-b from-teal-500 to-teal-600 rounded-full mr-4"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-500 dark:to-cyan-600 rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200  hover:shadow-3xl transition-all duration-300 dark:border-sky-800 dark:bg-sky-900">
+                <h3 className="text-2xl font-semibold text-teal-600 mb-6 flex items-center dark:text-teal-400">
+                  <div className="w-2 h-8 bg-gradient-to-b from-teal-500 to-teal-600 rounded-full mr-4 "></div>
                   {t("Home.profile")}
                 </h3>
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 dark:text-slate-200">
                   {t("Home.profiletxt")}
                 </p>
                 <div className="flex justify-end">
@@ -216,13 +213,13 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Bloc Pro */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl transform -rotate-2 group-hover:-rotate-3 transition-transform duration-300"></div>
-                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 h-full">
-                  <h3 className="text-2xl font-semibold text-blue-700 mb-6 flex items-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 rounded-3xl transform -rotate-2 group-hover:-rotate-3 transition-transform duration-300"></div>
+                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 h-full dark:border-sky-800 dark:bg-sky-900">
+                  <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 flex items-center">
                     <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-600 rounded-full mr-4"></div>
                     {t("Home.pro")}
                   </h3>
-                  <p className="text-gray-700 text-base leading-relaxed mb-6 flex-grow">
+                  <p className="text-gray-700 dark:text-slate-200 text-base leading-relaxed mb-6 flex-grow">
                     {t("Home.protxt")}
                     
                   </p>
@@ -240,13 +237,13 @@ export default function Home() {
 
               {/* Bloc Sport */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl transform rotate-2 group-hover:rotate-3  transition-transform duration-300"></div>
-                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 h-full">
-                  <h3 className="text-2xl font-semibold text-green-700 mb-6 flex items-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-500 rounded-3xl transform rotate-2 group-hover:rotate-3  transition-transform duration-300"></div>
+                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 h-full dark:border-sky-800 dark:bg-sky-900">
+                  <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6 flex items-center">
                     <div className="w-2 h-8 bg-gradient-to-b from-green-500 to-green-600 rounded-full mr-4 "></div>
                     {t("Home.sport")}
                   </h3>
-                  <p className="text-gray-700 text-base leading-relaxed mb-6 flex-grow">
+                  <p className="text-gray-700 dark:text-slate-200 text-base leading-relaxed mb-6 flex-grow">
                     {t("Home.sporttxt")}
                    
                   </p>
@@ -274,13 +271,13 @@ export default function Home() {
             </div>
 
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300">
-                <h3 className="text-2xl font-semibold text-purple-700 mb-6 flex items-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-500 rounded-3xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 dark:border-sky-800 dark:bg-sky-900">
+                <h3 className="text-2xl font-semibold text-purple-700 dark:text-purple-400 mb-6 flex items-center">
                   <div className="w-2 h-8 bg-gradient-to-b from-purple-500 to-purple-600 rounded-full mr-4"></div>
                   {t("Home.lastarticle")}
                 </h3>
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-gray-700 dark:text-slate-200 text-lg leading-relaxed mb-6">
                 {t("Home.blogtxt")}
                 </p>
                 <div className="flex justify-end">

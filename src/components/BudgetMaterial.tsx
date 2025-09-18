@@ -170,15 +170,7 @@ const BudgetMaterial = () => {
   return (
     <section className="py-16 px-6 bg-gray-50 rounded-3xl">
       <div className="max-w-6xl mx-auto space-y-16">
-        {/* Header */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            {t("Sport.budget.seasonbudget")}
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            {t('Sport.budget.intro')}
-          </p>
-        </div>
+        
 
         {/* Equipment Section */}
         <div className="space-y-8">

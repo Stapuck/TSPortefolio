@@ -11,21 +11,21 @@ const DownloadSection: React.FC = () => {
       fileChoice: "CV" as const,
       title: "CV",
       description: t("DownloadBtn.cvdescription"),
-      icon: <FileText className="w-8 h-8 text-blue-600" />,
+      icon: <FileText className="w-8 h-8 text-blue-600 dark:text-white" />,
       variant: "primary" as const,
     },
     {
       fileChoice: "Budget" as const,
       title: "Budget",
       description: t("DownloadBtn.budgetdescription"),
-      icon: <DollarSign className="w-8 h-8 text-green-600" />,
+      icon: <DollarSign className="w-8 h-8 text-green-600 dark:text-white" />,
       variant: "secondary" as const,
     },
     {
       fileChoice: "Sponsor" as const,
       title: "Sponsoring",
       description: t("DownloadBtn.sponsordescription"),
-      icon: <Users className="w-8 h-8 text-purple-600" />,
+      icon: <Users className="w-8 h-8 text-purple-600 dark:text-white" />,
       variant: "primary" as const,
     },
   ];
@@ -33,10 +33,10 @@ const DownloadSection: React.FC = () => {
   return (
     <section className="w-full max-w-4xl mx-auto p-4">
       <div className="mb-8 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        {/* <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           {t("DownloadBtn.title")}
-        </h2>
-        <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div>
+        </h2> */}
+        {/* <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div> */}
         <p className="text-gray-600 max-w-lg mx-auto">
           {t("DownloadBtn.description")}
         </p>

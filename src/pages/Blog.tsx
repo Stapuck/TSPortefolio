@@ -49,6 +49,8 @@ export default function Blog() {
   // Récupérer le dernier article (si au moins 1 existe)
   const lastArticle = articlesOnly[0];
 
+
+  // todo : revoir agencementn 
   return (
     <div className="text-gray-800">
       <HeroSection currentPage={"blog"} />
@@ -184,6 +186,7 @@ export default function Blog() {
           </p>
 
           {/* Filtres */}
+          {/* todo : mettre meme darkmode que pro project */}
           <div className="flex gap-3 justify-center mb-6">
             {[
               { key: "all", label: t("Blog.alls"), nbr: articles.length },
