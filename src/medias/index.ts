@@ -16,6 +16,17 @@ import threejs from "../medias/icones/skills/threejs.svg";
 import backend from "../medias/icones/skills/backend.png";
 import github from "../medias/icones/skills/github.png";
 
+// sql 
+// figma 
+//C++
+//python
+//angular
+//react
+//suite office 
+// 
+
+//certification : cisco, green developer, ... 
+
 
 //image article
 import photo1 from "../medias/images/news/articles/1.webp";

@@ -198,6 +198,7 @@ const Contact: React.FC = () => {
 
         {/* Méthodes de Contact Principales */}
         {/* todo mettre les réseaux, alias mail ?  */}
+        {/*  todo : message non sérieux s'abstenir pour le mail, revoir sur les compte pro ( youtuber/ streamer) */}
         <section className="space-y-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">

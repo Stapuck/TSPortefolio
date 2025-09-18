@@ -31,6 +31,8 @@ const DownloadSection: React.FC = () => {
   ];
 
   return (
+  // todo : revoir darkmode
+
     <section className="w-full max-w-4xl mx-auto p-4">
       <div className="mb-8 text-center">
         {/* <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">

@@ -112,7 +112,6 @@ export const next_date: EventType[] = [
     type: "other",
     type_event_en: "Course",
     type_event_fr: "Race",
-
     photobg:
       "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
   },
@@ -168,7 +167,6 @@ export const next_date: EventType[] = [
     type: "sport",
     type_event_en: "training",
     type_event_fr: "entrainement",
-
     photobg:
       "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
   },
@@ -186,7 +184,7 @@ export const next_date: EventType[] = [
     event_en: "2026 ICF Canoe Slalom World Cup Final La Seu",
     event_fr: "Coupe du Monde Final 2026 à La Seu",
     link_result:
-      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-final-la-seu",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2026",
     type_event_en: "worldcup",
     type_event_fr: "Coupe du monde",
   },
@@ -199,7 +197,7 @@ export const next_date: EventType[] = [
     event_en: "2026 ICF Canoe Slalom World Cup Vaires-sur-Marne",
     event_fr: "Coupe du monde 4 à Vaires-sur-Marne",
     link_result:
-      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-vaires-sur-marne",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/vaires-sur-marne-2026",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -212,7 +210,7 @@ export const next_date: EventType[] = [
     event_en: "2026 ICF Canoe Slalom World Championships Senior",
     event_fr: "Championnat du monde Sénior 2026",
     link_result:
-      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/oklahoma-city-2026",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -225,7 +223,7 @@ export const next_date: EventType[] = [
     event_en: "2026 ICF Canoe Slalom World Cup Augsburg",
     event_fr: "Coupe du monde 3 à Augsburg",
     link_result:
-      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-augsburg",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2026",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -238,7 +236,7 @@ export const next_date: EventType[] = [
     event_en: "2026 ICF Canoe Slalom World Cup Prague",
     event_fr: "Coupe du monde 2 à Prague",
     link_result:
-      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-prague",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2026",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -251,9 +249,10 @@ export const next_date: EventType[] = [
     event_en: "2026 ICF Canoe Slalom World Cup Tacen",
     event_fr: "Coupe du monde 1 à Tacen",
     link_result:
-      "https://www.canoeicf.com/2026-icf-canoe-slalom-world-cup-tacen",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-tacen-2026",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
+    //todo rajouter /results lorsque les infos seront la.
   },
 
   // 2025
@@ -266,7 +265,7 @@ export const next_date: EventType[] = [
     event_en: "2025 ICF Canoe Slalom World Cup Tacen",
     event_fr: "4e Coupe du monde 2025",
     link_result:
-      "https://www.canoeicf.com/2025-icf-canoe-slalom-world-cup-tacen",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-2025/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -279,7 +278,7 @@ export const next_date: EventType[] = [
     event_en: "2025 ICF Junior & U23 Canoe Slalom World Championships",
     event_fr: "Championnat du monde U23 2026",
     link_result:
-      "https://www.canoeicf.com/2025-icf-junior-u23-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/foix-2025/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -291,7 +290,7 @@ export const next_date: EventType[] = [
     lieu_en: "Pau, France",
     event_en: "2025 ICF Canoe Slalom World Cup Pau",
     event_fr: "2e Coupe du monde 2025",
-    link_result: "https://www.canoeicf.com/2025-icf-canoe-slalom-world-cup-pau",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2025/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -303,10 +302,10 @@ export const next_date: EventType[] = [
     lieu_en: "Seu d'Urgell, Spain",
     event_en: "African Reference Race",
     event_fr: "Course Africaine de Référence ",
-    link_result: "https://www.canoeicf.com/african-reference-race",
-    type_event_en: "worldcup",
-    type_event_fr: "coupe du monde",
-    // todo : revoir pour type_event continental
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/african-reference-race",
+    type_event_en: "continental",
+    type_event_fr: "course continentale",
+    // todo : revoir pour type_event 
   },
   {
     date: "June 06, 2025 08:00",
@@ -317,7 +316,7 @@ export const next_date: EventType[] = [
     event_en: "2025 ICF Canoe Slalom World Cup La Seu",
     event_fr: "1er Coupe du monde 2025",
     link_result:
-      "https://www.canoeicf.com/2025-icf-canoe-slalom-world-cup-la-seu",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -332,7 +331,7 @@ export const next_date: EventType[] = [
     event_en: "2024 ICF Canoe Slalom World Cup Final La Seu",
     event_fr: "Final du circuit coupe du monde 2024",
     link_result:
-      "https://www.canoeicf.com/2024-icf-canoe-slalom-world-cup-final-la-seu",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2024/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -345,7 +344,7 @@ export const next_date: EventType[] = [
     event_en: "2024 ICF Canoe Slalom World Cup Ivrea",
     event_fr: "4e Coupe du monde 2024",
     link_result:
-      "https://www.canoeicf.com/2024-icf-canoe-slalom-world-cup-ivrea",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ivrea-2024/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -358,7 +357,7 @@ export const next_date: EventType[] = [
     event_en: "2024 ICF Junior & U23 Canoe Slalom World Championships",
     event_fr: "Championnat du monde U23 2024",
     link_result:
-      "https://www.canoeicf.com/2024-icf-junior-u23-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/liptovsky-mikulas-2024/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -370,8 +369,9 @@ export const next_date: EventType[] = [
     lieu_en: "Reunion Island, France",
     event_en: "Olympic Qualifier",
     event_fr: "Championnat d'Afrique &Qualification Olympique",
-    type_event_en: "national",
-    type_event_fr: "course nationale",
+    type_event_en: "continental",
+    type_event_fr: "course continentale",
+    //todo : revoir event_type
   },
   // 2023
   {
@@ -383,7 +383,7 @@ export const next_date: EventType[] = [
     event_en: "2023 ICF Canoe Slalom World Championships",
     event_fr: "Championnat du Monde 2023",
     link_result:
-      "https://www.canoeicf.com/2023-icf-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/lee-valley-2023/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -396,7 +396,7 @@ export const next_date: EventType[] = [
     event_en: "2023 ICF Canoe Slalom World Cup La Seu",
     event_fr: "4e Coupe du monde 2023",
     link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-d-urgell-2023",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-d-urgell-2023/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -409,7 +409,7 @@ export const next_date: EventType[] = [
     event_en: "2023 ICF Junior & U23 Canoe Slalom World Championships",
     event_fr: "Championnat du monde Junior & U23 2023",
     link_result:
-      "https://www.canoeicf.com/2023-icf-junior-u23-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/krakow-2023/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -422,7 +422,7 @@ export const next_date: EventType[] = [
     lieu_en: "Pau, France",
     event_en: "2022 ICF Canoe Slalom World Cup Pau",
     event_fr: "3e Coupe du Monde 2022",
-    link_result: "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-pau",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2022/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -435,7 +435,7 @@ export const next_date: EventType[] = [
     event_en: "2022 ICF Canoe Slalom World Cup Final La Seu",
     event_fr: "Final du circuit Coupe du monde 2022",
     link_result:
-      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-final-la-seu",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2022/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -448,7 +448,7 @@ export const next_date: EventType[] = [
     event_en: "2022 ICF Canoe Slalom World Championships",
     event_fr: "Championnat du monde Sénior 2022",
     link_result:
-      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/augsburg-2022/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -461,7 +461,7 @@ export const next_date: EventType[] = [
     event_en: "2022 ICF Junior & U23 Canoe Slalom World Championships",
     event_fr: "Championnat du monde Junior & U23 2022",
     link_result:
-      "https://www.canoeicf.com/2022-icf-junior-u23-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/ivrea-2022/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -474,7 +474,7 @@ export const next_date: EventType[] = [
     event_en: "2022 ICF Canoe Slalom World Cup Krakow",
     event_fr: "2e Coupe du monde 2022",
     link_result:
-      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-krakow",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/krakow-2022/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -487,7 +487,7 @@ export const next_date: EventType[] = [
     event_en: "2022 ICF Canoe Slalom World Cup Prague",
     event_fr: "1er Coupe du monde 2022",
     link_result:
-      "https://www.canoeicf.com/2022-icf-canoe-slalom-world-cup-prague",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2022/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -501,7 +501,7 @@ export const next_date: EventType[] = [
     event_en: "2021 ICF Canoe Slalom World Cup Final Pau",
     event_fr: "Final du circuit Coupe du monde 2021",
     link_result:
-      "https://www.canoeicf.com/2021-icf-canoe-slalom-world-cup-final-pau",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2021/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -514,7 +514,7 @@ export const next_date: EventType[] = [
     event_en: "2021 ICF Canoe Slalom World Cup La Seu",
     event_fr: "4e Coupe du monde 2021",
     link_result:
-      "https://www.canoeicf.com/2021-icf-canoe-slalom-world-cup-la-seu",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2021/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -538,7 +538,7 @@ export const next_date: EventType[] = [
     event_en: "2021 ICF Junior & U23 Canoe Slalom World Championships",
     event_fr: "Championnat du monde Junior & U23 2021",
     link_result:
-      "https://www.canoeicf.com/2021-icf-junior-u23-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/ljubljana-tacen-2021/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -551,7 +551,7 @@ export const next_date: EventType[] = [
     event_en: "2021 ICF Canoe Slalom World Cup Prague",
     event_fr: "3e Coupe du Monde 2021",
     link_result:
-      "https://www.canoeicf.com/2021-icf-canoe-slalom-world-cup-prague",
+      "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2021/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -564,7 +564,7 @@ export const next_date: EventType[] = [
     lieu_en: "Pau, France",
     event_en: "2020 ICF Canoe Slalom World Cup Pau",
     event_fr: "2e Coupe du monde 2020",
-    link_result: "https://www.canoeicf.com/2020-icf-canoe-slalom-world-cup-pau",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2020/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -590,7 +590,7 @@ export const next_date: EventType[] = [
     event_en: "2019 Canoe Slalom Olympic Test Event",
     event_fr: "Evenement test pour les JO 2020",
     link_result:
-      "https://www.canoeicf.com/2019-canoe-slalom-olympic-test-event",
+      "https://www.canoeicf.com/canoe-slalom-olympic-test-event/tokyo-2019/results",
     type_event_en: "national",
     type_event_fr: "course nationale",
   },
@@ -614,7 +614,7 @@ export const next_date: EventType[] = [
     event_en: "2019 ICF Canoe Slalom World Championships",
     event_fr: "Championnat du monde Sénior 2019",
     link_result:
-      "https://www.canoeicf.com/2019-icf-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/la-seu-d-urgell-2019/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -627,7 +627,7 @@ export const next_date: EventType[] = [
     event_en: "2019 ICF Junior & U23 Canoe Slalom World Championships",
     event_fr: "Championnat du monde junior & U23 2019",
     link_result:
-      "https://www.canoeicf.com/2019-icf-junior-u23-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/krakow-2019/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -639,7 +639,7 @@ export const next_date: EventType[] = [
     lieu_en: "Tacen, Slovenia",
     event_en: "2019 ICF Canoe Slalom World Cup 3",
     event_fr: "3e Coupe du monde 2019",
-    link_result: "https://www.canoeicf.com/2019-icf-canoe-slalom-world-cup-3",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-2019/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -651,7 +651,7 @@ export const next_date: EventType[] = [
     lieu_en: "Bratislava, Slovakia",
     event_en: "2019 ICF Canoe Slalom World Cup 2",
     event_fr: "2e Coupe du monde 2019",
-    link_result: "https://www.canoeicf.com/2019-icf-canoe-slalom-world-cup-2",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/bratislava-2019/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -663,7 +663,7 @@ export const next_date: EventType[] = [
     lieu_en: "London, England",
     event_en: "2019 ICF Canoe Slalom World Cup 1",
     event_fr: "1er Coupe du monde 2019",
-    link_result: "https://www.canoeicf.com/2019-icf-canoe-slalom-world-cup-1",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/lee-valley-2019/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -677,9 +677,9 @@ export const next_date: EventType[] = [
     event_en: "2018 Youth Olympic Games - Canoe Sprint & Slalom",
     event_fr: "Jeux Olympique de la jeunesse CEL et SL",
     link_result:
-      "https://www.canoeicf.com/2018-youth-olympic-games-canoe-sprint",
-    type_event_en: "worldchamp",
-    type_event_fr: "Jeux Olympique de la Jeunesse",
+      "https://www.canoeicf.com/canoe-sprint-olympics/buenos-aires-2018/results",
+    type_event_en: "olympics",
+    type_event_fr: "olympiques",
     // todo : revoir pour type_event
   },
   {
@@ -690,8 +690,8 @@ export const next_date: EventType[] = [
     lieu_en: "Algiers, Algeria",
     event_en: "YAG",
     event_fr: "Jeux African de la jeunesse",
-    type_event_en: "national",
-    type_event_fr: "course nationale",
+    type_event_en: "continental",
+    type_event_fr: "course continentale",
     //todo : revoir pour type_event
   },
   {
@@ -703,7 +703,7 @@ export const next_date: EventType[] = [
     event_en: "2018 ICF Junior & U23 Canoe Slalom World Championships",
     event_fr: "Championnat du monde Junior & U23 2018",
     link_result:
-      "https://www.canoeicf.com/2018-icf-junior-u23-canoe-slalom-world-championships",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/ivrea-2018/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -717,7 +717,7 @@ export const next_date: EventType[] = [
     event_en: "2017 Canoe Slalom World Championship Slalom & Downriver",
     event_fr: "Championnat du monde de Slalom et descente 2017",
     link_result:
-      "https://www.canoeicf.com/2017-canoe-slalom-world-championship-france",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/pau-2017/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
@@ -730,7 +730,7 @@ export const next_date: EventType[] = [
     event_en: "2017 ICF Canoe Slalom Junior & U23 World Championship",
     event_fr: "Championnat du monde Junior & U23 2017",
     link_result:
-      "https://www.canoeicf.com/2017-icf-canoe-slalom-junior-u23-world-championship",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/bratislava-2017/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },

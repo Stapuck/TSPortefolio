@@ -9,7 +9,6 @@ import { next_date, type EventType } from "../medias/databases/index-global";
 import {
   Calendar as CalendarIcon,
   MapPin,
-  // Clock,
   Trophy,
   Users,
   Plane,
@@ -177,6 +176,7 @@ export default function CalendarSection() {
       <div className="max-w-7xl mx-auto">
         {/* Calendar Container */}
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+          {/* todo : voir comment mettre la traduction sur les mois ( anglais uniquement pour le moment ) */}
           <Calendar
             localizer={localizer}
             events={events}
@@ -397,28 +397,7 @@ export default function CalendarSection() {
           })}
         </div> */}
 
-          {/* revoir en !extanded si je garde ?  */}
-        {/* Quick Tips */}
-        {/* <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100">
-          <h4 className="font-semibold text-gray-900 mb-4 flex items-center space-x-2">
-            <Clock className="w-5 h-5 text-blue-600" />
-            <span>{t("Calendar.tips")}</span>
-          </h4>
-          <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
-            <div className="flex items-start space-x-2">
-              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
-              <span>{t("Calendar.clickevent")}</span>
-            </div>
-            <div className="flex items-start space-x-2">
-              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
-              <span>{t("Calendar.changeday")}</span>
-            </div>
-            <div className="flex items-start space-x-2">
-              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
-              <span>{t("Calendar.color")}</span>
-            </div>
-          </div>
-        </div> */}
+          
       </div>
     </section>
   );

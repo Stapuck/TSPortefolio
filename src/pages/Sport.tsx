@@ -7,7 +7,7 @@ import SportObjectif from "../components/SportObjectif.tsx";
 import EventList from "../components/EventList.tsx";
 import AchievementRanking from "../components/AchievementRanking.tsx";
 
-import { Maximize2, Minimize2, DollarSign, Users } from "lucide-react";
+import { Maximize2, Minimize2, DollarSign, Users, Clock } from "lucide-react";
 import BudgetMaterial from "../components/BudgetMaterial.tsx";
 
 export default function Sport() {
@@ -102,13 +102,38 @@ export default function Sport() {
             }`}
           >
             <CalendarSection />
+
+            {/* Quick Tips */}
+            {/* todo : revoir si je garde ?  */}
+            { expanded ?  <>
+            <div className="max-w-3xl mx-auto p-6  bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl  border border-blue-100">
+              <h4 className="font-semibold text-gray-900 mb-4 flex items-center space-x-2">
+                <Clock className="w-5 h-5 text-blue-600" />
+                <span>{t("Calendar.tips")}</span>
+              </h4>
+              <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
+                <div className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <span>{t("Calendar.clickevent")}</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <span>{t("Calendar.changeday")}</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <span>{t("Calendar.color")}</span>
+                </div>
+              </div>
+            </div>
+            </> : ""}
             <EventList />
           </div>
         </section>
 
         {/* Palmarès / Carrière */}
         <section className="">
-        {/* <section className="space-y-8"> */}
+          {/* <section className="space-y-8"> */}
           <h2 className="text-3xl font-bold text-center dark:text-white mb-2">
             {t("Sport.career")}
           </h2>
@@ -118,18 +143,17 @@ export default function Sport() {
 
         {/* Header */}
         <section>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+              {t("Sport.budget.seasonbudget")}
+            </h2>
+            <div className="w-50 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
-            {t("Sport.budget.seasonbudget")}
-          </h2>
-          <div className="w-50 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-
-          <p className="text-gray-600 dark:text-gray-200 mb-3">
-            {t('Sport.budget.intro')}
-          </p>
-        </div>
-        <BudgetMaterial />
+            <p className="text-gray-600 dark:text-gray-200 mb-3">
+              {t("Sport.budget.intro")}
+            </p>
+          </div>
+          <BudgetMaterial />
         </section>
         <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
           {t("Sport.moreinfo")}
@@ -159,9 +183,11 @@ export default function Sport() {
         <section>
           <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
             {t("Sport.join")}
+            {/* todo : changer le texte  truc plus Participateur de l'aventure ?  */}
           </h3>
 
-          {/* faire card  */}
+          {/* todo : faire card  double rotateur comme louis et ses comms  */}
+          {/* mettre lunaar, safran, val d'indre, lycée grandmont, pole de tours  ? revori avec parent */}
           {/* mettre fédé, MOC, Ministere Mauricien */}
         </section>
 
