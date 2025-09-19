@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import { accordionDatafr } from "../medias/databases/index-fr";
-import { accordionDataen } from "../medias/databases/index-en";
+import { accordionData } from "../medias/databases/index-global";
 import Accordion from "../components/Accordion";
 
 import { useTranslation } from "react-i18next";
@@ -9,24 +7,6 @@ const AccordionGroup = () => {
   const initialLang = document.documentElement.lang || "fr";
   const {t} = useTranslation();
 
-  // todo : changer les data pour une vrai FAQ :
-  const [accordionData, setAccordionData] = useState(
-    initialLang === "en" ? accordionDataen : accordionDatafr
-  );
-
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      const lang = document.documentElement.lang;
-      const newaccordiondata =
-        lang === "en" ? accordionDataen : accordionDatafr;
-      setAccordionData(newaccordiondata);
-    });
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["lang"],
-    });
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -67,8 +47,8 @@ const AccordionGroup = () => {
                 animation: `fadeInUp 0.6s ease-out ${index * 0.1}s forwards`,
               }}
             >
-              <Accordion title={item.title}>
-                <div className="text-base leading-relaxed">{item.text}</div>
+              <Accordion title={initialLang === "fr" ? item.title_fr : item.title_en}>
+                <div className="text-base leading-relaxed">{initialLang === "fr" ? item.text_fr : item.text_en}</div>
               </Accordion>
             </div>
           ))}

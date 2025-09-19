@@ -1,4 +1,4 @@
-// import global avec index.ts
+// import
 
 import {
   //skills
@@ -80,12 +80,15 @@ export interface EventType {
   type_event_fr?: string;
 }
 
+// todo : ranger ce fichier pour qu'il soit propre, clean pétant
 //  todo : mettre la semaine à Prague et tacen de cette année.
 // revoir les dates de coupe du monde si mettre lundi ou si rajouter stage d'entrainement à chaque fois ?
 // revoir les liens
 // revoir pour les info starts, bibs, ...
 //revoir telecharger image d'event
 export const next_date: EventType[] = [
+  //2028
+  //2027
   {
     lieu_fr: "Penrith, Australie",
     lieu_en: "Penrith, Australia",
@@ -105,15 +108,15 @@ export const next_date: EventType[] = [
   {
     lieu_fr: "Pula, Croatie",
     lieu_en: "Pula, Croatia",
-    date: "September 20, 2025  19:00",
-    date_fin: "September 20, 2025 21:00",
+    date: "September 20, 2025  19:50",
+    date_fin: "September 20, 2025 22:0",
     event_en: "Pula semi Marathon",
     event_fr: "Semi Marathon de Pula",
     type: "other",
     type_event_en: "Course",
     type_event_fr: "Race",
     photobg:
-      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
+      "https://images.ahotu.com/r9urrd4o8fattlkye8ffwml2tira?w=1920&q=100&f=webp",
   },
   {
     lieu_fr: "Pula, Croatie",
@@ -183,8 +186,7 @@ export const next_date: EventType[] = [
     lieu_en: "Seu d'Urgell, Spain",
     event_en: "2026 ICF Canoe Slalom World Cup Final La Seu",
     event_fr: "Coupe du Monde Final 2026 à La Seu",
-    link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2026",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2026",
     type_event_en: "worldcup",
     type_event_fr: "Coupe du monde",
   },
@@ -235,8 +237,7 @@ export const next_date: EventType[] = [
     lieu_en: "Prague, Czech Republic",
     event_en: "2026 ICF Canoe Slalom World Cup Prague",
     event_fr: "Coupe du monde 2 à Prague",
-    link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2026",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2026",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -290,7 +291,8 @@ export const next_date: EventType[] = [
     lieu_en: "Pau, France",
     event_en: "2025 ICF Canoe Slalom World Cup Pau",
     event_fr: "2e Coupe du monde 2025",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2025/results",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2025/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -302,10 +304,11 @@ export const next_date: EventType[] = [
     lieu_en: "Seu d'Urgell, Spain",
     event_en: "African Reference Race",
     event_fr: "Course Africaine de Référence ",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/african-reference-race",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/african-reference-race",
     type_event_en: "continental",
     type_event_fr: "course continentale",
-    // todo : revoir pour type_event 
+    // todo : revoir pour type_event
   },
   {
     date: "June 06, 2025 08:00",
@@ -422,7 +425,8 @@ export const next_date: EventType[] = [
     lieu_en: "Pau, France",
     event_en: "2022 ICF Canoe Slalom World Cup Pau",
     event_fr: "3e Coupe du Monde 2022",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2022/results",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2022/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -564,7 +568,8 @@ export const next_date: EventType[] = [
     lieu_en: "Pau, France",
     event_en: "2020 ICF Canoe Slalom World Cup Pau",
     event_fr: "2e Coupe du monde 2020",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2020/results",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2020/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -639,7 +644,8 @@ export const next_date: EventType[] = [
     lieu_en: "Tacen, Slovenia",
     event_en: "2019 ICF Canoe Slalom World Cup 3",
     event_fr: "3e Coupe du monde 2019",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-2019/results",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-2019/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -651,7 +657,8 @@ export const next_date: EventType[] = [
     lieu_en: "Bratislava, Slovakia",
     event_en: "2019 ICF Canoe Slalom World Cup 2",
     event_fr: "2e Coupe du monde 2019",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/bratislava-2019/results",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/bratislava-2019/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -663,7 +670,8 @@ export const next_date: EventType[] = [
     lieu_en: "London, England",
     event_en: "2019 ICF Canoe Slalom World Cup 1",
     event_fr: "1er Coupe du monde 2019",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/lee-valley-2019/results",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/lee-valley-2019/results",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
@@ -742,6 +750,7 @@ export interface Skills {
   name: string;
   imageUrl: string;
   category: string;
+  category_fr: string;
   level: string;
 }
 export const skills = [
@@ -749,95 +758,112 @@ export const skills = [
     name: "CSS",
     imageUrl: css,
     category: "Frontend",
+    category_fr: "Frontend",
     level: "5",
   },
   {
     name: "Express",
     imageUrl: backend,
     category: "Backend",
+    category_fr: "Backend",
     level: "5",
   },
   {
     name: "Git",
     imageUrl: git,
     category: "Version Control",
+    category_fr: "Controle de Version",
     level: "5",
   },
   {
     name: "GitHub",
     imageUrl: github,
     category: "Version Control",
+    category_fr: "Controle de Version",
     level: "5",
   },
   {
     name: "HTML",
     imageUrl: html,
     category: "Frontend",
+    category_fr: "Frontend",
     level: "5",
   },
   {
     name: "JavaScript",
     imageUrl: javascript,
     category: "Frontend",
+    category_fr: "Frontend",
     level: "5",
   },
   {
     name: "MongoDB",
     imageUrl: mongodb,
     category: "Database",
+    category_fr: "Base de donnée",
+
     level: "5",
   },
   {
     name: "Motion",
     imageUrl: backend,
     category: "Animation",
+    category_fr: "Animation",
     level: "5",
   },
   {
     name: "UX/UI",
     imageUrl: backend,
     category: "Frontend",
+    category_fr: "Frontend",
     level: "5",
   },
   {
     name: "Next.js",
     imageUrl: backend,
+    category_fr: "Frontend",
     category: "Frontend",
     level: "5",
   },
   {
     name: "Node.js",
     imageUrl: nodejs,
+    category_fr: "Backend",
     category: "Backend",
     level: "5",
   },
   {
     name: "React",
     imageUrl: reactjs,
+    category_fr: "Frontend",
     category: "Frontend",
     level: "5",
   },
   {
     name: "Redux",
     imageUrl: redux,
+    category_fr: "Gestion des status",
     category: "State Management",
     level: "5",
   },
   {
     name: "Sass",
     imageUrl: backend,
+    category_fr: "Frontend",
     category: "Frontend",
     level: "5",
   },
   {
     name: "Tailwind",
     imageUrl: tailwind,
+    category_fr: "Frontend",
     category: "Frontend",
     level: "5",
   },
   {
     name: "TypeScript",
     imageUrl: typescript,
+    category_fr: "Frontend",
     category: "Frontend",
     level: "5",
   },
@@ -1509,3 +1535,391 @@ export const articles = [
   // revoir 2 photo 33 et 35
   // changer photo pour incubateur.
 ];
+
+//sportobjectives
+import { Target, Trophy, Users, Leaf } from "lucide-react";
+export const sportobjectives = [
+  {
+    icon: Target,
+    color: "from-yellow-400 to-orange-500",
+    bgColor: "bg-yellow-100",
+    iconColor: "text-yellow-600",
+    title_fr: "Championnat du monde Sénior 2026",
+    title_en: "World Championship 2026",
+    description_fr: "Objectif: Top 10 mondial et qualification pour la finale.",
+    description_en: "Objectif: Top 15 and qualification for the final.",
+    details_fr:
+      "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
+    details_en: "Fight with the best and get a spot in the precious final ",
+  },
+  {
+    icon: Users,
+    color: "from-blue-500 to-blue-600",
+    bgColor: "bg-blue-100",
+    iconColor: "text-blue-600",
+    title_fr: "Programme d'entrainement pour Jeune",
+    title_en: "Youth Training Program",
+    description_fr: "Lancer un programme pour former les jeunes kayakistes.",
+    description_en:
+      "Launch a program to help young paddler to develop their skills",
+    details_fr:
+      "Transmettre ma passion et développer la relève du canoë slalom",
+    details_en: "Share my passion and develop the next gen of canoe slalom",
+  },
+  {
+    icon: Leaf,
+    color: "from-green-500 to-emerald-600",
+    bgColor: "bg-green-100",
+    iconColor: "text-green-600",
+    title_fr: "Compétition Ecolo",
+    title_en: "Eco-friendly Competitions",
+    description_fr:
+      "Participer et promouvoir des événements respectueux de l'environnement.",
+    description_en: "Take part and promote green & eco-frendly event.",
+    details_fr:
+      "Allier performance sportive et respect de notre terrain de jeu : la nature",
+    details_en:
+      "Join performance and respect of the environment / water our playground",
+  },
+  {
+    icon: Trophy,
+    color: "from-red-500 to-pink-500",
+    bgColor: "bg-red-100",
+    iconColor: "text-red-600",
+    title_fr: "Développement du sport sur le continent africain",
+    title_en: "African Development",
+    description_fr: "Contribuer au développement du canoë slalom en Afrique.",
+    description_en:
+      "Being an actor in the development of the sport in Africa .",
+    details_fr: "Ouvrir de nouveaux horizons et démocratiser notre sport",
+    details_en: "Open new horizon and help the sport growth",
+  },
+];
+
+//accordiondata
+export const accordionData = [
+  // {
+  //   title: "Mon rythme de vie et organisation d'un double projet",
+  //   text: "Depuis la classe de 4e, j’ai pris l’habitude d’organiser ma vie autour de mes études et de ma pratique sportive. Le sport est rapidement devenu une composante essentielle de mon quotidien. Jongler efficacement entre ces deux projets n’a pas toujours été évident : il a fallu faire des compromis et accepter certains sacrifices, mais toujours dans l’objectif de me rapprocher de mon but final. Cela m’a conduit à optimiser au maximum mon temps.",
+  // },
+  // {
+  //   title: "Mes facteurs de succès",
+  //   text: "Pour moi, la diversification, le dépassement de soi et la persévérance sont des éléments essentiels pour atteindre le succès. L’aléatoire reste une variable incontrôlable, mais le travail fourni permet de réduire au maximum son impact, tant dans la performance que dans la réussite.",
+  // },
+  // {
+  //   title: "Ma gestion de la santé mentale",
+  //   text: "Un aspect qui me tient particulièrement à cœur est ma santé mentale. Bien que je pratique avant tout par plaisir, je pense que la diversification sportive que je m’impose au quotidien m’aide à éviter toute pression excessive. Tout comme un équilibre entre vie professionnelle et vie personnelle est nécessaire, je veille à bien distinguer ma pratique sportive des autres aspects de ma vie. J’ai remarqué que lorsque mon quotidien est équilibré et que mes différentes sphères de vie fonctionnent bien, mes performances sportives suivent naturellement. Enfin, j’accorde une grande importance à ne pas me comparer aux autres athlètes, car ma situation est particulière et implique des différences de quotidien et d’opportunités.",
+  // },
+  // {
+  //   title: "Le sport et ses opportunités",
+  //   text: "Le sport est non seulement un moyen d’épanouissement personnel, mais aussi une source d’opportunités. Il m’ouvre des perspectives de rencontres, d’expériences et de développement qui dépassent le simple cadre de la performance.",
+  // },
+  // {
+  //   title: "My Lifestyle and Managing a Dual Project",
+  //   text: "Since the 8th grade, I have gotten used to organizing my life around my studies and my sports practice. Sports quickly became an essential part of my daily routine. Balancing these two projects has not always been easy: compromises had to be made and sacrifices accepted, but always with the goal of getting closer to my final objective. This has led me to optimize my time as much as possible.",
+  // },
+  // {
+  //   title: "My Success Factors",
+  //   text: "For me, diversification, self-improvement, and perseverance are essential elements for achieving success. Randomness remains an uncontrollable variable, but the effort and work invested help minimize its impact, both in performance and in success.",
+  // },
+  // {
+  //   title: "My Mental Health Management",
+  //   text: "One aspect that I care deeply about is my mental health. Although I practice primarily for pleasure, I believe that the variety of sports I engage in daily helps me avoid excessive pressure. Just as a balance between professional and personal life is necessary, I make sure to clearly separate my sports practice from other aspects of my life. I have noticed that when my daily life is well-balanced and my different areas of life are stable, my sports performance naturally follows. Finally, I place great importance on avoiding comparisons with other athletes, since my situation is uncommon and involves different routines and opportunities.",
+  // },
+  // {
+  //   title: "Sports and Its Opportunities",
+  //   text: "Sports are not only a source of personal fulfillment but also a gateway to opportunities. They open perspectives for encounters, experiences, and development that go far beyond mere performance.",
+  // },
+
+  // todo : trouver des vrai question : revoir avec papa
+  // et faire des vrais réponses
+  {
+    title_fr: "D'où viens tu ? ",
+    text_fr:
+      "Avec des origines Mauriciennes, je vis en France depuis toujours, d'abord de Tours où j'ai passé mes années lycée ainsi que mon bac et ensuite dans le sud, sur Pau pour continuer ma pratique sportive et mes études.",
+    title_en: "Where are you from ? ",
+    text_en: "Mauritius baby ",
+  },
+  {
+    title_fr:
+      "Si tu devais choisir un autre sport que la Canoë-Kayak, lequel choisirais-tu ? ",
+    text_fr:
+      "Je pense que je me serais tourné vers la course à pied / trail pour le coté dépassement de soi, sinon le surf ou le hockey sur glace.",
+    title_en:
+      "If you had to choose an other sport, which one would you choose ? ",
+    text_en: "Running for sur ",
+  },
+
+  {
+    title_fr: "Qu'est ce qui te pousse à te lever le matin",
+    text_fr:
+      "Les plaisirs de la vie que ça soit dans le quotidien, la famille, les amis. Ou encore l'évolution perpetuelle, devenir une meilleur personne (sportif et pro). Repousser mes limites. ou juste connaitre à l'avance le repas du soir suffit parfois ;)",
+    title_en: "What make you go out of your bed the morning",
+    text_en: "Only one think does, the alarm on my phone. ",
+  },
+
+  {
+    title_fr: "La clès de la réussite selon toi ? ",
+    text_fr:
+      "Dans mon cas, je dirais la polyvalence et la résilience. Mais la réussite est tellement subjectif et peut varier d'un jour à l'autre que juste se sentir épanouie sera ma réponse finale.",
+    title_en: "The key of success in your opinion ? ",
+    text_en:
+      "Having close people supporting you, Loving the Day and trusting the process",
+  },
+
+  // {
+  //   title_fr: "",
+  //   text_fr: "",
+  // title_en: "",
+  // text_en: ""
+  // },
+];
+
+//experience
+//todo
+
+export interface Experiences {
+  etablissement_fr: string;
+  etablissement_en: string;
+  title_fr: string;
+  title_en: string;
+  periode_fr: string;
+  periode_en: string;
+  details_fr: string[];
+  details_en: string[];
+  type: string;
+}
+
+//  todo : mettre du vrai texte et traduire
+
+export const experiences = [
+  {
+    etablissement_fr: "Safran Helicopter Engines",
+    etablissement_en: "test",
+    title_fr: "Alternance Développeur Web",
+    title_en: "test",
+    periode_fr: "10/2023 - Maintenant",
+    periode_en: "",
+    details_fr: [
+      "Création d’interface et développement de nouvelles fonctionnalités au sein de l’application",
+      "Gestion de projet",
+      "",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Cesi Pau",
+    etablissement_en: "",
+    title_fr: "Cycle ingénieur",
+    title_en: "",
+    periode_fr: "09/2023 - Maintenant ",
+    periode_en: "",
+    details_fr: [
+      "alternance avec safran ",
+      "dev web ",
+      "management ",
+      "big data",
+    ],
+    details_en: ["", "", ""],
+    type: "formation",
+  },
+  {
+    etablissement_fr: "Université technologique de Pula",
+    etablissement_en: "",
+    title_fr: "Stagaire",
+    title_en: "",
+    periode_fr: "06/2025 - 10/2025",
+    periode_en: "",
+    details_fr: [
+      "travaille sur le développement d'un outils python",
+      "découverte culturel",
+      "CNC machining test sur machine",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Octopeek (part of Mazars)",
+    etablissement_en: "",
+    title_fr: "stagiaire Data Analyst",
+    title_en: "",
+    periode_fr: "04/2023 - 07/2023",
+    periode_en: "",
+    details_fr: [
+      "Traitement de donnée de sportif biologique et technique (nageur, kayakiste)",
+      "Analyse de données sur l’explicabilité des performances dans le sport",
+      "Relation client pour améliorer l’utilisation des données collectées",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Hermès, tellier ? textile ? ",
+    etablissement_en: "",
+    title_fr: "Prestataire de service, Développeur Full-stack",
+    title_en: "",
+    periode_fr: "04/2023 - 07/2023",
+    periode_en: "",
+    details_fr: [
+      "Développement Web et Application de bureau",
+      "Travail au sein d’une équipe de développeurs expérimentés",
+      "Apprentissage : développeur IHM (Angular & Node.js)",
+      "Stagiaire : projet de gestion de données",
+      "Prestataire : développeur full-stack (PHP Symfony)",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Fédération Canadienne de Kayak",
+    etablissement_en: "",
+    title_fr: "Coach équipe jeune",
+    title_en: "",
+    periode_fr: "02/2023 - 04/2023",
+    periode_en: "",
+    details_fr: [
+      "Partage de ma passion et de mes connaissances avec des jeunes pagayeurs",
+      "Organisation et gestion de séances quotidiennes (musculation, kayak et retour vidéo)",
+      "Coaching de l’équipe jeune",
+      "parallele des etudes",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "CESI, Pau",
+    etablissement_en: "",
+    title_fr: "Cycle préparatoire",
+    title_en: "",
+    periode_fr: "09/2021 - 07/2023",
+    periode_en: "",
+    details_fr: ["", "", ""],
+    details_en: ["", "", ""],
+    type: "formation",
+  },
+  {
+    etablissement_fr: "",
+    etablissement_en: "",
+    title_fr: "Année sadbatique",
+    title_en: "",
+    periode_fr: "09/2020 - 09/2021",
+    periode_en: "",
+    details_fr: ["", "section sportif ", "bac S "],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Lycée Grandmont",
+    etablissement_en: "",
+    title_fr: "Années Lycée",
+    title_en: "",
+    periode_fr: "09/2017 - 04/2020",
+    periode_en: "",
+    details_fr: ["", "section sportif ", "bac S "],
+    details_en: ["", "", ""],
+    type: "formation",
+  },
+  {
+    etablissement_fr: "Scalway",
+    etablissement_en: "",
+    title_fr: "Stage de 3e",
+    title_en: "",
+    periode_fr: "10/2016 - 11/2016",
+    periode_en: "",
+    details_fr: [
+      "Premier pas dans le monde professionnel",
+      "découverte du domaine informatique avec une entreprise d'hebergement",
+      "sous plusieurs angles ",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+];
+
+// traduction en partie en dessous y'a plus qu'a 
+
+// export const experiences_en = [
+//   {
+//     etablissement: "Cesi Pau / Safran, Bordes",
+//     titre: "Web Developer Apprenticeship",
+//     periode: "2023 - 2024",
+//     details: [
+//       "Web Developer Internship - Pula, Croatia",
+//       "BTS SIO - Lycée Saint Cricq, Pau",
+//     ],
+//     type: "formation"
+
+//   },
+//   {
+//     etablissement: "Cesi Pau / Safran, Bordes",
+//     titre: "Web Developer Apprenticeship",
+//     periode: "2022 - 2023",
+//     details: [
+//       "Web Developer Internship - Paris",
+//       "Data processing and analysis internship - Paris",
+//     ],
+//     type: "formation"
+
+//   },
+//   {
+//     etablissement: "Cesi Pau",
+//     titre: "2nd Year",
+//     periode: "2021 - 2022",
+//     details: [
+//       "Web Developer Internship - Paris",
+//       "Data processing and analysis internship - Paris",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Safran Helicopter Engines",
+//     titre: "Web Developer Apprenticeship",
+//     periode: "10/2023 - Present",
+//     details: [
+//       "Interface creation and development of new features within the application",
+//       "Project management",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Octopeek (part of Mazars)",
+//     titre: "Data Analyst",
+//     periode: "04/2023 - 07/2023",
+//     details: [
+//       "Data analysis on performance explainability in sports",
+//       "Client relations to improve the use of collected data",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Hermès",
+//     titre: "Full-stack Developer",
+//     periode: "04/2023 - 07/2023",
+//     details: [
+//       "Web and desktop application development",
+//       "Working within a team of experienced developers",
+//       "Learning: UI Developer (Angular & Node.js)",
+//       "Intern: data management project",
+//       "Contractor: full-stack developer (PHP Symfony)",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Canadian Kayak Federation",
+//     titre: "Youth Team Coach",
+//     periode: "02/2023 - 04/2023",
+//     details: [
+//       "Sharing my passion and knowledge with young paddlers",
+//       "Organizing and managing daily sessions (strength training, kayaking, and video feedback)",
+//       "Coaching the youth team",
+//     ],
+//     type: "experiencepro"
+
+//   },
+// ];
+

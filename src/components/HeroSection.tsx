@@ -152,6 +152,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
             // className="w-full h-full object-cover object-[80%]"
             className="w-full h-full object-cover object-[0%_25%]"
           />
+          {/* Overlay adapté dark */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/30 dark:from-black/20 dark:via-black/30 dark:to-black/40 z-10"></div>
         </div>
       </section>
     );

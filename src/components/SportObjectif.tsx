@@ -1,49 +1,5 @@
-// // import { sportobjectif_en } from "../medias/databases/index-en";
-// // import { sportobjectif_fr } from "../medias/databases/index-fr";
-
-// const SportObjectif = () => {
-// // const initialLang = document.documentElement.lang || "fr";
-
-// // const sportobjectif = (initialLang === "fr" ? sportobjectif_fr : sportobjectif_en)
-// //
-
-// return (
-//     <div className="grid md:grid-cols-3 gap-6 mt-6">
-//       {/* todo : mettre data dans index-fr et index-en  */}
-//       {/* todo : slider avec texte dans database et 3 afficher sur les 5 qui tourne, tourne doucement. comme louis sur son site web pour Karlo.  */}
-
-//       <div className="bg-white rounded-lg shadow-md p-4 hover:scale-105 transition">
-//         <h3 className="font-semibold text-lg mb-2">World Championship 2026</h3>
-//         <p>Objectif: Top 10 mondial et qualification pour la finale.</p>
-//       </div>
-//       <div className="bg-white rounded-lg shadow-md p-4 hover:scale-105 transition">
-//         <h3 className="font-semibold text-lg mb-2">Youth Training Program</h3>
-//         <p>Lancer un programme pour former les jeunes kayakistes.</p>
-//       </div>
-//       <div className="bg-white rounded-lg shadow-md p-4 hover:scale-105 transition">
-//         <h3 className="font-semibold text-lg mb-2">
-//           Eco-friendly Competitions
-//         </h3>
-//         <p>
-//           Participer et promouvoir des événements respectueux de
-//           l’environnement.
-//         </p>
-//       </div>
-
-//       {/* coach TIP, developpement en afrique, objectif sport : JO LA, Gagner une coupe du monde.  */}
-//     </div>
-//   );
-// };
-
-// export default SportObjectif;
-
-// import { useState, useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import {
-  Target,
-  Trophy,
-  Users,
-  Leaf,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -52,112 +8,39 @@ import { useTranslation } from "react-i18next";
 // // import { sportobjectif_en } from "../medias/databases/index-en";
 // // import { sportobjectif_fr } from "../medias/databases/index-fr";
 
+import { sportobjectives } from "../medias/databases/index-global";
+// todo :  mettre dans index global rajouter au mien
+
 const SportObjectif = () => {
   const initialLang = document.documentElement.lang || "fr";
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useTranslation();
 
-  // todo :  mettre dans index global rajouter au mien
-  const objectives = [
-    {
-      icon: Trophy,
-      color: "from-yellow-400 to-orange-500",
-      bgColor: "bg-yellow-100",
-      iconColor: "text-yellow-600",
-      title_fr: "World Championship 2026",
-      title_en: "World Championship 2026",
-      description_fr:
-        "Objectif: Top 10 mondial et qualification pour la finale.",
-      description_en:
-        "Objectif: Top 10 mondial et qualification pour la finale.",
-      details_fr:
-        "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
-      details_en:
-        "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
-    },
-    {
-      icon: Users,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-100",
-      iconColor: "text-blue-600",
-      title_fr: "Youth Training Program",
-      title_en: "Youth Training Program",
-      description_fr: "Lancer un programme pour former les jeunes kayakistes.",
-      description_en: "Lancer un programme pour former les jeunes kayakistes.",
-      details_fr:
-        "Transmettre ma passion et développer la relève du canoë slalom",
-      details_en:
-        "Transmettre ma passion et développer la relève du canoë slalom",
-    },
-    {
-      icon: Leaf,
-      color: "from-green-500 to-emerald-600",
-      bgColor: "bg-green-100",
-      iconColor: "text-green-600",
-      title_fr: "Eco-friendly Competitions",
-      title_en: "Eco-friendly Competitions",
-      description_fr:
-        "Participer et promouvoir des événements respectueux de l'environnement.",
-      description_en:
-        "Participer et promouvoir des événements respectueux de l'environnement.",
-      details_fr:
-        "Allier performance sportive et respect de notre terrain de jeu : la nature",
-      details_en:
-        "Allier performance sportive et respect de notre terrain de jeu : la nature",
-    },
-    {
-      icon: Target,
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-100",
-      iconColor: "text-purple-600",
-      title_fr: "Coaching Development",
-      title_en: "Coaching Development",
-      description_fr:
-        "Développer mes compétences d'entraîneur et partager mon expérience.",
-      description_en:
-        "Développer mes compétences d'entraîneur et partager mon expérience.",
-      details_fr:
-        "Former la prochaine génération d'athlètes avec une approche moderne",
-      details_en:
-        "Former la prochaine génération d'athlètes avec une approche moderne",
-    },
-    {
-      icon: Trophy,
-      color: "from-red-500 to-pink-500",
-      bgColor: "bg-red-100",
-      iconColor: "text-red-600",
-      title_fr: "African Development",
-      title_en: "African Development",
-      description_fr: "Contribuer au développement du canoë slalom en Afrique.",
-      description_en: "Contribuer au développement du canoë slalom en Afrique.",
-      details_fr: "Ouvrir de nouveaux horizons et démocratiser notre sport",
-      details_en: "Ouvrir de nouveaux horizons et démocratiser notre sport",
-    },
-  ];
 
+  
   // Auto-rotate slides
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev + 1) % objectives.length);
-  //   }, 6000);
-  //   return () => clearInterval(interval);
-  // }, [objectives.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % sportobjectives.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [sportobjectives.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % objectives.length);
+    setCurrentSlide((prev) => (prev + 1) % sportobjectives.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide(
-      (prev) => (prev - 1 + objectives.length) % objectives.length
+      (prev) => (prev - 1 + sportobjectives.length) % sportobjectives.length
     );
   };
 
   const getVisibleObjectives = () => {
     const visible = [];
     for (let i = 0; i < 3; i++) {
-      const index = (currentSlide + i) % objectives.length;
-      visible.push({ ...objectives[index], index });
+      const index = (currentSlide + i) % sportobjectives.length;
+      visible.push({ ...sportobjectives[index], index });
     }
     return visible;
   };
@@ -204,7 +87,7 @@ const SportObjectif = () => {
               return (
                 <div
                   key={objective.index}
-                  className={`group relative overflow-hidden transition-all duration-500 ${
+                  className={`group relative overflow-hidden transition-all duration-500 rounded-3xl ${
                     isCenter
                       ? "transform scale-105 z-10"
                       : "transform scale-95 opacity-75 hover:opacity-100"
@@ -212,7 +95,7 @@ const SportObjectif = () => {
                 >
                   {/* Gradient Background */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${objective.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                    className={`absolute inset-0 bg-gradient-to-br ${objective.color} rounded-3xl  opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                   />
 
                   {/* Card Content */}
@@ -262,7 +145,7 @@ const SportObjectif = () => {
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
-            {objectives.map((_, index) => (
+            {sportobjectives.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}

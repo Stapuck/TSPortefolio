@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import videoBg from "../medias/videos/20240203_Reunion.mp4";
 import { Link } from "react-router-dom";
-
 import {
   Volume2,
   VolumeX,
@@ -64,7 +63,8 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70 z-10"></div>
+        {/* Overlay adapté dark */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70 dark:from-black/40 dark:via-black/60 dark:to-black/80 z-10"></div>
 
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-20 px-4 sm:px-6">
           <div className="space-y-6 animate-fade-in">
@@ -90,31 +90,28 @@ export default function Home() {
           {/* Scroll down */}
           <button
             onClick={scrollDown}
-            className="fixed bottom-16 left-1/2 transform -translate-x-1/2 text-white z-30 animate-bounce hover:animate-none"
+            className="fixed bottom-16 left-1/2 transform -translate-x-1/2 text-white dark:text-slate-100 z-30 animate-bounce hover:animate-none"
           >
-            <div className="p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110">
+            <div className="p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 dark:bg-slate-100/10 dark:border-slate-100/20 dark:hover:bg-slate-100/20 transition-all duration-300 hover:scale-110">
               <ChevronDown size={20} />
             </div>
           </button>
 
           {/* Info  */}
           <div className="group fixed bottom-16 right-4 sm:right-8 z-30">
-            <div
-              className=" group-hover:hidden flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <button className=" flex items-center justify-center w-8 h-8 text-white transition-transform duration-300 hover:scale-110">
+            <div className="group-hover:hidden flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 dark:bg-slate-100/10 dark:border-slate-100/20 dark:hover:bg-slate-100/20 transition-all duration-300">
+              <button className="flex items-center justify-center w-8 h-8 text-white dark:text-slate-100 transition-transform duration-300 hover:scale-110">
                 <CircleHelp size={24} />
               </button>
             </div>
 
-            {/* try absolute pour le mettre.  */}
             <div className="hidden group-hover:flex flex-col items-center mt-3 animate-fade-in">
-              <div className="px-3 py-2 bg-black/80 backdrop-blur-sm rounded-lg border border-white/20">
+              <div className="px-3 py-2 bg-black/80 dark:bg-sky-950/90 backdrop-blur-sm rounded-lg border border-white/20 dark:border-slate-100/20">
                 <a
                   target="_blank"
                   href="https://www.instagram.com/romain.bruneau/"
                   rel="noreferrer"
-                  className="text-white/90 text-sm whitespace-nowrap hover:text-white transition-colors duration-300"
+                  className="text-white/90 dark:text-slate-100 text-sm whitespace-nowrap hover:text-white transition-colors duration-300"
                 >
                   {t("Home.by")} R.B
                 </a>
@@ -123,10 +120,10 @@ export default function Home() {
           </div>
 
           {/* Volume */}
-          <div className="fixed bottom-16 left-4 sm:left-8 text-white z-30">
+          <div className="fixed bottom-16 left-4 sm:left-8 text-white dark:text-slate-100 z-30">
             <button
               onClick={toggleSound}
-              className="p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 dark:bg-slate-100/10 dark:border-slate-100/20 dark:hover:bg-slate-100/20 transition-all duration-300 hover:scale-110"
             >
               {sound ? <Volume2 size={20} /> : <VolumeX size={20} />}
             </button>
@@ -140,31 +137,30 @@ export default function Home() {
           onClick={scrollUp}
           className="fixed bottom-28 right-4 sm:right-8 z-30 animate-fade-in"
         >
-          <div className="p-3 rounded-full bg-gray-800/90 dark:bg-gray-900/80  backdrop-blur-md border border-gray-700 hover:bg-gray-800 transition-all duration-300 hover:scale-110 text-white">
+          <div className="p-3 rounded-full bg-gray-800/90 dark:bg-slate-900/90 backdrop-blur-md border border-gray-700 dark:border-slate-700 hover:bg-gray-800 dark:hover:bg-slate-800 transition-all duration-300 hover:scale-110 text-white dark:text-slate-100">
             <CircleChevronUp size={28} />
           </div>
         </button>
       )}
 
       {/* Contenu après la vidéo */}
-      <main className="max-w-6xl mx-auto px-6 py-12 space-y-20  min-h-screen ">
-        {/* <main className="max-w-6xl mx-auto px-6 py-12 space-y-20 bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen"> */}
+      {/* <main className="max-w-6xl mx-auto px-6 py-12 space-y-20 min-h-screen bg-white dark:bg-sky-950 text-gray-900 dark:text-slate-100"> */}
+      <main className="max-w-6xl mx-auto px-6 py-12 space-y-20 min-h-screen">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 space-y-16">
-          {/* Welcome Section */}
           <div className="text-center space-y-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 bg-clip-text text-transparent dark:from-white dark:via-slate-300 dark:to-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 bg-clip-text text-transparent dark:from-slate-100 dark:via-slate-300 dark:to-slate-100">
               {t("Home.home_welcome")}
             </h1>
             <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed dark:text-white">
+            <p className="text-lg sm:text-xl text-gray-700 dark:text-slate-200 max-w-4xl mx-auto leading-relaxed">
               {t("Home.intro")}
             </p>
           </div>
 
           {/* Countdown Section */}
           <section className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl transform rotate-1 dark:from-blue-800 dark:to-purple-800"></div>
-            <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200  dark:border-sky-800 dark:bg-sky-900">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-900 dark:to-purple-900 rounded-3xl transform rotate-1"></div>
+            <div className="relative bg-white dark:bg-sky-900/90 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-sky-700/50">
               <Countdown />
             </div>
           </section>
@@ -172,20 +168,20 @@ export default function Home() {
           {/* Profile Section */}
           <section className="space-y-8">
             <div className="text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 dark:text-slate-100">
                 {t("Home.myprofile")}
               </h2>
               <div className="h-1 w-16 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto rounded-full"></div>
             </div>
 
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-500 dark:to-cyan-600 rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200  hover:shadow-3xl transition-all duration-300 dark:border-sky-800 dark:bg-sky-900">
-                <h3 className="text-2xl font-semibold text-teal-600 mb-6 flex items-center dark:text-teal-400">
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-700 dark:to-cyan-700 rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white dark:bg-sky-900/90 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-sky-700/50 hover:shadow-3xl transition-all duration-300">
+                <h3 className="text-2xl font-semibold text-teal-600 mb-6 flex items-center dark:text-teal-300">
                   <div className="w-2 h-8 bg-gradient-to-b from-teal-500 to-teal-600 rounded-full mr-4 "></div>
                   {t("Home.profile")}
                 </h3>
-                <p className="text-gray-700 text-lg leading-relaxed mb-6 dark:text-slate-200">
+                <p className="text-gray-700 dark:text-slate-200 text-lg leading-relaxed mb-6">
                   {t("Home.profiletxt")}
                 </p>
                 <div className="flex justify-end">
@@ -204,7 +200,7 @@ export default function Home() {
           {/* Section Pro + Sport */}
           <section className="space-y-8">
             <div className="text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 dark:text-slate-100">
                 {t("Home.pro&sport")}
               </h2>
               <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-green-500 mx-auto rounded-full"></div>
@@ -213,15 +209,14 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Bloc Pro */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 rounded-3xl transform -rotate-2 group-hover:-rotate-3 transition-transform duration-300"></div>
-                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 h-full dark:border-sky-800 dark:bg-sky-900">
-                  <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-6 flex items-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-800 dark:to-indigo-800 rounded-3xl transform -rotate-2 group-hover:-rotate-3 transition-transform duration-300"></div>
+                <div className="relative bg-white dark:bg-sky-900/90 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-sky-700/50 hover:shadow-3xl transition-all duration-300 h-full">
+                  <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-300 mb-6 flex items-center">
                     <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-600 rounded-full mr-4"></div>
                     {t("Home.pro")}
                   </h3>
                   <p className="text-gray-700 dark:text-slate-200 text-base leading-relaxed mb-6 flex-grow">
                     {t("Home.protxt")}
-                    
                   </p>
                   <div className="flex justify-end">
                     <Link
@@ -237,15 +232,14 @@ export default function Home() {
 
               {/* Bloc Sport */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-500 rounded-3xl transform rotate-2 group-hover:rotate-3  transition-transform duration-300"></div>
-                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 h-full dark:border-sky-800 dark:bg-sky-900">
-                  <h3 className="text-2xl font-semibold text-green-700 dark:text-green-400 mb-6 flex items-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-800 dark:to-emerald-800 rounded-3xl transform rotate-2 group-hover:rotate-3  transition-transform duration-300"></div>
+                <div className="relative bg-white dark:bg-sky-900/90 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-sky-700/50 hover:shadow-3xl transition-all duration-300 h-full">
+                  <h3 className="text-2xl font-semibold text-green-700 dark:text-green-300 mb-6 flex items-center">
                     <div className="w-2 h-8 bg-gradient-to-b from-green-500 to-green-600 rounded-full mr-4 "></div>
                     {t("Home.sport")}
                   </h3>
                   <p className="text-gray-700 dark:text-slate-200 text-base leading-relaxed mb-6 flex-grow">
                     {t("Home.sporttxt")}
-                   
                   </p>
                   <div className="flex justify-end">
                     <Link
@@ -264,21 +258,21 @@ export default function Home() {
           {/* Section Blog */}
           <section className="space-y-8">
             <div className="text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 dark:text-slate-100">
                 {t("Home.blog")}
               </h2>
               <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-purple-600 mx-auto rounded-full"></div>
             </div>
 
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-500 rounded-3xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 dark:border-sky-800 dark:bg-sky-900">
-                <h3 className="text-2xl font-semibold text-purple-700 dark:text-purple-400 mb-6 flex items-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-800 dark:to-pink-800 rounded-3xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+              <div className="relative bg-white dark:bg-sky-900/90 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-sky-700/50 hover:shadow-3xl transition-all duration-300">
+                <h3 className="text-2xl font-semibold text-purple-700 dark:text-purple-300 mb-6 flex items-center">
                   <div className="w-2 h-8 bg-gradient-to-b from-purple-500 to-purple-600 rounded-full mr-4"></div>
                   {t("Home.lastarticle")}
                 </h3>
                 <p className="text-gray-700 dark:text-slate-200 text-lg leading-relaxed mb-6">
-                {t("Home.blogtxt")}
+                  {t("Home.blogtxt")}
                 </p>
                 <div className="flex justify-end">
                   <Link
@@ -306,7 +300,7 @@ export default function Home() {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fade-in {
           animation: fade-in 1s ease-out;
         }
