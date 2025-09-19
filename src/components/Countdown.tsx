@@ -78,8 +78,7 @@ const Countdown = () => {
         return;
       }
 
-
-      // todo : revoir code doublons ici 
+      // todo : revoir code doublons ici
       const eventEnd = nextEvent.date_fin
         ? new Date(nextEvent.date_fin).getTime()
         : countDate + 12 * 60 * 60 * 1000; // 12h si pas de date_fin
@@ -180,7 +179,57 @@ const Countdown = () => {
                   : t("Countdown.nowPro")}
               </p>
             ) : (
-              <div className="flex flex-col sm:flex-row justify-center gap-6 mb-5 mt-4">
+              // <div className="flex flex-col sm:flex-row justify-center gap-6 mb-5 mt-4">
+              //   {/* Days */}
+              //   <div className="flex flex-col items-center">
+              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+              //       {timeLeft.days}
+              //     </span>
+              //     <span className="text-sm text-slate-200">
+              //       {getLabel(timeLeft.days, "Countdown.day", "Countdown.days")}
+              //     </span>
+              //   </div>
+              //   {/* Hours */}
+              //   <div className="flex flex-col items-center">
+              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+              //       {timeLeft.hours}
+              //     </span>
+              //     <span className="text-sm text-slate-200">
+              //       {getLabel(
+              //         timeLeft.hours,
+              //         "Countdown.hour",
+              //         "Countdown.hours"
+              //       )}
+              //     </span>
+              //   </div>
+              //   {/* Minutes */}
+              //   <div className="flex flex-col items-center">
+              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+              //       {timeLeft.minutes}
+              //     </span>
+              //     <span className="text-sm text-slate-200">
+              //       {getLabel(
+              //         timeLeft.minutes,
+              //         "Countdown.minute",
+              //         "Countdown.minutes"
+              //       )}
+              //     </span>
+              //   </div>
+              //   {/* Seconds */}
+              //   <div className="flex flex-col items-center">
+              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+              //       {timeLeft.seconds}
+              //     </span>
+              //     <span className="text-sm text-slate-200">
+              //       {getLabel(
+              //         timeLeft.seconds,
+              //         "Countdown.second",
+              //         "Countdown.seconds"
+              //       )}
+              //     </span>
+              //   </div>
+              // </div>
+              <div className="flex flex-row flex-nowrap justify-center gap-6 mb-5 mt-4 overflow-x-auto">
                 {/* Days */}
                 <div className="flex flex-col items-center">
                   <span className="text-3xl sm:text-4xl font-bold text-slate-200">
@@ -190,6 +239,7 @@ const Countdown = () => {
                     {getLabel(timeLeft.days, "Countdown.day", "Countdown.days")}
                   </span>
                 </div>
+
                 {/* Hours */}
                 <div className="flex flex-col items-center">
                   <span className="text-3xl sm:text-4xl font-bold text-slate-200">
@@ -203,6 +253,7 @@ const Countdown = () => {
                     )}
                   </span>
                 </div>
+
                 {/* Minutes */}
                 <div className="flex flex-col items-center">
                   <span className="text-3xl sm:text-4xl font-bold text-slate-200">
@@ -216,6 +267,7 @@ const Countdown = () => {
                     )}
                   </span>
                 </div>
+
                 {/* Seconds */}
                 <div className="flex flex-col items-center">
                   <span className="text-3xl sm:text-4xl font-bold text-slate-200">
@@ -296,17 +348,15 @@ const Countdown = () => {
 
         {nextEvent && (
           <div className="mt-8 flex flex-col sm:flex-col md:flex-row justify-center md:justify-between gap-3 lg:gap-4">
-            {/* Bouton voir le calendrier */}
             <div className="text-center">
               <button
                 onClick={goToCalendar}
                 className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-blue-500 hover:text-white w-full md:w-auto"
               >
-                Voir le calendrier
+                {t("Countdown.linkCalendar")}
               </button>
             </div>
 
-            {/* Bouton page sport */}
             {nextEvent.type === "sport" && (
               <a
                 href="/sport"
@@ -316,7 +366,6 @@ const Countdown = () => {
               </a>
             )}
 
-            {/* Bouton page pro */}
             {nextEvent.type === "pro" && (
               <a
                 href="/pro"

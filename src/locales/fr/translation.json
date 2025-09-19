@@ -7,11 +7,18 @@
     "pro&sport": "Pro & Sport",
     "myprofile": "Mon Profil",
     "pro": "Pro",
+    "profile": "Profil",
     "sport": "Sport",
     "blog": "Blog",
-    "see": "→ Voir",
-    "lastarticle": "Derniers articles"
+    "see": "Voir ",
+    "seebis": "→ Voir ",
+    "lastarticle": "Derniers articles",
+    "profiletxt": "Information simple mais éfficace à mon sujet",
+    "sporttxt": "infos autour du canoë-kayak, entraînements, compétitions, budget d'une saison.",
+    "blogtxt": "Entre Article de presse, interview ou encore ma section blog, il ne manque pas de quoi lire sur cette page, cliquez pour découvrir plus ;)",
+    "protxt": "Ici c'est background professionnel, project auquel j'ai participé ou encore un échantillons de skill developper pdt mon cycle ingé"
   },
+
   "Blog": {
     "blog_welcome": "📝 Bienvenue sur la page de News",
     "txtintro": "Ici je partage mes expériences entre sport de haut niveau et études en informatique. Vous trouverez des passages médias, mes articles personnels et des réflexions sur mon parcours.",
@@ -20,7 +27,7 @@
     "alltxt": "Parcourez l’ensemble de mes contenus, filtrez par type ou découvrez dans l’ordre chronologique.",
     "specialnews": "⚡ News Spéciales",
     "lastarticle": " 🆕 Dernier Article",
-    "toparticle": "⭐ Top Articles Sportifs",
+    "topsportarticle": "⭐ Top Articles Sportifs",
     "important": "Annonce Importante",
     "importanttxt": "Une nouvelle excitante concernant ma prochaine compétition internationale ! Plus de détails arrivent bientôt.",
     "alls": "Tous",
@@ -29,63 +36,108 @@
   },
 
   "Profile": {
-    "profile_welcome": "📝 Bienvenue sur la page de mon profile"
+    "profile_welcome": "📝 Bienvenue sur la page de mon profile",
+    "faq": "Foire aux questions :",
+    "faqtxt": "Découvrez les réponses aux questions les plus courantes",
+    "french": "Français",
+    "english": "Anglais",
+    "years": "ans",
+    "citation" : "« Discipline, curiosité et persévérance guident chacun de mes projets.»", 
+    "":" Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur",
+    "d":""
+
+
   },
 
   "Sport": {
     "sport_welcome": " Bienvenue sur la page sport",
+    "join": "Déja dans l'aventure : ",
+    "calendarandevent":"Calendrier et Événements",
+    "calendartxt":"Explorez mon calendrier sportif et professionnel de manière interactive. Cliquez sur un événement pour plus de détails.",
+    "legend":"Légende",
     "budget": {
       "helmet": "Casque",
       "c1paddle": "pagaie de canoë",
       "k1paddle": "pagaie de kayak cross",
       "hikospraydeck": "jupe Kway ",
+      "kayakcrossdeck": "jupe Kway de kayak cross",
       "hikolifejacket": "gilet",
       "slalomboat": "bateau de slalom",
       "kayakcrossboat": "bateau de kayak cross",
       "racerst": "Jupe Kway de course",
-      "seasonbudget": "💰 Budget de saison",
+      "seasonbudget": "Budget de saison",
       "training&race": "Stages & Compétitions",
-      "sum&info": "📊 Récapitulatif & Infos",
+      "sum&info": "Récapitulatif & Infos",
       "equippement": "Équipement",
       "travel": "Déplacement",
-      "totalglo": "Total Global :",
-      "total": "Total :"
+      "totalglo": "Budget Global :",
+      "total": "Budget :",
+      "material": "Matériels",
+      "intro": "Découvrez le budget nécessaire pour une saison complète de compétition internationale",
+      "viewtoolpoint": "Vue Interactive",
+      "viewdetail": "Vue Détaillée",
+      "race": "6 semaines de compétition internationale",
+      "training": "3 semaines de camps d'entraînement",
+      "nationale": "5 courses nationales N1/N2",
+      "budgetreality": "Réalité budgétaire",
+      "budgetrealitytxt1": "Au vu de mes impératifs professionnels et de ma capacité financière, je ne peux pas me permettre une saison complète. Je choisis donc 3 World Cup et les championnats du monde en plus des compétitions en France.",
+      "budgetrealitytxt2": "De même, contrairement à un athlète professionnel qui change de bateau chaque année, mon matériel fait 2-3 saisons avant d'être renouvelé."
     },
     "deplacement": {
-      "registrationfee":"Frais d'inscription",
-      "coaching":"Coaching",
-      "accomodation":"Hébergement",
-      "food":"Repas",
-      "transport":"Transport",
-      "other":"Autres",
-      "":""
+      "registrationfee": "Frais d'inscription",
+      "registrationfeetxt": "130€ par coupe du monde (x5) + 240€ par mondiaux (x2)",
+      "coaching": "Coaching",
+      "coachingtxt": "2571€ pour 4 semaines de compétition → 642€/semaine → 6420€ par saison",
+      "accomodation": "Hébergement",
+      "accomodationtxt": "Airbnb 1260€ → moyenne par événement : 315€",
+      "food": "Repas",
+      "foodtxt": "Repas équilibrés ~140€/semaine",
+      "transport": "Transport",
+      "transporttxt": "Dépend de la distance, mode de transport, prix essence",
+      "other": "Autres",
+      "othertxt": "Séances 10-25€/séance, 1-2 séances/jour → ~120€/semaine",
+      "subscription": "Abonnement Pau structure d'entraînement",
+      "subscriptiontxt": "Abonnement annuel",
+      "daily": "Vie quotidienne",
+      "dailytxt": "Loyer, Course, Essence, ..."
     },
-    "projet&objectif": "🎯 Projets & Objectifs",
-    "incomingevent": "📅 Événements à venir !",
+
+    "projet&objectif": "Projets & Objectifs",
+    "incomingevent": "Événements à venir !",
     "calendarreduce": "Réduire le calendrier",
     "calendargrowth": "Agrandir le calendrier",
-    "career": "🏆 Palmarès & Carrière",
-    "moreinfo": "📂 Pour plus d'informations",
-    "moreinfotxt": "Téléchargez mes fichiers budget et sponsoring pour tout savoir :", 
-    "budgetsimple":"Budget", 
-    "sponsor":"sponsoring",
-    "incommingeventyears":"événements à venir 🚀 dans l'année",
-    "incommingeventyear":"événement à venir 🚀 dans l'année",
-    "noincommingeventyear":"Pas d'evenement à venir ",
+    "career": "Palmarès & Carrière",
+    "moreinfo": "Pour plus d'informations",
+    "moreinfotxt": "Téléchargez mes fichiers budget et sponsoring pour tout savoir :",
+    "budgetsimple": "Budget",
+    "sponsor": "sponsoring",
+    "incommingeventyears": "événements à venir 🚀 dans l'année",
+    "incommingeventyear": "événement à venir 🚀 dans l'année",
+    "noincommingeventyear": "Pas d'evenement à venir ",
+    "myobjectif": "Mes Objectifs Sportifs",
+    "myobjectiftxt": "Entre performance individuelle et impact collectif, découvrez mes ambitions pour les années à venir dans le monde du canoë slalom.",
 
-
-    "citation":" « La performance commence par une bonne préparation et un budget maîtrisé. »"
+    "citation": " « La performance commence par une bonne préparation et un budget maîtrisé. »"
   },
 
   "Pro": {
-    "pro_welcome": " Bienvenue sur la page pro", 
+    "pro_welcome": " Bienvenue sur la page pro",
+
+    "background": "Parcours & Formations",
+    "skills": "Skills",
+    "skillstxt": "Découvrez les technologies et outils que j'utilise pour créer des solutions innovantes et performantes. Chaque compétence représente une expertise développée à travers des projets concrets et une formation continue.",
+    "project": "Projects",
+    "projecttxt": "Une sélection de mes projets les plus significatifs, alliant innovation technique et expérience utilisateur. Chaque projet reflète ma passion pour le développement et ma capacité à résoudre des problèmes complexes.",
+    "noproject":"Aucun projet trouvé dans cette catégorie",
+    "allproject":"Tous les projets",
+    "projectpro":"Professionnel",
+    "projectperso":"Personnel",
+    "featured":"Mis en avant",
+
+    "projectnumber":"Projets totaux",
+    "featuredstat":"Mis en avant",
 
 
-
-
-
-
-    
     "citation": "« L’expérience et la formation sont les fondations sur lesquelles se construisent les projets ambitieux. »"
   },
   "Contact": {
@@ -126,8 +178,9 @@
     "start": "Heure de départ",
     "now": "Compétition en cours !!",
     "nowPro": "Événement en cours !!",
-    "linkPagePro": "voir la page Pro",
-    "linkPageSport": "voir la page Sport",
+    "linkPagePro": "Voir la page Pro",
+    "linkPageSport": "Voir la page Sport",
+    "linkCalendar": "Voir le Calendrier",
     "linkhere": "Ici",
     "upcoming": " Plus d'informatiion 48h avant le début de l'évènement !!"
   },
@@ -148,17 +201,44 @@
     "navigation": "Navigation",
     "social": "Réseaux",
     "allrights": "Tous droits réservés.",
-    "lastupdate": "Dernières mise à jour"
+    "lastupdate": "Dernières mise à jour",
+    "news": "Média"
   },
 
   "Experience": {
     "formation": "Formation",
-    "pro": "Experience Professionnelle"
+    "pro": "Experience Professionnelle",
+    "title": "Expériences"
+  },
+
+  "Skills": {
+    "noteTitle": "Information",
+    "noteText": "1 = begginer (< 2h) / 2 = intermédaire ( < 5h )/ 3 = ?? ( entre 5h et 10h) / 4 = advanced (> 10h) / 5 = expert (> 20h)  ",
+    "e": "",
+    "r": "",
+    "t": ""
   },
 
   "NotFound": {
+    "title" : "Page introuvable",
     "oups": "Oups 😅 Vous pagayez dans une zone inconnue du web.",
-    "retour": "Retour à l’accueil"
+    "retour": "Retour à l’accueil", 
+    "or":"Ou explorez directement"
+  },
+
+  "HeroSection": {
+    "sporttitle": "Athlète Semi-Professionnel • Canoë Slalom & Kayak Cross",
+    "sporttxt1": "Médaillé International",
+    "sporttxt2": "Top 100 Mondial",
+    "protitle": "Ingénieur IT • Développeur Web",
+    "protxt1": "Expérience Full-Stack",
+    "protxt2": "Projets Cloud & IA",
+    "blogtitle": "Article de presse • TV • Radio • Blog",
+    "blogtxt1": "30 min de temps d'écran",
+    "blogtxt2": "Interview",
+    "contacttitle": "Restons en Contact",
+    "contacttxt1": "Que ce soit pour une collaboration professionnelle, un partenariat sportif, ou simplement échanger sur nos passions communes, n'hésitez pas à me contacter !",
+    "contacttxt2": ""
   },
 
   "AchievementR": {
@@ -170,16 +250,59 @@
   },
 
   "Calendar": {
-    "interactif": "Calendrier Interactif"
+    "interactif": "Calendrier Interactif",
+    "worldchamp": "Championnat du Monde",
+    "worldcup": "Coupe du monde",
+    "national": "Course National ",
+    "training": "Stage d'entrainement",
+    "pro": "Evènement Professionel",
+    "other": "Autre",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "today": "Aujourd'hui",
+    "month": "Mois",
+    "week": "Semaine",
+    "day": "Jour",
+    "agenda": "Agenda",
+    "date": "Date",
+    "time": "Heure",
+    "event": "Événement",
+    "noEventsInRange": "Aucun événement dans cette période.",
+    "showMore": "de plus",
+    "starttime": "Mon heure de départ",
+    "place": "Lieu de l'événement",
+    "bibs": "Dossard",
+    "participationnumber": "Numéro de participation",
+    "results": "Voir les Résultats",
+    "video": "Regarder la vidéo",
+    "eventdetail": "À propos de cet événement",
+    "worldchamptxt": "Championnat du Monde ICF, l'événement le plus prestigieux de la saison.",
+    "worldcuptxt": "Compétition internationale de haut niveau faisant partie du circuit des Coupes du Monde ICF.",
+    "nationaltxt": "Compétition nationale française, étape importante du calendrier sportif français.",
+    "trainingtxt": "Stage d'entraînement pour préparer les compétitions à venir.",
+    "protxt": "Événement professionnel lié à mon activité d'ingénieur informatique.",
+    "othertxt": "Événement sportif ou professionnel.",
+    "tips": "Conseils d'utilisation",
+    "clickevent": "Cliquez sur un événement pour voir tous les détails",
+    "changeday": "Naviguez entre les vues mois, semaine et jour",
+    "color": "Utilisez les couleurs pour identifier les types d'événements"
   },
 
   "DownloadBtn": {
-    "download": "Télécharger"
+    "download": "Télécharger",
+    "downloading": "Téléchargement...",
+    "noteTitle": "Information",
+    "noteText": "Les documents sont automatiquement téléchargés dans la langue sélectionnée sur le site.",
+    "cvdescription": "Mon curriculum vitae complet",
+    "budgetdescription": "Détail budgétaire ",
+    "sponsordescription": "Dossier de sponsoring",
+    "title": "Téléchargements",
+    "description": "Découvrez mes documents officiels et informations détaillées"
   },
 
   "EventList": {
-    "seeall": "See all →",
-    "allevent": "📜 Tous les événements",
+    "seeall": "Voir Tout →",
+    "allevents": "📜 Tous les événements",
     "close": "✕ Fermer",
     "result": "Résultat",
     "video": "Vidéo",
@@ -194,6 +317,8 @@
     "sport": "Sport",
     "pro": "Pro",
     "date": "Date",
-    "place": "Lieu"
+    "place": "Lieu",
+    "noevent": "Aucun événement",
+    "event": "évènement"
   }
 }

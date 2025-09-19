@@ -1,9 +1,8 @@
 // import
 
 import {
+  //skills
   css,
-  // docker,
-  // figma,
   git,
   html,
   javascript,
@@ -14,8 +13,53 @@ import {
   tailwind,
   typescript,
   backend,
-  // threejs,
   github,
+
+  //image, next_event pour countdown  :
+
+  //articles
+  photo1,
+  photo2,
+  photo3,
+  photo4,
+  photo5,
+  photo6,
+  photo7,
+  photo8,
+  photo9,
+  photo10,
+  photo11,
+  photo12,
+  photo13,
+  photo14,
+  photo15,
+  photo16,
+  photo17,
+  photo18,
+  photo19,
+  photo20,
+  photo21,
+  photo22,
+  photo23,
+  photo24,
+  photo25,
+  photo26,
+  photo27,
+  photo28,
+  photo29,
+  photo30,
+  photo31,
+  photo32,
+  photo33,
+  photo34,
+  photo35,
+  photo36,
+  photo37,
+  photo38,
+
+  //blog
+
+  //other
 } from "../../medias";
 
 // Next_date
@@ -32,355 +76,800 @@ export interface EventType {
   start?: string;
   type: string;
   photobg?: string;
-  type_event?: string;
+  type_event_en?: string;
+  type_event_fr?: string;
 }
 
-
-//todo : retrouver toutes les courses, 
-//  todo : mettre la semaine à Prague et tacen de cette année. 
+// todo : ranger ce fichier pour qu'il soit propre, clean pétant
+//  todo : mettre la semaine à Prague et tacen de cette année.
+// revoir les dates de coupe du monde si mettre lundi ou si rajouter stage d'entrainement à chaque fois ?
+// revoir les liens
+// revoir pour les info starts, bibs, ...
+//revoir telecharger image d'event
 export const next_date: EventType[] = [
-  {
-    date: "July 05, 2026 12:00",
-    date_fin: "July 07, 2026 18:00",
-    lieu_fr: "Liptovsky Mikulas, Slovaquie",
-    lieu_en: "Liptovsky Mikulas, Slovakia",
-    event_en: "WorldChampionship U23",
-    event_fr: "Championnat du monde U23",
-    link_result: "link",
-    link_video: "link",
-    bibs: "18",
-    start: "12h15",
-    type: "pro",
-    type_event: "exam",
-    photobg:
-      "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
-  },
-  {
-    lieu_fr: "Ivrea, Italie",
-    lieu_en: "Ivrea, Italy",
-    date: "October 11, 2025 12:00",
-    date_fin: "October 17, 2025 18:00",
-    event_en: "WC",
-    event_fr: "Coupe du monde",
-    link_result: "link",
-    link_video: "link",
-    bibs: "18",
-    start: "12h15",
-    type: "sport",
-    type_event: "worldcup",
-
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-  {
-    lieu_fr: "Seu d'Urgell, Espagne",
-    lieu_en: "Seu d'Urgell, Spain",
-    date: "September 19, 2024 12:00",
-    date_fin: "September 27, 2024 18:00",
-    event_en: "WC",
-    event_fr: "Coupe du monde",
-    link_result: "link1",
-    link_video: "link2",
-    bibs: "18",
-    start: "12h15",
-    type: "sport",
-    type_event: "worldcup",
-    photobg:
-      "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
-  },
-  {
-    lieu_fr: "Paris, France",
-    lieu_en: "Paris, France",
-    date: "September 06, 2025  20:00",
-    date_fin: "September 08, 2025 08:37",
-    event_en: "World Cup Final",
-    event_fr: "Final du circuit coupe du monde",
-    link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2025/results",
-    link_video:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    bibs: "18",
-    start: "12h15",
-    type: "sport",
-    type_event: "worldchamp",
-    photobg:
-      "https://images.pexels.com/photos/2231631/pexels-photo-2231631.jpeg",
-  },
+  //2028
+  //2027
   {
     lieu_fr: "Penrith, Australie",
     lieu_en: "Penrith, Australia",
-    date: "September 21, 2025  08:15",
+    date: "September 25, 2025  08:15",
     date_fin: "October 03, 2025 16:05",
-    event_en: "world championship Senior 2026",
-    event_fr: "Championnat du monde senior 2026",
+    event_en: "world championship Senior 2025",
+    event_fr: "Championnat du monde senior 2025",
     link_result:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    link_video:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    bibs: "11",
-    start: "11",
+      "https://www.canoeicf.com/canoe-slalom-world-championships/sydney-2025/results",
     type: "sport",
-    type_event: "worldchamp",
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-  {
-    lieu_fr: "Augsburg, Allemagne",
-    lieu_en: "Augsburg, Germany",
-    date: "January 15, 2026  21:01",
-    date_fin: "January 17, 2026 16:05",
-    event_en: "World Cup Final test",
-    event_fr: "Final du circuit coupe du monde test",
-    link_result:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    link_video:
-      "https://www.ondemandcmo.com/app/uploads/2016/03/canstockphoto22402523-arcos-creator.com_.jpg",
-    bibs: "19",
-    start: "11h49",
-    type: "sport",
-    type_event: "worldchamp",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
   {
     lieu_fr: "Pula, Croatie",
     lieu_en: "Pula, Croatia",
-    date: "September 20, 2025  19:00",
-    date_fin: "September 20, 2025 21:00",
+    date: "September 20, 2025  19:50",
+    date_fin: "September 20, 2025 22:0",
     event_en: "Pula semi Marathon",
     event_fr: "Semi Marathon de Pula",
-    type: "pro",
-    type_event: "Course",
+    type: "other",
+    type_event_en: "Course",
+    type_event_fr: "Race",
     photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+      "https://images.ahotu.com/r9urrd4o8fattlkye8ffwml2tira?w=1920&q=100&f=webp",
   },
   {
     lieu_fr: "Pula, Croatie",
     lieu_en: "Pula, Croatia",
+    // todo changer date
     date: "November 17, 2025 16:00",
     date_fin: "November 23, 2025 18:00",
     event_en: " Pula Internship",
     event_fr: " stage Pula",
-    link_result: "link",
-    link_video: "link",
-    bibs: " 18",
-    start: "12h15",
     type: "pro",
-    type_event: "stage",
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-  {
-    lieu_fr: "Cesi, Pau",
-    lieu_en: "Cesi, Pau",
-    date: "March 05, 2026 16:00",
-    date_fin: "March 05, 2026 18:00",
-    event_en: "Graduation",
-    event_fr: "diplome d'ingénieur",
-    bibs: "00",
-    start: "12h15",
-    type: "sport",
-    type_event: "national",
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
+    type_event_en: "internship",
+    type_event_fr: "stage",
 
+    photobg:
+      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+  },
   {
-    lieu_fr: "test world cup, Pau",
-    lieu_en: "test world cup, Pau",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
     date: "September 12, 2026 16:00",
     date_fin: "September 13, 2026 18:00",
     event_en: "Graduation",
     event_fr: "diplome d'ingénieur",
-    bibs: "00",
-    start: "12h15",
     type: "pro",
-    type_event: "diplome",
+    type_event_en: "graduation",
+    type_event_fr: "diplome",
+
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
-
   {
-    lieu_fr: "Stage, Pau",
-    lieu_en: "Stage, Pau",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
     date: "April 25, 2026 16:00",
     date_fin: "April 30, 2026 18:00",
     event_en: "training camp",
     event_fr: "stage entrainement",
-    link_result: "",
-    link_video: "",
-    bibs: "",
-    start: "",
     type: "sport",
-    type_event: "training",
+    type_event_en: "training",
+    type_event_fr: "entrainement",
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
-
   {
-    lieu_fr: "test1, Pau",
-    lieu_en: "test1, Pau",
-    date: "April 20, 2026 16:00",
-    date_fin: "April 21, 2026 18:00",
-    event_en: "Graduation",
-    event_fr: "diplome d'ingénieur",
-    link_result: "link",
-    link_video: "link",
-    bibs: "00",
-    start: "12h15",
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Praha, czech Republic",
+    date: "August 17, 2025  19:00",
+    date_fin: "August 25, 2025 16:00",
+    event_en: "training camp",
+    event_fr: "Camp d'entrainement",
     type: "sport",
-    type_event: "national",
+    type_event_en: "training",
+    type_event_fr: "entrainement",
     photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
+  },
+  //  ranger au dessus apres
+  // todo : revoir les quelque probleme de type et rajouter les autres caractéristique // revoir les liens
+  // YOG et YAG type = other à faire
+
+  // 2026
+  {
+    date: "September 11, 2026 08:00",
+    date_fin: "September 13, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'Urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2026 ICF Canoe Slalom World Cup Final La Seu",
+    event_fr: "Coupe du Monde Final 2026 à La Seu",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2026",
+    type_event_en: "worldcup",
+    type_event_fr: "Coupe du monde",
+  },
+  {
+    date: "September 04, 2026 08:00",
+    date_fin: "September 09, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Paris, France",
+    lieu_en: "Paris, France",
+    event_en: "2026 ICF Canoe Slalom World Cup Vaires-sur-Marne",
+    event_fr: "Coupe du monde 4 à Vaires-sur-Marne",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/vaires-sur-marne-2026",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 21, 2026 08:00",
+    date_fin: "July 26, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Oklahoma City, USA",
+    lieu_en: "Oklahoma City, USA",
+    event_en: "2026 ICF Canoe Slalom World Championships Senior",
+    event_fr: "Championnat du monde Sénior 2026",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/oklahoma-city-2026",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 12, 2026 08:00",
+    date_fin: "June 14, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Augsburg, Allemagne",
+    lieu_en: "Augsburg, Germany",
+    event_en: "2026 ICF Canoe Slalom World Cup Augsburg",
+    event_fr: "Coupe du monde 3 à Augsburg",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2026",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 05, 2026 08:00",
+    date_fin: "June 07, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Prague, Czech Republic",
+    event_en: "2026 ICF Canoe Slalom World Cup Prague",
+    event_fr: "Coupe du monde 2 à Prague",
+    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2026",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "May 29, 2026 08:00",
+    date_fin: "May 31, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2026 ICF Canoe Slalom World Cup Tacen",
+    event_fr: "Coupe du monde 1 à Tacen",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-tacen-2026",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+    //todo rajouter /results lorsque les infos seront la.
+  },
+
+  // 2025
+  {
+    date: "August 29, 2025 08:00",
+    date_fin: "August 31, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2025 ICF Canoe Slalom World Cup Tacen",
+    event_fr: "4e Coupe du monde 2025",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-2025/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 08, 2025 08:00",
+    date_fin: "July 13, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Foix, France",
+    lieu_en: "Foix, France",
+    event_en: "2025 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde U23 2026",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/foix-2025/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 13, 2025 08:00",
+    date_fin: "June 15, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2025 ICF Canoe Slalom World Cup Pau",
+    event_fr: "2e Coupe du monde 2025",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2025/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 06, 2025 08:00",
+    date_fin: "June 08, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "African Reference Race",
+    event_fr: "Course Africaine de Référence ",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/african-reference-race",
+    type_event_en: "continental",
+    type_event_fr: "course continentale",
+    // todo : revoir pour type_event
+  },
+  {
+    date: "June 06, 2025 08:00",
+    date_fin: "June 08, 2025 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2025 ICF Canoe Slalom World Cup La Seu",
+    event_fr: "1er Coupe du monde 2025",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+
+  // 2024
+  {
+    date: "September 19, 2024 08:00",
+    date_fin: "September 22, 2024 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2024 ICF Canoe Slalom World Cup Final La Seu",
+    event_fr: "Final du circuit coupe du monde 2024",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2024/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "September 12, 2024 08:00",
+    date_fin: "September 15, 2024 18:00",
+    type: "sport",
+    lieu_fr: "Ivréa, Italie",
+    lieu_en: "Ivrea, Italy",
+    event_en: "2024 ICF Canoe Slalom World Cup Ivrea",
+    event_fr: "4e Coupe du monde 2024",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ivrea-2024/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 02, 2024 08:00",
+    date_fin: "July 07, 2024 18:00",
+    type: "sport",
+    lieu_fr: "Liptovsky Mikulas, Slovaquie",
+    lieu_en: "Liptovsky Mikulas, Slovakia",
+    event_en: "2024 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde U23 2024",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/liptovsky-mikulas-2024/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "February 09, 2024 08:00",
+    date_fin: "February 11, 2024 18:00",
+    type: "sport",
+    lieu_fr: " Île de la Reunion, France",
+    lieu_en: "Reunion Island, France",
+    event_en: "Olympic Qualifier",
+    event_fr: "Championnat d'Afrique &Qualification Olympique",
+    type_event_en: "continental",
+    type_event_fr: "course continentale",
+    //todo : revoir event_type
+  },
+  // 2023
+  {
+    date: "September 19, 2023 08:00",
+    date_fin: "September 24, 2023 18:00",
+    type: "sport",
+    lieu_fr: "Londre, Angleterre",
+    lieu_en: "London, England",
+    event_en: "2023 ICF Canoe Slalom World Championships",
+    event_fr: "Championnat du Monde 2023",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/lee-valley-2023/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "August 31, 2023 08:00",
+    date_fin: "September 03, 2023 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2023 ICF Canoe Slalom World Cup La Seu",
+    event_fr: "4e Coupe du monde 2023",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-d-urgell-2023/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "August 15, 2023 08:00",
+    date_fin: "August 20, 2023 18:00",
+    type: "sport",
+    lieu_fr: "Cracovie, Pologne",
+    lieu_en: "Krakow, Poland",
+    event_en: "2023 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2023",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/krakow-2023/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  // 2022
+  {
+    date: "August 26, 2022 08:00",
+    date_fin: "August 28, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2022 ICF Canoe Slalom World Cup Pau",
+    event_fr: "3e Coupe du Monde 2022",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2022/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "September 02, 2022 08:00",
+    date_fin: "September 04, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2022 ICF Canoe Slalom World Cup Final La Seu",
+    event_fr: "Final du circuit Coupe du monde 2022",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2022/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "July 26, 2022 08:00",
+    date_fin: "July 31, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Augsburg, Allemagne",
+    lieu_en: "Augsburg, Germany",
+    event_en: "2022 ICF Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Sénior 2022",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/augsburg-2022/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "July 05, 2022 08:00",
+    date_fin: "July 07, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Ivréa, Italie",
+    lieu_en: "Ivrea, Italy",
+    event_en: "2022 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2022",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/ivrea-2022/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 17, 2022 08:00",
+    date_fin: "June 19, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Cracovie, Pologne",
+    lieu_en: "Krakow, Poland",
+    event_en: "2022 ICF Canoe Slalom World Cup Krakow",
+    event_fr: "2e Coupe du monde 2022",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/krakow-2022/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 10, 2022 08:00",
+    date_fin: "June 12, 2022 18:00",
+    type: "sport",
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Prague, Czech Republic",
+    event_en: "2022 ICF Canoe Slalom World Cup Prague",
+    event_fr: "1er Coupe du monde 2022",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2022/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  // 2021
+  {
+    date: "September 10, 2021 08:00",
+    date_fin: "September 12, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2021 ICF Canoe Slalom World Cup Final Pau",
+    event_fr: "Final du circuit Coupe du monde 2021",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2021/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "September 03, 2021 08:00",
+    date_fin: "September 05, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2021 ICF Canoe Slalom World Cup La Seu",
+    event_fr: "4e Coupe du monde 2021",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2021/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 20, 2021 08:00",
+    date_fin: "June 25, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Bourg saint maurice, France",
+    lieu_en: "Bourg-Saint-Maurice, France",
+    event_en: "French Championship",
+    event_fr: "Championnat de France 2021",
+    type_event_en: "national",
+    type_event_fr: "national",
+  },
+  {
+    date: "July 06, 2021 08:00",
+    date_fin: "July 11, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2021 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2021",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/ljubljana-tacen-2021/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 11, 2021 08:00",
+    date_fin: "June 13, 2021 18:00",
+    type: "sport",
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Prague, Czech Republic",
+    event_en: "2021 ICF Canoe Slalom World Cup Prague",
+    event_fr: "3e Coupe du Monde 2021",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2021/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  // 2020
+  {
+    date: "November 06, 2020 08:00",
+    date_fin: "November 08, 2020 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2020 ICF Canoe Slalom World Cup Pau",
+    event_fr: "2e Coupe du monde 2020",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/pau-2020/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "August 23, 2020 08:00",
+    date_fin: "August 27, 2020 18:00",
+    type: "sport",
+    lieu_fr: "Argentiere, France",
+    lieu_en: "Argentiere, France",
+    event_en: "French Championship",
+    event_fr: "Championnat de France",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+  },
+
+  // 2019
+  {
+    date: "October 25, 2019 08:00",
+    date_fin: "October 27, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Tokyo, Japon",
+    lieu_en: "Tokyo, Japan",
+    event_en: "2019 Canoe Slalom Olympic Test Event",
+    event_fr: "Evenement test pour les JO 2020",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-olympic-test-event/tokyo-2019/results",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+  },
+  {
+    date: "October 18, 2019 08:00",
+    date_fin: "October 20, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Tokyo, Japon",
+    lieu_en: "Tokyo, Japan",
+    event_en: "NHK Cup",
+    event_fr: "Coupe NHK",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+  },
+  {
+    date: "September 25, 2019 08:00",
+    date_fin: "September 27, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Seu d'urgel, Espagne",
+    lieu_en: "Seu d'Urgell, Spain",
+    event_en: "2019 ICF Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Sénior 2019",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/la-seu-d-urgell-2019/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "July 16, 2019 08:00",
+    date_fin: "July 21, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Cracovie, Pologne",
+    lieu_en: "Krakow, Poland",
+    event_en: "2019 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde junior & U23 2019",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/krakow-2019/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "June 28, 2019 08:00",
+    date_fin: "June 30, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Tacen, Slovénie",
+    lieu_en: "Tacen, Slovenia",
+    event_en: "2019 ICF Canoe Slalom World Cup 3",
+    event_fr: "3e Coupe du monde 2019",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-2019/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 21, 2019 08:00",
+    date_fin: "June 23, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Bratislava, Slovaquie",
+    lieu_en: "Bratislava, Slovakia",
+    event_en: "2019 ICF Canoe Slalom World Cup 2",
+    event_fr: "2e Coupe du monde 2019",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/bratislava-2019/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  {
+    date: "June 14, 2019 08:00",
+    date_fin: "June 16, 2019 18:00",
+    type: "sport",
+    lieu_fr: "Londre, Angleterre",
+    lieu_en: "London, England",
+    event_en: "2019 ICF Canoe Slalom World Cup 1",
+    event_fr: "1er Coupe du monde 2019",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-cup/lee-valley-2019/results",
+    type_event_en: "worldcup",
+    type_event_fr: "coupe du monde",
+  },
+  // 2018
+  {
+    date: "October 12, 2018 08:00",
+    date_fin: "October 13, 2018 18:00",
+    type: "sport",
+    lieu_fr: "Buenos Aires, Argentine",
+    lieu_en: "Buenos Aires, Argentina",
+    event_en: "2018 Youth Olympic Games - Canoe Sprint & Slalom",
+    event_fr: "Jeux Olympique de la jeunesse CEL et SL",
+    link_result:
+      "https://www.canoeicf.com/canoe-sprint-olympics/buenos-aires-2018/results",
+    type_event_en: "olympics",
+    type_event_fr: "olympiques",
+    // todo : revoir pour type_event
+  },
+  {
+    date: "July 23, 2018 08:00",
+    date_fin: "July 27, 2018 18:00",
+    type: "sport",
+    lieu_fr: "Alger, Algérie",
+    lieu_en: "Algiers, Algeria",
+    event_en: "YAG",
+    event_fr: "Jeux African de la jeunesse",
+    type_event_en: "continental",
+    type_event_fr: "course continentale",
+    //todo : revoir pour type_event
+  },
+  {
+    date: "July 17, 2018 08:00",
+    date_fin: "July 22, 2018 18:00",
+    type: "sport",
+    lieu_fr: "Ivréa, Italie",
+    lieu_en: "Ivrea, Italy",
+    event_en: "2018 ICF Junior & U23 Canoe Slalom World Championships",
+    event_fr: "Championnat du monde Junior & U23 2018",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/ivrea-2018/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  // 2017
+  {
+    date: "Septembre 26, 2017 08:00",
+    date_fin: "October 01, 2017 18:00",
+    type: "sport",
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    event_en: "2017 Canoe Slalom World Championship Slalom & Downriver",
+    event_fr: "Championnat du monde de Slalom et descente 2017",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/pau-2017/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
+  },
+  {
+    date: "July 18, 2017 08:00",
+    date_fin: "July 23, 2017 18:00",
+    type: "sport",
+    lieu_fr: "Bratislava, Slovaquie",
+    lieu_en: "Bratislava, Slovakia",
+    event_en: "2017 ICF Canoe Slalom Junior & U23 World Championship",
+    event_fr: "Championnat du monde Junior & U23 2017",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-world-championships/bratislava-2017/results",
+    type_event_en: "worldchamp",
+    type_event_fr: "championnat du monde",
   },
 ];
 
 // skills
 
+export interface Skills {
+  name: string;
+  imageUrl: string;
+  category: string;
+  category_fr: string;
+  level: string;
+}
 export const skills = [
   {
-    imageUrl: css,
     name: "CSS",
-    type: "Frontend",
-    color: "red",
+    imageUrl: css,
+    category: "Frontend",
+    category_fr: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: backend, //express
     name: "Express",
-    type: "Backend",
-    color: "green",
+    imageUrl: backend,
+    category: "Backend",
+    category_fr: "Backend",
+    level: "5",
   },
   {
-    imageUrl: git,
     name: "Git",
-    type: "Version Control",
-    color: "black",
+    imageUrl: git,
+    category: "Version Control",
+    category_fr: "Controle de Version",
+    level: "5",
   },
   {
-    imageUrl: github,
     name: "GitHub",
-    type: "Version Control",
-    color: "pink",
+    imageUrl: github,
+    category: "Version Control",
+    category_fr: "Controle de Version",
+    level: "5",
   },
   {
-    imageUrl: html,
     name: "HTML",
-    type: "Frontend",
-    color: "yellow",
+    imageUrl: html,
+    category: "Frontend",
+    category_fr: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: javascript,
     name: "JavaScript",
-    type: "Frontend",
-    color: "red",
+    imageUrl: javascript,
+    category: "Frontend",
+    category_fr: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: mongodb,
     name: "MongoDB",
-    type: "Database",
-    color: "red",
+    imageUrl: mongodb,
+    category: "Database",
+    category_fr: "Base de donnée",
+
+    level: "5",
   },
   {
-    imageUrl: backend, //motion,
     name: "Motion",
-    type: "Animation",
-    color: "red",
+    imageUrl: backend,
+    category: "Animation",
+    category_fr: "Animation",
+    level: "5",
   },
   {
-    imageUrl: backend, //mui
     name: "UX/UI",
-    type: "Frontend",
-    color: "orange",
+    imageUrl: backend,
+    category: "Frontend",
+    category_fr: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: backend, //mui
-    // imageUrl: nextjs,
     name: "Next.js",
-    type: "Frontend",
-    color: "blue",
+    imageUrl: backend,
+    category_fr: "Frontend",
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: nodejs,
     name: "Node.js",
-    type: "Backend",
-    color: "red",
+    imageUrl: nodejs,
+    category_fr: "Backend",
+    category: "Backend",
+    level: "5",
   },
   {
-    imageUrl: reactjs,
     name: "React",
-    type: "Frontend",
-    color: "red",
+    imageUrl: reactjs,
+    category_fr: "Frontend",
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: redux,
     name: "Redux",
-    type: "State Management",
-    color: "red",
+    imageUrl: redux,
+    category_fr: "Gestion des status",
+    category: "State Management",
+    level: "5",
   },
   {
-    imageUrl: backend, //sass
     name: "Sass",
-    type: "Frontend",
-    color: "red",
+    imageUrl: backend,
+    category_fr: "Frontend",
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: tailwind,
     name: "Tailwind",
-    type: "Frontend",
-    color: "red",
+    imageUrl: tailwind,
+    category_fr: "Frontend",
+    category: "Frontend",
+    level: "5",
   },
   {
-    imageUrl: typescript,
     name: "TypeScript",
-    type: "Frontend",
-    color: "red",
+    imageUrl: typescript,
+    category_fr: "Frontend",
+    category: "Frontend",
+    level: "5",
   },
 ];
 
-// articles
-
-import photo1 from "../images/news/articles/1.webp";
-import photo2 from "../images/news/articles/2.webp";
-import photo3 from "../images/news/articles/3.webp";
-import photo4 from "../images/news/articles/4.jpg";
-import photo5 from "../images/news/articles/5.jpg";
-import photo6 from "../images/news/articles/6.webp";
-import photo7 from "../images/news/articles/7.webp";
-import photo8 from "../images/news/articles/8.jpg";
-import photo9 from "../images/news/articles/9.webp";
-import photo10 from "../images/news/articles/10.jpg";
-import photo11 from "../images/news/articles/11.jpg";
-import photo12 from "../images/news/articles/12.jpg";
-import photo13 from "../images/news/articles/13.avif";
-import photo14 from "../images/news/articles/14.jpg";
-import photo15 from "../images/news/articles/15.jpg";
-import photo16 from "../images/news/articles/16.jpg";
-import photo17 from "../images/news/articles/17.webp";
-import photo18 from "../images/news/articles/18.jpg";
-import photo19 from "../images/news/articles/19.jpg";
-import photo20 from "../images/news/articles/20.jpeg";
-import photo21 from "../images/news/articles/21.png";
-import photo22 from "../images/news/articles/22.jpg";
-import photo23 from "../images/news/articles/23.jpg";
-import photo24 from "../images/news/articles/24.webp";
-import photo25 from "../images/news/articles/25.webp";
-import photo26 from "../images/news/articles/26.webp";
-import photo27 from "../images/news/articles/27.jpg";
-import photo28 from "../images/news/articles/28.webp";
-import photo29 from "../images/news/articles/29.jpg";
-import photo30 from "../images/news/articles/30.jpg";
-import photo31 from "../images/news/articles/31.png";
-import photo32 from "../images/news/articles/32.jpg";
-// import photo33 from "../images/news/articles/33.";
-import photo34 from "../images/news/articles/34.jpg";
-// import photo35 from "../images/news/articles/35.";
-import photo36 from "../images/news/articles/36.jpg";
-import photo37 from "../images/news/articles/37.webp";
-
-// revoir pour images
-// import photo100 from "../images/news/blogs/100";
-// import photo101 from "../images/news/blogs/101";
-// import photo102 from "../images/news/blogs/102";
+// articles et blog
 
 export const articles = [
   //1
@@ -895,7 +1384,7 @@ export const articles = [
     date_en: "2021-04-19",
     date_fr: "19/04/2021",
     description_fr: "Passage sur Val de Loire TV.",
-    image: "photo33",
+    image: photo33,
     link: "https://www.valdeloire.tv/video/qlz3vu5/",
     top_article: false,
     journal: "Val de Loire TV",
@@ -927,7 +1416,7 @@ export const articles = [
     date_en: "2022-08-01",
     date_fr: "01/08/2022",
     description_fr: "Documentaire Olympic TV.",
-    image: "photo35",
+    image: photo35,
     link: "https://www.olympics.com/en/video/meet-the-history-making-siblings-from-mauritius",
     top_article: false,
     journal: "Olympic",
@@ -951,8 +1440,10 @@ export const articles = [
   {
     id: 37,
     type: "media",
-    title_fr: "Canoë-kayak : Thomas Ukalovic et Terence Saramandif ambitieux pour leurs derniers Mondiaux U23",
-    title_en: "Canoe-kayak : Thomas Ukalovic and Terence Saramandif ambitious for their last U23 world championship",
+    title_fr:
+      "Canoë-kayak : Thomas Ukalovic et Terence Saramandif ambitieux pour leurs derniers Mondiaux U23",
+    title_en:
+      "Canoe-kayak : Thomas Ukalovic and Terence Saramandif ambitious for their last U23 world championship",
     description_en: "U23 world in Foix",
     date_en: "2025-07-07",
     date_fr: "07/07/2025",
@@ -963,6 +1454,23 @@ export const articles = [
     journal: "NR",
   },
   //38
+  {
+    id: 38,
+    type: "media",
+    title_fr:
+      "Célébrer le kayak africain lors de l'événement spécial Course Kayak Cross continental",
+    title_en:
+      "Celebrating African paddling at the special Kayak Cross continental racing event",
+    description_en: "Kayak Cross Africa Race",
+    date_en: "2025-06-08",
+    date_fr: "08/06/2025",
+    description_fr: "Championnat de kayak cross Africain",
+    image: photo38,
+    link: "https://www.youtube.com/watch?v=GViXMLPtJh0", //course
+    // link: "https://www.youtube.com/watch?v=6MwnOIMZMz0" //interview
+    top_article: true,
+    journal: "ICF",
+  },
 
   //39
   //40
@@ -970,8 +1478,6 @@ export const articles = [
   //42
   //43
   //44
-
-  
 
   // blog
   // 100
@@ -1029,3 +1535,391 @@ export const articles = [
   // revoir 2 photo 33 et 35
   // changer photo pour incubateur.
 ];
+
+//sportobjectives
+import { Target, Trophy, Users, Leaf } from "lucide-react";
+export const sportobjectives = [
+  {
+    icon: Target,
+    color: "from-yellow-400 to-orange-500",
+    bgColor: "bg-yellow-100",
+    iconColor: "text-yellow-600",
+    title_fr: "Championnat du monde Sénior 2026",
+    title_en: "World Championship 2026",
+    description_fr: "Objectif: Top 10 mondial et qualification pour la finale.",
+    description_en: "Objectif: Top 15 and qualification for the final.",
+    details_fr:
+      "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
+    details_en: "Fight with the best and get a spot in the precious final ",
+  },
+  {
+    icon: Users,
+    color: "from-blue-500 to-blue-600",
+    bgColor: "bg-blue-100",
+    iconColor: "text-blue-600",
+    title_fr: "Programme d'entrainement pour Jeune",
+    title_en: "Youth Training Program",
+    description_fr: "Lancer un programme pour former les jeunes kayakistes.",
+    description_en:
+      "Launch a program to help young paddler to develop their skills",
+    details_fr:
+      "Transmettre ma passion et développer la relève du canoë slalom",
+    details_en: "Share my passion and develop the next gen of canoe slalom",
+  },
+  {
+    icon: Leaf,
+    color: "from-green-500 to-emerald-600",
+    bgColor: "bg-green-100",
+    iconColor: "text-green-600",
+    title_fr: "Compétition Ecolo",
+    title_en: "Eco-friendly Competitions",
+    description_fr:
+      "Participer et promouvoir des événements respectueux de l'environnement.",
+    description_en: "Take part and promote green & eco-frendly event.",
+    details_fr:
+      "Allier performance sportive et respect de notre terrain de jeu : la nature",
+    details_en:
+      "Join performance and respect of the environment / water our playground",
+  },
+  {
+    icon: Trophy,
+    color: "from-red-500 to-pink-500",
+    bgColor: "bg-red-100",
+    iconColor: "text-red-600",
+    title_fr: "Développement du sport sur le continent africain",
+    title_en: "African Development",
+    description_fr: "Contribuer au développement du canoë slalom en Afrique.",
+    description_en:
+      "Being an actor in the development of the sport in Africa .",
+    details_fr: "Ouvrir de nouveaux horizons et démocratiser notre sport",
+    details_en: "Open new horizon and help the sport growth",
+  },
+];
+
+//accordiondata
+export const accordionData = [
+  // {
+  //   title: "Mon rythme de vie et organisation d'un double projet",
+  //   text: "Depuis la classe de 4e, j’ai pris l’habitude d’organiser ma vie autour de mes études et de ma pratique sportive. Le sport est rapidement devenu une composante essentielle de mon quotidien. Jongler efficacement entre ces deux projets n’a pas toujours été évident : il a fallu faire des compromis et accepter certains sacrifices, mais toujours dans l’objectif de me rapprocher de mon but final. Cela m’a conduit à optimiser au maximum mon temps.",
+  // },
+  // {
+  //   title: "Mes facteurs de succès",
+  //   text: "Pour moi, la diversification, le dépassement de soi et la persévérance sont des éléments essentiels pour atteindre le succès. L’aléatoire reste une variable incontrôlable, mais le travail fourni permet de réduire au maximum son impact, tant dans la performance que dans la réussite.",
+  // },
+  // {
+  //   title: "Ma gestion de la santé mentale",
+  //   text: "Un aspect qui me tient particulièrement à cœur est ma santé mentale. Bien que je pratique avant tout par plaisir, je pense que la diversification sportive que je m’impose au quotidien m’aide à éviter toute pression excessive. Tout comme un équilibre entre vie professionnelle et vie personnelle est nécessaire, je veille à bien distinguer ma pratique sportive des autres aspects de ma vie. J’ai remarqué que lorsque mon quotidien est équilibré et que mes différentes sphères de vie fonctionnent bien, mes performances sportives suivent naturellement. Enfin, j’accorde une grande importance à ne pas me comparer aux autres athlètes, car ma situation est particulière et implique des différences de quotidien et d’opportunités.",
+  // },
+  // {
+  //   title: "Le sport et ses opportunités",
+  //   text: "Le sport est non seulement un moyen d’épanouissement personnel, mais aussi une source d’opportunités. Il m’ouvre des perspectives de rencontres, d’expériences et de développement qui dépassent le simple cadre de la performance.",
+  // },
+  // {
+  //   title: "My Lifestyle and Managing a Dual Project",
+  //   text: "Since the 8th grade, I have gotten used to organizing my life around my studies and my sports practice. Sports quickly became an essential part of my daily routine. Balancing these two projects has not always been easy: compromises had to be made and sacrifices accepted, but always with the goal of getting closer to my final objective. This has led me to optimize my time as much as possible.",
+  // },
+  // {
+  //   title: "My Success Factors",
+  //   text: "For me, diversification, self-improvement, and perseverance are essential elements for achieving success. Randomness remains an uncontrollable variable, but the effort and work invested help minimize its impact, both in performance and in success.",
+  // },
+  // {
+  //   title: "My Mental Health Management",
+  //   text: "One aspect that I care deeply about is my mental health. Although I practice primarily for pleasure, I believe that the variety of sports I engage in daily helps me avoid excessive pressure. Just as a balance between professional and personal life is necessary, I make sure to clearly separate my sports practice from other aspects of my life. I have noticed that when my daily life is well-balanced and my different areas of life are stable, my sports performance naturally follows. Finally, I place great importance on avoiding comparisons with other athletes, since my situation is uncommon and involves different routines and opportunities.",
+  // },
+  // {
+  //   title: "Sports and Its Opportunities",
+  //   text: "Sports are not only a source of personal fulfillment but also a gateway to opportunities. They open perspectives for encounters, experiences, and development that go far beyond mere performance.",
+  // },
+
+  // todo : trouver des vrai question : revoir avec papa
+  // et faire des vrais réponses
+  {
+    title_fr: "D'où viens tu ? ",
+    text_fr:
+      "Avec des origines Mauriciennes, je vis en France depuis toujours, d'abord de Tours où j'ai passé mes années lycée ainsi que mon bac et ensuite dans le sud, sur Pau pour continuer ma pratique sportive et mes études.",
+    title_en: "Where are you from ? ",
+    text_en: "Mauritius baby ",
+  },
+  {
+    title_fr:
+      "Si tu devais choisir un autre sport que la Canoë-Kayak, lequel choisirais-tu ? ",
+    text_fr:
+      "Je pense que je me serais tourné vers la course à pied / trail pour le coté dépassement de soi, sinon le surf ou le hockey sur glace.",
+    title_en:
+      "If you had to choose an other sport, which one would you choose ? ",
+    text_en: "Running for sur ",
+  },
+
+  {
+    title_fr: "Qu'est ce qui te pousse à te lever le matin",
+    text_fr:
+      "Les plaisirs de la vie que ça soit dans le quotidien, la famille, les amis. Ou encore l'évolution perpetuelle, devenir une meilleur personne (sportif et pro). Repousser mes limites. ou juste connaitre à l'avance le repas du soir suffit parfois ;)",
+    title_en: "What make you go out of your bed the morning",
+    text_en: "Only one think does, the alarm on my phone. ",
+  },
+
+  {
+    title_fr: "La clès de la réussite selon toi ? ",
+    text_fr:
+      "Dans mon cas, je dirais la polyvalence et la résilience. Mais la réussite est tellement subjectif et peut varier d'un jour à l'autre que juste se sentir épanouie sera ma réponse finale.",
+    title_en: "The key of success in your opinion ? ",
+    text_en:
+      "Having close people supporting you, Loving the Day and trusting the process",
+  },
+
+  // {
+  //   title_fr: "",
+  //   text_fr: "",
+  // title_en: "",
+  // text_en: ""
+  // },
+];
+
+//experience
+//todo
+
+export interface Experiences {
+  etablissement_fr: string;
+  etablissement_en: string;
+  title_fr: string;
+  title_en: string;
+  periode_fr: string;
+  periode_en: string;
+  details_fr: string[];
+  details_en: string[];
+  type: string;
+}
+
+//  todo : mettre du vrai texte et traduire
+
+export const experiences = [
+  {
+    etablissement_fr: "Safran Helicopter Engines",
+    etablissement_en: "test",
+    title_fr: "Alternance Développeur Web",
+    title_en: "test",
+    periode_fr: "10/2023 - Maintenant",
+    periode_en: "",
+    details_fr: [
+      "Création d’interface et développement de nouvelles fonctionnalités au sein de l’application",
+      "Gestion de projet",
+      "",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Cesi Pau",
+    etablissement_en: "",
+    title_fr: "Cycle ingénieur",
+    title_en: "",
+    periode_fr: "09/2023 - Maintenant ",
+    periode_en: "",
+    details_fr: [
+      "alternance avec safran ",
+      "dev web ",
+      "management ",
+      "big data",
+    ],
+    details_en: ["", "", ""],
+    type: "formation",
+  },
+  {
+    etablissement_fr: "Université technologique de Pula",
+    etablissement_en: "",
+    title_fr: "Stagaire",
+    title_en: "",
+    periode_fr: "06/2025 - 10/2025",
+    periode_en: "",
+    details_fr: [
+      "travaille sur le développement d'un outils python",
+      "découverte culturel",
+      "CNC machining test sur machine",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Octopeek (part of Mazars)",
+    etablissement_en: "",
+    title_fr: "stagiaire Data Analyst",
+    title_en: "",
+    periode_fr: "04/2023 - 07/2023",
+    periode_en: "",
+    details_fr: [
+      "Traitement de donnée de sportif biologique et technique (nageur, kayakiste)",
+      "Analyse de données sur l’explicabilité des performances dans le sport",
+      "Relation client pour améliorer l’utilisation des données collectées",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Hermès, tellier ? textile ? ",
+    etablissement_en: "",
+    title_fr: "Prestataire de service, Développeur Full-stack",
+    title_en: "",
+    periode_fr: "04/2023 - 07/2023",
+    periode_en: "",
+    details_fr: [
+      "Développement Web et Application de bureau",
+      "Travail au sein d’une équipe de développeurs expérimentés",
+      "Apprentissage : développeur IHM (Angular & Node.js)",
+      "Stagiaire : projet de gestion de données",
+      "Prestataire : développeur full-stack (PHP Symfony)",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Fédération Canadienne de Kayak",
+    etablissement_en: "",
+    title_fr: "Coach équipe jeune",
+    title_en: "",
+    periode_fr: "02/2023 - 04/2023",
+    periode_en: "",
+    details_fr: [
+      "Partage de ma passion et de mes connaissances avec des jeunes pagayeurs",
+      "Organisation et gestion de séances quotidiennes (musculation, kayak et retour vidéo)",
+      "Coaching de l’équipe jeune",
+      "parallele des etudes",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "CESI, Pau",
+    etablissement_en: "",
+    title_fr: "Cycle préparatoire",
+    title_en: "",
+    periode_fr: "09/2021 - 07/2023",
+    periode_en: "",
+    details_fr: ["", "", ""],
+    details_en: ["", "", ""],
+    type: "formation",
+  },
+  {
+    etablissement_fr: "",
+    etablissement_en: "",
+    title_fr: "Année sadbatique",
+    title_en: "",
+    periode_fr: "09/2020 - 09/2021",
+    periode_en: "",
+    details_fr: ["", "section sportif ", "bac S "],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+  {
+    etablissement_fr: "Lycée Grandmont",
+    etablissement_en: "",
+    title_fr: "Années Lycée",
+    title_en: "",
+    periode_fr: "09/2017 - 04/2020",
+    periode_en: "",
+    details_fr: ["", "section sportif ", "bac S "],
+    details_en: ["", "", ""],
+    type: "formation",
+  },
+  {
+    etablissement_fr: "Scalway",
+    etablissement_en: "",
+    title_fr: "Stage de 3e",
+    title_en: "",
+    periode_fr: "10/2016 - 11/2016",
+    periode_en: "",
+    details_fr: [
+      "Premier pas dans le monde professionnel",
+      "découverte du domaine informatique avec une entreprise d'hebergement",
+      "sous plusieurs angles ",
+    ],
+    details_en: ["", "", ""],
+    type: "experiencepro",
+  },
+];
+
+// traduction en partie en dessous y'a plus qu'a 
+
+// export const experiences_en = [
+//   {
+//     etablissement: "Cesi Pau / Safran, Bordes",
+//     titre: "Web Developer Apprenticeship",
+//     periode: "2023 - 2024",
+//     details: [
+//       "Web Developer Internship - Pula, Croatia",
+//       "BTS SIO - Lycée Saint Cricq, Pau",
+//     ],
+//     type: "formation"
+
+//   },
+//   {
+//     etablissement: "Cesi Pau / Safran, Bordes",
+//     titre: "Web Developer Apprenticeship",
+//     periode: "2022 - 2023",
+//     details: [
+//       "Web Developer Internship - Paris",
+//       "Data processing and analysis internship - Paris",
+//     ],
+//     type: "formation"
+
+//   },
+//   {
+//     etablissement: "Cesi Pau",
+//     titre: "2nd Year",
+//     periode: "2021 - 2022",
+//     details: [
+//       "Web Developer Internship - Paris",
+//       "Data processing and analysis internship - Paris",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Safran Helicopter Engines",
+//     titre: "Web Developer Apprenticeship",
+//     periode: "10/2023 - Present",
+//     details: [
+//       "Interface creation and development of new features within the application",
+//       "Project management",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Octopeek (part of Mazars)",
+//     titre: "Data Analyst",
+//     periode: "04/2023 - 07/2023",
+//     details: [
+//       "Data analysis on performance explainability in sports",
+//       "Client relations to improve the use of collected data",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Hermès",
+//     titre: "Full-stack Developer",
+//     periode: "04/2023 - 07/2023",
+//     details: [
+//       "Web and desktop application development",
+//       "Working within a team of experienced developers",
+//       "Learning: UI Developer (Angular & Node.js)",
+//       "Intern: data management project",
+//       "Contractor: full-stack developer (PHP Symfony)",
+//     ],
+//     type: "experiencepro"
+
+//   },
+//   {
+//     etablissement: "Canadian Kayak Federation",
+//     titre: "Youth Team Coach",
+//     periode: "02/2023 - 04/2023",
+//     details: [
+//       "Sharing my passion and knowledge with young paddlers",
+//       "Organizing and managing daily sessions (strength training, kayaking, and video feedback)",
+//       "Coaching the youth team",
+//     ],
+//     type: "experiencepro"
+
+//   },
+// ];
+

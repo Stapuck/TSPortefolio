@@ -6,34 +6,12 @@ import CalendarSection from "../components/CalendarSection.tsx";
 import SportObjectif from "../components/SportObjectif.tsx";
 import EventList from "../components/EventList.tsx";
 import AchievementRanking from "../components/AchievementRanking.tsx";
-// import TooltipPoint from "../components/ToolTipPoint.tsx";
 
-import { Maximize2, Minimize2 } from "lucide-react";
+import { Maximize2, Minimize2, DollarSign, Users, Clock } from "lucide-react";
 import BudgetMaterial from "../components/BudgetMaterial.tsx";
-
-// import { useInView } from "react-intersection-observer";
-// import { useCountUp } from "../hooks/useCountUp"; // ton hook créé juste au-des
-
-// import hikospraydeck from "../medias/images/budget/hiko_spraydeck.png";
-// // import hikolifejacket from "../medias/images/budget/hiko_lifejacket.png";
-// import racerst from "../medias/images/budget/racerst.png";
-// import kayakcrosshelmet from "../medias/images/budget/kayakcross_helmet.png";
-// import vadjahelmet from "../medias/images/budget/vajda_helmet.png";
-
-// import k1paddle from "../medias/images/budget/k1_paddle.png";
-// import c1paddle from "../medias/images/budget/c1_paddle.png";
-
-// import slalomboat from "../medias/images/budget/slalom_boat.png";
-// import kayakcrossboat from "../medias/images/budget/kayakcross_boat.png";
-
-// // import imagetest from "../medias/images/DSC04086.png"
-// import kayakCross from "../medias/images/budget/Foix_kayakCross.jpg";
-// import canoeslalom from "../medias/images/budget/Foix_slalom.jpg";
-// import canoeslalom from "../medias/images/Capture d'écran 2025-09-11 103259.png";
 
 export default function Sport() {
   const { t } = useTranslation();
-  // const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   const [expanded, setExpanded] = useState(false);
   useEffect(() => {
@@ -50,193 +28,172 @@ export default function Sport() {
     }
   }, [location]);
 
-  //todo : gerer trad dans toute la page.  modal inclus
-  // mettre dans index- global // revoir pour la traduction ? ou faire trad avec les 2 fichier index ??
-  // const photos = [
-  //   {
-  //     src: canoeslalom,
-  //     alt: "Canoe Slalom",
-  //     tooltips: [
-  //       {
-  //         x: "45%",
-  //         y: "38%",
-  //         img: vadjahelmet,
-  //         price: 240,
-  //         text: t("Sport.budget.helmet"),
-  //       },
-  //       {
-  //         x: "37%",
-  //         y: "72%",
-  //         img: c1paddle,
-  //         price: 360,
-  //         text: t("Sport.budget.c1paddle"),
-  //       },
-  //       {
-  //         x: "65%",
-  //         y: "68%",
-  //         img: slalomboat,
-  //         price: 2500,
-  //         text: t("Sport.budget.slalomboat"),
-  //       },
-  //       {
-  //         x: "50%",
-  //         y: "60%",
-  //         img: racerst,
-  //         price: 320,
-  //         text: t("Sport.budget.racerst"),
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     src: kayakCross,
-  //     alt: "Kayak Cross",
-  //     tooltips: [
-  //       {
-  //         x: "53%",
-  //         y: "39%",
-  //         img: kayakcrosshelmet,
-  //         price: 120,
-  //         text: t("Sport.budget.helmet"),
-  //       },
-  //       {
-  //         x: "40%",
-  //         y: "54%",
-  //         img: k1paddle,
-  //         price: 500,
-  //         text: t("Sport.budget.k1paddle"),
-  //       },
-  //       {
-  //         x: "30%",
-  //         y: "70%",
-  //         img: kayakcrossboat,
-  //         price: 2000,
-  //         text: t("Sport.budget.kayakcrossboat"),
-  //       },
-  //     ],
-  //   },
-  // ];
-
-  // calculer les totaux par sport
-  // const totals = photos.map((p) =>
-  //   p.tooltips.reduce((sum, item) => sum + item.price, 0)
-  // );
-
-  // // total global
-  // const globalTotal = totals.reduce((a, b) => a + b, 0);
-
-  // const equipement = useCountUp(inView ? globalTotal : 0);
-  // const deplacement = useCountUp(inView ? 14550 : 0);
-  // const total = useCountUp(inView ? 20590 : 0);
-
-  // const formatPrice = (val: number) =>
-  //   new Intl.NumberFormat("fr-FR", {
-  //     style: "currency",
-  //     currency: "EUR",
-  //     minimumFractionDigits: 0,
-  //   }).format(val);
-
   return (
-    <div className="text-gray-800">
+    <div className="">
       <HeroSection currentPage={"sport"} />
 
-      <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
-        {/* Projects / Objectives */}
-        <section className="space-y-8">
-          <h2 className="text-3xl font-bold text-center">
-            {t("Sport.projet&objectif")}
-          </h2>
-          <SportObjectif />
-        </section>
+      <main className="max-w-6xl mx-auto px-6 py-12 space-y-10">
+        <SportObjectif />
 
-        {/* Calendar / Events */}
+        <section id="calendar" className="space-y-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-2 dark:text-white">
+              {t("Sport.calendarandevent")}
+            </h2>
+            <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
-        <section id="calendar" className="space-y-8">
-          <h2 className="text-3xl font-bold text-center">
-            {t("Sport.incomingevent")}
-          </h2>
+            <p className="text-gray-600 max-w-xl mx-auto dark:text-slate-300">
+              {t("Sport.calendartxt")}
+            </p>
+          </div>
 
-          {/* Bouton d’agrandissement */}
-          {/* revoir le placement du btn  */}
+          {/* Legend */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+            <h4 className="text-sm font-semibold text-gray-700 mb-4">
+              {t("Sport.legend")}
+            </h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-4">
+              {[
+                {
+                  type: "worldcup",
+                  color: "#F59E0B",
+                  label: t("Calendar.worldcup"),
+                },
+                {
+                  type: "worldchamp",
+                  color: "#8B5CF6",
+                  label: t("Calendar.worldchamp"),
+                },
+                {
+                  type: "national",
+                  color: "#3B82F6",
+                  label: t("Calendar.national"),
+                },
+                {
+                  type: "training",
+                  color: "#10B981",
+                  label: t("Calendar.training"),
+                },
+                { type: "pro", color: "#6B7280", label: t("Calendar.pro") },
+              ].map((item) => (
+                <div key={item.type} className="flex items-center gap-3">
+                  <div
+                    className="w-4 h-4 rounded-full shrink-0"
+                    style={{ backgroundColor: item.color }}
+                  />
+                  <span className="text-sm text-gray-700">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Toggle Button */}
           <div className="flex justify-center">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition flex flex-row"
+              className="flex items-center gap-2 px-4 py-2 mt-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
             >
               {expanded ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
-              {/* {expanded ? t('Sport.calendarreduce') : t('Sport.calendargrowth') } */}
             </button>
           </div>
-
-          {/* <button
-            onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
-          >
-            {expanded ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
-            {expanded ? "Réduire" : "Agrandir"}
-          </button> */}
-
-          {/* Layout responsive selon l’état */}
           <div
-            className={`grid gap-8 shadow-md transition-all duration-300 ${
+            className={`bg-gray-200 rounded-lg grid gap-6 transition-all duration-300 ${
               expanded ? "grid-cols-1" : "md:grid-cols-2"
             }`}
           >
-            <div
-              className={`bg-gray-100 rounded-lg p-3 transition-all duration-300 ${
-                expanded ? "col-span-1 w-full" : "w-full"
-              }`}
-            >
-              <CalendarSection />
-            </div>
+            <CalendarSection />
 
-            {/* En mode expanded, EventList passe en dessous */}
-            <div className={`${expanded ? "col-span-1" : ""}`}>
-              <EventList />
+            {/* Quick Tips */}
+            {/* todo : revoir si je garde ?  */}
+            { expanded ?  <>
+            <div className="max-w-3xl mx-auto p-6  bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl  border border-blue-100">
+              <h4 className="font-semibold text-gray-900 mb-4 flex items-center space-x-2">
+                <Clock className="w-5 h-5 text-blue-600" />
+                <span>{t("Calendar.tips")}</span>
+              </h4>
+              <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
+                <div className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <span>{t("Calendar.clickevent")}</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <span>{t("Calendar.changeday")}</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <span>{t("Calendar.color")}</span>
+                </div>
+              </div>
             </div>
+            </> : ""}
+            <EventList />
           </div>
         </section>
+
         {/* Palmarès / Carrière */}
-        <section className="space-y-8">
-          <h2 className="text-3xl font-bold text-center">
+        <section className="">
+          {/* <section className="space-y-8"> */}
+          <h2 className="text-3xl font-bold text-center dark:text-white mb-2">
             {t("Sport.career")}
           </h2>
+          <div className="w-50 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <AchievementRanking />
         </section>
 
-        {/* Budget / Sponsorship */}
-        {/* revoir responsiv telephone  */}
-        <BudgetMaterial />
+        {/* Header */}
+        <section>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+              {t("Sport.budget.seasonbudget")}
+            </h2>
+            <div className="w-50 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
-        {/* Call-to-action / téléchargement */}
-        <div className="mt-8 p-6 bg-blue-50 rounded-2xl shadow-md text-center">
-          <h3 className="text-2xl font-bold mb-2">{t("Sport.moreinfo")}</h3>
-          <p className="text-gray-700 mb-4">{t("Sport.moreinfotxt")}</p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <div className="flex flex-col items-center bg-white rounded-xl shadow p-4 w-40 hover:scale-105 transition-transform duration-300">
-              <span className="text-3xl mb-2">💰</span>
-              <p className="font-semibold mb-2">{t("Sport.budgetsimple")}</p>
-              <DownloadButton fileChoice={"Budget"} />
-            </div>
-            <div className="flex flex-col items-center bg-white rounded-xl shadow p-4 w-40 hover:scale-105 transition-transform duration-300">
-              <span className="text-3xl mb-2">🤝</span>
-              <p className="font-semibold mb-2">{t("Sport.sponsor")}</p>
-              <DownloadButton fileChoice={"Sponsor"} />
-            </div>
+            <p className="text-gray-600 dark:text-gray-200 mb-3">
+              {t("Sport.budget.intro")}
+            </p>
           </div>
+          <BudgetMaterial />
+        </section>
+        <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
+          {t("Sport.moreinfo")}
+        </h3>
+        <p className="text-gray-700 mb-4 text-center dark:text-white">
+          {t("Sport.moreinfotxt")}
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <DownloadButton
+            fileChoice={"Budget"}
+            title={"Budget"}
+            description={t("DownloadBtn.budgetdescription")}
+            icon={<DollarSign className="w-8 h-8 text-blue-600" />}
+            variant={"primary"}
+          />
+
+          <DownloadButton
+            fileChoice={"Sponsor"}
+            title={"Sponsor"}
+            description={t("DownloadBtn.sponsordescription")}
+            icon={<Users className="w-8 h-8 text-blue-600" />}
+            variant={"primary"}
+          />
         </div>
 
-        <div className="mt-6 text-center text-gray-700 italic">
+        <section>
+          <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
+            {t("Sport.join")}
+            {/* todo : changer le texte  truc plus Participateur de l'aventure ?  */}
+          </h3>
+
+          {/* todo : faire card  double rotateur comme louis et ses comms  */}
+          {/* mettre lunaar, safran, val d'indre, lycée grandmont, pole de tours  ? revori avec parent */}
+          {/* mettre fédé, MOC, Ministere Mauricien */}
+        </section>
+
+        <div className="mt-6 text-center text-gray-700 italic dark:text-slate-200">
           {t("Sport.citation")}
         </div>
-
-        {/* todo : revoir un truc avec motion framer pour au scroll afficher les différents equippement a droite et gauche de la photo plutot ?  */}
-
-        {/* <section className="space-y-12">
-          <h2 className="text-3xl font-bold text-center">
-            Déjà dans l’aventure
-          </h2>
-        </section> */}
       </main>
     </div>
   );

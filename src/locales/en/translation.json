@@ -1,18 +1,8 @@
 {
   "Home": {
-    "home_welcome": "🏠 Welcome to Home page",
-    "title": "Home",
-    "videotext": "Athlete | Engineer | Entrepreneur",
-    "videotextbis": "thlete | Engineer | Entrepreneu"
+    "videotext": "Athlete | Engineer | Entrepreneur"
   },
-  "Blog": {
-    "blog_welcome": "📝 Welcome to Blog page"
-  },
-
-  "News": {
-    "news_welcome": "📝 Welcome to News Page"
-  },
-
+  
   "Sidebar": {
     "home": "Home",
     "blog": "Blog",

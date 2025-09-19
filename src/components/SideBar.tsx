@@ -49,6 +49,20 @@ export default function Sidebar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    setDarkMode(true);
+    document.documentElement.classList.add("dark");
+  }
+}, []);
+
+useEffect(() => {
+  localStorage.setItem("theme", darkMode ? "dark" : "light");
+  document.documentElement.classList.toggle("dark", darkMode);
+}, [darkMode]);
+
+
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
     document.documentElement.lang = code;
@@ -60,7 +74,8 @@ export default function Sidebar() {
   return (
     <>
       {/* Sidebar toujours visible pour md+ */}
-      <aside className="hidden lg:flex bg-gray-900 dark:bg-gray-800 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3">
+      {/* todo : revoir darkmode  */}
+      <aside className="hidden lg:flex  bg-gray-900 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3">
         <nav className="flex flex-col gap-6">
           {links.map((link) => (
             <Link
@@ -134,7 +149,8 @@ export default function Sidebar() {
       <div className="lg:hidden fixed bottom-4 left-4 z-50">
         {!open && (
           <button
-            className="w-14 h-14 rounded-full bg-gray-900 dark:bg-gray-800 text-white flex items-center justify-center shadow-lg hover:scale-105 transition"
+            // className="w-14 h-14 rounded-full bg-gray-900 dark:bg-gray-800 text-white flex items-center justify-center shadow-lg hover:scale-105 transition"
+            className="w-14 h-14 rounded-full bg-gray-900 text-white flex items-center justify-center shadow-lg hover:scale-105 transition"
             onClick={() => setOpen(true)}
           >
             {activeLink.icon}
@@ -144,7 +160,8 @@ export default function Sidebar() {
         {open && (
           <aside
             ref={menuRef}
-            className="bg-gray-900 dark:bg-gray-800 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"
+            // className="bg-gray-900 dark:bg-gray-800 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"
+            className="bg-gray-900  text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"
           >
             {/* Bouton fermer */}
             <button
