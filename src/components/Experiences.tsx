@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { experiences, type Experiences } from "../medias/databases/index-global.ts";
+import { experiences, } from "../medias/databases/index-global.ts";
+// import type { Experiences } from "../medias/databases/index-global.ts";
 import { useTranslation } from "react-i18next";
 
 const Experiences = () => {
@@ -27,13 +28,13 @@ const Experiences = () => {
   }, []);
 
   // Récupération du bon texte en fonction de la langue
-  const getTitle = (exp : Experiences) =>
+  const getTitle = (exp : any) =>
     lang === "en" ? exp.title_en || exp.title_fr : exp.title_fr;
-  const getEtab = (exp : Experiences) =>
+  const getEtab = (exp : any) =>
     lang === "en" ? exp.etablissement_en || exp.etablissement_fr : exp.etablissement_fr;
-  const getPeriode = (exp : Experiences) =>
+  const getPeriode = (exp : any) =>
     lang === "en" ? exp.periode_en || exp.periode_fr : exp.periode_fr;
-  const getDetails = (exp : Experiences) =>
+  const getDetails = (exp : any) =>
     lang === "en"
       ? exp.details_en.filter(Boolean).length
         ? exp.details_en
@@ -97,7 +98,7 @@ const Experiences = () => {
                   </h4>
 
                   <div className="space-y-3">
-                    {getDetails(selected).map((detail, idx) => (
+                    {getDetails(selected).map((detail : any , idx : any) => (
                       <div key={idx} className="flex items-start space-x-3">
                         <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
@@ -162,7 +163,7 @@ const Experiences = () => {
               </h4>
 
               <div className="space-y-2">
-                {getDetails(selected).map((detail, idx) => (
+                {getDetails(selected).map((detail : any, idx : any) => (
                   <div key={idx} className="flex items-start space-x-3">
                     <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
@@ -225,7 +226,7 @@ const Experiences = () => {
               </h4>
 
               <div className="space-y-2 mt-3">
-                {getDetails(selected).map((detail, idx) => (
+                {getDetails(selected).map((detail : any, idx : any) => (
                   <div key={idx} className="flex items-start space-x-2">
                     <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
@@ -272,7 +273,7 @@ const Experiences = () => {
               </div>
 
               <div className="space-y-2">
-                {getDetails(exp).map((detail, idx) => (
+                {getDetails(exp).map((detail : any, idx : any) => (
                   <div key={idx} className="flex items-start space-x-2">
                     <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
