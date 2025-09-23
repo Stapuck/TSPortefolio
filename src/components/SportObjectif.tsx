@@ -1,28 +1,18 @@
-import { useState, useEffect} from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
-// // import { sportobjectif_en } from "../medias/databases/index-en";
-// // import { sportobjectif_fr } from "../medias/databases/index-fr";
-
 import { sportobjectives } from "../medias/databases/index-global";
-// todo :  mettre dans index global rajouter au mien
 
 const SportObjectif = () => {
   const initialLang = document.documentElement.lang || "fr";
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useTranslation();
 
-
-  
-  // Auto-rotate slides
+  // Auto-rotate slides 5s
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sportobjectives.length);
-    }, 10000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [sportobjectives.length]);
 
@@ -46,36 +36,35 @@ const SportObjectif = () => {
   };
 
   return (
-    <section className="py-4 px-6 mb-16">
+    <section className="py-4 px-6 mb-16 bg-gray-200 dark:bg-sky-900 transition-colors duration-300 rounded-3xl">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white transition-colors duration-300">
             {t("Sport.myobjectif")}
           </h2>
           <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
-          <p className="text-gray-600 max-w-2xl mx-auto dark:text-slate-300">
+          <p className="text-gray-600 max-w-2xl mx-auto dark:text-slate-300 transition-colors duration-300">
             {t("Sport.myobjectiftxt")}
           </p>
         </div>
 
         {/* Carousel Container */}
         <div className="relative">
-          {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white dark:bg-slate-700 rounded-full shadow-lg hover:shadow-xl dark:shadow-slate-900/50 transition-all duration-300 hover:scale-110"
             aria-label="Objectif précédent"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600" />
+            <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-slate-300" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white dark:bg-slate-700 rounded-full shadow-lg hover:shadow-xl dark:shadow-slate-900/50 transition-all duration-300 hover:scale-110"
             aria-label="Objectif suivant"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
+            <ChevronRight className="w-6 h-6 text-gray-600 dark:text-slate-300" />
           </button>
 
           {/* Cards Grid */}
@@ -95,34 +84,34 @@ const SportObjectif = () => {
                 >
                   {/* Gradient Background */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${objective.color} rounded-3xl  opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                    className={`absolute inset-0 bg-gradient-to-br ${objective.color} rounded-3xl opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-300`}
                   />
 
                   {/* Card Content */}
-                  <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
+                  <div className="relative bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-lg hover:shadow-xl dark:shadow-slate-900/50 dark:hover:shadow-slate-900/70 transition-all duration-300 hover:-translate-y-2 h-full">
                     {/* Icon */}
                     <div
-                      className={`inline-flex p-4 ${objective.bgColor} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
+                      className={`inline-flex p-4 ${objective.bgColor} dark:opacity-90 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
                     >
                       <Icon className={`w-8 h-8 ${objective.iconColor}`} />
                     </div>
 
                     {/* title_fr */}
-                    <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-gray-900">
+                    <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors duration-300">
                       {initialLang === "fr"
                         ? objective.title_fr
                         : objective.title_en}
                     </h3>
 
                     {/* description_fr */}
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-gray-600 dark:text-slate-300 mb-4 leading-relaxed transition-colors duration-300">
                       {initialLang === "fr"
                         ? objective.description_fr
                         : objective.description_en}
                     </p>
 
                     {/* Details */}
-                    <p className="text-sm text-gray-500 italic">
+                    <p className="text-sm text-gray-500 dark:text-slate-400 italic transition-colors duration-300">
                       {initialLang === "fr"
                         ? objective.details_fr
                         : objective.details_en}
@@ -130,7 +119,7 @@ const SportObjectif = () => {
 
                     {/* Progress Indicator (decorative) */}
                     <div className="mt-6">
-                      <div className="w-full bg-gray-200 rounded-full h-1">
+                      <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-1 transition-colors duration-300">
                         <div
                           className={`bg-gradient-to-r ${objective.color} h-1 rounded-full transition-all duration-1000 ease-out`}
                           style={{ width: isCenter ? "75%" : "45%" }}
@@ -151,10 +140,10 @@ const SportObjectif = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? "bg-blue-600 scale-110"
-                    : "bg-gray-300 hover:bg-gray-400"
+                    ? "bg-blue-600 dark:bg-blue-500 scale-110"
+                    : "bg-gray-300 dark:bg-slate-600 hover:bg-gray-400 dark:hover:bg-slate-500"
                 }`}
-                aria-label={`Aller à l'objectif ${index + 1}`}
+                aria-label={` ${t('Sport.goto')} ${index + 1}`}
               />
             ))}
           </div>
@@ -162,17 +151,17 @@ const SportObjectif = () => {
 
         {/* Stats Section */}
         {/* <div className="grid md:grid-cols-3 gap-6 mt-16">
-          <div className="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="text-3xl font-bold text-blue-600 mb-2">2026</div>
-            <div className="text-gray-600">Prochains Mondiaux</div>
+          <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-lg dark:shadow-slate-900/50 dark:hover:shadow-slate-900/70 transition-shadow">
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">2026</div>
+            <div className="text-gray-600 dark:text-slate-300">Prochains Mondiaux</div>
           </div>
-          <div className="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="text-3xl font-bold text-green-600 mb-2">5+</div>
-            <div className="text-gray-600">Projets en cours</div>
+          <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-lg dark:shadow-slate-900/50 dark:hover:shadow-slate-900/70 transition-shadow">
+            <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">5+</div>
+            <div className="text-gray-600 dark:text-slate-300">Projets en cours</div>
           </div>
-          <div className="text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="text-3xl font-bold text-purple-600 mb-2">∞</div>
-            <div className="text-gray-600">Motivation</div>
+          <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-lg dark:shadow-slate-900/50 dark:hover:shadow-slate-900/70 transition-shadow">
+            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">∞</div>
+            <div className="text-gray-600 dark:text-slate-300">Motivation</div>
           </div>
         </div> */}
       </div>

@@ -7,8 +7,8 @@ import pdfCV_FR from "../medias/pdfs/TS_CV_FR.pdf";
 import pdfCV_EN from "../medias/pdfs/TS_CV_EN.pdf";
 import pdfBudget_FR from "../medias/pdfs/Receipt_1068-175-144-en.pdf";
 import pdfBudget_EN from "../medias/pdfs/Terence_Saramandif_Flight_Pula-en.pdf";
-import pdfSponsor_FR from "../medias/pdfs/Standard_OffIcial_FR.pdf";
-import pdfSponsor_EN from "../medias/pdfs/racun-en.pdf";
+import pdfSponsor_FR from "../medias/pdfs/DossierSponsoring_22092025_TSFRV3.pdf";
+import pdfSponsor_EN from "../medias/pdfs/DossierSponsoring_22092025_TSENV3.pdf";
 
 export interface DownloadButtonProps {
   fileChoice: "CV" | "Budget" | "Sponsor";

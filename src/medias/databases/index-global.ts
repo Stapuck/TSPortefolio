@@ -173,6 +173,20 @@ export const next_date: EventType[] = [
     photobg:
       "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
   },
+  {
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    date: "April 17, 2026  19:00",
+    date_fin: "April 25, 2026 16:00",
+    event_en: "N1",
+    event_fr: "N1",
+    type: "sport",
+    type_event_en: "national",
+    type_event_fr: "course nationale",
+    photobg:
+      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
+  },
+  
   //  ranger au dessus apres
   // todo : revoir les quelque probleme de type et rajouter les autres caractéristique // revoir les liens
   // YOG et YAG type = other à faire
@@ -1838,7 +1852,7 @@ export const experiences = [
 ];
 
 // traduction en partie en dessous y'a plus qu'a 
-
+// todo : faire la traduction de experience
 // export const experiences_en = [
 //   {
 //     etablissement: "Cesi Pau / Safran, Bordes",
@@ -1923,3 +1937,73 @@ export const experiences = [
 //   },
 // ];
 
+
+// todo : revoir les texte
+export   const travelExpenses = [
+    {
+      key: "registrationfee",
+      label_fr: "Frais d'inscription",
+      label_en: "Registration fee",
+      amount: 1130,
+      tooltip_fr: "130€ par coupe du monde (x5) + 240€ par mondiaux (x2)",
+      tooltip_en: "130€ for 5 world cups + 240€ for 2 world championships",
+    },
+    {
+      key: "coaching",
+      label_fr: "Coaching",
+      label_en: "Coaching",
+      amount: 6420,
+      tooltip_fr: "2571€ pour 4 semaines de compétition → 642€/semaine → 6420€ par saison",
+      tooltip_en: "2571€ for 4 weeks of competition → 642€/week → 6420€ per season",
+    },
+    {
+      key: "accommodation",
+      label_fr: "Hébergement",
+      label_en: "Accommodation",
+      amount: 3150,
+      tooltip_fr: "Airbnb 1260€ → moyenne par événement : 315€",
+      tooltip_en: "Airbnb 1260€ → average per event: 315€",
+    },
+    {
+      key: "food",
+      label_fr: "Repas",
+      label_en: "Food",
+      amount: 1400,
+      tooltip_fr: "Repas équilibrés ~140€/semaine",
+      tooltip_en: "Meals ~140€/week",
+    },
+    {
+      key: "transport",
+      label_fr: "Transport",
+      label_en: "Transport",
+      amount: 800,
+      tooltip_fr: "Dépend de la distance, mode de transport, prix essence",
+      tooltip_en: "Depends on distance, mode of transport, fuel price",
+    },
+    {
+      key: "other",
+      label_fr: "Autres",
+      label_en: "Other",
+      amount: 1200,
+      tooltip_fr: "Séances 10-25€/séance, 1-2 séances/jour → ~120€/semaine",
+      tooltip_en: "Sessions 10-25€/session, 1-2 sessions/day → ~120€/week",
+    },
+    {
+      key: "subscription",
+      label_fr: "Abonnement Pau structure d'entraînement",
+      label_en: "Pau training structure subscription",
+      amount: 1250,
+      tooltip_fr: "Abonnement annuel",
+      tooltip_en: "annual subscription",
+    },
+    {
+      key: "Daily",
+      label_fr: "Vie quotidienne",
+      label_en: "Daily life",
+      amount: 10000,
+      tooltip_fr: "Loyer, Course, Essence, ...",
+      tooltip_en: "Rent, Groceries, Fuel, ...",
+    },
+  ];
+
+// todo : revoir si je met photos ici ou pas ?? gestion des images à revoir 
