@@ -31,9 +31,6 @@ const DownloadSection: React.FC = () => {
   ];
 
   return (
-    // todo : revoir darkmode
-
-    // <section className="w-full max-w-4xl mx-auto p-4 dark:bg-sky-900/80 dark:border-sky-700/50 rounded-3xl">
     <section className="w-full max-w-4xl mx-auto p-4 rounded-3xl">
       <div className="mb-8 text-center">
         <p className="text-gray-600 dark:text-gray-200 max-w-lg mx-auto">
@@ -62,7 +59,6 @@ const DownloadSection: React.FC = () => {
             rounded-xl transition-colors duration-300 shadow-lg"
       >
         <div className="flex items-start space-x-3">
-          {/* Icône circulaire */}
           <div
             className="w-5 h-5 bg-blue-600 dark:bg-blue-500 
                     rounded-full flex items-center justify-center 
@@ -71,7 +67,6 @@ const DownloadSection: React.FC = () => {
             <span className="text-white text-xs font-bold">i</span>
           </div>
 
-          {/* Texte */}
           <div className="text-sm text-blue-800 dark:text-slate-200 transition-colors duration-300">
             <p className="font-medium mb-1">{t("DownloadBtn.noteTitle")}</p>
             <p className="text-blue-700 dark:text-slate-300">

@@ -188,7 +188,7 @@ export default function Sport() {
             </div>
           </div>
           <div
-            className={`bg-sky-200 dark:bg-sky-900 rounded-2xl grid gap-6 transition-all duration-300 ${
+            className={`bg-sky-100 dark:bg-sky-900 rounded-2xl grid gap-6 transition-all duration-300 ${
               expanded ? "grid-cols-1" : "md:grid-cols-2"
             }`}
           >
@@ -233,7 +233,7 @@ export default function Sport() {
         </section>
         {/* Budget : Material, Event & Recap */}
         <section>
-          <div className="min-h-screen bg-sky-200 dark:bg-sky-950 py-6  rounded-3xl">
+          <div className="min-h-screen bg-sky-100 dark:bg-sky-950 py-6  rounded-3xl">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <section className="mb-16">
                 <div className="text-center">
@@ -298,14 +298,14 @@ export default function Sport() {
           </div>
         </section>
 
-        <section className="bg-sky-200 dark:bg-sky-900 py-8 rounded-3xl">
+        <section className="bg-sky-100 dark:bg-sky-900 py-8 rounded-3xl">
           <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
             {t("Sport.join")}
             {/* todo : faire partie sponsor ou participateur de l'aventure // Partenaire de l'aventure */}
           </h3>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
-          <div className="bg-sky-200 dark:bg-sky-900 py-12 overflow-hidden rounded-3xl">
+          <div className="bg-sky-100 dark:bg-sky-900 py-12 overflow-hidden rounded-3xl">
             <LogoSliders items={logos} speed={30} />
             {/* todo revoir parce que pas infini  */}
             {/* ask code to louis */}

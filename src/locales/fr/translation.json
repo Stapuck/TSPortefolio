@@ -42,19 +42,17 @@
     "french": "Français",
     "english": "Anglais",
     "years": "ans",
-    "citation" : "« Discipline, curiosité et persévérance guident chacun de mes projets.»", 
-    "":" Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur",
-    "d":""
-
-
+    "citation": "« Discipline, curiosité et persévérance guident chacun de mes projets.»",
+    "": " Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur",
+    "d": ""
   },
 
   "Sport": {
     "sport_welcome": " Bienvenue sur la page sport",
     "join": "Déja dans l'aventure : ",
-    "calendarandevent":"Calendrier et Événements",
-    "calendartxt":"Explorez mon calendrier sportif et professionnel de manière interactive. Cliquez sur un événement pour plus de détails.",
-    "legend":"Légende",
+    "calendarandevent": "Calendrier et Événements",
+    "calendartxt": "Explorez mon calendrier sportif et professionnel de manière interactive. Cliquez sur un événement pour plus de détails.",
+    "legend": "Légende",
     "budget": {
       "helmet": "Casque",
       "c1paddle": "pagaie de canoë",
@@ -118,10 +116,9 @@
     "myobjectif": "Mes Objectifs Sportifs",
     "myobjectiftxt": "Entre performance individuelle et impact collectif, découvrez mes ambitions pour les années à venir dans le monde du canoë slalom.",
     "goto": "Aller à l'objectif",
-    "clicktoinfo":"Cliquer pour plus d'infos", 
-    "description":"Description",
-    "price":"Prix",
-
+    "clicktoinfo": "Cliquer pour plus d'infos",
+    "description": "Description",
+    "price": "Prix",
 
     "citation": " « La performance commence par une bonne préparation et un budget maîtrisé. »"
   },
@@ -134,42 +131,40 @@
     "skillstxt": "Découvrez les technologies et outils que j'utilise pour créer des solutions innovantes et performantes. Chaque compétence représente une expertise développée à travers des projets concrets et une formation continue.",
     "project": "Projects",
     "projecttxt": "Une sélection de mes projets les plus significatifs, alliant innovation technique et expérience utilisateur. Chaque projet reflète ma passion pour le développement et ma capacité à résoudre des problèmes complexes.",
-    "noproject":"Aucun projet trouvé dans cette catégorie",
-    "allproject":"Tous les projets",
-    "projectpro":"Professionnel",
-    "projectperso":"Personnel",
-    "featured":"Mis en avant",
+    "noproject": "Aucun projet trouvé dans cette catégorie",
+    "allproject": "Tous les projets",
+    "projectpro": "Professionnel",
+    "projectperso": "Personnel",
+    "featured": "Mis en avant",
 
-    "projectnumber":"Projets totaux",
-    "featuredstat":"Mis en avant",
-    "downloadcv":"sinon voici mon CV",
-    "readytocollab":"Une Idée de projet ?",
-    "readytocollabtxt":"Je suis joignable pour discuter de vos idées et voir comment nous pouvons travailler ensemble.",
-    "certifications":"Certifications",
-    "certificationstxt":"Tout au long de mon parcours, j'ai obtenu diverses certifications qui attestent de mes compétences et de mon engagement envers l'excellence professionnelle.",
-
+    "projectnumber": "Projets totaux",
+    "featuredstat": "Mis en avant",
+    "downloadcv": "sinon voici mon CV",
+    "readytocollab": "Une Idée de projet ?",
+    "readytocollabtxt": "Je suis joignable pour discuter de vos idées et voir comment nous pouvons travailler ensemble.",
+    "certifications": "Certifications",
+    "certificationstxt": "Tout au long de mon parcours, j'ai obtenu diverses certifications qui attestent de mes compétences et de mon engagement envers l'excellence professionnelle.",
 
     "citation": "« L’expérience et la formation sont les fondations sur lesquelles se construisent les projets ambitieux. »"
   },
   "Contact": {
     "contact_welcome": "📬 Bienvenue sur la page de Contact",
-    "followme":"Suivez-moi sur les Réseaux",
-    "info":"Informations Pratiques",
-    "follow":"Suivre",
-    "collab":"Types de Collaborations",
-    "followers":"abonnés",
-    "connexions":"connexions",
-    "contact":"Comment me Joindre",
+    "followme": "Suivez-moi sur les Réseaux",
+    "info": "Informations Pratiques",
+    "follow": "Suivre",
+    "collab": "Types de Collaborations",
+    "followers": "abonnés",
+    "connexions": "connexions",
+    "contact": "Comment me Joindre",
     "noserious2": "Non sérieux s'abstenir",
     "noserious": "Cette démarche s’adresse uniquement à celles et ceux qui la considèrent avec sérieux. Merci de vous abstenir si votre engagement n’est pas sincère.",
-    "ressourses":"Ressources et Documents",
-    "readytocollab":"Prêt à Collaborer ?",
-    "readytocollabtxt":"Chaque projet est une nouvelle aventure. Discutons ensemble de la façon dont nous pouvons créer quelque chose d'exceptionnel !",
-    "contactme":"Me Contacter",
-    "sendemail":"Envoyez un Email",
-    "connect":"Connectons-nous",
-    "getmy":"Obtenir mon "
-
+    "ressourses": "Ressources et Documents",
+    "readytocollab": "Prêt à Collaborer ?",
+    "readytocollabtxt": "Chaque projet est une nouvelle aventure. Discutons ensemble de la façon dont nous pouvons créer quelque chose d'exceptionnel !",
+    "contactme": "Me Contacter",
+    "sendemail": "Envoyez un Email",
+    "connect": "Connectons-nous",
+    "getmy": "Obtenir mon "
   },
 
   "SideBar": {
@@ -242,15 +237,20 @@
   "Skills": {
     "noteTitle": "Information",
     "noteText": "1 = begginer (< 2h) / 2 = intermédaire ( < 5h )/ 3 = ?? ( entre 5h et 10h) / 4 = advanced (> 10h) / 5 = expert (> 20h)  ",
+    "noteText1": "1 = Débutant (< 2h)",
+    "noteText2": "2 = Intermédiaire (< 5h)",
+    "noteText3": "3 = Confirmé (5h à 10h)",
+    "noteText4": "4 = Avancé (> 10h)",
+    "noteText5": "5 = Expert (> 20h)",
     "global": "Vue globale",
     "category": "Afficher par catégorie"
   },
 
   "NotFound": {
-    "title" : "Page introuvable",
+    "title": "Page introuvable",
     "oups": "Oups 😅 Vous pagayez dans une zone inconnue du web.",
-    "retour": "Retour à l’accueil", 
-    "or":"Ou explorez directement"
+    "retour": "Retour à l’accueil",
+    "or": "Ou explorez directement"
   },
 
   "HeroSection": {
@@ -260,12 +260,11 @@
     "protitle": "Ingénieur IT • Développeur Web",
     "protxt1": "Expérience Full-Stack",
     "protxt2": "Polyvalent & Curieux",
-    "blogtitle": "Article de presse • TV • Radio • Blog",
-    "blogtxt1": "30 min de temps d'écran",
-    "blogtxt2": "Interview",
+    "blogtitle": "Zone Média",
+    "blogtxt1": "Article • TV ",
+    "blogtxt2": "Radio • Interview",
     "contacttitle": "Restons en Contact",
-    "contacttxt1": "Que ce soit pour une collaboration professionnelle, un partenariat sportif, ou simplement échanger sur nos passions communes, n'hésitez pas à me contacter !",
-    "contacttxt2": ""
+    "contacttxt1": "Une idée de Collaboration ? "
   },
 
   "AchievementR": {
@@ -274,12 +273,9 @@
     "senior": "Sénior",
     "continentalranking": "Classement Continental",
     "worldrankingkx": "Classement Mondial Kayak Cross",
-    "clicktoflip" : "Click to flip between disciplines",
+    "clicktoflip": "Click to flip between disciplines",
     "worldrank": "Classement Mondial",
     "moreachievements": "médailles"
-
-
-
   },
 
   "Calendar": {

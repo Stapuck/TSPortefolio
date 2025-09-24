@@ -1,62 +1,63 @@
 import { useTranslation } from "react-i18next";
 import { MapPin, Clock, Zap } from "lucide-react";
+import { travelExpenses} from "../medias/databases/index-global.ts";
 
 const BudgetEvent = () => {
   const { t } = useTranslation();
+  const initialLang = document.documentElement.lang || "fr";
 
-  //todo mettre dans index global ? si oui revoir la traduction 
-// import { travelExpenses} from "../medias/databases/index-global.ts";
 
-  const travelExpenses = [
-    {
-      key: "registrationfee",
-      label: t("Sport.deplacement.registrationfee"),
-      amount: 1130,
-      tooltip: t("Sport.deplacement.registrationfeetxt"),
-    },
-    {
-      key: "coaching",
-      label: t("Sport.deplacement.coaching"),
-      amount: 6420,
-      tooltip: t("Sport.deplacement.coachingtxt"),
-    },
-    {
-      key: "accommodation",
-      label: t("Sport.deplacement.accomodation"),
-      amount: 3150,
-      tooltip: t("Sport.deplacement.accomodationtxt"),
-    },
-    {
-      key: "food",
-      label: t("Sport.deplacement.food"),
-      amount: 1400,
-      tooltip: t("Sport.deplacement.foodtxt"),
-    },
-    {
-      key: "transport",
-      label: t("Sport.deplacement.transport"),
-      amount: 800,
-      tooltip: t("Sport.deplacement.transporttxt"),
-    },
-    {
-      key: "other",
-      label: t("Sport.deplacement.other"),
-      amount: 1200,
-      tooltip: t("Sport.deplacement.othertxt"),
-    },
-    {
-      key: "subscription",
-      label: t("Sport.deplacement.subscription"),
-      amount: 1250,
-      tooltip: t("Sport.deplacement.subscriptiontxt"),
-    },
-    {
-      key: "Daily",
-      label: t("Sport.deplacement.daily"),
-      amount: 10000,
-      tooltip: t("Sport.deplacement.dailytxt"),
-    },
-  ];
+
+  // const travelExpenses = [
+  //   {
+  //     key: "registrationfee",
+  //     label: t("Sport.deplacement.registrationfee"),
+  //     amount: 1130,
+  //     tooltip: t("Sport.deplacement.registrationfeetxt"),
+  //   },
+  //   {
+  //     key: "coaching",
+  //     label: t("Sport.deplacement.coaching"),
+  //     amount: 6420,
+  //     tooltip: t("Sport.deplacement.coachingtxt"),
+  //   },
+  //   {
+  //     key: "accommodation",
+  //     label: t("Sport.deplacement.accomodation"),
+  //     amount: 3150,
+  //     tooltip: t("Sport.deplacement.accomodationtxt"),
+  //   },
+  //   {
+  //     key: "food",
+  //     label: t("Sport.deplacement.food"),
+  //     amount: 1400,
+  //     tooltip: t("Sport.deplacement.foodtxt"),
+  //   },
+  //   {
+  //     key: "transport",
+  //     label: t("Sport.deplacement.transport"),
+  //     amount: 800,
+  //     tooltip: t("Sport.deplacement.transporttxt"),
+  //   },
+  //   {
+  //     key: "other",
+  //     label: t("Sport.deplacement.other"),
+  //     amount: 1200,
+  //     tooltip: t("Sport.deplacement.othertxt"),
+  //   },
+  //   {
+  //     key: "subscription",
+  //     label: t("Sport.deplacement.subscription"),
+  //     amount: 1250,
+  //     tooltip: t("Sport.deplacement.subscriptiontxt"),
+  //   },
+  //   {
+  //     key: "Daily",
+  //     label: t("Sport.deplacement.daily"),
+  //     amount: 10000,
+  //     tooltip: t("Sport.deplacement.dailytxt"),
+  //   },
+  // ];
 
   const totalTravel = travelExpenses.reduce(
     (sum, expense) => sum + expense.amount,
@@ -112,7 +113,7 @@ const BudgetEvent = () => {
                 <div className="bg-gray-50 dark:bg-slate-800 dark:hover:bg-gray-800/70 p-6 rounded-2xl hover:bg-gray-100  transition-colors cursor-help">
                   <div className="flex justify-between items-center">
                     <h4 className="font-semibold text-gray-800 dark:text-white">
-                      {expense.label}
+                      {initialLang === "fr" ? expense.label_fr : expense.label_en}
                     </h4>
                     <span className="font-bold text-green-600 dark:text-green-400 text-lg">
                       {formatPrice(expense.amount)}
@@ -121,7 +122,7 @@ const BudgetEvent = () => {
 
                   {/* Tooltip */}
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-72 bg-gray-700 dark:bg-gray-900 text-white text-sm p-3 rounded-lg shadow-xl z-10">
-                    {expense.tooltip}
+                    {initialLang === "fr" ? expense.tooltip_fr : expense.tooltip_en}
                   </div>
                 </div>
               </div>

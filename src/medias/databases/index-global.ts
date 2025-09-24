@@ -1,4 +1,4 @@
-// import
+// import :
 
 import {
   //skills
@@ -61,6 +61,9 @@ import {
 
   //other
 } from "../../medias";
+import { Target, Trophy, Users, Leaf } from "lucide-react";
+
+//interface :
 
 // Next_date
 export interface EventType {
@@ -79,13 +82,32 @@ export interface EventType {
   type_event_en?: string;
   type_event_fr?: string;
 }
+// Experiences
+export interface Experiences {
+  etablissement_fr: string;
+  etablissement_en: string;
+  title_fr: string;
+  title_en: string;
+  periode_fr: string;
+  periode_en: string;
+  details_fr: string[];
+  details_en: string[];
+  type: string;
+}
 
-// todo : ranger ce fichier pour qu'il soit propre, clean pétant
-//  todo : mettre la semaine à Prague et tacen de cette année.
-// revoir les dates de coupe du monde si mettre lundi ou si rajouter stage d'entrainement à chaque fois ?
-// revoir les liens
-// revoir pour les info starts, bibs, ...
-//revoir telecharger image d'event
+// skills
+export interface Skills {
+  name: string;
+  imageUrl: string;
+  category: string;
+  category_fr: string;
+  level: string;
+}
+
+// Liste :
+
+// todo : revoir les dates de coupe du monde si mettre lundi ou si rajouter stage d'entrainement à chaque fois ?
+// todo : revoir telecharger image d'event
 export const next_date: EventType[] = [
   //2028
   //2027
@@ -116,7 +138,7 @@ export const next_date: EventType[] = [
     type_event_en: "Course",
     type_event_fr: "Race",
     bibs: "651",
-    link_result:"https://www.utrka.com/utrke/xica/2025/rezultati/",
+    link_result: "https://www.utrka.com/utrke/xica/2025/rezultati/",
     photobg:
       "https://images.ahotu.com/r9urrd4o8fattlkye8ffwml2tira?w=1920&q=100&f=webp",
   },
@@ -188,7 +210,7 @@ export const next_date: EventType[] = [
     photobg:
       "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
   },
-  
+
   //  ranger au dessus apres
   // todo : revoir les quelque probleme de type et rajouter les autres caractéristique // revoir les liens
   // YOG et YAG type = other à faire
@@ -760,15 +782,7 @@ export const next_date: EventType[] = [
   },
 ];
 
-// skills
-
-export interface Skills {
-  name: string;
-  imageUrl: string;
-  category: string;
-  category_fr: string;
-  level: string;
-}
+// skill
 export const skills = [
   {
     name: "CSS",
@@ -1553,7 +1567,7 @@ export const articles = [
 ];
 
 //sportobjectives
-import { Target, Trophy, Users, Leaf } from "lucide-react";
+
 export const sportobjectives = [
   {
     icon: Target,
@@ -1613,6 +1627,7 @@ export const sportobjectives = [
 ];
 
 //accordiondata
+//todo revoir avec papa 4 question à mettre
 export const accordionData = [
   // {
   //   title: "Mon rythme de vie et organisation d'un double projet",
@@ -1692,36 +1707,24 @@ export const accordionData = [
 ];
 
 //experience
-//todo
-
-export interface Experiences {
-  etablissement_fr: string;
-  etablissement_en: string;
-  title_fr: string;
-  title_en: string;
-  periode_fr: string;
-  periode_en: string;
-  details_fr: string[];
-  details_en: string[];
-  type: string;
-}
-
 //  todo : mettre du vrai texte et traduire
-
 export const experiences = [
   {
     etablissement_fr: "Safran Helicopter Engines",
-    etablissement_en: "test",
+    etablissement_en: "Safran Helicopter Engines",
     title_fr: "Alternance Développeur Web",
-    title_en: "test",
+    title_en: "Web Developer Apprenticeship",
     periode_fr: "10/2023 - Maintenant",
-    periode_en: "",
+    periode_en: "10/2023 - Now",
     details_fr: [
       "Création d’interface et développement de nouvelles fonctionnalités au sein de l’application",
       "Gestion de projet",
       "",
     ],
-    details_en: ["", "", ""],
+    details_en: [
+      "Interface creation and development of new features within the application",
+      "Project management",
+    ],
     type: "experiencepro",
   },
   {
@@ -1757,26 +1760,30 @@ export const experiences = [
   },
   {
     etablissement_fr: "Octopeek (part of Mazars)",
-    etablissement_en: "",
+    etablissement_en: "Octopeek (part of Mazars)",
     title_fr: "stagiaire Data Analyst",
-    title_en: "",
+    title_en: "Intern Data Analyst",
     periode_fr: "04/2023 - 07/2023",
-    periode_en: "",
+    periode_en: "04/2023 - 07/2023",
     details_fr: [
       "Traitement de donnée de sportif biologique et technique (nageur, kayakiste)",
       "Analyse de données sur l’explicabilité des performances dans le sport",
       "Relation client pour améliorer l’utilisation des données collectées",
     ],
-    details_en: ["", "", ""],
+    details_en: [
+      "Data analysis on performance explainability in sports",
+      "Client relations to improve the use of collected data",
+    ],
     type: "experiencepro",
   },
+
   {
     etablissement_fr: "Hermès, tellier ? textile ? ",
     etablissement_en: "",
     title_fr: "Prestataire de service, Développeur Full-stack",
-    title_en: "",
+    title_en: "Full-stack Developer Contractor",
     periode_fr: "04/2023 - 07/2023",
-    periode_en: "",
+    periode_en: "04/2023 - 07/2023",
     details_fr: [
       "Développement Web et Application de bureau",
       "Travail au sein d’une équipe de développeurs expérimentés",
@@ -1784,32 +1791,42 @@ export const experiences = [
       "Stagiaire : projet de gestion de données",
       "Prestataire : développeur full-stack (PHP Symfony)",
     ],
-    details_en: ["", "", ""],
+    details_en: [
+      "Web and desktop application development",
+      "Working within a team of experienced developers",
+      "Learning: UI Developer (Angular & Node.js)",
+      "Intern: data management project",
+      "Contractor: full-stack developer (PHP Symfony)",
+    ],
     type: "experiencepro",
   },
   {
     etablissement_fr: "Fédération Canadienne de Kayak",
-    etablissement_en: "",
+    etablissement_en: "Canadian Kayak Federation",
     title_fr: "Coach équipe jeune",
-    title_en: "",
+    title_en: "Youth Team Coach",
     periode_fr: "02/2023 - 04/2023",
-    periode_en: "",
+    periode_en: "02/2023 - 04/2023",
     details_fr: [
       "Partage de ma passion et de mes connaissances avec des jeunes pagayeurs",
       "Organisation et gestion de séances quotidiennes (musculation, kayak et retour vidéo)",
       "Coaching de l’équipe jeune",
       "parallele des etudes",
     ],
-    details_en: ["", "", ""],
+    details_en: [
+      "Sharing my passion and knowledge with young paddlers",
+      "Organizing and managing daily sessions (strength training, kayaking, and video feedback)",
+      "Coaching the youth team",
+    ],
     type: "experiencepro",
   },
   {
     etablissement_fr: "CESI, Pau",
-    etablissement_en: "",
+    etablissement_en: "CESI, Pau",
     title_fr: "Cycle préparatoire",
-    title_en: "",
+    title_en: "Preparatory Cycle",
     periode_fr: "09/2021 - 07/2023",
-    periode_en: "",
+    periode_en: "09/2021 - 07/2023",
     details_fr: ["", "", ""],
     details_en: ["", "", ""],
     type: "formation",
@@ -1818,22 +1835,22 @@ export const experiences = [
     etablissement_fr: "",
     etablissement_en: "",
     title_fr: "Année sadbatique",
-    title_en: "",
+    title_en: "Gap Year",
     periode_fr: "09/2020 - 09/2021",
-    periode_en: "",
-    details_fr: ["", "section sportif ", "bac S "],
+    periode_en: "09/2020 - 09/2021",
+    details_fr: ["petit boulot ", "sportif à plein temps", "LEA 1ere année"],
     details_en: ["", "", ""],
     type: "experiencepro",
   },
   {
     etablissement_fr: "Lycée Grandmont",
-    etablissement_en: "",
+    etablissement_en: "Lycée Grandmont",
     title_fr: "Années Lycée",
-    title_en: "",
+    title_en: "High School Years",
     periode_fr: "09/2017 - 04/2020",
-    periode_en: "",
+    periode_en: "09/2017 - 04/2020",
     details_fr: ["", "section sportif ", "bac S "],
-    details_en: ["", "", ""],
+    details_en: ["??", "Sport Section ", "Bachelor of Science"],
     type: "formation",
   },
   {
@@ -1853,158 +1870,147 @@ export const experiences = [
   },
 ];
 
-// traduction en partie en dessous y'a plus qu'a 
-// todo : faire la traduction de experience
-// export const experiences_en = [
-//   {
-//     etablissement: "Cesi Pau / Safran, Bordes",
-//     titre: "Web Developer Apprenticeship",
-//     periode: "2023 - 2024",
-//     details: [
-//       "Web Developer Internship - Pula, Croatia",
-//       "BTS SIO - Lycée Saint Cricq, Pau",
-//     ],
-//     type: "formation"
+// TravelExpenses
+export const travelExpenses = [
+  {
+    key: "registrationfee",
+    label_fr: "Frais d'inscription",
+    label_en: "Registration fee",
+    amount: 1130,
+    tooltip_fr: "130€ par coupe du monde (x5) + 240€ par mondiaux (x2)",
+    tooltip_en: "130€ for 5 world cups + 240€ for 2 world championships",
+  },
+  {
+    key: "coaching",
+    label_fr: "Coaching",
+    label_en: "Coaching",
+    amount: 6420,
+    tooltip_fr:
+      "2571€ pour 4 semaines de compétition → 642€/semaine → 6420€ par saison",
+    tooltip_en:
+      "2571€ for 4 weeks of competition → 642€/week → 6420€ per season",
+  },
+  {
+    key: "accommodation",
+    label_fr: "Hébergement",
+    label_en: "Accommodation",
+    amount: 3150,
+    tooltip_fr: "Airbnb 1260€ → moyenne par événement : 315€",
+    tooltip_en: "Airbnb 1260€ → average per event: 315€",
+  },
+  {
+    key: "food",
+    label_fr: "Repas",
+    label_en: "Food",
+    amount: 1400,
+    tooltip_fr: "Repas équilibrés ~140€/semaine",
+    tooltip_en: "Meals ~140€/week",
+  },
+  {
+    key: "transport",
+    label_fr: "Transport",
+    label_en: "Transport",
+    amount: 800,
+    tooltip_fr: "Dépend de la distance, mode de transport, prix essence",
+    tooltip_en: "Depends on distance, mode of transport, fuel price",
+  },
+  {
+    key: "other",
+    label_fr: "Autres",
+    label_en: "Other",
+    amount: 1200,
+    tooltip_fr: "Séances 10-25€/séance, 1-2 séances/jour → ~120€/semaine",
+    tooltip_en: "Sessions 10-25€/session, 1-2 sessions/day → ~120€/week",
+  },
+  {
+    key: "subscription",
+    label_fr: "Abonnement Pau structure d'entraînement",
+    label_en: "Pau training structure subscription",
+    amount: 1250,
+    tooltip_fr: "Abonnement annuel",
+    tooltip_en: "annual subscription",
+  },
+  {
+    key: "Daily",
+    label_fr: "Vie quotidienne",
+    label_en: "Daily life",
+    amount: 10000,
+    tooltip_fr: "Loyer, Course, Essence, ...",
+    tooltip_en: "Rent, Groceries, Fuel, ...",
+  },
+];
 
-//   },
-//   {
-//     etablissement: "Cesi Pau / Safran, Bordes",
-//     titre: "Web Developer Apprenticeship",
-//     periode: "2022 - 2023",
-//     details: [
-//       "Web Developer Internship - Paris",
-//       "Data processing and analysis internship - Paris",
-//     ],
-//     type: "formation"
+// achivement
+export const achievements = [
+  {
+    year: "2025",
+    event_fr: "Course de Référence Africaine KX1 H2H",
+    event_en: "Continental Championship KX1 H2H",
+    medal: "Gold",
+    color: "from-yellow-400 to-yellow-600",
+  },
+  {
+    year: "2025",
+    event_fr: "Course de Référence Africaine KX1 Timetrial",
+    event_en: "Continental Championship KX1 time trial",
+    medal: "Gold",
+    color: "from-yellow-400 to-yellow-600",
+  },
+  {
+    year: "2025",
+    event_fr: "Championnat continental C1 slalom",
+    event_en: "Continental Championship C1 slalom",
+    medal: "Bronze",
+    color: "from-amber-600 to-amber-800",
+  },
+  {
+    year: "2024",
+    event_fr: "Championnat continental C1 slalom",
+    event_en: "Continental Championship C1 slalom",
+    medal: "Bronze",
+    color: "from-amber-600 to-amber-800",
+  },
+  {
+    year: "2018",
+    event_fr: "Jeux Olympique de la Jeunesse C1 slalom",
+    event_en: "Youth Olympics game C1 slalom",
+    medal: "Gold",
+    color: "from-yellow-400 to-yellow-600",
+  },
+  {
+    year: "2018",
+    event_fr: "Jeux Africain de la Jeunesse C1 slalom",
+    event_en: "Youth Africa Games C1 slalom",
+    medal: "Gold",
+    color: "from-yellow-400 to-yellow-600",
+  },
+  {
+    year: "2018",
+    event_fr: "Jeux Africain de la Jeunesse C1 course en ligne",
+    event_en: "Youth Africa Games C1 sprint",
+    medal: "Bronze",
+    color: "from-amber-600 to-amber-800",
+  },
+];
 
-//   },
-//   {
-//     etablissement: "Cesi Pau",
-//     titre: "2nd Year",
-//     periode: "2021 - 2022",
-//     details: [
-//       "Web Developer Internship - Paris",
-//       "Data processing and analysis internship - Paris",
-//     ],
-//     type: "experiencepro"
-
-//   },
-//   {
-//     etablissement: "Safran Helicopter Engines",
-//     titre: "Web Developer Apprenticeship",
-//     periode: "10/2023 - Present",
-//     details: [
-//       "Interface creation and development of new features within the application",
-//       "Project management",
-//     ],
-//     type: "experiencepro"
-
-//   },
-//   {
-//     etablissement: "Octopeek (part of Mazars)",
-//     titre: "Data Analyst",
-//     periode: "04/2023 - 07/2023",
-//     details: [
-//       "Data analysis on performance explainability in sports",
-//       "Client relations to improve the use of collected data",
-//     ],
-//     type: "experiencepro"
-
-//   },
-//   {
-//     etablissement: "Hermès",
-//     titre: "Full-stack Developer",
-//     periode: "04/2023 - 07/2023",
-//     details: [
-//       "Web and desktop application development",
-//       "Working within a team of experienced developers",
-//       "Learning: UI Developer (Angular & Node.js)",
-//       "Intern: data management project",
-//       "Contractor: full-stack developer (PHP Symfony)",
-//     ],
-//     type: "experiencepro"
-
-//   },
-//   {
-//     etablissement: "Canadian Kayak Federation",
-//     titre: "Youth Team Coach",
-//     periode: "02/2023 - 04/2023",
-//     details: [
-//       "Sharing my passion and knowledge with young paddlers",
-//       "Organizing and managing daily sessions (strength training, kayaking, and video feedback)",
-//       "Coaching the youth team",
-//     ],
-//     type: "experiencepro"
-
-//   },
-// ];
-
-
-// todo : revoir les texte + implémenter apres 
-export   const travelExpenses = [
-    {
-      key: "registrationfee",
-      label_fr: "Frais d'inscription",
-      label_en: "Registration fee",
-      amount: 1130,
-      tooltip_fr: "130€ par coupe du monde (x5) + 240€ par mondiaux (x2)",
-      tooltip_en: "130€ for 5 world cups + 240€ for 2 world championships",
-    },
-    {
-      key: "coaching",
-      label_fr: "Coaching",
-      label_en: "Coaching",
-      amount: 6420,
-      tooltip_fr: "2571€ pour 4 semaines de compétition → 642€/semaine → 6420€ par saison",
-      tooltip_en: "2571€ for 4 weeks of competition → 642€/week → 6420€ per season",
-    },
-    {
-      key: "accommodation",
-      label_fr: "Hébergement",
-      label_en: "Accommodation",
-      amount: 3150,
-      tooltip_fr: "Airbnb 1260€ → moyenne par événement : 315€",
-      tooltip_en: "Airbnb 1260€ → average per event: 315€",
-    },
-    {
-      key: "food",
-      label_fr: "Repas",
-      label_en: "Food",
-      amount: 1400,
-      tooltip_fr: "Repas équilibrés ~140€/semaine",
-      tooltip_en: "Meals ~140€/week",
-    },
-    {
-      key: "transport",
-      label_fr: "Transport",
-      label_en: "Transport",
-      amount: 800,
-      tooltip_fr: "Dépend de la distance, mode de transport, prix essence",
-      tooltip_en: "Depends on distance, mode of transport, fuel price",
-    },
-    {
-      key: "other",
-      label_fr: "Autres",
-      label_en: "Other",
-      amount: 1200,
-      tooltip_fr: "Séances 10-25€/séance, 1-2 séances/jour → ~120€/semaine",
-      tooltip_en: "Sessions 10-25€/session, 1-2 sessions/day → ~120€/week",
-    },
-    {
-      key: "subscription",
-      label_fr: "Abonnement Pau structure d'entraînement",
-      label_en: "Pau training structure subscription",
-      amount: 1250,
-      tooltip_fr: "Abonnement annuel",
-      tooltip_en: "annual subscription",
-    },
-    {
-      key: "Daily",
-      label_fr: "Vie quotidienne",
-      label_en: "Daily life",
-      amount: 10000,
-      tooltip_fr: "Loyer, Course, Essence, ...",
-      tooltip_en: "Rent, Groceries, Fuel, ...",
-    },
-  ];
-
+// projects
+// todo : mettre du vrai projet
+export const projects = [
+  {
+    id: 1,
+    title_en: "",
+    title_fr: "",
+    subject_fr: "",
+    subject_en: "",
+    domain: "",
+    image:"",
+    description_fr:
+      "",
+    description_en:
+      "",
+    technologies: ["", ".", "", "", ""],
+    github: "",
+    demo: "",
+    featured: true,
+  },
+];

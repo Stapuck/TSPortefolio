@@ -329,7 +329,6 @@ const Contact: React.FC = () => {
         </section>
 
         {/* Méthodes de Contact Principales */}
-        {/* todo mettre les réseaux, alias mail ?  */}
         <section className="space-y-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">

@@ -6,15 +6,14 @@ export interface SkillsProps {
   skills: any[];
 }
 
+// todo revoir darkmode
 export default function Skills({ skills }: SkillsProps) {
   const { t } = useTranslation();
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   const [groupByCategory, setGroupByCategory] = useState(false);
   // const initialLang = document.documentElement.lang || "fr";
-  // todo : revoir pour afficher la category ou catgory_fr en fonction de la langue choisis 
-                  // {initialLang === "fr" ? category_fr : category}
-
-
+  // todo : revoir pour afficher la category ou catgory_fr en fonction de la langue choisis
+  // {initialLang === "fr" ? category_fr : category}
 
   const groupedSkills = skills.reduce((acc: any, skill: Skills) => {
     const category = skill.category || "Général";
@@ -37,82 +36,83 @@ export default function Skills({ skills }: SkillsProps) {
   const shouldDisplayInline = groupByCategory && canCategoriesBeInline();
 
   const renderSkillCard = (
-  skill: Skills,
-  index: number,
-  categoryKey: string = ""
-) => (
-  <div
-    key={`${categoryKey}-${index}`}
-    className="group relative"
-    onMouseEnter={() => setHoveredSkill(`${categoryKey}-${index}`)}
-    onMouseLeave={() => setHoveredSkill(null)}
-  >
-    <div className="relative">
-      {/* Card principal */}
-      <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white dark:bg-sky-800/50 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200 relative">
+    skill: Skills,
+    index: number,
+    categoryKey: string = ""
+  ) => (
+    <div
+      key={`${categoryKey}-${index}`}
+      className="group relative"
+      onMouseEnter={() => setHoveredSkill(`${categoryKey}-${index}`)}
+      onMouseLeave={() => setHoveredSkill(null)}
+    >
+      <div className="relative">
+        {/* Card principal */}
+        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white dark:bg-sky-800/50 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200 relative">
+          <img
+            src={skill.imageUrl}
+            alt={skill.name}
+            className="w-8 h-8 lg:w-10 lg:h-10 object-contain transition-transform duration-300 group-hover:scale-110"
+          />
+
+          {/* Badge niveau si disponible */}
+          {skill.level && (
+            <div className="absolute -top-1 -right-1 w-5 h-5 lg:w-6 lg:h-6 bg-blue-600 rounded-full flex items-center justify-center">
+              <span className="text-white text-xs lg:text-sm font-bold">
+                {skill.level}
+              </span>
+            </div>
+          )}
+        </div>
+
+        {/* Tooltip */}
+        <div
+          className={`absolute -top-12 left-1/2 transform -translate-x-1/2 transition-all duration-300 z-10 ${
+            hoveredSkill === `${categoryKey}-${index}`
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible translate-y-2"
+          }`}
+        >
+          <div className="bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg">
+            {skill.name}
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Nom en dessous pour mobile */}
+      <p className="md:hidden text-center text-xs font-medium text-gray-700 dark:text-gray-300 mt-2">
+        {skill.name}
+      </p>
+    </div>
+  );
+
+  const renderMobileSkillCard = (
+    skill: Skills,
+    index: number,
+    categoryKey: string = ""
+  ) => (
+    <div key={`${categoryKey}-${index}`} className="relative text-center">
+      <div className="w-14 h-14 bg-white dark:bg-sky-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-600 flex items-center justify-center mx-auto relative">
         <img
           src={skill.imageUrl}
           alt={skill.name}
-          className="w-8 h-8 lg:w-10 lg:h-10 object-contain transition-transform duration-300 group-hover:scale-110"
+          className="w-7 h-7 object-contain"
         />
 
         {/* Badge niveau si disponible */}
         {skill.level && (
-          <div className="absolute -top-1 -right-1 w-5 h-5 lg:w-6 lg:h-6 bg-blue-600 rounded-full flex items-center justify-center">
-            <span className="text-white text-xs lg:text-sm font-bold">{skill.level}</span>
+          <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-600 rounded-full flex items-center justify-center">
+            <span className="text-white text-xs font-bold">{skill.level}</span>
           </div>
         )}
       </div>
 
-      {/* Tooltip */}
-      <div
-        className={`absolute -top-12 left-1/2 transform -translate-x-1/2 transition-all duration-300 z-10 ${
-          hoveredSkill === `${categoryKey}-${index}`
-            ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible translate-y-2"
-        }`}
-      >
-        <div className="bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg">
-          {skill.name}
-          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
-        </div>
-      </div>
+      <p className="text-xs font-medium text-gray-700 dark:text-gray-300 mt-2 leading-tight">
+        {skill.name}
+      </p>
     </div>
-
-    {/* Nom en dessous pour mobile */}
-    <p className="md:hidden text-center text-xs font-medium text-gray-700 dark:text-gray-300 mt-2">
-      {skill.name}
-    </p>
-  </div>
-);
-
-
-  const renderMobileSkillCard = (
-  skill: Skills,
-  index: number,
-  categoryKey: string = ""
-) => (
-  <div key={`${categoryKey}-${index}`} className="relative text-center">
-    <div className="w-14 h-14 bg-white dark:bg-sky-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-600 flex items-center justify-center mx-auto relative">
-      <img
-        src={skill.imageUrl}
-        alt={skill.name}
-        className="w-7 h-7 object-contain"
-      />
-
-      {/* Badge niveau si disponible */}
-      {skill.level && (
-        <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-600 rounded-full flex items-center justify-center">
-          <span className="text-white text-xs font-bold">{skill.level}</span>
-        </div>
-      )}
-    </div>
-
-    <p className="text-xs font-medium text-gray-700 dark:text-gray-300 mt-2 leading-tight">
-      {skill.name}
-    </p>
-  </div>
-);
+  );
 
   return (
     <section className="w-full max-w-6xl mx-auto p-4">
@@ -145,14 +145,29 @@ export default function Skills({ skills }: SkillsProps) {
           {/* Texte */}
           <div className="text-sm text-blue-800 dark:text-slate-200 transition-colors duration-300">
             <p className="font-medium mb-1">{t("Skills.noteTitle")}</p>
-            <p className="text-blue-700 dark:text-slate-300">
+            {/* <p className="text-blue-700 dark:text-slate-300">
               {t("Skills.noteText")}
-            </p>
+            </p> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-10">
+              <p className="text-blue-700 dark:text-slate-300">
+                {t("Skills.noteText1")}
+              </p>
+              <p className="text-blue-700 dark:text-slate-300">
+                {t("Skills.noteText2")}
+              </p>
+              <p className="text-blue-700 dark:text-slate-300">
+                {t("Skills.noteText3")}
+              </p>
+              <p className="text-blue-700 dark:text-slate-300">
+                {t("Skills.noteText4")}
+              </p>
+              <p className="text-blue-700 dark:text-slate-300">
+                {t("Skills.noteText5")}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-
 
       {/* Bouton de tri */}
       <div className="mt-6 mb-4">
@@ -164,7 +179,7 @@ export default function Skills({ skills }: SkillsProps) {
               : "bg-gray-100 dark:bg-sky-950 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-sky-900"
           }`}
         >
-          {groupByCategory ?  t("Skills.global")  : t("Skills.category") }
+          {groupByCategory ? t("Skills.global") : t("Skills.category")}
         </button>
       </div>
 

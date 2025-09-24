@@ -11,7 +11,6 @@ interface TimeLeft {
   minutes: number;
   seconds: number;
 }
-// todo : revoir responsive de compteur
 const Countdown = () => {
   const [nextEvent, setNextEvent] = useState<EventType | null>(null);
   const [countDate, setCountDate] = useState<number | null>(null);
@@ -125,8 +124,6 @@ const Countdown = () => {
     navigate("/sport#calendar");
   };
 
-
-  
   return (
     <section
       className="relative px-4 py-8 bg-cover bg-center rounded-3xl"
@@ -236,7 +233,7 @@ const Countdown = () => {
 
             {(showSportInfo || isNow) && nextEvent.type === "sport" && (
               <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl">
-                <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
+                <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow ">
                   <span className="block text-slate-300 font-semibold mb-2">
                     {t("Countdown.linkresult")}
                   </span>
@@ -255,6 +252,38 @@ const Countdown = () => {
                     </span>
                   )}
                 </div>
+
+                {/* {nextEvent.link_result && (
+                  <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
+                    <span className="block text-slate-300 font-semibold mb-2">
+                      {t("Countdown.linkresult")}
+                    </span>
+                    <a
+                      href={nextEvent.link_result}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:underline text-lg"
+                    >
+                      {t("Countdown.linkhere")}
+                    </a>
+                  </div>
+                )} */}
+
+                {/* {nextEvent.link_video && (
+                  <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
+                    <span className="block text-slate-300 font-semibold mb-2">
+                      {t("Countdown.linkvideo")}
+                    </span>
+                    <a
+                      href={nextEvent.link_video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:underline text-lg"
+                    >
+                      {t("Countdown.linkhere")}
+                    </a>
+                  </div>
+                )} */}
 
                 <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
                   <span className="block text-slate-300 font-semibold mb-2">
@@ -276,6 +305,17 @@ const Countdown = () => {
                   )}
                 </div>
 
+                {/* {nextEvent.bibs && (
+                  <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
+                    <span className="block text-slate-300 font-semibold mb-2">
+                      {t("Countdown.linkresult")}
+                    </span>
+                    <span className="text-slate-100 font-bold text-lg dark:text-white">
+                      {nextEvent.bibs || "-"}
+                    </span>
+                  </div>
+                )} */}
+
                 <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
                   <span className="block text-slate-300 font-semibold mb-2">
                     {t("Countdown.bibs")}
@@ -284,6 +324,17 @@ const Countdown = () => {
                     {nextEvent.bibs || "-"}
                   </span>
                 </div>
+
+                {/* {nextEvent.start && (
+                  <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
+                    <span className="block text-slate-300 font-semibold mb-2">
+                      {t("Countdown.linkresult")}
+                    </span>
+                    <span className="text-slate-100 font-bold text-lg dark:text-white">
+                      {nextEvent.start || "-"}
+                    </span>
+                  </div>
+                )} */}
 
                 <div className="bg-slate-800 border border-slate-500 rounded-xl p-4 text-center shadow">
                   <span className="block text-slate-300 font-semibold mb-2">

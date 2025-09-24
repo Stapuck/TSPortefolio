@@ -194,7 +194,6 @@ export default function CalendarSection() {
       <div className="max-w-7xl mx-auto">
         {/* Calendar Container */}
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-          {/* todo : voir comment mettre la traduction sur les mois ( anglais uniquement pour le moment ) */}
           <Calendar
             localizer={localizer}
             events={events}
