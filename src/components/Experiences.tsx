@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { experiences, } from "../medias/databases/index-global.ts";
-// import type { Experiences } from "../medias/databases/index-global.ts";
+// import type { Experiences } from "../medias/databases/index-global.ts"; //todo revoir pour l'inclure  et deploy
 import { useTranslation } from "react-i18next";
 
 const Experiences = () => {
@@ -43,7 +43,6 @@ const Experiences = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
-      {/* --- Exemple Desktop Layout, les autres layouts gardent le même principe --- */}
       <div className="hidden xl:block shadow-lg">
         <div className="bg-white dark:bg-sky-900 rounded-2xl shadow-lg border border-gray-100 dark:border-sky-800 overflow-hidden">
           <div className="flex h-[500px]">
@@ -54,7 +53,7 @@ const Experiences = () => {
                   {t("Experience.title")}
                 </h2>
               </div>
-              <div className="p-4 space-y-2 h-full overflow-y-auto">
+              <div className="p-4 space-y-2 h-full overflow-y-auto custom-scrollbar">
                 {experiences.map((exp, i) => (
                   <button
                     key={i}

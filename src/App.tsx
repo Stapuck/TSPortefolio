@@ -13,8 +13,6 @@ import Footer from "./components/Footer";
 export default function App() {
 
   return (
-    // todo : revoir la couleur en dark https://tailwindcss.com/docs/colors
-    // <div className="min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-800">
     <div className="min-h-screen bg-gray-100 text-gray-900 dark:bg-sky-950">
       <div className="fixed top-0 left-0 h-full z-50">
         <Sidebar />

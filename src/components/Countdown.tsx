@@ -179,56 +179,6 @@ const Countdown = () => {
                   : t("Countdown.nowPro")}
               </p>
             ) : (
-              // <div className="flex flex-col sm:flex-row justify-center gap-6 mb-5 mt-4">
-              //   {/* Days */}
-              //   <div className="flex flex-col items-center">
-              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
-              //       {timeLeft.days}
-              //     </span>
-              //     <span className="text-sm text-slate-200">
-              //       {getLabel(timeLeft.days, "Countdown.day", "Countdown.days")}
-              //     </span>
-              //   </div>
-              //   {/* Hours */}
-              //   <div className="flex flex-col items-center">
-              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
-              //       {timeLeft.hours}
-              //     </span>
-              //     <span className="text-sm text-slate-200">
-              //       {getLabel(
-              //         timeLeft.hours,
-              //         "Countdown.hour",
-              //         "Countdown.hours"
-              //       )}
-              //     </span>
-              //   </div>
-              //   {/* Minutes */}
-              //   <div className="flex flex-col items-center">
-              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
-              //       {timeLeft.minutes}
-              //     </span>
-              //     <span className="text-sm text-slate-200">
-              //       {getLabel(
-              //         timeLeft.minutes,
-              //         "Countdown.minute",
-              //         "Countdown.minutes"
-              //       )}
-              //     </span>
-              //   </div>
-              //   {/* Seconds */}
-              //   <div className="flex flex-col items-center">
-              //     <span className="text-3xl sm:text-4xl font-bold text-slate-200">
-              //       {timeLeft.seconds}
-              //     </span>
-              //     <span className="text-sm text-slate-200">
-              //       {getLabel(
-              //         timeLeft.seconds,
-              //         "Countdown.second",
-              //         "Countdown.seconds"
-              //       )}
-              //     </span>
-              //   </div>
-              // </div>
               <div className="flex flex-row flex-nowrap justify-center gap-6 mb-5 mt-4 overflow-x-auto">
                 {/* Days */}
                 <div className="flex flex-col items-center">
@@ -300,7 +250,7 @@ const Countdown = () => {
                       {t("Countdown.linkhere")}
                     </a>
                   ) : (
-                    <span>-</span>
+                    <span className="text-black font-bold text-lg dark:text-white">-</span>
                   )}
                 </div>
 
@@ -318,7 +268,7 @@ const Countdown = () => {
                       {t("Countdown.linkhere")}
                     </a>
                   ) : (
-                    <span>-</span>
+                    <span className="text-slate-100 font-bold text-lg dark:text-white">-</span>
                   )}
                 </div>
 
@@ -326,7 +276,7 @@ const Countdown = () => {
                   <span className="block text-slate-300 font-semibold mb-2">
                     {t("Countdown.bibs")}
                   </span>
-                  <span className="text-slate-100 font-bold text-lg">
+                  <span className="text-slate-100 font-bold text-lg dark:text-white">
                     {nextEvent.bibs || "-"}
                   </span>
                 </div>
@@ -335,7 +285,7 @@ const Countdown = () => {
                   <span className="block text-slate-300 font-semibold mb-2">
                     {t("Countdown.start")}
                   </span>
-                  <span className="text-slate-100 font-bold text-lg">
+                  <span className="text-slate-100 font-bold text-lg dark:text-white">
                     {nextEvent.start || "-"}
                   </span>
                 </div>
@@ -351,7 +301,7 @@ const Countdown = () => {
             <div className="text-center">
               <button
                 onClick={goToCalendar}
-                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-blue-500 hover:text-white w-full md:w-auto"
+                className="px-4 py-2 rounded-xl text-sm font-medium text-slate-100 border border-slate-100 transition-colors duration-200 hover:bg-green-500 hover:text-white w-full md:w-auto"
               >
                 {t("Countdown.linkCalendar")}
               </button>

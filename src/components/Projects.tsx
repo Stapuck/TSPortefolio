@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 //  todo gerer les data ranger dans index global
-// ou faire des index personaliser ?
+
 
 const fakeProjects = [
   {
@@ -142,7 +142,7 @@ const Projects = () => {
           {t("Pro.project")}
         </h2>
         <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed dark:text-slate-200">
+        <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed dark:text-slate-200">
           {t("Pro.projecttxt")}
         </p>
       </div>
@@ -171,7 +171,7 @@ const Projects = () => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="group bg-white dark:bg-sky-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-500 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+            className="group bg-white dark:bg-sky-800/50 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100  overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             {/* Image */}
@@ -191,7 +191,7 @@ const Projects = () => {
                       : "bg-purple-100 text-purple-700 dark:bg-purple-300   dark:text-purple-900"
                   }`}
                 >
-                  {project.domain === "pro" ? "Professionnel" : "Personnel"}
+                  {project.domain === "pro" ? t("Pro.projectpro") : t("Pro.projectperso")}
                 </span>
               </div>
 
@@ -247,7 +247,7 @@ const Projects = () => {
 
             {/* Contenu */}
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 dark:text-gray-200 dark:group-hover:text-gray-900 transition-colors">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 dark:text-gray-200 dark:group-hover:text-blue-300/80 transition-colors">
                 {initialLang === "fr" ? project.title_fr : project.title_en}
               </h3>
 
@@ -264,13 +264,13 @@ const Projects = () => {
                 {project.technologies.slice(0, 4).map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 py-1 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-slate-200 text-xs rounded-lg font-medium"
+                    className="px-2 py-1 bg-gray-100 text-gray-700 dark:bg-sky-700/50 dark:text-slate-200 text-xs rounded-lg font-medium"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.technologies.length > 4 && (
-                  <span className="px-2 py-1 bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-slate-100 text-xs rounded-lg font-medium">
+                  <span className="px-2 py-1 bg-gray-100 text-gray-500 dark:bg-sky-700/50 dark:text-slate-100 text-xs rounded-lg font-medium">
                     +{project.technologies.length - 4}
                   </span>
                 )}
@@ -283,7 +283,7 @@ const Projects = () => {
       {/* Message si aucun projet */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-12">
-          <div className="w-20 h-20 bg-gray-100 dark:bg-sky-800 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-20 h-20 bg-gray-100 dark:bg-sky-800/70 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
               className="w-8 h-8 text-gray-400 dark:text-gray-800 "
               fill="none"
@@ -305,36 +305,36 @@ const Projects = () => {
       )}
 
       {/* Statistiques des projets */}
-      <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-sky-700 dark:via-sky-800 dark:to-sky-700 rounded-2xl p-6 md:p-8">
+      <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-sky-800/60 dark:via-sky-900/60 dark:to-sky-800/60 rounded-2xl p-6 md:p-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-300 mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-200 mb-2">
               {projects.length}
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+            <div className="text-sm text-gray-600 dark:text-gray-200 font-medium">
               {t('Pro.projectnumber')}
               
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-green-600 dark:text-slate-300  mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-green-600 dark:text-slate-200  mb-2">
               {projects.filter((p) => p.domain === "pro").length}
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400  font-medium">
+            <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
               {t('Pro.projectpro')}s
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-slate-300  mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-slate-200  mb-2">
               {projects.filter((p) => p.domain === "perso").length}
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400  font-medium">{t('Pro.projectperso')}s</div>
+            <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">{t('Pro.projectperso')}s</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-slate-300  mb-2">
+            <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-slate-200  mb-2">
               {projects.filter((p) => p.featured).length}
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400  font-medium">
+            <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
                {t('Pro.featuredstat')}
             </div>
           </div>

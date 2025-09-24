@@ -68,6 +68,7 @@
       "seasonbudget": "Budget de saison",
       "training&race": "Stages & Compétitions",
       "sum&info": "Récapitulatif & Infos",
+      "sumchange": "Ces montants sont indicatifs et peuvent varier selon les saisons.",
       "equippement": "Équipement",
       "travel": "Déplacement",
       "totalglo": "Budget Global :",
@@ -108,7 +109,7 @@
     "calendargrowth": "Agrandir le calendrier",
     "career": "Palmarès & Carrière",
     "moreinfo": "Pour plus d'informations",
-    "moreinfotxt": "Téléchargez mes fichiers budget et sponsoring pour tout savoir :",
+    "moreinfotxt": "Téléchargez mes fichiers budget et sponsoring pour en savoir plus :",
     "budgetsimple": "Budget",
     "sponsor": "sponsoring",
     "incommingeventyears": "événements à venir 🚀 dans l'année",
@@ -116,6 +117,8 @@
     "noincommingeventyear": "Pas d'evenement à venir ",
     "myobjectif": "Mes Objectifs Sportifs",
     "myobjectiftxt": "Entre performance individuelle et impact collectif, découvrez mes ambitions pour les années à venir dans le monde du canoë slalom.",
+    "goto": "Aller à l'objectif",
+
 
     "citation": " « La performance commence par une bonne préparation et un budget maîtrisé. »"
   },
@@ -136,12 +139,33 @@
 
     "projectnumber":"Projets totaux",
     "featuredstat":"Mis en avant",
+    "downloadcv":"sinon voici mon CV",
+    "readytocollab":"Une Idée de projet ?",
+    "readytocollabtxt":"Je suis joignable pour discuter de vos idées et voir comment nous pouvons travailler ensemble.",
+    "certifications":"Certifications",
+    "certificationstxt":"Tout au long de mon parcours, j'ai obtenu diverses certifications qui attestent de mes compétences et de mon engagement envers l'excellence professionnelle.",
 
 
     "citation": "« L’expérience et la formation sont les fondations sur lesquelles se construisent les projets ambitieux. »"
   },
   "Contact": {
-    "contact_welcome": "📬 Bienvenue sur la page de Contact"
+    "contact_welcome": "📬 Bienvenue sur la page de Contact",
+    "followme":"Suivez-moi sur les Réseaux",
+    "info":"Informations Pratiques",
+    "follow":"Suivre",
+    "collab":"Types de Collaborations",
+    "followers":"abonnés",
+    "connexions":"connexions",
+    "contact":"Comment me Joindre",
+    "noserious2": "Non sérieux s'abstenir",
+    "noserious": "Cette démarche s’adresse uniquement à celles et ceux qui la considèrent avec sérieux. Merci de vous abstenir si votre engagement n’est pas sincère.",
+    "ressourses":"Ressources et Documents",
+    "readytocollab":"Prêt à Collaborer ?",
+    "readytocollabtxt":"Chaque projet est une nouvelle aventure. Discutons ensemble de la façon dont nous pouvons créer quelque chose d'exceptionnel !",
+    "contactme":"Me Contacter",
+    "sendemail":"Envoyez un Email",
+    "connect":"Connectons-nous"
+
   },
 
   "SideBar": {
@@ -214,9 +238,8 @@
   "Skills": {
     "noteTitle": "Information",
     "noteText": "1 = begginer (< 2h) / 2 = intermédaire ( < 5h )/ 3 = ?? ( entre 5h et 10h) / 4 = advanced (> 10h) / 5 = expert (> 20h)  ",
-    "e": "",
-    "r": "",
-    "t": ""
+    "global": "Vue globale",
+    "category": "Afficher par catégorie"
   },
 
   "NotFound": {
@@ -232,7 +255,7 @@
     "sporttxt2": "Top 100 Mondial",
     "protitle": "Ingénieur IT • Développeur Web",
     "protxt1": "Expérience Full-Stack",
-    "protxt2": "Projets Cloud & IA",
+    "protxt2": "Polyvalent & Curieux",
     "blogtitle": "Article de presse • TV • Radio • Blog",
     "blogtxt1": "30 min de temps d'écran",
     "blogtxt2": "Interview",
@@ -246,7 +269,13 @@
     "worldrankingsla": "Classement Mondial Canoë Slalom",
     "senior": "Sénior",
     "continentalranking": "Classement Continental",
-    "worldrankingkx": "Classement Mondial Kayak Cross"
+    "worldrankingkx": "Classement Mondial Kayak Cross",
+    "clicktoflip" : "Click to flip between disciplines",
+    "worldrank": "Classement Mondial",
+    "moreachievements": "médailles"
+
+
+
   },
 
   "Calendar": {

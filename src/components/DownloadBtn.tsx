@@ -7,8 +7,8 @@ import pdfCV_FR from "../medias/pdfs/TS_CV_FR.pdf";
 import pdfCV_EN from "../medias/pdfs/TS_CV_EN.pdf";
 import pdfBudget_FR from "../medias/pdfs/Receipt_1068-175-144-en.pdf";
 import pdfBudget_EN from "../medias/pdfs/Terence_Saramandif_Flight_Pula-en.pdf";
-import pdfSponsor_FR from "../medias/pdfs/Standard_OffIcial_FR.pdf";
-import pdfSponsor_EN from "../medias/pdfs/racun-en.pdf";
+import pdfSponsor_FR from "../medias/pdfs/DossierSponsoring_22092025_TSFRV3.pdf";
+import pdfSponsor_EN from "../medias/pdfs/DossierSponsoring_22092025_TSENV3.pdf";
 
 export interface DownloadButtonProps {
   fileChoice: "CV" | "Budget" | "Sponsor";
@@ -78,35 +78,34 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
 
   const variantClasses = {
     primary:
-      "bg-white border-gray-200 hover:border-blue-300 hover:shadow-xl hover:scale-105 dark:bg-sky-900 dark:border-sky-800",
+      "bg-white border-gray-200 hover:border-sky-300 hover:shadow-xl hover:scale-105 dark:bg-slate-800 dark:border-sky-800 dark:hover:border-sky-700 dark:shadow-sky-950/50",
     secondary:
-      "bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200 hover:border-blue-300 hover:shadow-xl hover:scale-105 dark:from-sky-700 dark:to-sky-800 dark:border-blue-700",
+      "bg-gradient-to-br from-gray-50 to-sky-50 border-sky-200 hover:border-sky-300 hover:shadow-xl hover:scale-105 dark:from-sky-700 dark:to-sky-800 dark:border-sky-600 dark:hover:border-sky-500 dark:shadow-sky-950/50",
   };
 
-  // todo : revoir darkmode
   return (
     <div
       className={`${baseClasses} ${variantClasses[variant]} min-w-[160px] max-w-[200px] relative group`}
     >
       {/* Surbrillance */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-0 group-hover:opacity-20 dark:via-gray-300 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-1000" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sky-400/30 to-transparent opacity-0 group-hover:opacity-100 dark:via-sky-300/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-1000" />
 
       {/* Icone */}
       <div className="relative mb-4">
-        <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-500 dark:to-purple-700 rounded-xl flex items-center justify-center group-hover:from-blue-200 group-hover:to-purple-200 dark:group-hover:from-blue-600 dark:group-hover:to-purple-600 transition-all duration-300">
+        <div className="w-16 h-16 bg-gradient-to-br from-sky-100 to-sky-200 dark:from-blue-400 dark:to-sky-400 rounded-xl flex items-center justify-center group-hover:from-sky-200 group-hover:to-blue-600 dark:group-hover:from-sky-600 dark:group-hover:to-sky-700 transition-all duration-300 shadow-lg dark:shadow-sky-950/50">
           {icon || (
-            <FileText className="w-8 h-8 text-blue-600 dark:text-white" />
+            <FileText className="w-8 h-8 text-sky-600 dark:text-blue-100" />
           )}
         </div>
       </div>
 
       {/* Texte */}
       <div className="text-center space-y-2">
-        <h3 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+        <h3 className="font-bold text-gray-900 dark:text-sky-100 group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors duration-300">
           {title}
         </h3>
         {description && (
-          <p className="text-sm text-gray-600 dark:text-gray-300 leading-tight px-2">
+          <p className="text-sm text-gray-600 dark:text-sky-300 leading-tight px-2">
             {description}
           </p>
         )}
@@ -117,7 +116,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
         <button
           onClick={handleDownload}
           disabled={isDownloading}
-          className="px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center space-x-2"
+          className="px-4 py-2 bg-sky-600 dark:bg-sky-700 text-white text-sm font-medium rounded-lg hover:bg-sky-700 dark:hover:bg-sky-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center space-x-2 shadow-lg dark:shadow-sky-950/50"
         >
           {isDownloading ? (
             <>

@@ -19,7 +19,7 @@ const DownloadSection: React.FC = () => {
       title: "Budget",
       description: t("DownloadBtn.budgetdescription"),
       icon: <DollarSign className="w-8 h-8 text-green-600 dark:text-white" />,
-      variant: "secondary" as const,
+      variant: "primary" as const,
     },
     {
       fileChoice: "Sponsor" as const,
@@ -31,15 +31,12 @@ const DownloadSection: React.FC = () => {
   ];
 
   return (
-  // todo : revoir darkmode
+    // todo : revoir darkmode
 
-    <section className="w-full max-w-4xl mx-auto p-4">
+    // <section className="w-full max-w-4xl mx-auto p-4 dark:bg-sky-900/80 dark:border-sky-700/50 rounded-3xl">
+    <section className="w-full max-w-4xl mx-auto p-4 rounded-3xl">
       <div className="mb-8 text-center">
-        {/* <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-          {t("DownloadBtn.title")}
-        </h2> */}
-        {/* <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div> */}
-        <p className="text-gray-600 max-w-lg mx-auto">
+        <p className="text-gray-600 dark:text-gray-200 max-w-lg mx-auto">
           {t("DownloadBtn.description")}
         </p>
       </div>
@@ -57,14 +54,29 @@ const DownloadSection: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+      {/* Note Section */}
+      <div
+        className="mt-8 p-4 
+            bg-blue-50 dark:bg-sky-700/50  
+            border border-blue-200 dark:border-slate-700 
+            rounded-xl transition-colors duration-300 shadow-lg"
+      >
         <div className="flex items-start space-x-3">
-          <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+          {/* Icône circulaire */}
+          <div
+            className="w-5 h-5 bg-blue-600 dark:bg-blue-500 
+                    rounded-full flex items-center justify-center 
+                    flex-shrink-0 mt-0.5 transition-colors duration-300"
+          >
             <span className="text-white text-xs font-bold">i</span>
           </div>
-          <div className="text-sm text-blue-800">
+
+          {/* Texte */}
+          <div className="text-sm text-blue-800 dark:text-slate-200 transition-colors duration-300">
             <p className="font-medium mb-1">{t("DownloadBtn.noteTitle")}</p>
-            <p className="text-blue-700">{t("DownloadBtn.noteText")}</p>
+            <p className="text-blue-700 dark:text-slate-300">
+              {t("DownloadBtn.noteText")}
+            </p>
           </div>
         </div>
       </div>

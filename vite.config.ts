@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
   preview: {
     host: '0.0.0.0',
-    port: 8000, //4173 todo : change en .env
-    allowedHosts: ['.koyeb.app'] // autorise tous les sous-domaines Koyeb
+    port: 8000, //4173 todo : change en .env || 8000 pour koyeb mais sinon ? ,
+    allowedHosts: ['.koyeb.app', 'terence.saramandif.com'] 
   }
 })
