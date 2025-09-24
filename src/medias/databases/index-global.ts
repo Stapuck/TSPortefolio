@@ -115,6 +115,8 @@ export const next_date: EventType[] = [
     type: "other",
     type_event_en: "Course",
     type_event_fr: "Race",
+    bibs: "651",
+    link_result:"https://www.utrka.com/utrke/xica/2025/rezultati/",
     photobg:
       "https://images.ahotu.com/r9urrd4o8fattlkye8ffwml2tira?w=1920&q=100&f=webp",
   },
@@ -1938,7 +1940,7 @@ export const experiences = [
 // ];
 
 
-// todo : revoir les texte
+// todo : revoir les texte + implémenter apres 
 export   const travelExpenses = [
     {
       key: "registrationfee",
@@ -2006,4 +2008,3 @@ export   const travelExpenses = [
     },
   ];
 
-// todo : revoir si je met photos ici ou pas ?? gestion des images à revoir 

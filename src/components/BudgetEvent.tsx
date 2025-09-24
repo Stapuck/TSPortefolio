@@ -72,7 +72,6 @@ const BudgetEvent = () => {
 
   return (
     <section className="mt-2 bg-sky-200 dark:bg-sky-900 p-3 rounded-3xl">
-
         <div className="bg-white dark:bg-sky-800/70 rounded-3xl shadow-lg p-8">
             <div className="space-y-6">
         <div className="text-center">

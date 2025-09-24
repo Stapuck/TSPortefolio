@@ -20,6 +20,7 @@ import canoeslalom from "../medias/images/budget/Foix_slalom.jpg";
 const BudgetMaterial = () => {
   const { t } = useTranslation();
   const [showDetailedView, setShowDetailedView] = useState(false);
+  
 
 
   // mettre dans inedx global 

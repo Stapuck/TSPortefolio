@@ -125,6 +125,8 @@ const Countdown = () => {
     navigate("/sport#calendar");
   };
 
+
+  
   return (
     <section
       className="relative px-4 py-8 bg-cover bg-center rounded-3xl"

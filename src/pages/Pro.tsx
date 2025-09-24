@@ -24,7 +24,7 @@ export default function Pro() {
 
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
         {/* Parcours & Formations */}
-        <section className="bg-sky-100 dark:bg-sky-900 p-8 rounded-3xl">
+        <section className="bg-sky-200 dark:bg-sky-900/90 p-8 rounded-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex justify-center dark:text-slate-100">
             {t("Pro.background")}
           </h2>
@@ -32,7 +32,7 @@ export default function Pro() {
           <Experiences />
         </section>
 
-        <section className="bg-sky-100 dark:bg-sky-900 p-8 rounded-3xl">
+        <section className="bg-sky-200 dark:bg-sky-900/90 p-8 rounded-3xl">
           <Skills skills={skills} />
         </section>
 

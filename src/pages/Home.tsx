@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import videoBg from "../medias/videos/20240203_Reunion.mp4"; 
+// import videoBg from "../medias/videos/20240203_Reunion.mp4"; 
 import { Link } from "react-router-dom";
 import {
   Volume2,
@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <>
       <section className="relative w-full h-screen sm:h-screen md:h-[100vh] lg:h-[100vh]">
-        <video
+        {/* <video
           ref={videoRef}
           src={videoBg}
           autoPlay
@@ -62,15 +62,16 @@ export default function Home() {
           muted={!sound}
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-        />
-        {/* <video
+        /> */}
+        <video
           src="/videos/20240203_Reunion.mp4" // <- chemin public
           autoPlay
           loop
           muted={!sound}
           playsInline
           preload="auto"
-        /> */}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70 dark:from-black/40 dark:via-black/60 dark:to-black/80 z-10"></div>
 
