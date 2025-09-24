@@ -141,7 +141,7 @@ const AchievementRanking = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-8 p-6 bg-gray-200 dark:bg-sky-900 transition-colors duration-300 rounded-3xl">
+    <div className="grid md:grid-cols-2 gap-8 p-6 bg-sky-100 dark:bg-sky-900 transition-colors duration-300 rounded-3xl">
       {/* Achievements Section */}
       <div className="space-y-6">
         <div className="flex items-center justify-center gap-3 mb-6">

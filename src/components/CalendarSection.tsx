@@ -3,7 +3,8 @@
 import { Calendar, dateFnsLocalizer, type View } from "react-big-calendar";
 import { useState } from "react";
 import { format, parse, startOfWeek, getDay } from "date-fns";
-import { fr } from "date-fns/locale";
+import { fr, enUS } from "date-fns/locale";
+
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { next_date, type EventType } from "../medias/databases/index-global";
 import {
@@ -20,14 +21,29 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const locales = { fr };
-const localizer = dateFnsLocalizer({
-  format,
-  parse,
-  startOfWeek: (date: Date) => startOfWeek(date, { weekStartsOn: 1 }),
-  getDay,
-  locales,
-});
+const locales = { fr, en: enUS };
+
+const createLocalizer = (language: string) => {
+  return dateFnsLocalizer({
+    format: (date: Date, formatStr: string) => format(date, formatStr, { locale: locales[language as keyof typeof locales] || locales.fr }),
+    parse: (str: string, formatStr: string) => parse(str, formatStr, new Date(), { locale: locales[language as keyof typeof locales] || locales.fr }),
+    startOfWeek: (date: Date) => startOfWeek(date, { weekStartsOn: 1 }),
+    getDay,
+    locales,
+  });
+};
+
+
+
+// const localizer = dateFnsLocalizer({
+//   format: (date: Date, formatStr: string) => format(date, formatStr, { locale: locales[language as keyof typeof locales] || locales.fr }),
+//   parse: (str: string, formatStr: string) => parse(str, formatStr, new Date(), { locale: locales[language as keyof typeof locales] || locales.fr }),
+//   // format,
+//   // parse,
+//   startOfWeek: (date: Date) => startOfWeek(date, { weekStartsOn: 1 }),
+//   getDay,
+//   locales,
+// });
 
 export default function CalendarSection() {
   const [date, setDate] = useState(new Date());
@@ -35,6 +51,8 @@ export default function CalendarSection() {
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
   const initialLang = document.documentElement.lang || "fr";
   const { t } = useTranslation();
+
+  const localizer = createLocalizer(initialLang);
 
   // Enhanced event mapping with better categorization
   const events = next_date.map((event) => {

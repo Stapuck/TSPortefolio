@@ -859,7 +859,7 @@
 // export default EventList;
 
 
-//test 2
+//test 1
 
 import { next_date, type EventType } from "../medias/databases/index-global.ts";
 import { useState } from "react";
@@ -1021,7 +1021,7 @@ const EventList = () => {
   );
 
   return (
-    <section className="py-4 px-6 bg-gray-200 dark:bg-sky-900 transition-colors duration-300 rounded-3xl">
+    <section className="py-4 px-6  transition-colors duration-300 rounded-3xl">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center">
           <p className="text-gray-600 dark:text-slate-300 mb-6 transition-colors duration-300">
@@ -1101,7 +1101,7 @@ const EventList = () => {
 
                 {/* Expandable Content */}
                 {openMenu === category.id && hasEvents && (
-                  <div className="px-6 pb-6 bg-gray-50 dark:bg-slate-700/80 transition-colors duration-300">
+                  <div className="px-6 pb-6 bg-gray-50 dark:bg-slate-700 transition-colors duration-300">
                     <div className="grid gap-4 pt-4">
                       {category.events.map((event, index) =>
                         renderEventCard(event, index)

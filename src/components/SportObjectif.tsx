@@ -36,7 +36,7 @@ const SportObjectif = () => {
   };
 
   return (
-    <section className="py-4 px-6 mb-16 bg-gray-200 dark:bg-sky-900 transition-colors duration-300 rounded-3xl">
+    <section className="py-4 px-6 mb-16 bg-sky-100 dark:bg-sky-900 transition-colors duration-300 rounded-3xl">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white transition-colors duration-300">

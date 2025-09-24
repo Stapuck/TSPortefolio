@@ -19,7 +19,7 @@ const DownloadSection: React.FC = () => {
       title: "Budget",
       description: t("DownloadBtn.budgetdescription"),
       icon: <DollarSign className="w-8 h-8 text-green-600 dark:text-white" />,
-      variant: "secondary" as const,
+      variant: "primary" as const,
     },
     {
       fileChoice: "Sponsor" as const,

@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Eye, List } from "lucide-react";
 import TooltipPoint from "../components/ToolTipPoint.tsx";
 
-
 // import { photos} from "../medias/databases/index-global.ts";
 // mettre dans inedx global 
 // mettre dans index de images aussi 
@@ -21,6 +20,7 @@ import canoeslalom from "../medias/images/budget/Foix_slalom.jpg";
 const BudgetMaterial = () => {
   const { t } = useTranslation();
   const [showDetailedView, setShowDetailedView] = useState(false);
+
 
   // mettre dans inedx global 
   const photos = [
@@ -107,24 +107,23 @@ const BudgetMaterial = () => {
     }).format(val);
 
   return (
-    <section className="py-10 px-6 bg-gray-200 rounded-3xl">
+    <section className="py-10 px-6 bg-sky-200 dark:bg-sky-900 rounded-3xl">
       <div className="max-w-6xl mx-auto space-y-16">
-        {/* Equipment Section */}
         <div className="space-y-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
               {t("Sport.budget.material")}
             </h3>
-            <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-4" />
+            <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto rounded-full mb-4" />
 
             {/* Toggle Button */}
-            <div className="inline-flex items-center bg-white rounded-full p-1 shadow-md mb-2">
+            <div className="inline-flex items-center bg-white dark:bg-sky-700/80 rounded-full p-1 shadow-md mb-2">
               <button
                 onClick={() => setShowDetailedView(false)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
                   !showDetailedView
-                    ? "bg-blue-500 text-white shadow-lg"
-                    : "text-gray-600 hover:text-blue-500"
+                    ? "bg-blue-500 text-white shadow-lg dark:bg-sky-600/80"
+                    : "text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                 }`}
               >
                 <Eye className="w-4 h-4" />
@@ -134,8 +133,8 @@ const BudgetMaterial = () => {
                 onClick={() => setShowDetailedView(true)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
                   showDetailedView
-                    ? "bg-blue-500 text-white shadow-lg"
-                    : "text-gray-600 hover:text-blue-500"
+                    ? "bg-blue-500 text-white shadow-lg dark:bg-sky-600/80"
+                    : "text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                 }`}
               >
                 <List className="w-4 h-4" />
@@ -146,12 +145,12 @@ const BudgetMaterial = () => {
 
           {/* Equipment Content */}
           {!showDetailedView ? (
-            // Original Tooltip View
+           
             <div className="grid md:grid-cols-2 gap-8">
               {photos.map((photo, i) => (
                 <div
                   key={i}
-                  className="relative p-4 rounded-2xl shadow-lg bg-white flex flex-col items-center hover:shadow-xl transition-shadow duration-300"
+                  className="relative p-4 rounded-2xl shadow-lg bg-white dark:bg-sky-700/50 flex flex-col items-center hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="relative flex justify-center w-full">
                     <img
@@ -171,7 +170,7 @@ const BudgetMaterial = () => {
                     ))}
                   </div>
 
-                  <div className="mt-6 bg-gray-50 text-black text-center p-4 rounded-xl shadow">
+                  <div className="mt-6 bg-gray-50 dark:bg-slate-800/80 text-black dark:text-slate-200 text-center p-4 rounded-xl shadow">
                     <h3 className="text-lg font-bold">{photo.alt}</h3>
                     <p className="text-2xl font-extrabold mt-2">
                       Budget : {formatPrice(totals[i])}
@@ -192,7 +191,7 @@ const BudgetMaterial = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    className="bg-white dark:bg-sky-700/50 rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                   >
                     {/* Category Image */}
                     <div className="relative h-64 overflow-hidden">
@@ -213,7 +212,7 @@ const BudgetMaterial = () => {
                         {category.tooltips.map((item, itemIndex) => (
                           <div
                             key={itemIndex}
-                            className="flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
+                            className="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700/60 transition-colors"
                           >
                             <div className="flex items-center space-x-3">
                               <img
@@ -221,11 +220,11 @@ const BudgetMaterial = () => {
                                 alt={item.text}
                                 className="w-12 h-12 object-cover rounded-lg"
                               />
-                              <span className="font-medium text-gray-700">
+                              <span className="font-medium text-gray-700 dark:text-gray-200">
                                 {item.text}
                               </span>
                             </div>
-                            <span className="font-bold text-blue-600">
+                            <span className="font-bold text-blue-600 dark:text-gray-100">
                               {formatPrice(item.price)}
                             </span>
                           </div>
@@ -233,11 +232,11 @@ const BudgetMaterial = () => {
                       </div>
 
                       {/* Category Total */}
-                      <div className="bg-blue-50 p-4 rounded-xl text-center">
-                        <p className="text-sm text-blue-600 font-medium mb-1">
+                      <div className="bg-blue-50 dark:bg-slate-900/80 p-4 rounded-xl text-center">
+                        <p className="text-sm text-blue-600 dark:text-gray-200 font-medium mb-1">
                           Budget : {category.alt}
                         </p>
-                        <p className="text-2xl font-bold text-blue-700">
+                        <p className="text-2xl font-bold text-blue-700 dark:text-gray-300">
                           {formatPrice(categoryTotal)}
                         </p>
                       </div>
