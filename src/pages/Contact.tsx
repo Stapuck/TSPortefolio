@@ -15,7 +15,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
-import {LuLinkedin } from "react-icons/lu";
+import { LuLinkedin } from "react-icons/lu";
 const Contact: React.FC = () => {
   const { t } = useTranslation();
   const initialLang = document.documentElement.lang || "fr";
@@ -296,7 +296,6 @@ const Contact: React.FC = () => {
 
         {/* Méthodes de Contact Principales */}
         {/* todo mettre les réseaux, alias mail ?  */}
-        {/*  todo : message non sérieux s'abstenir pour le mail, revoir sur les compte pro ( youtuber/ streamer) */}
         <section className="space-y-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
@@ -351,12 +350,25 @@ const Contact: React.FC = () => {
                     </div>
 
                     <a
+                      // todo revoir pour mettre la fonction qui change le num et le mail ? Chatka
+                      onClick={() => console.log("click" + method.action)}
+                      className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${method.gradient} text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                    >
+                      obtenir mon{" "}
+                      {initialLang === "fr"
+                        ? method.title_fr.toLowerCase()
+                        : method.title_en.toLowerCase()}
+                      <ChevronRight className="ml-2" size={18} />
+                    </a>
+                    {/* todo mettre le num et alias mail ?  ajouter plus tard le bouton */}
+
+                    {/* <a
                       href={method.action}
                       className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${method.gradient} text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
                     >
                       {t("Contact.contactme")}
                       <ChevronRight className="ml-2" size={18} />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>

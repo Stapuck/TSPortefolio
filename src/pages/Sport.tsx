@@ -12,7 +12,7 @@ import BudgetMaterial from "../components/BudgetMaterial.tsx";
 import BudgetEvent from "../components/BudgetEvent.tsx";
 import BudgetRecap from "../components/BudgetRecap.tsx";
 
-// import LogoSlidersDouble from "../components/LogoSlidersDouble.tsx";
+import LogoSliders from "../components/LogoSliders.tsx";
 
 //faire un composant encore
 
@@ -34,98 +34,103 @@ export default function Sport() {
     }
   }, [location]);
 
-  // const logos = [
-  //   {
-  //     id: 1,
-  //     name_fr: "Nike",
-  //     name_en: "Nike",
-  //     description_fr: "Marque de vêtements et équipements sportifs",
-  //     description_en: "Sportswear and equipment brand",
-  //     price: "€12 000",
-  //     logo: "https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg",
-  //   },
-  //   {
-  //     id: 2,
-  //     name_fr: "Adidas",
-  //     name_en: "Adidas",
-  //     description_fr: "Entreprise allemande de vêtements de sport",
-  //     description_en: "German sportswear company",
-  //     price: "€10 000",
-  //     logo: "https://images.pexels.com/photos/20772146/pexels-photo-20772146.jpeg",
-  //   },
-  //   {
-  //     id: 3,
-  //     name_fr: "Burger King",
-  //     name_en: "Burger King",
-  //     description_fr: "Chaîne de restauration rapide",
-  //     description_en: "Fast food restaurant chain",
-  //     price: "€8 000",
-  //     logo: "https://images.pexels.com/photos/30830193/pexels-photo-30830193.jpeg",
-  //   },
-  //   {
-  //     id: 4,
-  //     name_fr: "FedEx",
-  //     name_en: "FedEx",
-  //     description_fr: "Entreprise de logistique et transport express",
-  //     description_en: "Express shipping and logistics company",
-  //     price: "€9 500",
-  //     logo: "https://images.pexels.com/photos/20584482/pexels-photo-20584482.jpeg",
-  //   },
-  //   {
-  //     id: 5,
-  //     name_fr: "Quiksilver",
-  //     name_en: "Quiksilver",
-  //     description_fr: "Marque de surf et sports de glisse",
-  //     description_en: "Surf and board sports brand",
-  //     price: "€7 500",
-  //     logo: "https://www.bing.com/images/search?view=detailV2&ccid=Hgq2f60s&id=F75A2E8C612240DDE11A5EFD0A829104FB807008&thid=OIP.Hgq2f60s73Rwzvbol_-LsgHaEK&mediaurl=https%3a%2f%2flogosmarcas.net%2fwp-content%2fuploads%2f2021%2f01%2fQuicksilver-Logo.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.1e0ab67fad2cef7470cef6e897ff8bb2%3frik%3dCHCA%252bwSRggr9Xg%26pid%3dImgRaw%26r%3d0&exph=2160&expw=3840&q=quicksilver+logo&FORM=IRPRST&ck=3EBD99BC9223DA8794AEA856F5C5650F&selectedIndex=0&itb=1",
-  //   },
-  //   {
-  //     id: 6,
-  //     name_fr: "Chanel",
-  //     name_en: "Chanel",
-  //     description_fr: "Maison de haute couture française",
-  //     description_en: "French luxury fashion house",
-  //     price: "€15 000",
-  //     logo: "https://www.pexels.com/fr-fr/photo/des-roses-roses-dans-un-sac-en-papier-11155051/",
-  //   },
-  //   {
-  //     id: 7,
-  //     name_fr: "Gucci",
-  //     name_en: "Gucci",
-  //     description_fr: "Marque italienne de luxe (mode & accessoires)",
-  //     description_en: "Italian luxury fashion brand",
-  //     price: "€14 000",
-  //     logo: "https://www.pexels.com/fr-fr/photo/mode-homme-debout-jeune-16379095/",
-  //   },
-  //   {
-  //     id: 8,
-  //     name_fr: "Starbucks",
-  //     name_en: "Starbucks",
-  //     description_fr: "Chaîne internationale de cafés",
-  //     description_en: "International coffeehouse chain",
-  //     price: "€11 000",
-  //     logo: "https://www.pexels.com/fr-fr/photo/photo-en-gros-plan-du-gobelet-jetable-starbucks-2042606/",
-  //   },
-  //   {
-  //     id: 9,
-  //     name_fr: "McDonald’s",
-  //     name_en: "McDonald’s",
-  //     description_fr: "Chaîne de restauration rapide mondiale",
-  //     description_en: "Global fast food restaurant chain",
-  //     price: "€13 000",
-  //     logo: "https://www.pexels.com/fr-fr/photo/building-batiment-immeuble-mur-11459428/",
-  //   },
-  //   {
-  //     id: 10,
-  //     name_fr: "Apple",
-  //     name_en: "Apple",
-  //     description_fr: "Entreprise technologique, matériel et logiciel",
-  //     description_en: "Technology company (hardware & software)",
-  //     price: "€20 000",
-  //     logo: "https://www.pexels.com/fr-fr/photo/logo-apple-544295/",
-  //   },
-  // ];
+  const logos = [
+    {
+      id: 1,
+      name_fr: "Nike",
+      name_en: "Nike",
+      description_fr: "Marque de vêtements et équipements sportifs",
+      description_en: "Sportswear and equipment brand",
+      price: "€12 000",
+      logo: "https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg",
+    },
+    {
+      id: 2,
+      name_fr: "Adidas",
+      name_en: "Adidas",
+      description_fr: "Entreprise allemande de vêtements de sport",
+      description_en: "German sportswear company",
+      price: "€10 000",
+      logo: "https://images.pexels.com/photos/20772146/pexels-photo-20772146.jpeg",
+    },
+    {
+      id: 3,
+      name_fr: "Burger King",
+      name_en: "Burger King",
+      description_fr: "Chaîne de restauration rapide",
+      description_en: "Fast food restaurant chain",
+      price: "€8 000",
+      logo: "https://images.pexels.com/photos/30830193/pexels-photo-30830193.jpeg",
+    },
+    {
+      id: 4,
+      name_fr: "FedEx",
+      name_en: "FedEx",
+      description_fr: "Entreprise de logistique et transport express",
+      description_en: "Express shipping and logistics company",
+      price: "€9 500",
+      logo: "https://images.pexels.com/photos/20584482/pexels-photo-20584482.jpeg",
+    },
+    {
+      id: 5,
+      name_fr: "Quiksilver",
+      name_en: "Quiksilver",
+      description_fr: "Marque de surf et sports de glisse",
+      description_en: "Surf and board sports brand",
+      price: "€7 500",
+      logo: "https://www.bing.com/images/search?view=detailV2&ccid=Hgq2f60s&id=F75A2E8C612240DDE11A5EFD0A829104FB807008&thid=OIP.Hgq2f60s73Rwzvbol_-LsgHaEK&mediaurl=https%3a%2f%2flogosmarcas.net%2fwp-content%2fuploads%2f2021%2f01%2fQuicksilver-Logo.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.1e0ab67fad2cef7470cef6e897ff8bb2%3frik%3dCHCA%252bwSRggr9Xg%26pid%3dImgRaw%26r%3d0&exph=2160&expw=3840&q=quicksilver+logo&FORM=IRPRST&ck=3EBD99BC9223DA8794AEA856F5C5650F&selectedIndex=0&itb=1",
+    },
+    {
+      id: 6,
+      name_fr: "Chanel",
+      name_en: "Chanel",
+      description_fr: "Maison de haute couture française",
+      description_en: "French luxury fashion house",
+      price: "€15 000",
+      logo: "https://www.pexels.com/fr-fr/photo/des-roses-roses-dans-un-sac-en-papier-11155051/",
+    },
+    {
+      id: 7,
+      name_fr: "Gucci",
+      name_en: "Gucci",
+      description_fr: "Marque italienne de luxe (mode & accessoires)",
+      description_en: "Italian luxury fashion brand",
+      price: "€14 000",
+      logo: "https://www.pexels.com/fr-fr/photo/mode-homme-debout-jeune-16379095/",
+    },
+    {
+      id: 8,
+      name_fr: "Starbucks",
+      name_en: "Starbucks",
+      description_fr: "Chaîne internationale de cafés",
+      description_en: "International coffeehouse chain",
+      price: "€11 000",
+      logo: "https://www.pexels.com/fr-fr/photo/photo-en-gros-plan-du-gobelet-jetable-starbucks-2042606/",
+    },
+    {
+      id: 9,
+      name_fr: "McDonald’s",
+      name_en: "McDonald’s",
+      description_fr: "Chaîne de restauration rapide mondiale",
+      description_en: "Global fast food restaurant chain",
+      price: "€13 000",
+      logo: "https://www.pexels.com/fr-fr/photo/building-batiment-immeuble-mur-11459428/",
+    },
+    {
+      id: 10,
+      name_fr: "Apple",
+      name_en: "Apple",
+      description_fr: "Entreprise technologique, matériel et logiciel",
+      description_en: "Technology company (hardware & software)",
+      price: "€20 000",
+      logo: "https://www.pexels.com/fr-fr/photo/logo-apple-544295/",
+    },
+  ];
+
+  // todo : rajouter lien internet et histoire dans la liste de logo. 
+  // ou encore date de début et fin de partenariat
+  {/* mettre lunaar, safran, val d'indre, lycée grandmont, pole de tours  ? revori avec parent */}
+          {/* mettre fédé, MOC, Ministere Mauricien */}
 
   return (
     <div className="">
@@ -239,7 +244,7 @@ export default function Sport() {
         </section>
 
         {/* Palmarès / Carrière */}
-        <section className="">
+        <section >
           <h2 className="text-3xl font-bold text-center dark:text-white mb-2">
             {t("Sport.career")}
           </h2>
@@ -323,21 +328,18 @@ export default function Sport() {
           </div>
         </section>
 
-        <section>
-          {/* todo : faire partie sponsor ou participateur de l'aventure */}
+        <section className="bg-sky-100 dark:bg-sky-900 py-8 rounded-3xl">
           <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
             {t("Sport.join")}
-            {/* todo : changer le texte  truc plus Participateur de l'aventure ?  */}
+          {/* todo : faire partie sponsor ou participateur de l'aventure // Partenaire de l'aventure */}
           </h3>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
-          {/* <div className="bg-gray-50 py-12 overflow-hidden">
-            <LogoSlidersDouble items={logos} speed={30} />
-          </div> */}
+          <div className="bg-sky-100 dark:bg-sky-900 py-12 overflow-hidden rounded-3xl">
+            <LogoSliders items={logos} speed={30} />
+          </div>
 
-          {/* todo : faire card  double rotateur comme louis et ses comms  */}
-          {/* mettre lunaar, safran, val d'indre, lycée grandmont, pole de tours  ? revori avec parent */}
-          {/* mettre fédé, MOC, Ministere Mauricien */}
+          
         </section>
 
         <div className="mt-6 text-center text-gray-700 italic dark:text-slate-200">

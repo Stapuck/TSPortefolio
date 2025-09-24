@@ -11,7 +11,7 @@ interface TimeLeft {
   minutes: number;
   seconds: number;
 }
-
+// todo : revoir responsive de compteur
 const Countdown = () => {
   const [nextEvent, setNextEvent] = useState<EventType | null>(null);
   const [countDate, setCountDate] = useState<number | null>(null);
@@ -65,8 +65,6 @@ const Countdown = () => {
         setCountDate(null);
       }
     };
-
-    // todo : rajouter react toastify : https://chatgpt.com/share/68c01ab2-3834-8012-8069-26939887d70b
 
     findNextEvent();
 
@@ -179,23 +177,23 @@ const Countdown = () => {
                   : t("Countdown.nowPro")}
               </p>
             ) : (
-              <div className="flex flex-row flex-nowrap justify-center gap-6 mb-5 mt-4 overflow-x-auto">
+              <div className="flex flex-row flex-nowrap justify-center gap-3 md:gap-6 mb-5 mt-4 overflow-x-auto">
                 {/* Days */}
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+                <div className="flex flex-col items-center min-w-[30px] sm:min-w-[60px] md:min-w-[90px]">
+                  <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-200">
                     {timeLeft.days}
                   </span>
-                  <span className="text-sm text-slate-200">
+                  <span className="text-xs sm:text-sm text-slate-200">
                     {getLabel(timeLeft.days, "Countdown.day", "Countdown.days")}
                   </span>
                 </div>
 
                 {/* Hours */}
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+                <div className="flex flex-col items-center min-w-[30px] sm:min-w-[60px] md:min-w-[90px]">
+                  <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-200">
                     {timeLeft.hours}
                   </span>
-                  <span className="text-sm text-slate-200">
+                  <span className="text-xs sm:text-sm text-slate-200">
                     {getLabel(
                       timeLeft.hours,
                       "Countdown.hour",
@@ -205,11 +203,11 @@ const Countdown = () => {
                 </div>
 
                 {/* Minutes */}
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+                <div className="flex flex-col items-center min-w-[30px] sm:min-w-[60px] md:min-w-[90px]">
+                  <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-200">
                     {timeLeft.minutes}
                   </span>
-                  <span className="text-sm text-slate-200">
+                  <span className="text-xs sm:text-sm text-slate-200">
                     {getLabel(
                       timeLeft.minutes,
                       "Countdown.minute",
@@ -219,11 +217,11 @@ const Countdown = () => {
                 </div>
 
                 {/* Seconds */}
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl sm:text-4xl font-bold text-slate-200">
+                <div className="flex flex-col items-center min-w-[30px] sm:min-w-[60px] md:min-w-[90px]">
+                  <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-200">
                     {timeLeft.seconds}
                   </span>
-                  <span className="text-sm text-slate-200">
+                  <span className="text-xs sm:text-sm text-slate-200">
                     {getLabel(
                       timeLeft.seconds,
                       "Countdown.second",
@@ -250,7 +248,9 @@ const Countdown = () => {
                       {t("Countdown.linkhere")}
                     </a>
                   ) : (
-                    <span className="text-black font-bold text-lg dark:text-white">-</span>
+                    <span className="text-black font-bold text-lg dark:text-white">
+                      -
+                    </span>
                   )}
                 </div>
 
@@ -268,7 +268,9 @@ const Countdown = () => {
                       {t("Countdown.linkhere")}
                     </a>
                   ) : (
-                    <span className="text-slate-100 font-bold text-lg dark:text-white">-</span>
+                    <span className="text-slate-100 font-bold text-lg dark:text-white">
+                      -
+                    </span>
                   )}
                 </div>
 
