@@ -15,11 +15,13 @@ import c1paddle from "../medias/images/budget/c1_paddle.png";
 import slalomboat from "../medias/images/budget/slalom_boat.png";
 import kayakcrossboat from "../medias/images/budget/kayakcross_boat.png";
 import kayakCross from "../medias/images/budget/Foix_kayakCross.jpg";
+// import kayakCross from "../medias/images/budget/kayakcrosspic.png";
 import canoeslalom from "../medias/images/budget/Foix_slalom.jpg";
 
 const BudgetMaterial = () => {
   const { t } = useTranslation();
   const [showDetailedView, setShowDetailedView] = useState(false);
+  
 
 
   // mettre dans inedx global 
@@ -219,6 +221,7 @@ const BudgetMaterial = () => {
                                 src={item.img}
                                 alt={item.text}
                                 className="w-12 h-12 object-cover rounded-lg"
+                                loading="lazy"
                               />
                               <span className="font-medium text-gray-700 dark:text-gray-200">
                                 {item.text}

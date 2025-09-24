@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import Skills from "../components/Skills.tsx";
 import { skills } from "../medias/databases/index-global";
 import Projects from "../components/Projects.tsx";
-import { Mail } from "lucide-react";
+// import { Mail } from "lucide-react";
 import { LuLinkedin } from "react-icons/lu";
 
 export default function Pro() {
@@ -24,7 +24,7 @@ export default function Pro() {
 
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
         {/* Parcours & Formations */}
-        <section>
+        <section className="bg-sky-100 dark:bg-sky-900/90 p-8 rounded-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex justify-center dark:text-slate-100">
             {t("Pro.background")}
           </h2>
@@ -32,11 +32,11 @@ export default function Pro() {
           <Experiences />
         </section>
 
-        <section>
+        <section className="bg-sky-100 dark:bg-sky-900/90 p-8 rounded-3xl">
           <Skills skills={skills} />
         </section>
 
-        <section>
+        <section className="bg-sky-100 dark:bg-sky-900 p-8 rounded-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex justify-center dark:text-slate-100">
             {t("Pro.certifications")}
           </h2>
@@ -50,7 +50,7 @@ export default function Pro() {
         </section>
 
         {/* Projects */}
-        <section id="projects">
+        <section id="projects" className="bg-sky-100 dark:bg-sky-900 p-8 rounded-3xl">
           <Projects />
         </section>
 
@@ -70,13 +70,13 @@ export default function Pro() {
 
               {/* Boutons de contact */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a
+                {/* <a
                   href="mailto:terence.saramandif@email.com"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <Mail className="mr-2" size={20} />
                   {t("Contact.sendemail")}
-                </a>
+                </a> */}
                 <a
                   href="https://linkedin.com/in/terence-saramandif"
                   target="_blank"
@@ -99,11 +99,6 @@ export default function Pro() {
             </div>
           </div>
         </section>
-
-        {/* todo : mettre le download btn dans experience sinon nan ?  */}
-        {/* <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <DownloadButton title="CV" description="CV" fileChoice={"CV"} />
-        </div> */}
 
         {/* Petit texte informatif ou citation */}
         <div className="mt-6 text-center text-gray-700 italic dark:text-slate-200">

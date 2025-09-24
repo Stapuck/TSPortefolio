@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection.tsx";
 import DownloadSection from "../components/DownloadSection.tsx";
 import { useTranslation } from "react-i18next";
+// import ReCAPTCHA from "react-google-recaptcha";
 import {
   Mail,
   Phone,
@@ -15,7 +16,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
-import {LuLinkedin } from "react-icons/lu";
+import { LuLinkedin } from "react-icons/lu";
 const Contact: React.FC = () => {
   const { t } = useTranslation();
   const initialLang = document.documentElement.lang || "fr";
@@ -24,12 +25,14 @@ const Contact: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const contactMethods = [
+  // const contactMethods = [
+  const [methods, setMethods] = useState([
     {
       icon: Mail,
       title_fr: "Email Professionnel",
       title_en: "Professional Email",
-      value: "terence.saramandif@email.com",
+      value: "tXXXXX@XXXX.com",
+      realValue: "terencepro@saramandif.com",
       description_fr:
         "Pour toute demande professionnelle, sponsoring ou collaboration",
       description_en:
@@ -38,6 +41,8 @@ const Contact: React.FC = () => {
       gradient: "from-blue-500 to-blue-600",
       available_fr: "Réponse sous 24h",
       available_en: "Response within 24h",
+      revealed: false,
+      // captchaVerified: false,
     },
 
     {
@@ -45,14 +50,17 @@ const Contact: React.FC = () => {
       title_fr: "Téléphone",
       title_en: "Phone Number",
       value: "+33 6 XX XX XX XX",
+      realValue: "+33 6 72 25 32 84",
       description_fr: "Disponible pour les appels",
       description_en: "Available for calls",
       action: "tel:+33600000000",
       gradient: "from-purple-500 to-purple-600",
       available_fr: "Lun-Ven 10h-17h",
       available_en: "Mon-Fri 10am-5pm",
+      revealed: false,
+      // captchaVerified: false,
     },
-  ];
+  ]);
 
   const socialLinks = [
     {
@@ -143,6 +151,32 @@ const Contact: React.FC = () => {
       gradient: "from-purple-500 to-purple-600",
     },
   ];
+
+  const revealInfo = (idx: number) => {
+    setMethods((prev) =>
+      prev.map((m, i) =>
+        i === idx ? { ...m, value: m.realValue, revealed: true } : m
+      )
+    );
+  };
+
+  // const revealInfo = (idx: number) => {
+  //   setMethods((prev) =>
+  //     prev.map((m, i) =>
+  //       i === idx && m.captchaVerified
+  //         ? { ...m, value: m.realValue, revealed: true }
+  //         : m
+  //     )
+  //   );
+  // };
+
+  // const onCaptchaChange = (idx: number, token: string | null) => {
+  //   if (token) {
+  //     setMethods((prev) =>
+  //       prev.map((m, i) => (i === idx ? { ...m, captchaVerified: true } : m))
+  //     );
+  //   }
+  // };
 
   return (
     // <div className="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen">
@@ -295,8 +329,6 @@ const Contact: React.FC = () => {
         </section>
 
         {/* Méthodes de Contact Principales */}
-        {/* todo mettre les réseaux, alias mail ?  */}
-        {/*  todo : message non sérieux s'abstenir pour le mail, revoir sur les compte pro ( youtuber/ streamer) */}
         <section className="space-y-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-4 dark:text-white">
@@ -309,14 +341,84 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {contactMethods.map((method, idx) => (
+          {/* <div className="grid gap-6 md:grid-cols-2">
+      {methods.map((method, idx) => (
+        <div key={idx} className="group relative">
+          <div
+            className={`absolute inset-0 bg-gradient-to-r ${method.gradient} rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300`}
+          />
+          <div className="relative bg-white dark:bg-sky-900/90 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-sky-700/50">
+            <div className="text-center space-y-6">
+              <div
+                className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-br ${method.gradient} flex items-center justify-center`}
+              >
+                <method.icon size={32} className="text-white" />
+              </div>
+
+              <h3 className="text-xl font-bold dark:text-white">
+                {initialLang === "fr" ? method.title_fr : method.title_en}
+              </h3>
+
+              <p className="text-gray-600 dark:text-slate-200 text-sm">
+                {initialLang === "fr"
+                  ? method.description_fr
+                  : method.description_en}
+              </p>
+
+              <div
+                className={`bg-gradient-to-r ${method.gradient} rounded-xl p-4`}
+              >
+                <p className="font-bold text-gray-800 dark:text-slate-100 text-lg">
+                  {method.value}
+                </p>
+                <p className="text-gray-500 dark:text-slate-200 text-sm">
+                  {initialLang === "fr"
+                    ? method.available_fr
+                    : method.available_en}
+                </p>
+              </div>
+
+              {!method.revealed && (
+                <ReCAPTCHA
+                  sitekey="VOTRE_SITE_KEY" 
+                  onChange={(token) => onCaptchaChange(idx, token)}
+                />
+              )}
+
+              {method.revealed ? (
+                <a
+                  href={method.action}
+                  className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${method.gradient} text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                >
+                  {t("Contact.contactme")}
+                  <ChevronRight className="ml-2" size={18} />
+                </a>
+              ) : (
+                <button
+                  onClick={() => revealInfo(idx)}
+                  disabled={!method.captchaVerified}
+                  className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${method.gradient} text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed`}
+                >
+                  {t("Contact.getmy")}
+                  {initialLang === "fr"
+                    ? method.title_fr.toLowerCase()
+                    : method.title_en.toLowerCase()}
+                  <ChevronRight className="ml-2" size={18} />
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div> */}
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {methods.map((method, idx) => (
               <div key={idx} className="group relative">
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${method.gradient} rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300`}
-                ></div>
-
-                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-200 hover:shadow-3xl transition-all duration-300 h-full dark:bg-sky-900/90 dark:border-sky-700/50">
+                />
+                <div className="relative bg-white dark:bg-sky-900/90 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-sky-700/50">
                   <div className="text-center space-y-6">
                     <div
                       className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-br ${method.gradient} flex items-center justify-center`}
@@ -324,39 +426,49 @@ const Contact: React.FC = () => {
                       <method.icon size={32} className="text-white" />
                     </div>
 
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
-                        {initialLang === "fr"
-                          ? method.title_fr
-                          : method.title_en}
-                      </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed dark:text-slate-200 mb-4">
-                        {initialLang === "fr"
-                          ? method.description_fr
-                          : method.description_en}
-                      </p>
-                    </div>
+                    <h3 className="text-xl font-bold dark:text-white">
+                      {initialLang === "fr" ? method.title_fr : method.title_en}
+                    </h3>
+
+                    <p className="text-gray-600 dark:text-slate-200 text-sm">
+                      {initialLang === "fr"
+                        ? method.description_fr
+                        : method.description_en}
+                    </p>
 
                     <div
-                      className={`bg-gradient-to-r ${method.gradient} bg-opacity-10 rounded-xl p-4`}
+                      className={`bg-gradient-to-r ${method.gradient} rounded-xl p-4`}
                     >
-                      <p className="font-bold text-gray-200 dark:text-slate-100 text-lg mb-1">
+                      <p className="font-bold text-gray-800 dark:text-slate-100 text-lg">
                         {method.value}
                       </p>
-                      <p className="text-gray-200 text-sm dark:text-slate-200">
+                      <p className="text-gray-500 dark:text-slate-200 text-sm">
                         {initialLang === "fr"
                           ? method.available_fr
                           : method.available_en}
                       </p>
                     </div>
 
-                    <a
-                      href={method.action}
-                      className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${method.gradient} text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
-                    >
-                      {t("Contact.contactme")}
-                      <ChevronRight className="ml-2" size={18} />
-                    </a>
+                    {method.revealed ? (
+                      <a
+                        href={method.action}
+                        className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${method.gradient} text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                      >
+                        {t("Contact.contactme")}
+                        <ChevronRight className="ml-2" size={18} />
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => revealInfo(idx)}
+                        className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${method.gradient} text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                      >
+                        {t("Contact.getmy")}
+                        {initialLang === "fr"
+                          ? method.title_fr.toLowerCase()
+                          : method.title_en.toLowerCase()}
+                        <ChevronRight className="ml-2" size={18} />
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

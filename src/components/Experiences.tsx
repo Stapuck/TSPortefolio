@@ -28,13 +28,13 @@ const Experiences = () => {
   }, []);
 
   // Récupération du bon texte en fonction de la langue
-  const getTitle = (exp : any) =>
+  const getTitle = (exp : any) => // : Experiences
     lang === "en" ? exp.title_en || exp.title_fr : exp.title_fr;
-  const getEtab = (exp : any) =>
+  const getEtab = (exp : any) =>// : Experiences
     lang === "en" ? exp.etablissement_en || exp.etablissement_fr : exp.etablissement_fr;
-  const getPeriode = (exp : any) =>
+  const getPeriode = (exp : any) =>// : Experiences
     lang === "en" ? exp.periode_en || exp.periode_fr : exp.periode_fr;
-  const getDetails = (exp : any) =>
+  const getDetails = (exp : any) =>// : Experiences
     lang === "en"
       ? exp.details_en.filter(Boolean).length
         ? exp.details_en

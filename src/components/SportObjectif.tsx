@@ -96,14 +96,14 @@ const SportObjectif = () => {
                       <Icon className={`w-8 h-8 ${objective.iconColor}`} />
                     </div>
 
-                    {/* title_fr */}
+                    {/* title */}
                     <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-gray-900 dark:group-hover:text-slate-100 transition-colors duration-300">
                       {initialLang === "fr"
                         ? objective.title_fr
                         : objective.title_en}
                     </h3>
 
-                    {/* description_fr */}
+                    {/* description*/}
                     <p className="text-gray-600 dark:text-slate-300 mb-4 leading-relaxed transition-colors duration-300">
                       {initialLang === "fr"
                         ? objective.description_fr
@@ -148,23 +148,9 @@ const SportObjectif = () => {
             ))}
           </div>
         </div>
-
-        {/* Stats Section */}
-        {/* <div className="grid md:grid-cols-3 gap-6 mt-16">
-          <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-lg dark:shadow-slate-900/50 dark:hover:shadow-slate-900/70 transition-shadow">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">2026</div>
-            <div className="text-gray-600 dark:text-slate-300">Prochains Mondiaux</div>
-          </div>
-          <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-lg dark:shadow-slate-900/50 dark:hover:shadow-slate-900/70 transition-shadow">
-            <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">5+</div>
-            <div className="text-gray-600 dark:text-slate-300">Projets en cours</div>
-          </div>
-          <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-lg dark:shadow-slate-900/50 dark:hover:shadow-slate-900/70 transition-shadow">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">∞</div>
-            <div className="text-gray-600 dark:text-slate-300">Motivation</div>
-          </div>
-        </div> */}
       </div>
+
+      {/* todo changer d'affichage pour md et sm */}
     </section>
   );
 };

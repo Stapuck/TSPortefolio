@@ -186,7 +186,6 @@ export default function Blog() {
           </p>
 
           {/* Filtres */}
-          {/* todo : mettre meme darkmode que pro project */}
           <div className="flex gap-3 justify-center mb-6">
             {[
               { key: "all", label: t("Blog.alls"), nbr: articles.length },
