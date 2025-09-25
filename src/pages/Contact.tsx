@@ -341,6 +341,7 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
+{/*  test recaptcha */}
           {/* <div className="grid gap-6 md:grid-cols-2">
       {methods.map((method, idx) => (
         <div key={idx} className="group relative">
@@ -442,7 +443,7 @@ const Contact: React.FC = () => {
                       <p className="font-bold text-gray-800 dark:text-slate-100 text-lg">
                         {method.value}
                       </p>
-                      <p className="text-gray-500 dark:text-slate-200 text-sm">
+                      <p className="text-gray-800 dark:text-slate-200 text-sm">
                         {initialLang === "fr"
                           ? method.available_fr
                           : method.available_en}

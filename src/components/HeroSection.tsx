@@ -32,6 +32,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
       break;
   }
 
+  // todo : revoir pour format tel les forme dans le bg 
+
   /** ===== SPORT ===== */
   if (currentPage === "sport") {
     return (
