@@ -45,6 +45,7 @@ const Countdown = () => {
           }
         }
 
+        // todo : revoir code doublons ici
         const eventDate = new Date(event.date).getTime();
         const eventEnd = event.date_fin
           ? new Date(event.date_fin).getTime()

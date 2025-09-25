@@ -139,7 +139,6 @@ export default function CalendarSection() {
       style: event.style,
     };
   };
-// todo : darkmode
   // Custom toolbar
   const CustomToolbar = ({ label, onNavigate, onView }: any) => (
     <div className="flex flex-col md:flex-row justify-between items-center mb-6 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
@@ -224,7 +223,6 @@ export default function CalendarSection() {
               noEventsInRange: t("noEventsInRange"),
               showMore: (total) => `+${total} ${t("showMore")}`,
             }}
-            // className="dark:bg-gray-300"  // todo revoir darkmode
           />
         </div>
 

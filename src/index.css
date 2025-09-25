@@ -2,59 +2,23 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-
-/* https://chatgpt.com/c/68c962c2-9d60-832c-8ab2-cbc4408895db */
-
-/* @theme {
-  /*  Font 
-  --font-poppins: "Poppins", "sans-serif";
-  --font-quattrocento: "Quattrocento Sans", sans-serif;
-  --font-rem: "REM", "sans-serif"; 
-
-  /* light mode
-  --color-primary: #1483d5;
-  --color-bg: #ffffff;
-  --color-bg-secondary: #f3f9fd;
-  --color-bg-light: #f8f8f8;
-  --color-hover-bg-light: #f2f2f2;
-  --color-bg-ultralight: #f2f2f2;
-  --color-hover-bg-ultralight: #ebebeb;
-  --color-bg-light-secondary: #e2e2e2;
-  --color-text: #0d0d0d;
-  --color-text-muted: #4d4d4d;
-
-  
-  --color-primary-dark: #48a7ee;
-  --color-bg-dark: #191919; 
-
-  --color-bg-secondary-dark: #191919;
-  --color-bg-light-dark: #262626;
-  --color-hover-bg-light-dark: #343434;
-  --color-bg-ultralight-dark: #2e2e2e;
-  --color-hover-bg-ultralight-dark: #363636;
-  --color-bg-light-secondary-dark: #262626;
-  --color-text-dark: #f2f2f2;
-  --color-text-muted-dark: #cccccc;
-}  */
-
 /* todo revoir couleur  */
-
 @theme {
-  /* Fonts */
+  /* ===== Fonts ===== */
   --font-poppins: "Poppins", sans-serif;
   --font-quattrocento: "Quattrocento Sans", sans-serif;
   --font-rem: "REM", sans-serif;
 
   /* ===== Light Mode ===== */
-  --color-primary: #2563eb;            /* bleu principal */
-  --color-primary-accent: #38bdf8;     /* accent bleu ciel */
-  --color-teal: #0d9488;               /* teal pour section profil */
-  --color-green: #22c55e;              /* vert sport */
-  --color-purple: #a855f7;             /* violet blog */
+  --color-primary: #2563eb;            /* blue-600 */
+  --color-primary-accent: #38bdf8;     /* sky-400 */
+  --color-teal: #0d9488;               /* teal-600 (profil) */
+  --color-green: #22c55e;              /* green-500 (sport) */
+  --color-purple: #a855f7;             /* purple-500 (blog) */
   --color-bg: #f9fafb;                 /* ✅ gray-50 */
   --color-bg-secondary: #f3f4f6;       /* gray-100 */
-  --color-bg-light: #f8f8f8;
-  --color-bg-ultralight: #f2f2f2;
+  --color-bg-light: #f8f8f8;           /* proche gray-50 personnalisé */
+  --color-bg-ultralight: #f2f2f2;      /* proche gray-100 personnalisé */
   --color-hover-bg-light: #f1f5f9;     /* gray-100 hover */
   --color-hover-bg-ultralight: #e5e7eb;/* gray-200 hover */
   --color-border: #e5e7eb;             /* gray-200 */
@@ -62,13 +26,13 @@
   --color-text-muted: #475569;         /* slate-600 */
 
   /* ===== Dark Mode ===== */
-  --color-primary-dark: #60a5fa;       /* bleu clair sur dark */
-  --color-primary-accent-dark: #38bdf8;
-  --color-teal-dark: #2dd4bf;
-  --color-green-dark: #4ade80;
-  --color-purple-dark: #c084fc;
-  --color-bg-dark: #101828 ;            /* ✅ #020617 sky-950 */
-  --color-bg-secondary-dark: #0f172a;  /* slate-900 */
+  --color-primary-dark: #60a5fa;       /* blue-400/sky-400 sur fond dark */
+  --color-primary-accent-dark: #38bdf8;/* sky-400 accent */
+  --color-teal-dark: #2dd4bf;          /* teal-400 */
+  --color-green-dark: #4ade80;         /* green-400 */
+  --color-purple-dark: #c084fc;        /* purple-400 */
+  --color-bg-dark: #020617;            /* ✅ sky-950 */
+  --color-bg-secondary-dark: #0c4a6e;  /* sky-900 */
   --color-bg-light-dark: #1e293b;      /* slate-800 */
   --color-bg-ultralight-dark: #334155; /* slate-700 */
   --color-hover-bg-light-dark: #475569;/* slate-600 hover */
@@ -77,6 +41,8 @@
   --color-text-dark: #f1f5f9;          /* slate-50 */
   --color-text-muted-dark: #cbd5e1;    /* slate-300 */
 }
+
+
 
 
 /* scroll bar de expérience */

@@ -106,62 +106,16 @@ export interface Skills {
 
 // Liste :
 
-// todo : revoir les dates de coupe du monde si mettre lundi ou si rajouter stage d'entrainement à chaque fois ?
 // todo : revoir telecharger image d'event
 export const next_date: EventType[] = [
   //2028
   //2027
-  {
-    lieu_fr: "Penrith, Australie",
-    lieu_en: "Penrith, Australia",
-    date: "September 25, 2025  08:15",
-    date_fin: "October 03, 2025 16:05",
-    event_en: "world championship Senior 2025",
-    event_fr: "Championnat du monde senior 2025",
-    link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-championships/sydney-2025/results",
-    type: "sport",
-    type_event_en: "worldchamp",
-    type_event_fr: "championnat du monde",
-
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-  {
-    lieu_fr: "Pula, Croatie",
-    lieu_en: "Pula, Croatia",
-    date: "September 20, 2025  19:50",
-    date_fin: "September 20, 2025 22:0",
-    event_en: "Pula semi Marathon",
-    event_fr: "Semi Marathon de Pula",
-    type: "other",
-    type_event_en: "Course",
-    type_event_fr: "Race",
-    bibs: "651",
-    link_result: "https://www.utrka.com/utrke/xica/2025/rezultati/",
-    photobg:
-      "https://images.ahotu.com/r9urrd4o8fattlkye8ffwml2tira?w=1920&q=100&f=webp",
-  },
-  {
-    lieu_fr: "Pula, Croatie",
-    lieu_en: "Pula, Croatia",
-    // todo changer date
-    date: "November 17, 2025 16:00",
-    date_fin: "November 23, 2025 18:00",
-    event_en: " Pula Internship",
-    event_fr: " stage Pula",
-    type: "pro",
-    type_event_en: "internship",
-    type_event_fr: "stage",
-
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
+  // 2026
   {
     lieu_fr: "Pau, France",
     lieu_en: "Pau, France",
-    date: "September 12, 2026 16:00",
-    date_fin: "September 13, 2026 18:00",
+    date: "October 10, 2026 16:00",
+    date_fin: "October 10, 2026 18:00",
     event_en: "Graduation",
     event_fr: "diplome d'ingénieur",
     type: "pro",
@@ -171,51 +125,6 @@ export const next_date: EventType[] = [
     photobg:
       "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
-  {
-    lieu_fr: "Pau, France",
-    lieu_en: "Pau, France",
-    date: "April 25, 2026 16:00",
-    date_fin: "April 30, 2026 18:00",
-    event_en: "training camp",
-    event_fr: "stage entrainement",
-    type: "sport",
-    type_event_en: "training",
-    type_event_fr: "entrainement",
-    photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
-  },
-  {
-    lieu_fr: "Prague, République tchèque",
-    lieu_en: "Praha, czech Republic",
-    date: "August 17, 2025  19:00",
-    date_fin: "August 25, 2025 16:00",
-    event_en: "training camp",
-    event_fr: "Camp d'entrainement",
-    type: "sport",
-    type_event_en: "training",
-    type_event_fr: "entrainement",
-    photobg:
-      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
-  },
-  {
-    lieu_fr: "Pau, France",
-    lieu_en: "Pau, France",
-    date: "April 17, 2026  19:00",
-    date_fin: "April 25, 2026 16:00",
-    event_en: "N1",
-    event_fr: "N1",
-    type: "sport",
-    type_event_en: "national",
-    type_event_fr: "course nationale",
-    photobg:
-      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
-  },
-
-  //  ranger au dessus apres
-  // todo : revoir les quelque probleme de type et rajouter les autres caractéristique // revoir les liens
-  // YOG et YAG type = other à faire
-
-  // 2026
   {
     date: "September 11, 2026 08:00",
     date_fin: "September 13, 2026 18:00",
@@ -291,10 +200,24 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-tacen-2026",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
-    //todo rajouter /results lorsque les infos seront la.
   },
 
   // 2025
+  {
+    lieu_fr: "Pula, Croatie",
+    lieu_en: "Pula, Croatia",
+    date: "September 20, 2025  19:50",
+    date_fin: "September 20, 2025 22:0",
+    event_en: "Pula semi Marathon",
+    event_fr: "Semi Marathon de Pula",
+    type: "other",
+    type_event_en: "Course",
+    type_event_fr: "Race",
+    bibs: "651",
+    link_result: "https://www.utrka.com/utrke/xica/2025/rezultati/",
+    photobg:
+      "https://images.ahotu.com/r9urrd4o8fattlkye8ffwml2tira?w=1920&q=100&f=webp",
+  },
   {
     date: "August 29, 2025 08:00",
     date_fin: "August 31, 2025 18:00",
@@ -309,6 +232,19 @@ export const next_date: EventType[] = [
     type_event_fr: "coupe du monde",
   },
   {
+    lieu_fr: "Prague, République tchèque",
+    lieu_en: "Praha, czech Republic",
+    date: "August 17, 2025  19:00",
+    date_fin: "August 25, 2025 16:00",
+    event_en: "training camp",
+    event_fr: "Camp d'entrainement",
+    type: "sport",
+    type_event_en: "training",
+    type_event_fr: "entrainement",
+    photobg:
+      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
+  },
+  {
     date: "July 08, 2025 08:00",
     date_fin: "July 13, 2025 18:00",
     type: "sport",
@@ -320,6 +256,20 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-slalom-world-championships/foix-2025/results",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
+  },
+  {
+    lieu_fr: "Pula, Croatie",
+    lieu_en: "Pula, Croatia",
+    date: "June 21, 2025 08:00",
+    date_fin: "October 17, 2025 18:00",
+    event_en: " Pula Internship",
+    event_fr: " stage Pula",
+    type: "pro",
+    type_event_en: "internship",
+    type_event_fr: "stage",
+
+    photobg:
+      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   },
   {
     date: "June 13, 2025 08:00",
@@ -1629,41 +1579,6 @@ export const sportobjectives = [
 //accordiondata
 //todo revoir avec papa 4 question à mettre
 export const accordionData = [
-  // {
-  //   title: "Mon rythme de vie et organisation d'un double projet",
-  //   text: "Depuis la classe de 4e, j’ai pris l’habitude d’organiser ma vie autour de mes études et de ma pratique sportive. Le sport est rapidement devenu une composante essentielle de mon quotidien. Jongler efficacement entre ces deux projets n’a pas toujours été évident : il a fallu faire des compromis et accepter certains sacrifices, mais toujours dans l’objectif de me rapprocher de mon but final. Cela m’a conduit à optimiser au maximum mon temps.",
-  // },
-  // {
-  //   title: "Mes facteurs de succès",
-  //   text: "Pour moi, la diversification, le dépassement de soi et la persévérance sont des éléments essentiels pour atteindre le succès. L’aléatoire reste une variable incontrôlable, mais le travail fourni permet de réduire au maximum son impact, tant dans la performance que dans la réussite.",
-  // },
-  // {
-  //   title: "Ma gestion de la santé mentale",
-  //   text: "Un aspect qui me tient particulièrement à cœur est ma santé mentale. Bien que je pratique avant tout par plaisir, je pense que la diversification sportive que je m’impose au quotidien m’aide à éviter toute pression excessive. Tout comme un équilibre entre vie professionnelle et vie personnelle est nécessaire, je veille à bien distinguer ma pratique sportive des autres aspects de ma vie. J’ai remarqué que lorsque mon quotidien est équilibré et que mes différentes sphères de vie fonctionnent bien, mes performances sportives suivent naturellement. Enfin, j’accorde une grande importance à ne pas me comparer aux autres athlètes, car ma situation est particulière et implique des différences de quotidien et d’opportunités.",
-  // },
-  // {
-  //   title: "Le sport et ses opportunités",
-  //   text: "Le sport est non seulement un moyen d’épanouissement personnel, mais aussi une source d’opportunités. Il m’ouvre des perspectives de rencontres, d’expériences et de développement qui dépassent le simple cadre de la performance.",
-  // },
-  // {
-  //   title: "My Lifestyle and Managing a Dual Project",
-  //   text: "Since the 8th grade, I have gotten used to organizing my life around my studies and my sports practice. Sports quickly became an essential part of my daily routine. Balancing these two projects has not always been easy: compromises had to be made and sacrifices accepted, but always with the goal of getting closer to my final objective. This has led me to optimize my time as much as possible.",
-  // },
-  // {
-  //   title: "My Success Factors",
-  //   text: "For me, diversification, self-improvement, and perseverance are essential elements for achieving success. Randomness remains an uncontrollable variable, but the effort and work invested help minimize its impact, both in performance and in success.",
-  // },
-  // {
-  //   title: "My Mental Health Management",
-  //   text: "One aspect that I care deeply about is my mental health. Although I practice primarily for pleasure, I believe that the variety of sports I engage in daily helps me avoid excessive pressure. Just as a balance between professional and personal life is necessary, I make sure to clearly separate my sports practice from other aspects of my life. I have noticed that when my daily life is well-balanced and my different areas of life are stable, my sports performance naturally follows. Finally, I place great importance on avoiding comparisons with other athletes, since my situation is uncommon and involves different routines and opportunities.",
-  // },
-  // {
-  //   title: "Sports and Its Opportunities",
-  //   text: "Sports are not only a source of personal fulfillment but also a gateway to opportunities. They open perspectives for encounters, experiences, and development that go far beyond mere performance.",
-  // },
-
-  // todo : trouver des vrai question : revoir avec papa
-  // et faire des vrais réponses
   {
     title_fr: "D'où viens tu ? ",
     text_fr:
@@ -1697,17 +1612,9 @@ export const accordionData = [
     text_en:
       "Having close people supporting you, Loving the Day and trusting the process",
   },
-
-  // {
-  //   title_fr: "",
-  //   text_fr: "",
-  // title_en: "",
-  // text_en: ""
-  // },
 ];
 
 //experience
-//  todo : mettre du vrai texte et traduire
 export const experiences = [
   {
     etablissement_fr: "Safran Helicopter Engines",
@@ -1718,44 +1625,56 @@ export const experiences = [
     periode_en: "10/2023 - Now",
     details_fr: [
       "Création d’interface et développement de nouvelles fonctionnalités au sein de l’application",
+      "Collaboration avec les clients pour connaitre leur besoin et améliorer leur qualité de vie dans l'environnement de travail",
       "Gestion de projet",
-      "",
     ],
     details_en: [
-      "Interface creation and development of new features within the application",
+      "Creating interfaces and developing new features within the application",
+      "Collaborating with customers to understand their needs and improve their quality of life in the workplace",
       "Project management",
     ],
     type: "experiencepro",
   },
   {
-    etablissement_fr: "Cesi Pau",
-    etablissement_en: "",
+    etablissement_fr: "CESI, Pau",
+    etablissement_en: "CESI, Pau",
     title_fr: "Cycle ingénieur",
-    title_en: "",
+    title_en: "Engineer Cycle",
     periode_fr: "09/2023 - Maintenant ",
-    periode_en: "",
+    periode_en: "09/2023 - Now",
     details_fr: [
-      "alternance avec safran ",
-      "dev web ",
-      "management ",
-      "big data",
+      "Acquérir les connaissances de base dans un panel de domaine lié à l'informatique",
+      "Connaitre les bases dans le domaine de management",
+      "Adopter une méthodologie de pensée critique et de conception pour aboutir à la solution.",
+      "Education CESI complété par une alternance chez Safran",
     ],
-    details_en: ["", "", ""],
+    details_en: [
+      "Acquire basic knowledge in a range of IT-related fields",
+      "Learn the fundamentals of management",
+      "Adopt a critical thinking and design methodology to arrive at the solution",
+      "CESI education supplemented by a work-study programme at Safran",
+    ],
     type: "formation",
   },
   {
-    etablissement_fr: "Université technologique de Pula",
-    etablissement_en: "",
-    title_fr: "Stagaire",
-    title_en: "",
+    etablissement_fr: "Université Juraj Dobrila,  Pula",
+    etablissement_en: "Juraj Dobrila university, Pula",
+    title_fr: "Stagaire developpement d'application en python",
+    title_en: "application development Intern in python",
     periode_fr: "06/2025 - 10/2025",
-    periode_en: "",
+    periode_en: "06/2025 - 10/2025",
     details_fr: [
-      "travaille sur le développement d'un outils python",
-      "découverte culturel",
-      "CNC machining test sur machine",
+      "Developpement à partir de zéro d'une application python",
+      "Découverte culturel de nouvelles méthodes de travail",
+      "Usinage à commande numérique par ordinateur",
+      "Géneration de code G-code pour optimiser les machines CNC",
     ],
-    details_en: ["", "", ""],
+    details_en: [
+      "Developing a Python application from scratch",
+      "Cultural discovery of new working method",
+      "Computer numerical control machining",
+      "Generating G-code to optimise CNC machines",
+    ],
     type: "experiencepro",
   },
   {
@@ -1766,20 +1685,20 @@ export const experiences = [
     periode_fr: "04/2023 - 07/2023",
     periode_en: "04/2023 - 07/2023",
     details_fr: [
-      "Traitement de donnée de sportif biologique et technique (nageur, kayakiste)",
+      "Récolte et analysede donnée de sportif biologique et technique (nageur, kayakiste)",
       "Analyse de données sur l’explicabilité des performances dans le sport",
       "Relation client pour améliorer l’utilisation des données collectées",
     ],
     details_en: [
+      "Collection and analysis of biological and technical data on athletes (swimmers, kayakers)",
       "Data analysis on performance explainability in sports",
       "Client relations to improve the use of collected data",
     ],
     type: "experiencepro",
   },
-
   {
-    etablissement_fr: "Hermès, tellier ? textile ? ",
-    etablissement_en: "",
+    etablissement_fr: "Hermès, Paris ",
+    etablissement_en: "Hermès, Paris",
     title_fr: "Prestataire de service, Développeur Full-stack",
     title_en: "Full-stack Developer Contractor",
     periode_fr: "04/2023 - 07/2023",
@@ -1811,12 +1730,13 @@ export const experiences = [
       "Partage de ma passion et de mes connaissances avec des jeunes pagayeurs",
       "Organisation et gestion de séances quotidiennes (musculation, kayak et retour vidéo)",
       "Coaching de l’équipe jeune",
-      "parallele des etudes",
+      "En Paralleles de mes études d'ingénieur",
     ],
     details_en: [
       "Sharing my passion and knowledge with young paddlers",
       "Organizing and managing daily sessions (strength training, kayaking, and video feedback)",
       "Coaching the youth team",
+      "Alongside my engineering studies",
     ],
     type: "experiencepro",
   },
@@ -1827,19 +1747,37 @@ export const experiences = [
     title_en: "Preparatory Cycle",
     periode_fr: "09/2021 - 07/2023",
     periode_en: "09/2021 - 07/2023",
-    details_fr: ["", "", ""],
-    details_en: ["", "", ""],
+    details_fr: [
+      "Consolidation des bases scientifiques : mathématiques, physique et informatique.",
+      "Développement d'une méthodologie d'ingénierie axée sur l'analyse et la résolution de problèmes.",
+      "Participation à des projets collaboratifs renforçant le travail en équipe et la gestion de projet.",
+      "Retour dans le système éducatif après une année de césure, avec un objectif de préparation au cycle d'ingénieur.",
+    ],
+    details_en: [
+      "Consolidation of scientific foundations: mathematics, physics and computer science.",
+      "Development of an engineering methodology focused on problem analysis and resolution.",
+      "Participation in collaborative projects reinforcing teamwork and project management.",
+      "Return to the education system after a gap year, with the aim of preparing for engineering studies.",
+    ],
     type: "formation",
   },
   {
     etablissement_fr: "",
     etablissement_en: "",
-    title_fr: "Année sadbatique",
+    title_fr: "Année de césure",
     title_en: "Gap Year",
     periode_fr: "09/2020 - 09/2021",
     periode_en: "09/2020 - 09/2021",
-    details_fr: ["petit boulot ", "sportif à plein temps", "LEA 1ere année"],
-    details_en: ["", "", ""],
+    details_fr: [
+      "Expériences professionnelles variées en emploi saisonnier, développant autonomie et gestion du temps.",
+      "Pratique sportive intensive à plein temps, renforçant discipline, tentative de qualification Olympique",
+      "Inscription en 1re année de Licence LEA, approfondissant mes compétences en langues et communication.",
+    ],
+    details_en: [
+      "Varied professional experience in seasonal employment, developing independence and time management skills.",
+      "Intensive full-time sports training, reinforcing discipline, Olympic qualification attempt",
+      "Enrolment in the first year of a Bachelor's degree in Applied Foreign Languages, furthering my language and communication skills.",
+    ],
     type: "experiencepro",
   },
   {
@@ -1849,23 +1787,35 @@ export const experiences = [
     title_en: "High School Years",
     periode_fr: "09/2017 - 04/2020",
     periode_en: "09/2017 - 04/2020",
-    details_fr: ["", "section sportif ", "bac S "],
-    details_en: ["??", "Sport Section ", "Bachelor of Science"],
+    details_fr: [
+      "Suivi d’un cursus scientifique approfondi (Bac S), développant rigueur et esprit analytique.",
+      "En section sportive, béneficiant donc d'un emploie du temps condensé pour laisser place à mes entrainements de kayak.",
+      "Acquisition de compétences transversales en organisation et gestion du temps.",
+    ],
+    details_en: [
+      "Completed a rigorous scientific curriculum (Bac S), developing analytical skills and precision.",
+      "In the sports section, I therefore benefit from a condensed timetable to make room for my kayaking training sessions.",
+      "Developed transversal skills in organization and time management.",
+    ],
     type: "formation",
   },
   {
     etablissement_fr: "Scalway",
-    etablissement_en: "",
+    etablissement_en: "Scalway",
     title_fr: "Stage de 3e",
-    title_en: "",
+    title_en: "9th Grade Internship",
     periode_fr: "10/2016 - 11/2016",
     periode_en: "",
     details_fr: [
-      "Premier pas dans le monde professionnel",
-      "découverte du domaine informatique avec une entreprise d'hebergement",
-      "sous plusieurs angles ",
+      "Premiers pas dans le monde professionnel, découvrant le fonctionnement d’une entreprise.",
+      "Découverte du domaine informatique et de l’hébergement web sous différents aspects.",
+      "Observation des pratiques professionnelles et initiation à la résolution de problèmes concrets.",
     ],
-    details_en: ["", "", ""],
+    details_en: [
+      "First experience in a professional environment, learning how a company operates.",
+      "Introduction to the IT and web hosting sector from multiple perspectives.",
+      "Gained initial exposure to professional practices and problem-solving tasks.",
+    ],
     type: "experiencepro",
   },
 ];
@@ -1886,25 +1836,25 @@ export const travelExpenses = [
     label_en: "Coaching",
     amount: 6420,
     tooltip_fr:
-      "2571€ pour 4 semaines de compétition → 642€/semaine → 6420€ par saison",
+      "Environ 650€ par semaine → 6500€ par saison",
     tooltip_en:
-      "2571€ for 4 weeks of competition → 642€/week → 6420€ per season",
+      "Approximatly 650€ per week → 6500€ per season",
   },
   {
     key: "accommodation",
     label_fr: "Hébergement",
     label_en: "Accommodation",
     amount: 3150,
-    tooltip_fr: "Airbnb 1260€ → moyenne par événement : 315€",
-    tooltip_en: "Airbnb 1260€ → average per event: 315€",
+    tooltip_fr: "moyenne par événement : 315€",
+    tooltip_en: "average per event: 315€",
   },
   {
     key: "food",
     label_fr: "Repas",
     label_en: "Food",
-    amount: 1400,
-    tooltip_fr: "Repas équilibrés ~140€/semaine",
-    tooltip_en: "Meals ~140€/week",
+    amount: 1200,
+    tooltip_fr: "Repas équilibrés ~120€/semaine",
+    tooltip_en: "Meals ~120€/week",
   },
   {
     key: "transport",
@@ -1919,24 +1869,24 @@ export const travelExpenses = [
     label_fr: "Autres",
     label_en: "Other",
     amount: 1200,
-    tooltip_fr: "Séances 10-25€/séance, 1-2 séances/jour → ~120€/semaine",
-    tooltip_en: "Sessions 10-25€/session, 1-2 sessions/day → ~120€/week",
+    tooltip_fr: "Le prix d'une séances est de 10-25€, avec 1-2 séances/jour → ~120€/semaine",
+    tooltip_en: "Sessions' price is 10-25, with 1-2 sessions/day → ~120€/week",
   },
   {
     key: "subscription",
     label_fr: "Abonnement Pau structure d'entraînement",
     label_en: "Pau training structure subscription",
     amount: 1250,
-    tooltip_fr: "Abonnement annuel",
-    tooltip_en: "annual subscription",
+    tooltip_fr: "Abonnement annuel, accès à la salle, coaching et prépation physique",
+    tooltip_en: "annual subscription, acces to the gym, coaching and physical preparation",
   },
   {
     key: "Daily",
     label_fr: "Vie quotidienne",
     label_en: "Daily life",
-    amount: 10000,
-    tooltip_fr: "Loyer, Course, Essence, ...",
-    tooltip_en: "Rent, Groceries, Fuel, ...",
+    amount: 8500,
+    tooltip_fr: "Loyer, Course, Essence, Frais de santé, ...",
+    tooltip_en: "Rent, Groceries, Fuel, Health fee, ...",
   },
 ];
 
@@ -1995,6 +1945,13 @@ export const achievements = [
 
 // projects
 // todo : mettre du vrai projet
+
+//pro: powerjoular, cnc,  safran, hermes,  // revoir avec papa pour code manquant et ou python pula 
+//perso: portefolion * 2, pokedex, angular, metéo api, money watcher, +3 
+
+//school : intershop , cesieat, CesiOP, Easysave, arduino , big data powerbi 
+
+//total : 15 + incomming 
 export const projects = [
   {
     id: 1,
@@ -2003,11 +1960,9 @@ export const projects = [
     subject_fr: "",
     subject_en: "",
     domain: "",
-    image:"",
-    description_fr:
-      "",
-    description_en:
-      "",
+    image: "",
+    description_fr: "",
+    description_en: "",
     technologies: ["", ".", "", "", ""],
     github: "",
     demo: "",

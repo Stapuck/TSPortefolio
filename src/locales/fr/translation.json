@@ -13,10 +13,10 @@
     "see": "Voir ",
     "seebis": "→ Voir ",
     "lastarticle": "Derniers articles",
-    "profiletxt": "Information simple mais éfficace à mon sujet",
-    "sporttxt": "infos autour du canoë-kayak, entraînements, compétitions, budget d'une saison.",
-    "blogtxt": "Entre Article de presse, interview ou encore ma section blog, il ne manque pas de quoi lire sur cette page, cliquez pour découvrir plus ;)",
-    "protxt": "Ici c'est background professionnel, project auquel j'ai participé ou encore un échantillons de skill developper pdt mon cycle ingé"
+    "profiletxt": "Allez explorer ma page profil ! Vous y trouverez une présentation générale de qui je suis : mon parcours, mes centres d’intérêt et ce qui m’inspire au quotidien. J’y partage un aperçu de ma personnalité, mon histoire et ce qui m'anime dans la vie de tous les jours via une petite FAQ.",
+    "sporttxt": "Cette section est dédiée à mon univers sportif. Retrouvez mon classement actuel, mes objectifs de saison, mon calendrier de compétitions, ainsi que mon palmarès complet. J’y parle aussi de budget sportif, de mes partenaires et sponsors qui m’accompagnent dans chaque étape de ma carrière.",
+    "blogtxt": "Cette page rassemble tous les articles et médias consacrés à ma carrière sportive. Vous y trouverez également mes propres écrits : analyses, réflexions et billets sur des thèmes qui me tiennent à cœur, du sport à d’autres sujets qui m’inspirent. Bref, il ne manque pas de quoi lire sur cette page, cliquez pour découvrir plus ;)",
+    "protxt": "Ici, je retrace mon chemin professionnel. Vous découvrirez mes expériences, mes compétences et les projets sur lesquels j’ai travaillé ainsi que les certifications que j’ai obtenues. J’y explique également la direction que prend ma carrière et les ambitions qui la façonnent."
   },
 
   "Blog": {
@@ -37,14 +37,31 @@
 
   "Profile": {
     "profile_welcome": "📝 Bienvenue sur la page de mon profile",
+    "txtintro": "Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur",
     "faq": "Foire aux questions :",
     "faqtxt": "Découvrez les réponses aux questions les plus courantes",
     "french": "Français",
     "english": "Anglais",
     "years": "ans",
     "citation": "« Discipline, curiosité et persévérance guident chacun de mes projets.»",
-    "": " Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur",
-    "d": ""
+    "slogan": " Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur",
+    "statlabel1": "Années d'expérience",
+    "statlabel2": "Champion Olympique",
+    "statlabel3": "Développeur Web",
+    "section1title":"Parours Tech",
+    "section1txt":"Étudiant en ingénierie informatique, passionné par le développement web front et back. Spécialisé en UI/UX, React, Node.js.",
+    "section2title":"Carrière Sportive",
+    "section2txt":"Athlète en canoë slalom depuis plus de 13 ans. Engagé dans la respect et la protection de l'environnement. Le sport m'a forgé discipline, organisation et résilience.",
+    "section3title":"Entrepreneuriat",
+    "section3txt":"",
+    "section3txt2":"",
+    "section4title":"Centre d'intérêt",
+    "section4txt1":"Famille",
+    "section4txt2":"Musique",
+    "section4txt3":"Pleine air",
+    "section4txt4":"Art",
+    "section2label1":"médaillé international",
+    "section2label2":"13+ ans d'expérience"
   },
 
   "Sport": {

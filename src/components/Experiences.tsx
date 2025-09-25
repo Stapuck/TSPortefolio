@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
-import { experiences, } from "../medias/databases/index-global.ts";
+import { experiences } from "../medias/databases/index-global.ts";
 // import type { Experiences } from "../medias/databases/index-global.ts"; //todo revoir pour l'inclure  et deploy
 import { useTranslation } from "react-i18next";
 
 const Experiences = () => {
-  // Langue initiale prise depuis <html lang="">
   const initialLang = document.documentElement.lang || "fr";
   const { t } = useTranslation();
 
-  // état pour la langue courante
   const [lang, setLang] = useState(initialLang);
-  // état pour l'expérience sélectionnée
   const [selected, setSelected] = useState(experiences[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Observer les changements de l’attribut lang sur <html>
+  // Observer les changements de l'attribut lang sur <html>
   useEffect(() => {
     const observer = new MutationObserver(() => {
       const newLang = document.documentElement.lang || "fr";
       setLang(newLang);
       setSelected(experiences[0]);
+      setCurrentIndex(0);
     });
     observer.observe(document.documentElement, {
       attributes: true,
@@ -27,14 +27,67 @@ const Experiences = () => {
     return () => observer.disconnect();
   }, []);
 
+
+
+  // todo : revoir si changement de carte au click ou à la nav. 
+  // Fonctions pour le slider vertical
+  const itemsPerPage = 4;
+  const maxIndex = Math.max(0, experiences.length - itemsPerPage);
+  const lastIndex = experiences.length - 1;
+
+  // Scroll up (vers le haut)
+  const scrollUp = () => {
+    setCurrentIndex((prev) => {
+      const newIndex = Math.max(0, prev - 1);
+      // setSelected(experiences[newIndex]);
+      return newIndex;
+    });
+  };
+
+  // Scroll down (vers le bas)
+  const scrollDown = () => {
+    setCurrentIndex((prev) => {
+      const newIndex = Math.min(prev + 1, lastIndex);
+      // setSelected(experiences[newIndex]);
+      return newIndex;
+    });
+  };
+
+  // Aller au début
+  const goToStart = () => {
+    setCurrentIndex(0);
+    // setSelected(experiences[0]);
+  };
+
+  // Aller à la fin
+  const goToEnd = () => {
+    // const newIndex = Math.max(0, lastIndex - (itemsPerPage - 1)); // scroll pour que le dernier élément soit visible
+    const newIndex = Math.max(0, maxIndex); // scroll pour que le dernier élément soit visible
+    setCurrentIndex(newIndex);
+    // setSelected(experiences[lastIndex]);
+  };
+
+  const visibleExperiences = experiences.slice(
+    currentIndex,
+    currentIndex + itemsPerPage
+  );
+
   // Récupération du bon texte en fonction de la langue
-  const getTitle = (exp : any) => // : Experiences
-    lang === "en" ? exp.title_en || exp.title_fr : exp.title_fr;
-  const getEtab = (exp : any) =>// : Experiences
-    lang === "en" ? exp.etablissement_en || exp.etablissement_fr : exp.etablissement_fr;
-  const getPeriode = (exp : any) =>// : Experiences
-    lang === "en" ? exp.periode_en || exp.periode_fr : exp.periode_fr;
-  const getDetails = (exp : any) =>// : Experiences
+  const getTitle = (
+    exp: any // : Experiences
+  ) => (lang === "en" ? exp.title_en || exp.title_fr : exp.title_fr);
+  const getEtab = (
+    exp: any // : Experiences
+  ) =>
+    lang === "en"
+      ? exp.etablissement_en || exp.etablissement_fr
+      : exp.etablissement_fr;
+  const getPeriode = (
+    exp: any // : Experiences
+  ) => (lang === "en" ? exp.periode_en || exp.periode_fr : exp.periode_fr);
+  const getDetails = (
+    exp: any // : Experiences
+  ) =>
     lang === "en"
       ? exp.details_en.filter(Boolean).length
         ? exp.details_en
@@ -42,69 +95,185 @@ const Experiences = () => {
       : exp.details_fr;
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-4">
-      <div className="hidden xl:block shadow-lg">
-        <div className="bg-white dark:bg-sky-900 rounded-2xl shadow-lg border border-gray-100 dark:border-sky-800 overflow-hidden">
-          <div className="flex h-[500px]">
+    <section className="w-full max-w-7xl mx-auto px-4 py-8">
+      {/* ---------- Desktop Layout (xl+) ---------- */}
+      <div className="hidden xl:block">
+        <div className="bg-white dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 dark:border-slate-700/50 overflow-hidden">
+          <div className="flex min-h-[600px]">
             {/* Sidebar */}
-            <div className="w-80 bg-gray-50 dark:bg-sky-800 border-r border-gray-200 dark:border-sky-700">
-              <div className="p-6 border-b border-gray-200 dark:border-sky-700">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  {t("Experience.title")}
-                </h2>
-              </div>
-              <div className="p-4 space-y-2 h-full overflow-y-auto custom-scrollbar">
-                {experiences.map((exp, i) => (
+            <div className="w-96 bg-gradient-to-b from-gray-50 to-gray-100/50 dark:from-slate-900/50 dark:to-slate-800/30 border-r border-gray-200/80 dark:border-slate-600/30">
+              <div className="p-8 border-b border-gray-200/80 dark:border-slate-600/30 flex items-center justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                    {t("Experience.title")}
+                  </h2>
+                  <p className="text-sm text-gray-500 dark:text-slate-400 mt-1">
+                    {currentIndex + 1}-
+                    {Math.min(currentIndex + itemsPerPage, experiences.length)}{" "}
+                    sur {experiences.length}
+                  </p>
+                </div>
+
+                {/* Contrôles de navigation */}
+                <div className="flex flex-col space-y-2">
+                  {/* Aller au début */}
                   <button
-                    key={i}
-                    onClick={() => setSelected(exp)}
-                    className={`w-full text-left p-4 rounded-xl transition-all duration-200 ${
-                      selected === exp
-                        ? "bg-blue-800/80 text-white shadow-md"
-                        : "hover:bg-white dark:hover:bg-sky-700 hover:shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-sky-600 text-gray-800 dark:text-gray-200"
-                    }`}
+                    onClick={goToStart} disabled={currentIndex === 0}
+                    className="px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   >
-                    <div className="font-medium text-sm mb-1">{getTitle(exp)}</div>
-                    <div className="text-xs opacity-75">{getPeriode(exp)}</div>
+                    <svg
+                      className="w-4 h-4 text-gray-600 dark:text-slate-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M7 11l5-5 5 5M7 17l5-5 5 5"
+                      />
+                    </svg>
                   </button>
-                ))}
+
+                  {/* Scroll Up */}
+                  <button
+                    onClick={scrollUp} disabled={currentIndex === 0}
+                    className="py-1 px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  >
+                    <svg
+                      className="w-4 h-4 text-gray-600 dark:text-slate-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 15l7-7 7 7"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Scroll Down */}
+                  <button
+                    onClick={scrollDown} disabled={currentIndex === lastIndex}
+                    className="py-1 px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  >
+                    <svg
+                      className="w-4 h-4 text-gray-600 dark:text-slate-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Aller à la fin */}
+                  <button
+                    onClick={goToEnd} disabled={currentIndex >= maxIndex}
+                    className=" px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  >
+                    <svg
+                      className="w-4 h-4 text-gray-600 dark:text-slate-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M7 13l5 5 5-5M7 7l5 5 5-5"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-6 space-y-3 h-full overflow-hidden">
+                <div className="space-y-3 transition-all duration-300 ease-in-out">
+                  {visibleExperiences.map((exp, i) => (
+                    <button
+                      key={currentIndex + i}
+                      onClick={() => setSelected(exp)}
+                      className={`w-full text-left p-5 rounded-2xl transition-all duration-300 group relative overflow-hidden ${
+                        selected === exp
+                          ? "bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg shadow-blue-500/25 transform scale-[1.02]"
+                          : "bg-white/70 dark:bg-slate-700/50 hover:bg-white dark:hover:bg-slate-700 hover:shadow-lg border border-gray-200/50 dark:border-slate-600/30 text-gray-800 dark:text-slate-200"
+                      }`}
+                    >
+                      <div
+                        className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                          selected !== exp
+                            ? "bg-gradient-to-r from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10"
+                            : ""
+                        }`}
+                      ></div>
+
+                      <div className="relative">
+                        <div className="font-semibold text-base mb-2 line-clamp-2">
+                          {getTitle(exp)}
+                        </div>
+                        <div className="text-sm opacity-80 mb-1">
+                          {getEtab(exp)}
+                        </div>
+                        <div className="text-xs opacity-70">
+                          {getPeriode(exp)}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Contenu */}
-            <div className="flex-1 p-8 bg-white dark:bg-sky-900">
-              <div className="h-full flex flex-col">
-                <div className="mb-6">
-                  <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-800/80 text-blue-700 dark:text-blue-200 text-xs font-medium rounded-full uppercase tracking-wide">
+            {/* Contenu principal */}
+            <div className="flex-1 p-10 bg-gradient-to-br from-white to-gray-50/30 dark:from-slate-800/50 dark:to-slate-900/30">
+              <div className="h-full flex flex-col max-w-3xl">
+                <div className="mb-8">
+                  <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold rounded-xl border border-blue-200/50 dark:border-blue-700/30">
                     {selected.type === "formation"
                       ? t("Experience.formation")
                       : t("Experience.pro")}
                   </span>
                 </div>
 
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <div className="space-y-6 flex-grow">
+                  <div className="space-y-3">
+                    <h3 className="text-3xl font-bold text-gray-900 dark:text-slate-100 leading-tight">
                       {getEtab(selected)}
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-300 font-medium">
+                    <p className="text-lg text-blue-600 dark:text-blue-400 font-medium">
                       {getPeriode(selected)}
                     </p>
                   </div>
 
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-                    {getTitle(selected)}
-                  </h4>
+                  <div className="bg-gradient-to-r from-blue-50/50 to-indigo-50/30 dark:from-blue-900/10 dark:to-indigo-900/10 p-6 rounded-2xl border border-blue-100/50 dark:border-blue-800/20">
+                    <h4 className="text-xl font-bold text-gray-800 dark:text-slate-200 mb-4">
+                      {getTitle(selected)}
+                    </h4>
 
-                  <div className="space-y-3">
-                    {getDetails(selected).map((detail : any , idx : any) => (
-                      <div key={idx} className="flex items-start space-x-3">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
-                          {detail}
-                        </p>
-                      </div>
-                    ))}
+                    <div className="space-y-4">
+                      {getDetails(selected).map((detail: any, idx: any) => (
+                        <div
+                          key={idx}
+                          className="flex items-start space-x-4 group"
+                        >
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform duration-200"></div>
+                          <p className="text-gray-700 dark:text-slate-300 leading-relaxed">
+                            {detail}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -112,60 +281,64 @@ const Experiences = () => {
           </div>
         </div>
       </div>
+
       {/* ---------- Tablet Layout (lg - xl) ---------- */}
       <div className="hidden lg:block xl:hidden">
-        <div className="bg-white dark:bg-sky-900 rounded-2xl shadow-lg border border-gray-100 dark:border-sky-800 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-            {t("Experience.title")}
-          </h2>
+        <div className="bg-white dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 dark:border-slate-700/50 p-8">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+              {t("Experience.title")}
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-2 gap-3 mb-6">
+          <div className="grid grid-cols-2 gap-4 mb-8">
             {experiences.map((exp, i) => (
               <button
                 key={i}
                 onClick={() => setSelected(exp)}
-                className={`p-4 rounded-xl text-left transition-all duration-200 ${
+                className={`p-5 rounded-2xl text-left transition-all duration-300 relative overflow-hidden ${
                   selected === exp
-                    ? "bg-blue-600 text-white shadow-md"
-                    : "bg-gray-50 dark:bg-sky-800 hover:bg-gray-100 dark:hover:bg-sky-700 border border-gray-200 dark:border-sky-700 text-gray-800 dark:text-gray-200"
+                    ? "bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg shadow-blue-500/25"
+                    : "bg-gray-50 dark:bg-slate-700/50 hover:bg-white dark:hover:bg-slate-700 border border-gray-200 dark:border-slate-600/30 text-gray-800 dark:text-slate-200 hover:shadow-lg"
                 }`}
               >
-                <div className="text-sm font-medium mb-1 line-clamp-1">
+                <div className="text-sm font-semibold mb-2 line-clamp-1">
                   {getTitle(exp)}
                 </div>
-                <div className="text-xs opacity-75">{getPeriode(exp)}</div>
+                <div className="text-xs opacity-80">{getEtab(exp)}</div>
+                <div className="text-xs opacity-70 mt-1">{getPeriode(exp)}</div>
               </button>
             ))}
           </div>
 
-          <div className="bg-gray-50 dark:bg-sky-800 rounded-xl p-6">
-            <div className="mb-4">
-              <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 text-xs font-medium rounded-full uppercase tracking-wide">
+          <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-slate-900/30 dark:to-slate-800/50 rounded-2xl p-8 border border-gray-200/50 dark:border-slate-600/30">
+            <div className="mb-6">
+              <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold rounded-xl">
                 {selected.type === "formation"
                   ? t("Experience.formation")
                   : t("Experience.pro")}
               </span>
             </div>
 
-            <div className="space-y-3">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-slate-100">
                   {getEtab(selected)}
                 </h3>
-                <p className="text-gray-500 dark:text-gray-300 font-medium">
+                <p className="text-blue-600 dark:text-blue-400 font-medium">
                   {getPeriode(selected)}
                 </p>
               </div>
 
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h4 className="text-lg font-bold text-gray-800 dark:text-slate-200">
                 {getTitle(selected)}
               </h4>
 
-              <div className="space-y-2">
-                {getDetails(selected).map((detail : any, idx : any) => (
+              <div className="space-y-3 mt-4">
+                {getDetails(selected).map((detail: any, idx: any) => (
                   <div key={idx} className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+                    <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 dark:text-slate-300 leading-relaxed">
                       {detail}
                     </p>
                   </div>
@@ -178,20 +351,22 @@ const Experiences = () => {
 
       {/* ---------- Mobile Layout (md - lg) ---------- */}
       <div className="hidden md:block lg:hidden">
-        <div className="bg-white dark:bg-sky-900 rounded-2xl shadow-lg border border-gray-100 dark:border-sky-800 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-            {t("Experience.title")}
-          </h2>
+        <div className="bg-white dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-200/50 dark:border-slate-700/50 p-6">
+          <div className="mb-6">
+            <h2 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+              {t("Experience.title")}
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-3 gap-2 mb-6">
+          <div className="grid grid-cols-3 gap-3 mb-6">
             {experiences.map((exp, i) => (
               <button
                 key={i}
                 onClick={() => setSelected(exp)}
-                className={`p-3 rounded-lg text-left transition-all duration-200 ${
+                className={`p-4 rounded-xl text-left transition-all duration-200 ${
                   selected === exp
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-50 dark:bg-sky-800 hover:bg-gray-100 dark:hover:bg-sky-700 border border-gray-200 dark:border-sky-700 text-gray-800 dark:text-gray-200"
+                    ? "bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md"
+                    : "bg-gray-50 dark:bg-slate-700/50 hover:bg-white dark:hover:bg-slate-700 border border-gray-200 dark:border-slate-600/30 text-gray-800 dark:text-slate-200"
                 }`}
               >
                 <div className="text-xs font-medium mb-1 line-clamp-2">
@@ -204,31 +379,31 @@ const Experiences = () => {
             ))}
           </div>
 
-          <div className="bg-gray-50 dark:bg-sky-800 rounded-xl p-5">
-            <div className="mb-3">
-              <span className="inline-block px-2 py-1 bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 text-xs font-medium rounded-full uppercase tracking-wide">
+          <div className="bg-gray-50 dark:bg-slate-900/30 rounded-xl p-6 border border-gray-200/50 dark:border-slate-600/30">
+            <div className="mb-4">
+              <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full uppercase tracking-wide">
                 {selected.type === "formation"
                   ? t("Experience.formation")
                   : t("Experience.pro")}
               </span>
             </div>
 
-            <div className="space-y-2">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+            <div className="space-y-3">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-slate-100">
                 {getEtab(selected)}
               </h3>
-              <p className="text-gray-500 dark:text-gray-300 text-sm font-medium">
+              <p className="text-blue-600 dark:text-blue-400 text-sm font-medium">
                 {getPeriode(selected)}
               </p>
-              <h4 className="text-base font-semibold text-gray-800 dark:text-gray-200">
+              <h4 className="text-base font-semibold text-gray-800 dark:text-slate-200">
                 {getTitle(selected)}
               </h4>
 
-              <div className="space-y-2 mt-3">
-                {getDetails(selected).map((detail : any, idx : any) => (
-                  <div key={idx} className="flex items-start space-x-2">
-                    <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+              <div className="space-y-3 mt-4">
+                {getDetails(selected).map((detail: any, idx: any) => (
+                  <div key={idx} className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
                       {detail}
                     </p>
                   </div>
@@ -241,51 +416,138 @@ const Experiences = () => {
 
       {/* ---------- Small Mobile Layout (sm - md) ---------- */}
       <div className="block md:hidden">
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white px-1">
-            {t("Experience.title")}
-          </h2>
+        <div className="space-y-6">
+          <div className="px-2">
+            <h2 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+              {t("Experience.title")}
+            </h2>
+          </div>
 
-          {experiences.map((exp, i) => (
-            <div
-              key={i}
-              className="bg-white dark:bg-sky-900 rounded-xl shadow-md border border-gray-100 dark:border-sky-800 p-5 space-y-3"
+          {/* Dropdown pour sélectionner l'expérience */}
+          <div className="relative px-2">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full bg-white dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200/50 dark:border-slate-700/50 p-4 flex items-center justify-between text-left"
             >
+              <div className="flex-1">
+                <div className="font-semibold text-gray-900 dark:text-slate-100 mb-1">
+                  {getTitle(selected)}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-slate-400">
+                  {getEtab(selected)} • {getPeriode(selected)}
+                </div>
+              </div>
+              <div
+                className={`transform transition-transform duration-200 ${
+                  isDropdownOpen ? "rotate-180" : ""
+                }`}
+              >
+                <svg
+                  className="w-5 h-5 text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </button>
+
+            {/* Liste déroulante */}
+            {isDropdownOpen && (
+              <div className="absolute z-10 w-full mt-2 bg-white dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-200/50 dark:border-slate-700/50 overflow-hidden">
+                <div className="max-h-64 overflow-y-auto">
+                  {experiences.map((exp, i) => (
+                    <button
+                      key={i}
+                      onClick={() => {
+                        setSelected(exp);
+                        setIsDropdownOpen(false);
+                      }}
+                      className={`w-full text-left p-4 border-b border-gray-100 dark:border-slate-700/50 last:border-b-0 transition-all duration-200 ${
+                        selected === exp
+                          ? "bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
+                          : "hover:bg-gray-50 dark:hover:bg-slate-700/50 text-gray-800 dark:text-slate-200"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="font-medium mb-1 line-clamp-1">
+                            {getTitle(exp)}
+                          </div>
+                          <div className="text-sm opacity-80">
+                            {getEtab(exp)}
+                          </div>
+                          <div className="text-xs opacity-70 mt-1">
+                            {getPeriode(exp)}
+                          </div>
+                        </div>
+                        <span
+                          className={`inline-block px-2 py-1 text-xs font-medium rounded-full uppercase tracking-wide ${
+                            exp.type === "formation"
+                              ? selected === exp
+                                ? "bg-white/20 text-white"
+                                : "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                              : selected === exp
+                              ? "bg-white/20 text-white"
+                              : "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300"
+                          }`}
+                        >
+                          {exp.type === "formation"
+                            ? t("Experience.formation")
+                            : t("Experience.pro")}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Contenu de l'expérience sélectionnée */}
+          <div className="px-2">
+            <div className="bg-white dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200/50 dark:border-slate-700/50 p-6 space-y-4">
               <div className="flex items-start justify-between">
-                <span className="inline-block px-2 py-1 bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-200 text-xs font-medium rounded-full uppercase tracking-wide">
-                  {exp.type === "formation"
+                <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full uppercase tracking-wide">
+                  {selected.type === "formation"
                     ? t("Experience.formation")
                     : t("Experience.pro")}
                 </span>
               </div>
 
-              <div className="space-y-2">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                  {getEtab(exp)}
+              <div className="space-y-3">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-slate-100">
+                  {getEtab(selected)}
                 </h3>
-                <p className="text-gray-500 dark:text-gray-300 text-sm font-medium">
-                  {getPeriode(exp)}
+                <p className="text-blue-600 dark:text-blue-400 text-sm font-medium">
+                  {getPeriode(selected)}
                 </p>
-                <h4 className="text-base font-semibold text-gray-800 dark:text-gray-200">
-                  {getTitle(exp)}
+                <h4 className="text-base font-semibold text-gray-800 dark:text-slate-200">
+                  {getTitle(selected)}
                 </h4>
               </div>
 
-              <div className="space-y-2">
-                {getDetails(exp).map((detail : any, idx : any) => (
-                  <div key={idx} className="flex items-start space-x-2">
-                    <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
+              <div className="space-y-3">
+                {getDetails(selected).map((detail: any, idx: any) => (
+                  <div key={idx} className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
                       {detail}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

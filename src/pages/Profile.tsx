@@ -69,7 +69,6 @@ export default function Profile() {
         </div> */}
 
         <div className="flex flex-col md:flex-row items-center md:items-center md:space-x-10 mt-20">
-          {/* Photo plus grande à gauche */}
           <div className="flex-shrink-0">
             <img
               src={pp2}
@@ -78,13 +77,12 @@ export default function Profile() {
             />
           </div>
 
-          {/* Carte info centrée verticalement */}
           <div className="mt-8 md:mt-0  flex flex-col items-center text-center bg-white dark:bg-sky-900/80 rounded-2xl px-8 py-6 shadow-lg">
             <h1 className="text-3xl font-bold dark:text-white">
               Terence SARAMANDIF
             </h1>
             <p className="text-gray-600 dark:text-slate-200 mt-2">
-              Étudiant en ingénierie IT • Athlète Canoë Slalom • Entrepreneur
+              {t('Profile.txtintro')}
             </p>
             <div className="flex justify-center items-center space-x-6 text-sm text-gray-500 mt-3">
               <div className="flex items-center space-x-1 dark:text-slate-100">
@@ -110,9 +108,9 @@ export default function Profile() {
         {/* Stats rapides */}
         <div className="grid sm:grid-cols-3 gap-6 text-center">
           {[
-            { num: "8+", label: "Années d’expérience" },
-            { num: "🏆", label: "Champion Olympique" },
-            { num: "💼", label: "Développeur Web" },
+            { num: "8+", label: t("Profile.label1") },
+            { num: "🏆", label: t("Profile.label2") },
+            { num: "💼", label: t("Profile.label3") },
           ].map((item, i) => (
             <div
               key={i}
@@ -135,25 +133,21 @@ export default function Profile() {
                 <Code className="w-6 h-6 text-blue-600 dark:text-blue-300" />
               </div>
               <h2 className="text-2xl font-bold text-gray-800 dark:text-slate-100">
-                Parcours Tech
+                {t("Profile.section1title")}
               </h2>
             </div>
             <p className="text-gray-700 dark:text-slate-200 leading-relaxed mb-4">
-              Étudiant en ingénierie informatique, passionné par le
-              développement web et l'IA. Spécialisé en React, Node.js et
-              technologies cloud.
+              {t("Profile.section1txt")}
             </p>
             <div className="flex flex-wrap gap-2">
-              {["React", "TypeScript", "Node.js", "Python", "AWS"].map(
-                (tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"
-                  >
-                    {tech}
-                  </span>
-                )
-              )}
+              {["React", "TypeScript", "Node.js", "Javascript"].map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
 
@@ -164,17 +158,16 @@ export default function Profile() {
                 <Award className="w-6 h-6 text-green-600 dark:text-green-300" />
               </div>
               <h2 className="text-2xl font-bold text-gray-800 dark:text-slate-100">
-                Carrière Sportive
+                {t("Profile.section2title")}
               </h2>
             </div>
             <p className="text-gray-700 dark:text-slate-200 leading-relaxed mb-4">
-              Athlète en canoë slalom depuis plus de 10 ans. Titres régionaux et
-              participations nationales. Le sport m'a forgé discipline et
-              résilience.
+              {t("Profile.section2txt")}
+              
             </p>
             <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-slate-300">
-              <span className="flex items-center">🏅 5 titres régionaux</span>
-              <span className="flex items-center">⏱️ 10+ ans d'expérience</span>
+              <span className="flex items-center">⏱️ {t("Profile.section2label2")}</span>
+              <span className="flex items-center">🏅 {t("Profile.section2label1")}</span>
             </div>
           </div>
 
@@ -185,18 +178,21 @@ export default function Profile() {
                 <Zap className="w-6 h-6 text-purple-600 dark:text-purple-300" />
               </div>
               <h2 className="text-2xl font-bold text-gray-800 dark:text-slate-100">
-                Entrepreneuriat
+                {t("Profile.section3title")}
               </h2>
             </div>
             <p className="text-gray-700 dark:text-slate-200 leading-relaxed mb-4">
-              Développement de projets innovants mêlant tech et sport. Objectif
-              : révolutionner l'entraînement sportif par la technologie.
+              Développement de projets innovants mêlant tech et sport. Objectif final
+              : révolutionner l'entraînement sportif par la technologie. status
+              de auto entrepreuneur depuis 2021 - participation a l'incubateur
+              ???
             </p>
             <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2 mb-2">
               <div className="bg-purple-500 h-2 rounded-full w-3/4"></div>
             </div>
-            <p className="text-sm text-gray-600 dark:text-slate-300">
-              Progression du projet : 75%
+            <p className="text-sm text-gray-600 dark:text-slate-300 italic">
+              Pas de projet Entrepreneuriat en cours pour le moment // en
+              attente de temps et d'opportunités
             </p>
           </div>
 
@@ -207,21 +203,19 @@ export default function Profile() {
                 <Heart className="w-6 h-6 text-pink-600 dark:text-pink-300" />
               </div>
               <h2 className="text-2xl font-bold text-gray-800 dark:text-slate-100">
-                Autres Passions
+                {t("Profile.section4title")}
               </h2>
             </div>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { icon: "👨‍👩‍👧‍👦", text: "Famille" },
-                { icon: "🎵", text: "Musique" },
-                { icon: "🎮", text: "Jeux vidéo" },
-                { icon: "🖼️", text: "Art" },
+                { icon: "👨‍👩‍👧‍👦", text: t("Profile.section4txt1") },
+                { icon: "🎵", text: t("Profile.section4txt2") },
+                { icon: "🏔️", text: t("Profile.section4txt3") },
+                { icon: "🖼️", text: t("Profile.section4txt4") },
               ].map((passion, index) => (
                 <div
                   key={index}
                   className="flex items-center space-x-2 p-3 bg-gray-100 border-1 border-gray-200 dark:bg-sky-950 dark:border-sky-800 rounded-xl"
-                  // className="flex items-center space-x-2 p-3 bg-[var(--color-bg)] dark:bg-[var(--color-bg-dark)]  rounded-xl"
-                  // className="flex items-center space-x-2 p-3 bg-gray-50 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-600 rounded-xl"
                 >
                   <span className="text-xl">{passion.icon}</span>
                   <span className="text-gray-700 dark:text-slate-200 font-medium">
