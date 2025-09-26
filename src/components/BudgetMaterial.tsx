@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Eye, List } from "lucide-react";
 import TooltipPoint from "../components/ToolTipPoint.tsx";
 
 // import { photos} from "../medias/databases/index-global.ts";
-// mettre dans inedx global 
-// mettre dans index de images aussi 
+// mettre dans inedx global
+// mettre dans index de images aussi
 import racerst from "../medias/images/budget/racerst.png";
 import kayakcrossdeck from "../medias/images/budget/KayakCross_spraydeck.png";
 import kayakcrosshelmet from "../medias/images/budget/kayakcross_helmet.png";
@@ -21,10 +21,22 @@ import canoeslalom from "../medias/images/budget/Foix_slalom.jpg";
 const BudgetMaterial = () => {
   const { t } = useTranslation();
   const [showDetailedView, setShowDetailedView] = useState(false);
-  
 
+  useEffect(() => {
+    photos.forEach((photo) => {
+      // Image principale
+      const img = new Image();
+      img.src = photo.src;
 
-  // mettre dans inedx global 
+      // Tooltips
+      photo.tooltips.forEach((tooltip) => {
+        const tipImg = new Image();
+        tipImg.src = tooltip.img;
+      });
+    });
+  }, []);
+
+  // mettre dans inedx global
   const photos = [
     {
       src: canoeslalom,
@@ -147,7 +159,6 @@ const BudgetMaterial = () => {
 
           {/* Equipment Content */}
           {!showDetailedView ? (
-           
             <div className="grid md:grid-cols-2 gap-8">
               {photos.map((photo, i) => (
                 <div

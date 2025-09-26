@@ -64,7 +64,8 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         /> */}
         <video
-          src="/videos/20240203_Reunion.mp4" // <- chemin public
+          src="/videos/20240203_Reunion.mp4"
+          ref={videoRef}
           autoPlay
           loop
           muted={!sound}
@@ -147,7 +148,7 @@ export default function Home() {
           className="fixed bottom-28 right-4 sm:right-8 z-30 animate-fade-in"
         >
           <div className="p-3 rounded-full bg-gray-800/90 dark:bg-slate-900/90 backdrop-blur-md border border-gray-700 dark:border-slate-700 hover:bg-gray-800 dark:hover:bg-slate-800 transition-all duration-300 hover:scale-110 text-white dark:text-slate-100">
-            <CircleChevronUp size={28} />
+            <CircleChevronUp size={23} />
           </div>
         </button>
       )}

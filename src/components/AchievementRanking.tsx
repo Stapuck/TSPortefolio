@@ -76,7 +76,8 @@ const AchievementRanking = () => {
       </div>
 
       {/* Rankings Flip Card */}
-      <div className="space-y-6">
+      {/* <div className="space-y-6"> */}
+        <div className="relative w-full min-h-[480px]  md:min-h-[420px]">
         <div className="flex items-center justify-center gap-3 mb-4">
           <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
            {t('AchievementR.worldrank')}
