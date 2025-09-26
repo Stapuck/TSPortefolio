@@ -108,9 +108,9 @@ export default function Profile() {
         {/* Stats rapides */}
         <div className="grid sm:grid-cols-3 gap-6 text-center">
           {[
-            { num: "8+", label: t("Profile.label1") },
-            { num: "🏆", label: t("Profile.label2") },
-            { num: "💼", label: t("Profile.label3") },
+            { num: "8+", label: t("Profile.statlabel1") },
+            { num: "🏆", label: t("Profile.statlabel2") },
+            { num: "💼", label: t("Profile.statlabel3") },
           ].map((item, i) => (
             <div
               key={i}
@@ -182,17 +182,13 @@ export default function Profile() {
               </h2>
             </div>
             <p className="text-gray-700 dark:text-slate-200 leading-relaxed mb-4">
-              Développement de projets innovants mêlant tech et sport. Objectif final
-              : révolutionner l'entraînement sportif par la technologie. status
-              de auto entrepreuneur depuis 2021 - participation a l'incubateur
-              ???
+              {t("Profile.section3txt1")}
             </p>
-            <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2 mb-2">
+            {/* <div className="w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2 mb-3">
               <div className="bg-purple-500 h-2 rounded-full w-3/4"></div>
-            </div>
+            </div> */}
             <p className="text-sm text-gray-600 dark:text-slate-300 italic">
-              Pas de projet Entrepreneuriat en cours pour le moment // en
-              attente de temps et d'opportunités
+              {t("Profile.section3txt2")}
             </p>
           </div>
 
