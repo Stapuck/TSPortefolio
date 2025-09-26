@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Sitemap pour aider les moteurs de recherche à indexer ton site
+Sitemap: https://www.terence.saramandif.com/sitemap.xml
