@@ -70,7 +70,7 @@ export default function Home() {
           loop
           muted={!sound}
           playsInline
-          preload="auto"
+          // preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Overlay */}
