@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-//  todo gerer les data ranger dans index global
+// import { projects } from "../medias/databases/index-global";
 
 
+//  todo mettre vrai projet index global
 const fakeProjects = [
   {
     id: 1,

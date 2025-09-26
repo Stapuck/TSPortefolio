@@ -21,6 +21,9 @@ export default function Blog() {
   }, []);
 
   const [filter, setFilter] = useState("all");
+  // const [specialnews, setSpecialNews] = useState(false);
+  const specialnews = false;
+  // todo : revoir avec papa pour automatiser le true ou false ? 
 
   const sortedArticles = [...articles].sort(
     (a, b) => new Date(b.date_en).getTime() - new Date(a.date_en).getTime()
@@ -49,8 +52,7 @@ export default function Blog() {
   // Récupérer le dernier article (si au moins 1 existe)
   const lastArticle = articlesOnly[0];
 
-
-  // todo : revoir agencementn 
+  // todo : revoir agencementn
   return (
     <div className="text-gray-800">
       <HeroSection currentPage={"blog"} />
@@ -65,6 +67,7 @@ export default function Blog() {
         </section>
 
         {/* Special News */}
+        {specialnews &&
         <section className="space-y-8 bg-yellow-50 p-6 rounded-2xl shadow-md">
           <h2 className="text-2xl font-bold text-center">
             {t("Blog.specialnews")}{" "}
@@ -91,6 +94,7 @@ export default function Blog() {
             </div>
           </div>
         </section>
+        }
 
         {/* Top Articles Sportifs */}
         <section className="space-y-8">
@@ -118,6 +122,7 @@ export default function Blog() {
                     src={a.image}
                     alt={lg === "fr" ? a.title_fr : a.title_en}
                     className="w-full md:w-1/2 h-64 object-cover rounded-2xl shadow-md"
+                    loading="lazy"
                   />
                   <div className="md:w-1/2 space-y-3">
                     <h3 className="text-xl font-semibold">
@@ -148,7 +153,7 @@ export default function Blog() {
           <h2 className="text-2xl font-bold text-center">
             {t("Blog.lastarticle")}
           </h2>
-          {lastArticle && (
+          {lastArticle ? (
             <div className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-xl transition">
               <img
                 src={lastArticle.image}
@@ -175,6 +180,10 @@ export default function Blog() {
                 </a>
               </div>
             </div>
+          ) : (
+            <div className="text-center py-6 px-4 bg-gray-100 border border-gray-300 rounded-lg text-gray-700 font-medium shadow-sm">
+              {t('Blog.nomedia')}
+            </div>
           )}
         </section>
 
@@ -198,8 +207,11 @@ export default function Blog() {
                   setFilter(f.key);
                   setCurrentPage(1);
                 }}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-                  filter === f.key
+                disabled={f.nbr === 0}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition } ${
+                  f.nbr === 0
+                    ? "bg-gray-300 text-gray-400 cursor-not-allowed" // style pour disabled
+                    : filter === f.key
                     ? "bg-blue-600 text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
@@ -210,7 +222,6 @@ export default function Blog() {
           </div>
 
           {/* Grille globale avec pagination */}
-
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {paginatedArticles.map((a, idx) => (
               <div
@@ -259,40 +270,6 @@ export default function Blog() {
               </div>
             ))}
           </div>
-
-          {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {paginatedArticles.map((a) => (
-              <div
-                key={a.id}
-                className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-xl transition"
-              >
-                <img
-                  src={a.image}
-                  alt={a.title_fr}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-2">
-                    {lg === "fr" ? a.title_fr : a.title_en}
-                  </h3>
-                  <p className="text-sm text-gray-500 mb-2">
-                    {lg === "fr" ? a.date_fr : a.date_en}
-                  </p>
-                  <p className="text-gray-700 mb-4">
-                    {lg === "fr" ? a.description_fr : a.description_en}
-                  </p>
-                  <a
-                    href={a.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-600 font-medium hover:underline"
-                  >
-                    {t("Blog.readmore")}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div> */}
 
           {/* Pagination */}
           {totalPages > 1 && (
@@ -364,12 +341,9 @@ export default function Blog() {
   );
 }
 
-
-
 // test de design
-// repicker le design pour les images 
-
-
+// repicker le design pour les images
+//garder le truc de filtre ==0 alors disable
 
 // import { useEffect, useState } from "react";
 // import HeroSection from "../components/HeroSection.tsx";
