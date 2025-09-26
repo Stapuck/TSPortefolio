@@ -123,7 +123,7 @@ export const next_date: EventType[] = [
     type_event_fr: "diplome",
 
     photobg:
-      "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
+      "https://la-rochelle.cesi.fr/wp-content/uploads/sites/12/2024/04/RDD-LR-2024-1.jpg",
   },
   {
     date: "September 11, 2026 08:00",
@@ -203,6 +203,22 @@ export const next_date: EventType[] = [
   },
 
   // 2025
+
+  {
+    lieu_fr: "Toulouse, France",
+    lieu_en: "Toulouse, France",
+    date: "November 02, 2025  8:00",
+    date_fin: "November 02, 2025 12:00",
+    event_en: "2025 Toulouse Marathon",
+    event_fr: "Marathon de Toulouse 2025",
+    type: "other",
+    type_event_en: "Course",
+    type_event_fr: "Race",
+    // bibs: "651",
+    // link_result: "",
+    photobg:
+      "https://tse1.mm.bing.net/th/id/OIP.ld8GvX4Lf4y3PbUDLG_IOAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3",
+  },
   {
     lieu_fr: "Pula, Croatie",
     lieu_en: "Pula, Croatia",
@@ -215,8 +231,6 @@ export const next_date: EventType[] = [
     type_event_fr: "Race",
     bibs: "651",
     link_result: "https://www.utrka.com/utrke/xica/2025/rezultati/",
-    photobg:
-      "https://images.ahotu.com/r9urrd4o8fattlkye8ffwml2tira?w=1920&q=100&f=webp",
   },
   {
     date: "August 29, 2025 08:00",
@@ -241,8 +255,6 @@ export const next_date: EventType[] = [
     type: "sport",
     type_event_en: "training",
     type_event_fr: "entrainement",
-    photobg:
-      "https://sup-passion.com/wp-content/uploads/2016/01/Stade_dEaux_Vives_Pau_Pyr%C3%A9n%C3%A9es.jpg",
   },
   {
     date: "July 08, 2025 08:00",
@@ -267,9 +279,6 @@ export const next_date: EventType[] = [
   //   type: "pro",
   //   type_event_en: "internship",
   //   type_event_fr: "stage",
-
-  //   photobg:
-  //     "https://images.pexels.com/photos/30303725/pexels-photo-30303725.jpeg",
   // },
   {
     date: "June 13, 2025 08:00",
@@ -1517,7 +1526,7 @@ export const articles = [
 ];
 
 //sportobjectives
-
+// todo : remettre dans le composant 
 export const sportobjectives = [
   {
     icon: Target,
