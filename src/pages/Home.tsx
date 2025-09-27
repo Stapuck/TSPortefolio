@@ -11,6 +11,9 @@ import {
 } from "lucide-react";
 import Countdown from "../components/Countdown";
 
+//todo : mettre une image en attendant que la video fonctionne 
+
+
 export default function Home() {
   const { t } = useTranslation();
 

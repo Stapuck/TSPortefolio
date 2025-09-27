@@ -8,7 +8,7 @@ const Experiences = () => {
   const { t } = useTranslation();
 
   const [lang, setLang] = useState(initialLang);
-  const [selected, setSelected] = useState(experiences[0]);
+  // const [selected, setSelected] = useState(experiences[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -28,49 +28,33 @@ const Experiences = () => {
   }, []);
 
 
-
-  // todo : revoir si changement de carte au click ou à la nav. 
-  // Fonctions pour le slider vertical
-  const itemsPerPage = 4;
+  const itemsPerPage = 3 ;
   const maxIndex = Math.max(0, experiences.length - itemsPerPage);
   const lastIndex = experiences.length - 1;
-
-  // Scroll up (vers le haut)
-  const scrollUp = () => {
-    setCurrentIndex((prev) => {
-      const newIndex = Math.max(0, prev - 1);
-      // setSelected(experiences[newIndex]);
-      return newIndex;
-    });
-  };
-
-  // Scroll down (vers le bas)
-  const scrollDown = () => {
-    setCurrentIndex((prev) => {
-      const newIndex = Math.min(prev + 1, lastIndex);
-      // setSelected(experiences[newIndex]);
-      return newIndex;
-    });
-  };
-
-  // Aller au début
-  const goToStart = () => {
-    setCurrentIndex(0);
-    // setSelected(experiences[0]);
-  };
-
-  // Aller à la fin
-  const goToEnd = () => {
-    // const newIndex = Math.max(0, lastIndex - (itemsPerPage - 1)); // scroll pour que le dernier élément soit visible
-    const newIndex = Math.max(0, maxIndex); // scroll pour que le dernier élément soit visible
-    setCurrentIndex(newIndex);
-    // setSelected(experiences[lastIndex]);
-  };
 
   const visibleExperiences = experiences.slice(
     currentIndex,
     currentIndex + itemsPerPage
   );
+  const [selected, setSelected] = useState(visibleExperiences[0]);
+
+
+  useEffect(() => {
+  setSelected(visibleExperiences[0]);
+}, [currentIndex]);
+
+  // Scroll up (vers le haut)
+  const scrollUp = () => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  };
+  // Scroll down (vers le bas)
+  const scrollDown = () => {
+    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex + itemsPerPage -1 ));
+  };
+  // Aller au début
+  const goToStart = () => setCurrentIndex(0);
+  // Aller à la fin
+  const goToEnd = () => setCurrentIndex(maxIndex + itemsPerPage -1);
 
   // Récupération du bon texte en fonction de la langue
   const getTitle = (
@@ -93,6 +77,7 @@ const Experiences = () => {
         ? exp.details_en
         : exp.details_fr
       : exp.details_fr;
+
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-8">
@@ -118,7 +103,8 @@ const Experiences = () => {
                 <div className="flex flex-col space-y-2">
                   {/* Aller au début */}
                   <button
-                    onClick={goToStart} disabled={currentIndex === 0}
+                    onClick={goToStart}
+                    disabled={currentIndex === 0}
                     className="px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   >
                     <svg
@@ -138,7 +124,8 @@ const Experiences = () => {
 
                   {/* Scroll Up */}
                   <button
-                    onClick={scrollUp} disabled={currentIndex === 0}
+                    onClick={scrollUp}
+                    disabled={currentIndex === 0}
                     className="py-1 px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   >
                     <svg
@@ -158,7 +145,8 @@ const Experiences = () => {
 
                   {/* Scroll Down */}
                   <button
-                    onClick={scrollDown} disabled={currentIndex === lastIndex}
+                    onClick={scrollDown}
+                    disabled={currentIndex === lastIndex}
                     className="py-1 px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   >
                     <svg
@@ -178,7 +166,8 @@ const Experiences = () => {
 
                   {/* Aller à la fin */}
                   <button
-                    onClick={goToEnd} disabled={currentIndex >= maxIndex}
+                    onClick={goToEnd}
+                    disabled={currentIndex >= maxIndex}
                     className=" px-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   >
                     <svg
@@ -434,7 +423,7 @@ const Experiences = () => {
                   {getTitle(selected)}
                 </div>
                 <div className="text-sm text-gray-600 dark:text-slate-400">
-                  {getEtab(selected)} • {getPeriode(selected)}
+               {getEtab(selected)}    {/* • {getPeriode(selected)} */}
                 </div>
               </div>
               <div
@@ -487,7 +476,7 @@ const Experiences = () => {
                             {getPeriode(exp)}
                           </div>
                         </div>
-                        <span
+                        {/* <span
                           className={`inline-block px-2 py-1 text-xs font-medium rounded-full uppercase tracking-wide ${
                             exp.type === "formation"
                               ? selected === exp
@@ -501,7 +490,7 @@ const Experiences = () => {
                           {exp.type === "formation"
                             ? t("Experience.formation")
                             : t("Experience.pro")}
-                        </span>
+                        </span> */}
                       </div>
                     </button>
                   ))}

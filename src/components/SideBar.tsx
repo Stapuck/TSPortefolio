@@ -1,75 +1,3 @@
-// import { useState, useEffect, useRef } from "react";
-// import { Link, useLocation } from "react-router-dom";
-// import {
-//   Home,
-//   Dumbbell,
-//   Briefcase,
-//   Mail,
-//   Newspaper,
-//   Settings,
-//   CircleUser,
-//   X,
-// } from "lucide-react";
-// import { useTranslation } from "react-i18next";
-
-// export default function Sidebar() {
-//   const { pathname } = useLocation();
-//   const [open, setOpen] = useState(false); // pour mobile
-//   const [settingsOpen, setSettingsOpen] = useState(false);
-//   const [darkMode, setDarkMode] = useState(false);
-
-//   const menuRef = useRef<HTMLDivElement>(null);
-//   const settingsRef = useRef<HTMLDivElement>(null);
-//   const { i18n, t } = useTranslation();
-
-//   const links = [
-//     { to: "/", label: t("SideBar.home"), icon: <Home size={24} /> },
-//     { to: "/pro", label: t("SideBar.pro"), icon: <Briefcase size={24} /> },
-//     { to: "/sport", label: t("SideBar.sport"), icon: <Dumbbell size={24} /> },
-//     { to: "/news", label: t("SideBar.news"), icon: <Newspaper size={24} /> },
-//     {
-//       to: "/profile",
-//       label: t("SideBar.profile"),
-//       icon: <CircleUser size={24} />,
-//     },
-//     { to: "/contact", label: t("SideBar.contact"), icon: <Mail size={24} /> },
-//   ];
-
-//   // Fermer le menu si on clique en dehors (mobile et paramètres)
-//   useEffect(() => {
-//     const handleClickOutside = (event: any) => {
-//       if (menuRef.current && !menuRef.current.contains(event.target)) {
-//         setOpen(false);
-//       }
-//       if (settingsRef.current && !settingsRef.current.contains(event.target)) {
-//         setSettingsOpen(false);
-//       }
-//     };
-//     document.addEventListener("mousedown", handleClickOutside);
-//     return () => document.removeEventListener("mousedown", handleClickOutside);
-//   }, []);
-
-//   useEffect(() => {
-//   const savedTheme = localStorage.getItem("theme");
-//   if (savedTheme === "dark") {
-//     setDarkMode(true);
-//     document.documentElement.classList.add("dark");
-//   }
-// }, []);
-
-// useEffect(() => {
-//   localStorage.setItem("theme", darkMode ? "dark" : "light");
-//   document.documentElement.classList.toggle("dark", darkMode);
-// }, [darkMode]);
-
-//   const changeLanguage = (code: string) => {
-//     i18n.changeLanguage(code);
-//     document.documentElement.lang = code;
-//   };
-
-//   // Trouver le lien actif (page courante)
-//   const activeLink = links.find((link) => link.to === pathname) || links[0];
-
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -89,7 +17,6 @@ export default function Sidebar() {
   const [open, setOpen] = useState(false); // pour mobile
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  // const [showSidebar, setShowSidebar] = useState(pathname !== "/"); // invisible sur home par défaut
 
   const menuRef = useRef<HTMLDivElement>(null);
   const settingsRef = useRef<HTMLDivElement>(null);
@@ -108,52 +35,40 @@ export default function Sidebar() {
     { to: "/contact", label: t("SideBar.contact"), icon: <Mail size={24} /> },
   ];
 
-  // Fermer le menu si on clique en dehors
+  // Fermer le menu si on clique en dehors (mobile et paramètres)
   useEffect(() => {
     const handleClickOutside = (event: any) => {
-      if (menuRef.current && !menuRef.current.contains(event.target))
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
         setOpen(false);
-      if (settingsRef.current && !settingsRef.current.contains(event.target))
+      }
+      if (settingsRef.current && !settingsRef.current.contains(event.target)) {
         setSettingsOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Scroll pour afficher la sidebar sur home
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (pathname === "/" && window.scrollY >= window.innerHeight) {
-  //       setShowSidebar(true);
-  //     } else if (pathname === "/") {
-  //       setShowSidebar(false);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [pathname]);
-
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    setDarkMode(true);
+    document.documentElement.classList.add("dark");
+  }
+}, []);
 
-  useEffect(() => {
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-    document.documentElement.classList.toggle("dark", darkMode);
-  }, [darkMode]);
+useEffect(() => {
+  localStorage.setItem("theme", darkMode ? "dark" : "light");
+  document.documentElement.classList.toggle("dark", darkMode);
+}, [darkMode]);
 
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
     document.documentElement.lang = code;
   };
 
+  // Trouver le lien actif (page courante)
   const activeLink = links.find((link) => link.to === pathname) || links[0];
-
-  // if (!showSidebar) return null; // <-- on ne rend rien si sidebar invisible
 
   return (
     <>

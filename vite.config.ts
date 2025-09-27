@@ -8,6 +8,6 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: 8000, //4173
-    allowedHosts: ['.koyeb.app', 'terence.saramandif.com'] 
+    allowedHosts: ['.koyeb.app', 'terence.saramandif.com', 'localhost'] 
   }
 })
