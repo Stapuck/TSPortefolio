@@ -9,6 +9,7 @@ import { skills } from "../medias/databases/index-global";
 import Projects from "../components/Projects.tsx";
 // import { Mail } from "lucide-react";
 import { LuLinkedin } from "react-icons/lu";
+import Certifications from "../components/Certifications.tsx";
 
 export default function Pro() {
   const { t } = useTranslation();
@@ -28,7 +29,8 @@ export default function Pro() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex justify-center dark:text-slate-100">
             {t("Pro.background")}
           </h2>
-          <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6 "></div>
+          <p className="max-w-4xl mx-auto sm:leading-relaxed flex justify-center text-gray-800 dark:text-slate-100">{t("Pro.backgroundtxt")}</p>
           <Experiences />
         </section>
 
@@ -44,9 +46,9 @@ export default function Pro() {
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed dark:text-slate-200">
             {t("Pro.certificationstxt")}
           </p>
+          <Certifications/>
 
-          {/* todo : voir pour faire un composant  */}
-        {/* mettre certif green dev et nasa, cisco, ??? en passé d'autre ,  */}
+          {/* here component certification  */}
         </section>
 
         {/* Projects */}
@@ -70,13 +72,6 @@ export default function Pro() {
 
               {/* Boutons de contact */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                {/* <a
-                  href="mailto:terence.saramandif@email.com"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  <Mail className="mr-2" size={20} />
-                  {t("Contact.sendemail")}
-                </a> */}
                 <a
                   href="https://linkedin.com/in/terence-saramandif"
                   target="_blank"
@@ -92,7 +87,6 @@ export default function Pro() {
                 {" "}
                 {t("Pro.downloadcv")}{" "}
               </p>
-              {/* Bouton de téléchargement du CV */}
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <DownloadButton title="CV" description="CV" fileChoice={"CV"} />
               </div>
@@ -100,7 +94,6 @@ export default function Pro() {
           </div>
         </section>
 
-        {/* Petit texte informatif ou citation */}
         <div className="mt-6 text-center text-gray-700 italic dark:text-slate-200">
           {t("Pro.citation")}
         </div>

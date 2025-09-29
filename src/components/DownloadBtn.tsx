@@ -3,8 +3,8 @@ import { Download, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 // Import des PDF
-import pdfCV_FR from "../medias/pdfs/TS_CV_FR.pdf";
-import pdfCV_EN from "../medias/pdfs/TS_CV_EN.pdf";
+import pdfCV_FR from "../medias/pdfs/TS_CV-FR.pdf";
+import pdfCV_EN from "../medias/pdfs/TS_CV-EN.pdf";
 import pdfBudget_FR from "../medias/pdfs/Receipt_1068-175-144-en.pdf";
 import pdfBudget_EN from "../medias/pdfs/Terence_Saramandif_Flight_Pula-en.pdf";
 import pdfSponsor_FR from "../medias/pdfs/DossierSponsoring_22092025_TSFRV3.pdf";

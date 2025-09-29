@@ -305,7 +305,6 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/african-reference-race",
     type_event_en: "continental",
     type_event_fr: "course continentale",
-    // todo : revoir pour type_event
   },
   {
     date: "June 06, 2025 08:00",
@@ -371,7 +370,6 @@ export const next_date: EventType[] = [
     event_fr: "Championnat d'Afrique &Qualification Olympique",
     type_event_en: "continental",
     type_event_fr: "course continentale",
-    //todo : revoir event_type
   },
   // 2023
   {
@@ -685,7 +683,6 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-sprint-olympics/buenos-aires-2018/results",
     type_event_en: "olympics",
     type_event_fr: "olympiques",
-    // todo : revoir pour type_event
   },
   {
     date: "July 23, 2018 08:00",
@@ -697,7 +694,6 @@ export const next_date: EventType[] = [
     event_fr: "Jeux African de la jeunesse",
     type_event_en: "continental",
     type_event_fr: "course continentale",
-    //todo : revoir pour type_event
   },
   {
     date: "July 17, 2018 08:00",
@@ -1526,7 +1522,7 @@ export const articles = [
 ];
 
 //sportobjectives
-// todo : remettre dans le composant 
+// todo : revoir en fonction de public remettre dans le composant, parce que import de icone qui ne vont pas dans le public 
 export const sportobjectives = [
   {
     icon: Target,
@@ -1694,7 +1690,7 @@ export const experiences = [
     periode_fr: "04/2023 - 07/2023",
     periode_en: "04/2023 - 07/2023",
     details_fr: [
-      "Récolte et analysede donnée de sportif biologique et technique (nageur, kayakiste)",
+      "Récolte et analyse de donnée de sportif biologique et technique (nageur, kayakiste)",
       "Analyse de données sur l’explicabilité des performances dans le sport",
       "Relation client pour améliorer l’utilisation des données collectées",
     ],
@@ -1706,8 +1702,8 @@ export const experiences = [
     type: "experiencepro",
   },
   {
-    etablissement_fr: "Hermès, Paris ",
-    etablissement_en: "Hermès, Paris",
+    etablissement_fr: "Acteur du Luxe Français , Paris ",
+    etablissement_en: "French Luxury Industry Actor, Paris",
     title_fr: "Prestataire de service, Développeur Full-stack",
     title_en: "Full-stack Developer Contractor",
     periode_fr: "04/2023 - 07/2023",
@@ -1715,16 +1711,14 @@ export const experiences = [
     details_fr: [
       "Développement Web et Application de bureau",
       "Travail au sein d’une équipe de développeurs expérimentés",
-      "Apprentissage : développeur IHM (Angular & Node.js)",
-      "Stagiaire : projet de gestion de données",
-      "Prestataire : développeur full-stack (PHP Symfony)",
+      "Projet de developpement avec gestion de données",
+      "Développeur full-stack (PHP Symfony)",
     ],
     details_en: [
       "Web and desktop application development",
       "Working within a team of experienced developers",
-      "Learning: UI Developer (Angular & Node.js)",
-      "Intern: data management project",
-      "Contractor: full-stack developer (PHP Symfony)",
+      "Project developpement with data management",
+      "Full-stack developer (PHP Symfony)",
     ],
     type: "experiencepro",
   },

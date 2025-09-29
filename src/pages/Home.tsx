@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Countdown from "../components/Countdown";
 
+
 export default function Home() {
   const { t } = useTranslation();
 

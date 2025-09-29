@@ -103,9 +103,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ currentPage }) => {
         </div>
 
         <div className="relative container mx-auto px-6 py-6 text-center">
-          <p className="text-xl md:text-2xl mb-6">
+          {/* <p className="text-xl md:text-2xl mb-6">
             {t("HeroSection.blogtitle")}
-          </p>
+          </p> */}
           <div className="flex justify-center items-center space-x-6 text-gray-200 dark:text-gray-300">
             <div className="flex items-center space-x-2">
               <Tv size={20} />

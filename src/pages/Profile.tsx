@@ -84,6 +84,9 @@ export default function Profile() {
             <p className="text-gray-600 dark:text-slate-200 mt-2">
               {t('Profile.txtintro')}
             </p>
+
+        {/*  todo : revoir le darkmode */}
+
             <div className="flex justify-center items-center space-x-6 text-sm text-gray-500 mt-3">
               <div className="flex items-center space-x-1 dark:text-slate-100">
                 <MapPin className="w-4 h-4" />
@@ -106,6 +109,7 @@ export default function Profile() {
         </div>
 
         {/* Stats rapides */}
+        {/*  todo : revoir le darkmode */}
         <div className="grid sm:grid-cols-3 gap-6 text-center">
           {[
             { num: "8+", label: t("Profile.statlabel1") },
@@ -127,7 +131,7 @@ export default function Profile() {
         {/* Sections principales */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Parcours Tech */}
-          <div className="bg-white dark:bg-sky-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-green-300 dark:bg-green-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-xl mr-4">
                 <Code className="w-6 h-6 text-blue-600 dark:text-blue-300" />
@@ -143,7 +147,7 @@ export default function Profile() {
               {["React", "TypeScript", "Node.js", "Javascript"].map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"
+                  className="px-3 py-1 bg-blue-50 dark:bg-blue-900/60 text-blue-700 dark:text-blue-200 rounded-full text-sm font-medium"
                 >
                   {tech}
                 </span>
@@ -152,7 +156,7 @@ export default function Profile() {
           </div>
 
           {/* Carrière sportive */}
-          <div className="bg-white dark:bg-sky-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-blue-300 dark:bg-blue-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-green-100 dark:bg-green-900 rounded-xl mr-4">
                 <Award className="w-6 h-6 text-green-600 dark:text-green-300" />
@@ -172,7 +176,7 @@ export default function Profile() {
           </div>
 
           {/* Entrepreneuriat */}
-          <div className="bg-white dark:bg-sky-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-pink-300 dark:bg-pink-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-purple-100 dark:bg-purple-900 rounded-xl mr-4">
                 <Zap className="w-6 h-6 text-purple-600 dark:text-purple-300" />
@@ -193,7 +197,7 @@ export default function Profile() {
           </div>
 
           {/* Passions */}
-          <div className="bg-white dark:bg-sky-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-purple-300 dark:bg-purple-900/70 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-pink-100 dark:bg-pink-900 rounded-xl mr-4">
                 <Heart className="w-6 h-6 text-pink-600 dark:text-pink-300" />
@@ -211,7 +215,7 @@ export default function Profile() {
               ].map((passion, index) => (
                 <div
                   key={index}
-                  className="flex items-center space-x-2 p-3 bg-gray-100 border-1 border-gray-200 dark:bg-sky-950 dark:border-sky-800 rounded-xl"
+                  className="flex items-center space-x-2 p-3 bg-gray-100 border-1 border-gray-200 dark:bg-sky-900/60 dark:border-sky-800 rounded-xl"
                 >
                   <span className="text-xl">{passion.icon}</span>
                   <span className="text-gray-700 dark:text-slate-200 font-medium">

@@ -12,7 +12,7 @@ import BudgetMaterial from "../components/BudgetMaterial.tsx";
 import BudgetEvent from "../components/BudgetEvent.tsx";
 import BudgetRecap from "../components/BudgetRecap.tsx";
 
-import LogoSliders from "../components/LogoSliders.tsx";
+import SponsorSlider from "../components/SponsorSlider.tsx";
 
 //faire un composant encore
 
@@ -36,67 +36,6 @@ export default function Sport() {
     }
   }, [location]);
 
-  const logos = [
-    {
-      id: 1,
-      name_fr: "Nike",
-      name_en: "Nike",
-      description_fr: "Marque de vêtements et équipements sportifs",
-      description_en: "Sportswear and equipment brand",
-      price: "€12 000",
-      logo: "https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg",
-      date: "2021 - 2023",
-      url : "", 
-    },
-    {
-      id: 2,
-      name_fr: "Adidas",
-      name_en: "Adidas",
-      description_fr: "Entreprise allemande de vêtements de sport",
-      description_en: "German sportswear company",
-      price: "€10 000",
-      logo: "https://images.pexels.com/photos/20772146/pexels-photo-20772146.jpeg",
-      date: "2021 - Present",
-      url : "", 
-
-    },
-    {
-      id: 3,
-      name_fr: "Burger King",
-      name_en: "Burger King",
-      description_fr: "Chaîne de restauration rapide",
-      description_en: "Fast food restaurant chain",
-      price: "€8 000",
-      logo: "https://images.pexels.com/photos/30830193/pexels-photo-30830193.jpeg",
-      date: "2021 - Present",
-      url : "", 
-
-    },
-    {
-      id: 4,
-      name_fr: "FedEx",
-      name_en: "FedEx",
-      description_fr: "Entreprise de logistique et transport express",
-      description_en: "Express shipping and logistics company",
-      price: "€9 500",
-      logo: "https://images.pexels.com/photos/20584482/pexels-photo-20584482.jpeg",
-      date: "2021 - Present",
-      url : "", 
-
-    },
-    {
-      id: 5,
-      name_fr: "Quiksilver",
-      name_en: "Quiksilver",
-      description_fr: "Marque de surf et sports de glisse",
-      description_en: "Surf and board sports brand",
-      price: "€7 500",
-      logo: "https://images.pexels.com/photos/0584483/pexels-photo-1459393.jpeg",
-      date: "2021 - Present",
-      url : "", 
-
-    },
-  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -118,7 +57,7 @@ export default function Sport() {
   }, []);
 
  
-  { //todo : revoir avec papa 
+  {  
     /* mettre lunaar, safran, val d'indre, lycée grandmont, pole de tours  ? revori avec parent */
   }
   {
@@ -309,14 +248,11 @@ export default function Sport() {
         <section className="bg-sky-100 dark:bg-sky-900 py-8 rounded-3xl">
           <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
             {t("Sport.join")}
-            {/* todo : faire partie sponsor ou participateur de l'aventure // Partenaire de l'aventure Coin Partenaire */}
           </h3>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
           <div className="bg-sky-100 dark:bg-sky-900 py-12 overflow-hidden rounded-3xl">
-            <LogoSliders items={logos} speed={30} />
-            {/* todo revoir parce que pas infini  */}
-            {/* ask code to louis */}
+            <SponsorSlider/>
           </div>
         </section>
 
