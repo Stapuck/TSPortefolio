@@ -305,7 +305,6 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-durgell-2025/african-reference-race",
     type_event_en: "continental",
     type_event_fr: "course continentale",
-    // todo : revoir pour type_event
   },
   {
     date: "June 06, 2025 08:00",
@@ -371,7 +370,6 @@ export const next_date: EventType[] = [
     event_fr: "Championnat d'Afrique &Qualification Olympique",
     type_event_en: "continental",
     type_event_fr: "course continentale",
-    //todo : revoir event_type
   },
   // 2023
   {
@@ -685,7 +683,6 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-sprint-olympics/buenos-aires-2018/results",
     type_event_en: "olympics",
     type_event_fr: "olympiques",
-    // todo : revoir pour type_event
   },
   {
     date: "July 23, 2018 08:00",
@@ -697,7 +694,6 @@ export const next_date: EventType[] = [
     event_fr: "Jeux African de la jeunesse",
     type_event_en: "continental",
     type_event_fr: "course continentale",
-    //todo : revoir pour type_event
   },
   {
     date: "July 17, 2018 08:00",
@@ -1526,7 +1522,7 @@ export const articles = [
 ];
 
 //sportobjectives
-// todo : revoir en fonction de public remettre dans le composant 
+// todo : revoir en fonction de public remettre dans le composant, parce que import de icone qui ne vont pas dans le public 
 export const sportobjectives = [
   {
     icon: Target,

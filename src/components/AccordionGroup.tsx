@@ -7,6 +7,8 @@ const AccordionGroup = () => {
   const initialLang = document.documentElement.lang || "fr";
   const { t } = useTranslation();
 
+
+  // todo : revoir le darkmode
   return (
     <div className="max-w-4xl mx-auto bg-sky-100 dark:bg-sky-900 py-2 rounded-3xl">
       <div className="text-center my-3">
