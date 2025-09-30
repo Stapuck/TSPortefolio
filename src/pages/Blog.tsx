@@ -49,7 +49,6 @@ export default function Blog() {
   // Récupérer le dernier article (si au moins 1 existe)
   const lastArticle = articlesOnly[0];
 
-  // todo : revoir darkmode ( red & green)
   return (
     <div className="text-gray-800">
       <HeroSection currentPage={"blog"} />

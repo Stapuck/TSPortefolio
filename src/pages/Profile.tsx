@@ -69,36 +69,34 @@ export default function Profile() {
         </div> */}
 
         <div className="flex flex-col md:flex-row items-center md:items-center md:space-x-10 mt-20">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 Z-10">
             <img
               src={pp2}
               alt="Photo de profil"
-              className="w-64 h-64 rounded-full object-cover shadow-lg border-4 border-slate-400 dark:border-sky-600/80"
+              className="w-64 h-64 rounded-full object-cover shadow-lg border-4 border-sky-400 dark:border-gray-900/60 "
             />
           </div>
 
-          <div className="mt-8 md:mt-0  flex flex-col items-center text-center bg-white dark:bg-sky-900/80 rounded-2xl px-8 py-6 shadow-lg">
-            <h1 className="text-3xl font-bold dark:text-white">
+          <div className="mt-8 md:mt-0 flex flex-col items-center text-center bg-white dark:bg-gray-900/60 rounded-2xl px-8 py-6 shadow-md shadow-black/30 dark:shadow-sky-600/80 ">
+            <h1 className="text-3xl font-bold dark:text-gray-100 text-gray-800">
               Terence SARAMANDIF
             </h1>
-            <p className="text-gray-600 dark:text-slate-200 mt-2">
-              {t('Profile.txtintro')}
+            <p className="dark:text-gray-300 text-gray-700 mt-2">
+              {t("Profile.txtintro")}
             </p>
 
-        {/*  todo : revoir le darkmode */}
-
-            <div className="flex justify-center items-center space-x-6 text-sm text-gray-500 mt-3">
-              <div className="flex items-center space-x-1 dark:text-slate-100">
+            <div className="flex justify-center items-center space-x-6 text-sm text-gray-800 dark:text-gray-400 mt-3">
+              <div className="flex items-center space-x-1 text-gray-800 dark:text-gray-300">
                 <MapPin className="w-4 h-4" />
                 <span>Pau, France</span>
               </div>
-              <div className="flex items-center space-x-1 dark:text-slate-100">
+              <div className="flex items-center space-x-1 text-gray-800 dark:text-gray-300">
                 <Calendar className="w-4 h-4" />
                 <span>
-                  {years.toFixed(8)} {t("Profile.years")}
+                  &{years.toFixed(8)} {t("Profile.years")}
                 </span>
               </div>
-              <div className="flex items-center space-x-1 dark:text-slate-100">
+              <div className="flex items-center space-x-1 text-gray-800 dark:text-gray-300">
                 <Globe className="w-4 h-4" />
                 <span>
                   {t("Profile.french")}, {t("Profile.english")}
@@ -109,7 +107,6 @@ export default function Profile() {
         </div>
 
         {/* Stats rapides */}
-        {/*  todo : revoir le darkmode */}
         <div className="grid sm:grid-cols-3 gap-6 text-center">
           {[
             { num: "8+", label: t("Profile.statlabel1") },
@@ -118,7 +115,7 @@ export default function Profile() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-white dark:bg-sky-900/80 shadow-md dark:shadow-slate-800/70 rounded-2xl p-6 hover:shadow-xl transition"
+              className="bg-sky-100 dark:bg-gray-900/60 shadow-md dark:shadow-sky-600/80 rounded-2xl p-6 hover:shadow-lg transition"
             >
               <p className="font-bold text-2xl dark:text-white">{item.num}</p>
               <p className="text-gray-600 dark:text-slate-200 mt-1">
@@ -131,7 +128,7 @@ export default function Profile() {
         {/* Sections principales */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Parcours Tech */}
-          <div className="bg-green-300 dark:bg-green-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-green-300 dark:bg-green-900/80 rounded-3xl p-8 shadow-md hover:shadow-lg dark:shadow-sky-700/90 transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-xl mr-4">
                 <Code className="w-6 h-6 text-blue-600 dark:text-blue-300" />
@@ -156,7 +153,7 @@ export default function Profile() {
           </div>
 
           {/* Carrière sportive */}
-          <div className="bg-blue-300 dark:bg-blue-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-blue-300 dark:bg-blue-900/80 rounded-3xl p-8 shadow-md hover:shadow-lg dark:shadow-sky-700/90 transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-green-100 dark:bg-green-900 rounded-xl mr-4">
                 <Award className="w-6 h-6 text-green-600 dark:text-green-300" />
@@ -167,16 +164,19 @@ export default function Profile() {
             </div>
             <p className="text-gray-700 dark:text-slate-200 leading-relaxed mb-4">
               {t("Profile.section2txt")}
-              
             </p>
             <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-slate-300">
-              <span className="flex items-center">⏱️ {t("Profile.section2label2")}</span>
-              <span className="flex items-center">🏅 {t("Profile.section2label1")}</span>
+              <span className="flex items-center">
+                ⏱️ {t("Profile.section2label2")}
+              </span>
+              <span className="flex items-center">
+                🏅 {t("Profile.section2label1")}
+              </span>
             </div>
           </div>
 
           {/* Entrepreneuriat */}
-          <div className="bg-pink-300 dark:bg-pink-900/80 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-pink-300 dark:bg-pink-900/80 rounded-3xl p-8 shadow-md hover:shadow-lg dark:shadow-sky-700/90 transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-purple-100 dark:bg-purple-900 rounded-xl mr-4">
                 <Zap className="w-6 h-6 text-purple-600 dark:text-purple-300" />
@@ -197,7 +197,7 @@ export default function Profile() {
           </div>
 
           {/* Passions */}
-          <div className="bg-purple-300 dark:bg-purple-900/70 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="bg-purple-300 dark:bg-purple-900/70 rounded-3xl p-8 shadow-lg hover:shadow-xl dark:shadow-sky-700/90 transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="p-3 bg-pink-100 dark:bg-pink-900 rounded-xl mr-4">
                 <Heart className="w-6 h-6 text-pink-600 dark:text-pink-300" />

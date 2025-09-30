@@ -101,8 +101,8 @@ const Contact: React.FC = () => {
       title_en: "Localisation",
       value_fr: "Pula, Istrie, Croatie",
       value_en: "Pula, Istrie, Croatie",
-      description_fr: "Base actuelle pour mes entraînements",
-      description_en: "Current base for my training",
+      description_fr: "Base actuelle pour ma mobilité ",
+      description_en: "Current base for my 4th year internship",
     },
     {
       icon: Clock,
@@ -110,7 +110,6 @@ const Contact: React.FC = () => {
       title_en: "Timezone",
       value_fr: "CET (UTC+1)",
       value_en: "CET (UTC+1)",
-      // description: "Heure de référence pour nos échanges"
       description_fr: "Référence pour nos échanges",
       description_en: "Reference for our communications",
     },
@@ -443,11 +442,11 @@ const Contact: React.FC = () => {
                       <p className="font-bold text-gray-800 dark:text-slate-100 text-lg">
                         {method.value}
                       </p>
-                      <p className="text-gray-800 dark:text-slate-200 text-sm">
+                      {/* <p className="text-gray-800 dark:text-slate-200 text-sm">
                         {initialLang === "fr"
                           ? method.available_fr
                           : method.available_en}
-                      </p>
+                      </p> */}
                     </div>
 
                     {method.revealed ? (

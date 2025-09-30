@@ -37,10 +37,76 @@ const Certifications = () => {
       image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=300&fit=crop",
       description: "Administration et orchestration de conteneurs avec Kubernetes.",
       link: "#"
-    }
+    }, 
+    // {
+    //   id: 1,
+    //   title_fr: "CCNA 1 Cisco certification",
+    //   title_en: "",
+    //   issuer_fr: "",
+    //   issuer_en: "",
+    //   date: "2023",
+    //   image: "",
+    //   description_fr: "",
+    //   description_en: "",
+    //   link: "#"
+    // },
+    // {
+    //   id: 2,
+    //   title_fr: "Cyber security Cisco 2023",
+    //   title_en: "",
+    //   issuer_fr: "",
+    //   issuer_en: "",
+    //   date: "2023",
+    //   image: "",
+    //   description_fr: "",
+    //   description_en: "",
+    //   link: "#"
+    // },
+    // {
+    //   id: 3,
+    //   title_fr: "certification Designer responsable  ",
+    //   title_en: "",
+    //   issuer_fr: "Green compagnon",
+    //   issuer_en: "",
+    //   date: "2024",
+    //   image: "",
+    //   description_fr: "",
+    //   description_en: "",
+    //   link: "#"
+    // },
+    // {
+    //   id: 4,
+    //   title_fr: "Nasa 1",
+    //   title_en: "",
+    //   issuer_fr: "",
+    //   issuer_en: "",
+    //   date: "2025",
+    //   image: "",
+    //   description_fr: "",
+    //   description_en: "",
+    //   link: "#"
+    // },
+    // {
+    //   id: 5,
+    //   title_fr: "NAsa 2",
+    //   title_en: "",
+    //   issuer_fr: "",
+    //   issuer_en: "",
+    //   date: "2025",
+    //   image: "",
+    //   description_fr: "",
+    //   description_en: "",
+    //   link: "#"
+    // },
   ];
 
-  //  Nasa, cisco, green developper 
+  // CCNA 1 Cisco certification // année ? 2022 ou 2023
+  // Cyber security Cisco 2023
+  // certification Designer responsable certification Green compagnon // 2023 ou 2024
+  //  Nasa *2  2025 both 
+
+// python to do 
+// javascript
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 // import { projects } from "../medias/databases/index-global";
 
 
-//  todo mettre vrai projet index global
+//  todo mettre vrai projet index global sauf si image
 const fakeProjects = [
   {
     id: 1,

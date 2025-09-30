@@ -69,6 +69,8 @@ export default function Sport() {
       <HeroSection currentPage={"sport"} />
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-10">
         <SportObjectif />
+
+        {/* section calendrier et eventlist */}
         <section id="calendar" className="space-y-4 ">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-2 dark:text-white">
@@ -224,7 +226,7 @@ export default function Sport() {
                 {t("Sport.moreinfotxt")}
               </p>
 
-              <div className="flex flex-col sm:flex-row justify-center gap-6">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                 <DownloadButton
                   fileChoice={"Budget"}
                   title={"Budget"}
@@ -249,7 +251,7 @@ export default function Sport() {
           <h3 className="text-2xl font-bold mb-2 text-center dark:text-white">
             {t("Sport.join")}
           </h3>
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-22 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
 
           <div className="bg-sky-100 dark:bg-sky-900 py-12 overflow-hidden rounded-3xl">
             <SponsorSlider/>

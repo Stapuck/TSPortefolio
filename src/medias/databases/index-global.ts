@@ -61,10 +61,8 @@ import {
 
   //other
 } from "../../medias";
-import { Target, Trophy, Users, Leaf } from "lucide-react";
 
 //interface :
-
 // Next_date
 export interface EventType {
   date: string;
@@ -1521,68 +1519,8 @@ export const articles = [
   // changer photo pour incubateur.
 ];
 
-//sportobjectives
-// todo : revoir en fonction de public remettre dans le composant, parce que import de icone qui ne vont pas dans le public 
-export const sportobjectives = [
-  {
-    icon: Target,
-    color: "from-yellow-400 to-orange-500",
-    bgColor: "bg-yellow-100",
-    iconColor: "text-yellow-600",
-    title_fr: "Championnat du monde Sénior 2026",
-    title_en: "World Championship 2026",
-    description_fr: "Objectif: Top 10 mondial et qualification pour la finale.",
-    description_en: "Objectif: Top 15 and qualification for the final.",
-    details_fr:
-      "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
-    details_en: "Fight with the best and get a spot in the precious final ",
-  },
-  {
-    icon: Users,
-    color: "from-blue-500 to-blue-600",
-    bgColor: "bg-blue-100",
-    iconColor: "text-blue-600",
-    title_fr: "Programme d'entrainement pour Jeune",
-    title_en: "Youth Training Program",
-    description_fr: "Lancer un programme pour former les jeunes kayakistes.",
-    description_en:
-      "Launch a program to help young paddler to develop their skills",
-    details_fr:
-      "Transmettre ma passion et développer la relève du canoë slalom",
-    details_en: "Share my passion and develop the next gen of canoe slalom",
-  },
-  {
-    icon: Leaf,
-    color: "from-green-500 to-emerald-600",
-    bgColor: "bg-green-100",
-    iconColor: "text-green-600",
-    title_fr: "Compétition Ecolo",
-    title_en: "Eco-friendly Competitions",
-    description_fr:
-      "Participer et promouvoir des événements respectueux de l'environnement.",
-    description_en: "Take part and promote green & eco-frendly event.",
-    details_fr:
-      "Allier performance sportive et respect de notre terrain de jeu : la nature",
-    details_en:
-      "Join performance and respect of the environment / water our playground",
-  },
-  {
-    icon: Trophy,
-    color: "from-red-500 to-pink-500",
-    bgColor: "bg-red-100",
-    iconColor: "text-red-600",
-    title_fr: "Développement du sport sur le continent africain",
-    title_en: "African Development",
-    description_fr: "Contribuer au développement du canoë slalom en Afrique.",
-    description_en:
-      "Being an actor in the development of the sport in Africa .",
-    details_fr: "Ouvrir de nouveaux horizons et démocratiser notre sport",
-    details_en: "Open new horizon and help the sport growth",
-  },
-];
 
 //accordiondata
-//todo revoir avec papa 4 question à mettre
 export const accordionData = [
   {
     title_fr: "D'où viens tu ? ",
@@ -1949,7 +1887,7 @@ export const achievements = [
 // projects
 // todo : mettre du vrai projet
 
-//pro: powerjoular, cnc,  safran, hermes,  // revoir avec papa pour code manquant et ou python pula 
+//pro: powerjoular, cnc revoir avec Carlo,  safran, hermes,  
 //perso: portefolion * 2, pokedex, angular, metéo api, money watcher, +3 
 
 //school : intershop , cesieat, CesiOP, Easysave, arduino , big data powerbi 

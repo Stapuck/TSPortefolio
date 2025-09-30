@@ -1,12 +1,72 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { sportobjectives } from "../medias/databases/index-global";
+// import { sportobjectives } from "../medias/databases/index-global";
+import { Target, Trophy, Users, Leaf } from "lucide-react";
 
 const SportObjectif = () => {
   const initialLang = document.documentElement.lang || "fr";
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useTranslation();
+
+  const sportobjectives = [
+    {
+      icon: Target,
+      color: "from-yellow-400 to-orange-500",
+      bgColor: "bg-yellow-100",
+      iconColor: "text-yellow-600",
+      title_fr: "Championnat du monde Sénior 2026",
+      title_en: "World Championship 2026",
+      description_fr:
+        "Objectif: Top 10 mondial et qualification pour la finale.",
+      description_en: "Objectif: Top 15 and qualification for the final.",
+      details_fr:
+        "Me hisser parmi les meilleurs mondiaux et décrocher une place en finale",
+      details_en: "Fight with the best and get a spot in the precious final ",
+    },
+    {
+      icon: Users,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-100",
+      iconColor: "text-blue-600",
+      title_fr: "Programme d'entrainement pour Jeune",
+      title_en: "Youth Training Program",
+      description_fr: "Lancer un programme pour former les jeunes kayakistes.",
+      description_en:
+        "Launch a program to help young paddler to develop their skills",
+      details_fr:
+        "Transmettre ma passion et développer la relève du canoë slalom",
+      details_en: "Share my passion and develop the next gen of canoe slalom",
+    },
+    {
+      icon: Leaf,
+      color: "from-green-500 to-emerald-600",
+      bgColor: "bg-green-100",
+      iconColor: "text-green-600",
+      title_fr: "Compétition Ecolo",
+      title_en: "Eco-friendly Competitions",
+      description_fr:
+        "Participer et promouvoir des événements respectueux de l'environnement.",
+      description_en: "Take part and promote green & eco-frendly event.",
+      details_fr:
+        "Allier performance sportive et respect de notre terrain de jeu : la nature",
+      details_en:
+        "Join performance and respect of the environment / water our playground",
+    },
+    {
+      icon: Trophy,
+      color: "from-red-500 to-pink-500",
+      bgColor: "bg-red-100",
+      iconColor: "text-red-600",
+      title_fr: "Développement du sport sur le continent africain",
+      title_en: "African Development",
+      description_fr: "Contribuer au développement du canoë slalom en Afrique.",
+      description_en:
+        "Being an actor in the development of the sport in Africa .",
+      details_fr: "Ouvrir de nouveaux horizons et démocratiser notre sport",
+      details_en: "Open new horizon and help the sport growth",
+    },
+  ];
 
   // Auto-rotate slides 5s
   useEffect(() => {
@@ -54,7 +114,7 @@ const SportObjectif = () => {
           {/* Navigation Buttons - Cachés sur sm, visibles sur md+ */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white dark:bg-slate-700 rounded-full shadow-lg hover:shadow-xl dark:shadow-slate-900/50 transition-all duration-300 hover:scale-110 hidden md:block lg:block"
+            className="absolute  left-0 top-1/2 -translate-y-1/2 z-20 p-3 bg-white dark:bg-slate-700 rounded-full shadow-lg hover:shadow-xl dark:shadow-slate-900/50 transition-all duration-300 hover:scale-110 hidden md:block lg:block"
             aria-label="Objectif précédent"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-slate-300" />
@@ -62,7 +122,7 @@ const SportObjectif = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white dark:bg-slate-700 rounded-full shadow-lg hover:shadow-xl dark:shadow-slate-900/50 transition-all duration-300 hover:scale-110 hidden md:block lg:block"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-3 bg-white dark:bg-slate-700 rounded-full shadow-lg hover:shadow-xl dark:shadow-slate-900/50 transition-all duration-300 hover:scale-110 hidden md:block lg:block"
             aria-label="Objectif suivant"
           >
             <ChevronRight className="w-6 h-6 text-gray-600 dark:text-slate-300" />
@@ -72,26 +132,35 @@ const SportObjectif = () => {
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 sm:px-4 md:px-8 lg:px-12">
             {/* Sur sm: affiche seulement la carte courante */}
             {/* Sur md: affiche 2 cartes */}
-            {/* Sur lg: affiche 3 cartes (comportement actuel) */}
+            {/* Sur lg: affiche 3 cartes */}
             {getVisibleObjectives().map((objective, displayIndex) => {
               const Icon = objective.icon;
               const isCenter = displayIndex === 1;
 
-              // Logic d'affichage responsive
               const shouldShow =
-                displayIndex === 0 || // Toujours afficher la première carte
-                (displayIndex === 1 && window.innerWidth >= 768) || // 2ème carte sur md+
-                (displayIndex === 2 && window.innerWidth >= 1024); // 3ème carte sur lg+
+                displayIndex === 0 ||
+                (displayIndex === 1 && window.innerWidth >= 768) ||
+                (displayIndex === 2 && window.innerWidth >= 1024);
 
               return (
                 <div
                   key={objective.index}
                   className={`
-                  group relative overflow-hidden transition-all duration-500 rounded-3xl  
+                  group relative overflow-hidden transition-all duration-500 rounded-3xl
                   ${!shouldShow ? "hidden" : ""} 
                   sm:scale-100 
-                  md:${ displayIndex === 0 ? "scale-105 z-10" : "scale-95 opacity-65 hover:opacity-100"}
-                  lg:${ isCenter ? "scale-105 z-10" : "scale-95 opacity-75 hover:opacity-100"}`}
+                  sm: ${displayIndex === 0 && window.innerWidth <= 768 ? "scale-105 z-10 opacity-100" : "" }
+                  md:${
+                    displayIndex === 0
+                      ? "scale-105 z-10"
+                      : "scale-95 opacity-65 hover:opacity-100"
+                  }
+                  md: ${displayIndex === 1 && window.innerWidth >= 768  && window.innerWidth <= 1020 ? "scale-105 z-10 opacity-" : "scale-105 z-10 opacity-100"}
+                  lg:${
+                    isCenter
+                      ? "scale-105 z-10 opacity-100"
+                      : "scale-95 opacity-75 hover:opacity-100"
+                  }`}
                 >
                   {/* Gradient Background */}
                   <div
