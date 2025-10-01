@@ -31,6 +31,7 @@ export default function Home() {
 
     document.title = "TS - Home";
 
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
@@ -71,7 +72,7 @@ export default function Home() {
           loop
           muted={!sound}
           playsInline
-          // preload="auto"
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Overlay */}
