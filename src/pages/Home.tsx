@@ -64,7 +64,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         /> */}
         <video
-          src="/videos/video_web.mp4"
+          src="/videos/video_web_streamable.mp4"
           ref={videoRef}
           autoPlay
           loop
