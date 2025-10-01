@@ -4,7 +4,7 @@ import { Eye, List } from "lucide-react";
 import TooltipPoint from "../components/ToolTipPoint.tsx";
 
 // import { photos} from "../medias/databases/index-global.ts";
-// mettre dans media 
+// mettre dans media  test de push
 import racerst from "../medias/images/budget/racerst.png";
 import kayakcrossdeck from "../medias/images/budget/KayakCross_spraydeck.png";
 import kayakcrosshelmet from "../medias/images/budget/kayakcross_helmet.png";
