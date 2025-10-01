@@ -66,7 +66,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         /> */}
         <video
-          src="/videos/20240203_Reunion.mp4"
+          src="/videos/video_bg.mp4"
           ref={videoRef}
           autoPlay
           loop
