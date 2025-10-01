@@ -63,7 +63,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         /> */}
-        {/* <video
+        <video
           src="/videos/video_web.mp4"
           ref={videoRef}
           autoPlay
@@ -72,11 +72,11 @@ export default function Home() {
           playsInline
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
-        /> */}
-        <video controls preload="auto" width="640" height="360">
+        />
+        {/* <video controls preload="auto" autoPlay width="640" height="360">
           <source src="videos/video_web.mp4" type="video/mp4"></source>
           Votre navigateur ne supporte pas la vidéo.
-        </video>
+        </video> */}
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70 dark:from-black/40 dark:via-black/60 dark:to-black/80 z-10"></div>
 
