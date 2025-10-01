@@ -6,17 +6,14 @@ export interface SkillsProps {
   skills: any[];
 }
 
-// todo revoir darkmode
 export default function Skills({ skills }: SkillsProps) {
   const { t } = useTranslation();
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   const [groupByCategory, setGroupByCategory] = useState(false);
-  // const initialLang = document.documentElement.lang || "fr";
-  // todo : revoir pour afficher la category ou catgory_fr en fonction de la langue choisis
-  // {initialLang === "fr" ? category_fr : category}
+  const initialLang = document.documentElement.lang || "fr";
 
   const groupedSkills = skills.reduce((acc: any, skill: Skills) => {
-    const category = skill.category || "Général";
+    const category = initialLang === "fr"  ? skill.category_fr : skill.category  || "Général";
     if (!acc[category]) {
       acc[category] = [];
     }
@@ -24,12 +21,10 @@ export default function Skills({ skills }: SkillsProps) {
     return acc;
   }, {});
 
-  // Fonction pour déterminer si les catégories peuvent être en ligne
   const canCategoriesBeInline = () => {
     const categories = Object.keys(groupedSkills);
     if (categories.length <= 1) return false;
 
-    // Vérifie si toutes les catégories ont peu d'éléments (≤ 6 sur desktop, ≤ 4 sur mobile)
     return categories.every((category) => groupedSkills[category].length <= 6);
   };
 
@@ -48,7 +43,7 @@ export default function Skills({ skills }: SkillsProps) {
     >
       <div className="relative">
         {/* Card principal */}
-        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white dark:bg-sky-800/50 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200 relative">
+        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-sky-900 dark:bg-gray-800/80 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200 relative">
           <img
             src={skill.imageUrl}
             alt={skill.name}
@@ -93,7 +88,7 @@ export default function Skills({ skills }: SkillsProps) {
     categoryKey: string = ""
   ) => (
     <div key={`${categoryKey}-${index}`} className="relative text-center">
-      <div className="w-14 h-14 bg-white dark:bg-sky-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-600 flex items-center justify-center mx-auto relative">
+      <div className="w-14 h-14 bg-sky-900 dark:bg-gray-800/80 rounded-xl shadow-md border border-gray-100 dark:border-gray-600 flex items-center justify-center mx-auto relative">
         <img
           src={skill.imageUrl}
           alt={skill.name}
@@ -170,10 +165,10 @@ export default function Skills({ skills }: SkillsProps) {
       </div>
 
       {/* Bouton de tri */}
-      <div className="mt-6 mb-4">
+      <div className=" mt-6 mb-4">
         <button
           onClick={() => setGroupByCategory(!groupByCategory)}
-          className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+          className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hidden md:block ${
             groupByCategory
               ? "bg-blue-600 text-white shadow-lg hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-sky-950 dark:hover:text-white"
               : "bg-gray-100 dark:bg-sky-950 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-sky-900"
@@ -230,16 +225,16 @@ export default function Skills({ skills }: SkillsProps) {
         )}
       </div>
 
-      {/* Mobile Layout */}
+      {/* Mobile Layout */} {/*sans filtre par catéegory*/}
       <div className="block md:hidden">
-        {!groupByCategory ? (
-          // Vue globale mobile
+        {/* {!groupByCategory ? ( */}
+          {/* // Vue globale mobile */}
           <div className="grid grid-cols-4 gap-4">
             {skills.map((skill: Skills, index: number) =>
               renderMobileSkillCard(skill, index, "global")
             )}
           </div>
-        ) : (
+        {/* ) : (
           // Vue par catégories mobile
           Object.entries(groupedSkills).map(([category, categorySkills]) => (
             <div key={category} className="mb-8">
@@ -255,18 +250,18 @@ export default function Skills({ skills }: SkillsProps) {
               </div>
             </div>
           ))
-        )}
+        )} */}
       </div>
 
       {/* Statistiques */}
-      <div className="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-sky-800/60 dark:via-sky-900/60 dark:to-sky-800/60 rounded-2xl p-6 md:p-8">
+      <div className="mt-12 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-sky-800/60 dark:via-sky-900/60 dark:to-sky-800/60 rounded-2xl p-6 md:p-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-300 mb-2">
               {skills.length}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-              Technologies
+              {t('Skills.techno')}
             </div>
           </div>
           <div className="text-center">
@@ -274,7 +269,7 @@ export default function Skills({ skills }: SkillsProps) {
               {Object.keys(groupedSkills).length}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-              Catégories
+              {t('Skills.cate')}
             </div>
           </div>
           <div className="text-center">
@@ -282,7 +277,7 @@ export default function Skills({ skills }: SkillsProps) {
               3+
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-              Années exp.
+              {t('Skills.exp')}
             </div>
           </div>
           <div className="text-center">
@@ -290,7 +285,7 @@ export default function Skills({ skills }: SkillsProps) {
               15+
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-              Projets
+              {t('Skills.project')}
             </div>
           </div>
         </div>

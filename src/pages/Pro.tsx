@@ -24,13 +24,28 @@ export default function Pro() {
       <HeroSection currentPage={"pro"} />
 
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
+        {/* Intro */}
+        <section className="text-center space-y-8">
+          <div className="space-y-6">
+            <h1 className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 bg-clip-text text-transparent dark:text-white">
+              {t("HeroSection.protitle")}
+            </h1>
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+
+            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed dark:text-slate-200">
+              {t("Pro.txtintro")}
+            </p>
+          </div>
+        </section>
         {/* Parcours & Formations */}
         <section className="bg-sky-100 dark:bg-sky-900/90 p-8 rounded-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex justify-center dark:text-slate-100">
             {t("Pro.background")}
           </h2>
           <div className="w-65 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6 "></div>
-          <p className="max-w-4xl mx-auto sm:leading-relaxed flex justify-center text-gray-800 dark:text-slate-100">{t("Pro.backgroundtxt")}</p>
+          <p className="max-w-4xl mx-auto sm:leading-relaxed flex justify-center text-gray-800 dark:text-slate-100">
+            {t("Pro.backgroundtxt")}
+          </p>
           <Experiences />
         </section>
 
@@ -46,13 +61,16 @@ export default function Pro() {
           <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed dark:text-slate-200">
             {t("Pro.certificationstxt")}
           </p>
-          <Certifications/>
+          <Certifications />
 
           {/* here component certification  */}
         </section>
 
         {/* Projects */}
-        <section id="projects" className="bg-sky-100 dark:bg-sky-900 p-8 rounded-3xl">
+        <section
+          id="projects"
+          className="bg-sky-100 dark:bg-sky-900 p-8 rounded-3xl"
+        >
           <Projects />
         </section>
 

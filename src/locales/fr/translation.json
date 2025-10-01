@@ -141,6 +141,7 @@
     "all": "Tous",
     "allevents": "📜 Tous les événements",
     "close": "✕ Fermer",
+    "closewithoucross": "Fermer",
     "date": "Date",
     "event": "évènement",
     "event_type": "Evènement",
@@ -179,7 +180,7 @@
     "blogtxt1": "Article • TV ",
     "blogtxt2": "Radio • Interview",
     "contacttitle": "Restons en Contact",
-    "contacttxt1": "Une idée de Collaboration ? ",
+    "contacttxt1": "Une idée de Collaboration ? Contactez moi ! ",
     "protitle": "Ingénieur IT • Développeur Web",
     "protxt1": "Expérience Full-Stack",
     "protxt2": "Polyvalent & Curieux",
@@ -235,14 +236,16 @@
     "readytocollab": "Une Idée de projet ?",
     "readytocollabtxt": "Je suis joignable pour discuter de vos idées et voir comment nous pouvons travailler ensemble.",
     "skills": "Compétences",
-    "skillstxt": "Découvrez les technologies et outils que j'utilise pour créer des solutions innovantes et performantes. Chaque compétence représente une expertise développée à travers des projets concrets et une formation continue."
+    "skillstxt": "Découvrez les technologies et outils que j'utilise pour créer des solutions innovantes et performantes. Chaque compétence représente une expertise développée à travers des projets concrets et une formation continue.",
+    "txtintro":"Cette page reprend l'intégralité de mon parcours académique, de mes compétences ou encore certifications obtenue ces dernières années. "
 
   },
 
   "Profile": {
     "citation": "« Discipline, curiosité et persévérance guident chacun de mes projets.»",
     "english": "Anglais",
-    "faq": "Foire aux questions :",
+    "faq": "Foire aux questions ",
+    "faqsmall":"F.A.Q",
     "faqtxt": "Découvrez les réponses aux questions les plus courantes",
     "french": "Français",
     "profile_welcome": "📝 Bienvenue sur la page de mon profile",
@@ -353,6 +356,7 @@
     "price": "Prix",
     "projet&objectif": "Projets & Objectifs",
     "sponsor": "sponsoring",
+    "sponsorhistory":"Notre Histoire",
     "sport_welcome": " Bienvenue sur la page sport"
   },
 
@@ -365,6 +369,10 @@
     "noteText2": "2 = Intermédiaire (< 5h)",
     "noteText3": "3 = Confirmé (5h à 10h)",
     "noteText4": "4 = Avancé (> 10h)",
-    "noteText5": "5 = Expert (> 20h)"
+    "noteText5": "5 = Expert (> 20h)", 
+    "techno":"Technologies",
+    "cate":"Catégories",
+    "exp":"Années d'expérience",
+    "project":"Projets"
   }
 }

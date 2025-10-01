@@ -8,15 +8,15 @@ const AccordionGroup = () => {
   const { t } = useTranslation();
 
 
-  // todo : revoir le darkmode
   return (
-    <div className="max-w-4xl mx-auto bg-sky-100 dark:bg-sky-900 py-2 rounded-3xl">
+    <div className="max-w-4xl mx-auto bg-sky-100 dark:bg-gray-900/60 py-2 rounded-3xl">
       <div className="text-center my-3">
         <div className="inline-flex items-center justify-center">
           <div className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mr-4"></div>
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 ">
+          <h3 className="hidden sm:block text-2xl font-bold text-gray-800 dark:text-gray-100 ">
             {t("Profile.faq")}
           </h3>
+          <h3 className="block sm:hidden text-2xl font-bold text-gray-800 dark:text-gray-100 ">{t("Profile.faqsmall")}</h3>
           <div className="h-1 w-12 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full ml-4"></div>
         </div>
         <p className="text-gray-600 dark:text-gray-400 mt-4 mx-4 max-w-2xl sm:mx-auto">
@@ -26,7 +26,6 @@ const AccordionGroup = () => {
 
       <div className="relative">
         {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 via-purple-100/20 to-pink-100/20 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-pink-900/10 rounded-3xl"></div> */}
-
         {/* Effet de border gradient */}
         {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-700 dark:via-purple-700 dark:to-pink-700  rounded-3xl p-[1px] blur-[50px]">
           <div className="absolute inset-4 bg-white rounded-3xl dark:bg-gray-700"></div>

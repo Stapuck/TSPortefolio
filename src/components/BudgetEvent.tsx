@@ -1,9 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { MapPin, Clock, Zap } from "lucide-react";
-import { travelExpenses } from "../medias/databases/index-global.ts";
-
 import { useState } from "react";
-import { PieChart, Grid3x3 } from "lucide-react";
+import { MapPin, Clock, Zap, PieChart, Grid3x3 } from "lucide-react";
+import { travelExpenses } from "../medias/databases/index-global.ts";
 import {
   PieChart as RechartsPie,
   Pie,
@@ -12,7 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { color } from "framer-motion";
+
 
 const BudgetEvent = () => {
   const { t } = useTranslation();
@@ -166,7 +164,6 @@ const BudgetEvent = () => {
                       // backgroundColor: "rgba(36, 183, 194, 0.90)",
                       // backgroundColor: "rgba(66, 223, 163, 1)",
                       backgroundColor: "rgba(35, 210, 143, 1)",
-                      // backgroundColor: ``,
                       border: "none",
                       borderRadius: "0.5rem",
                       color: "white",

@@ -12,7 +12,6 @@ const Experiences = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Observer les changements de l'attribut lang sur <html>
   useEffect(() => {
     const observer = new MutationObserver(() => {
       const newLang = document.documentElement.lang || "fr";

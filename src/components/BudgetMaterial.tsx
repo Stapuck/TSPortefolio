@@ -4,8 +4,7 @@ import { Eye, List } from "lucide-react";
 import TooltipPoint from "../components/ToolTipPoint.tsx";
 
 // import { photos} from "../medias/databases/index-global.ts";
-// mettre dans inedx global
-// mettre dans index de images aussi
+// mettre dans media 
 import racerst from "../medias/images/budget/racerst.png";
 import kayakcrossdeck from "../medias/images/budget/KayakCross_spraydeck.png";
 import kayakcrosshelmet from "../medias/images/budget/kayakcross_helmet.png";
@@ -15,8 +14,8 @@ import c1paddle from "../medias/images/budget/c1_paddle.png";
 import slalomboat from "../medias/images/budget/slalom_boat.png";
 import kayakcrossboat from "../medias/images/budget/kayakcross_boat.png";
 import kayakCross from "../medias/images/budget/Foix_kayakCross.jpg";
-// import kayakCross from "../medias/images/budget/kayakcrosspic.png";
-import canoeslalom from "../medias/images/budget/Foix_slalom.jpg";
+import canoeslalom from "/images/budget/Foix_slalom.jpg"; //public
+// import canoeslalom from "../media/images/budget/Foix_slalom.jpg"; //media 
 
 const BudgetMaterial = () => {
   const { t } = useTranslation();
@@ -36,7 +35,6 @@ const BudgetMaterial = () => {
     });
   }, []);
 
-  // mettre dans inedx global
   const photos = [
     {
       src: canoeslalom,
