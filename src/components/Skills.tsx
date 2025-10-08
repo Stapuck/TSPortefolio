@@ -43,7 +43,7 @@ export default function Skills({ skills }: SkillsProps) {
     >
       <div className="relative">
         {/* Card principal */}
-        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-sky-900 dark:bg-gray-800/80 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200 relative">
+        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-sky-950 dark:bg-slate-800 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100 flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 group-hover:border-blue-200 relative">
           <img
             src={skill.imageUrl}
             alt={skill.name}
@@ -88,7 +88,7 @@ export default function Skills({ skills }: SkillsProps) {
     categoryKey: string = ""
   ) => (
     <div key={`${categoryKey}-${index}`} className="relative text-center">
-      <div className="w-14 h-14 bg-sky-900 dark:bg-gray-800/80 rounded-xl shadow-md border border-gray-100 dark:border-gray-600 flex items-center justify-center mx-auto relative">
+      <div className="w-14 h-14 bg-sky-950 dark:bg-slate-800 rounded-xl shadow-md border border-gray-100 dark:border-gray-600 flex items-center justify-center mx-auto relative">
         <img
           src={skill.imageUrl}
           alt={skill.name}
@@ -234,27 +234,10 @@ export default function Skills({ skills }: SkillsProps) {
               renderMobileSkillCard(skill, index, "global")
             )}
           </div>
-        {/* ) : (
-          // Vue par catégories mobile
-          Object.entries(groupedSkills).map(([category, categorySkills]) => (
-            <div key={category} className="mb-8">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-slate-200 mb-4 flex items-center">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
-                {category}
-              </h3>
-              <div className="grid grid-cols-4 gap-4">
-                {(categorySkills as Skills[]).map(
-                  (skill: Skills, index: number) =>
-                    renderMobileSkillCard(skill, index, category)
-                )}
-              </div>
-            </div>
-          ))
-        )} */}
       </div>
 
       {/* Statistiques */}
-      <div className="mt-12 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-sky-800/60 dark:via-sky-900/60 dark:to-sky-800/60 rounded-2xl p-6 md:p-8">
+      <div className="mt-12 bg-gradient-to-r from-blue-200 to-purple-200 dark:from-sky-700/60 dark:via-sky-800/60 dark:to-sky-700/60 rounded-2xl p-6 md:p-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-300 mb-2">

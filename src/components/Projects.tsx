@@ -172,7 +172,7 @@ const Projects = () => {
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
-            className="group bg-white dark:bg-sky-800/50 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100  overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+            className="group bg-white dark:bg-slate-800 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100  overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             {/* Image */}
@@ -306,7 +306,7 @@ const Projects = () => {
       )}
 
       {/* Statistiques des projets */}
-      <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-sky-800/60 dark:via-sky-900/60 dark:to-sky-800/60 rounded-2xl p-6 md:p-8">
+      <div className="mt-16 bg-gradient-to-r from-blue-200 to-purple-200 dark:from-sky-700/60 dark:via-sky-800/60 dark:to-sky-700/60 rounded-2xl p-6 md:p-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-200 mb-2">

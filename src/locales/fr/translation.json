@@ -31,7 +31,7 @@
     "importanttxt": "Une nouvelle excitante concernant ma prochaine compétition internationale ! Plus de détails arrivent bientôt.",
     "lastarticle": " Dernier Article",
     "medias": "Médias",
-    "nomedia": "Pas d'article actuellement. Revenez plus tard.",
+    "nomedia": "Pas d'article actuellement.",
     "specialnews": "News Spéciales",
     "readmore": "Lire plus →",
     "topsportarticle": "Top Articles Sportifs",
@@ -209,6 +209,17 @@
     "videotext": "Athlète | Ingénieur | Entrepreneur"
   },
 
+  
+  "Maintenance": {
+    "contact": "Besoin urgent ?",
+    "contactUs": "Contactez-moi",
+    "estimatedTime": "Retour prévu dans quelques instants",
+    "message": "J'effectue actuellement des mises à jour...",
+    "subtitle": "Site en cours d'amélioration",
+    "title": "Maintenance",
+    "working": "Travaux en cours..."
+  },
+
   "NotFound": {
     "or": "Ou explorez directement",
     "retour": "Retour à l’accueil",
@@ -223,7 +234,7 @@
     "citation": "« L’expérience et la formation sont les fondations sur lesquelles se construisent les projets ambitieux. »",
     "certifications": "Certifications",
     "certificationstxt": "Tout au long de mon parcours, j'ai obtenu diverses certifications qui attestent de mes compétences et de mon engagement envers l'évolution continue ainsi que l'excellence professionnelle.",
-    "downloadcv": "sinon voici mon CV",
+    "downloadcv": "Ou téléchargez mon CV",
     "featured": "Mis en avant",
     "featuredstat": "Mis en avant",
     "noproject": "Aucun projet trouvé dans cette catégorie",
