@@ -2,24 +2,16 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Eye, List } from "lucide-react";
 import TooltipPoint from "../components/ToolTipPoint.tsx";
+import { photos } from "../medias/index-global.ts";
 
-// import { photos} from "../medias/databases/index-global.ts";
-// mettre dans media  
-import racerst from "../medias/images/budget/racerst.png";
-import kayakcrossdeck from "../medias/images/budget/KayakCross_spraydeck.png";
-import kayakcrosshelmet from "../medias/images/budget/kayakcross_helmet.png";
-import vadjahelmet from "../medias/images/budget/vajda_helmet.png";
-import k1paddle from "../medias/images/budget/k1_paddle.png";
-import c1paddle from "../medias/images/budget/c1_paddle.png";
-import slalomboat from "../medias/images/budget/slalom_boat.png";
-import kayakcrossboat from "../medias/images/budget/kayakcross_boat.png";
-import kayakCross from "../medias/images/budget/Foix_kayakCross.jpg";
-import canoeslalom from "/images/budget/Foix_slalom.jpg"; //public
-// import canoeslalom from "../media/images/budget/Foix_slalom.jpg"; //media 
 
 const BudgetMaterial = () => {
   const { t } = useTranslation();
   const [showDetailedView, setShowDetailedView] = useState(false);
+    // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
+
 
   useEffect(() => {
     photos.forEach((photo) => {
@@ -34,78 +26,6 @@ const BudgetMaterial = () => {
       });
     });
   }, []);
-
-  const photos = [
-    {
-      src: canoeslalom,
-      alt: "Canoe Slalom",
-      tooltips: [
-        {
-          x: "45%",
-          y: "38%",
-          img: vadjahelmet,
-          price: 240,
-          text: t("Sport.budget.helmet"),
-        },
-
-        {
-          x: "50%",
-          y: "60%",
-          img: racerst,
-          price: 320,
-          text: t("Sport.budget.racerst"),
-        },
-        {
-          x: "37%",
-          y: "72%",
-          img: c1paddle,
-          price: 360,
-          text: t("Sport.budget.c1paddle"),
-        },
-        {
-          x: "65%",
-          y: "68%",
-          img: slalomboat,
-          price: 2500,
-          text: t("Sport.budget.slalomboat"),
-        },
-      ],
-    },
-    {
-      src: kayakCross,
-      alt: "Kayak Cross",
-      tooltips: [
-        {
-          x: "53%",
-          y: "39%",
-          img: kayakcrosshelmet,
-          price: 120,
-          text: t("Sport.budget.helmet"),
-        },
-        {
-          x: "40%",
-          y: "54%",
-          img: k1paddle,
-          price: 500,
-          text: t("Sport.budget.k1paddle"),
-        },
-        {
-          x: "30%",
-          y: "70%",
-          img: kayakcrossboat,
-          price: 2000,
-          text: t("Sport.budget.kayakcrossboat"),
-        },
-        {
-          x: "53%",
-          y: "65%",
-          img: kayakcrossdeck,
-          price: 120,
-          text: t("Sport.budget.kayakcrossdeck"),
-        },
-      ],
-    },
-  ];
 
   const totals = photos.map((p) =>
     p.tooltips.reduce((sum, item) => sum + item.price, 0)
@@ -176,7 +96,7 @@ const BudgetMaterial = () => {
                         y={tooltip.y}
                         img={tooltip.img}
                         price={formatPrice(tooltip.price)}
-                        text={tooltip.text}
+                        text={initialLang === "fr" ? tooltip.text_fr : tooltip.text_en}
                       />
                     ))}
                   </div>
@@ -228,12 +148,12 @@ const BudgetMaterial = () => {
                             <div className="flex items-center space-x-3">
                               <img
                                 src={item.img}
-                                alt={item.text}
+                                alt={initialLang === "fr" ? item.text_fr : item.text_en}
                                 className="w-12 h-12 object-cover rounded-lg"
                                 loading="lazy"
                               />
                               <span className="font-medium text-gray-700 dark:text-gray-200">
-                                {item.text}
+                                {initialLang === "fr" ? item.text_fr : item.text_en}
                               </span>
                             </div>
                             <span className="font-bold text-blue-600 dark:text-gray-100">

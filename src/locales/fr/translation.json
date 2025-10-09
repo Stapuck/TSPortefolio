@@ -11,8 +11,8 @@
   },
 
   "AchievementR": {
-    "clicktoflip": "Click to flip between disciplines",
-    "continentalranking": "Continental",
+    "clicktoflip": "Cliquez pour retourner la carte",
+    "continentalranking": "Continentale",
     "medal&race": "Médailles & Courses",
     "moreachievements": "médailles",
     "senior": "Sénior",
@@ -29,9 +29,9 @@
     "blog_welcome": "Média Zone",
     "important": "Annonce Importante",
     "importanttxt": "Une nouvelle excitante concernant ma prochaine compétition internationale ! Plus de détails arrivent bientôt.",
-    "lastarticle": " Dernier Article",
+    "lastarticle": "Dernier Article",
     "medias": "Médias",
-    "nomedia": "Pas d'article actuellement. Revenez plus tard.",
+    "nomedia": "Pas d'article actuellement.",
     "specialnews": "News Spéciales",
     "readmore": "Lire plus →",
     "topsportarticle": "Top Articles Sportifs",
@@ -209,6 +209,16 @@
     "videotext": "Athlète | Ingénieur | Entrepreneur"
   },
 
+  "Maintenance": {
+    "contact": "Besoin urgent ?",
+    "contactUs": "Contactez-moi",
+    "estimatedTime": "Retour prévu dans quelques instants",
+    "message": "J'effectue actuellement des mises à jour...",
+    "subtitle": "Site en cours d'amélioration",
+    "title": "Maintenance",
+    "working": "Travaux en cours..."
+  },
+
   "NotFound": {
     "or": "Ou explorez directement",
     "retour": "Retour à l’accueil",
@@ -219,13 +229,12 @@
   "Pro": {
     "allproject": "Tous les projets",
     "background": "Parcours & Formations",
-    "backgroundtxt" : "Découvrez mon parcours professionnel et les expériences qui m’ont permis de développer mes compétences et de relever des défis concrets. Chaque étape de mon cheminement reflète ma capacité à m’adapter, apprendre et créer des solutions efficaces.", 
+    "backgroundtxt": "Découvrez mon parcours professionnel et les expériences qui m’ont permis de développer mes compétences et de relever des défis concrets. Chaque étape de mon cheminement reflète ma capacité à m’adapter, apprendre et créer des solutions efficaces.",
     "citation": "« L’expérience et la formation sont les fondations sur lesquelles se construisent les projets ambitieux. »",
     "certifications": "Certifications",
     "certificationstxt": "Tout au long de mon parcours, j'ai obtenu diverses certifications qui attestent de mes compétences et de mon engagement envers l'évolution continue ainsi que l'excellence professionnelle.",
-    "downloadcv": "sinon voici mon CV",
+    "downloadcv": "Ou téléchargez mon CV",
     "featured": "Mis en avant",
-    "featuredstat": "Mis en avant",
     "noproject": "Aucun projet trouvé dans cette catégorie",
     "project": "Projects",
     "projectnumber": "Projets totaux",
@@ -237,15 +246,14 @@
     "readytocollabtxt": "Je suis joignable pour discuter de vos idées et voir comment nous pouvons travailler ensemble.",
     "skills": "Compétences",
     "skillstxt": "Découvrez les technologies et outils que j'utilise pour créer des solutions innovantes et performantes. Chaque compétence représente une expertise développée à travers des projets concrets et une formation continue.",
-    "txtintro":"Cette page reprend l'intégralité de mon parcours académique, de mes compétences ou encore certifications obtenue ces dernières années. "
-
+    "txtintro": "Cette page reprend l'intégralité de mon parcours académique, de mes compétences ou encore certifications obtenue ces dernières années. "
   },
 
   "Profile": {
     "citation": "« Discipline, curiosité et persévérance guident chacun de mes projets.»",
     "english": "Anglais",
     "faq": "Foire aux questions ",
-    "faqsmall":"F.A.Q",
+    "faqsmall": "F.A.Q",
     "faqtxt": "Découvrez les réponses aux questions les plus courantes",
     "french": "Français",
     "profile_welcome": "📝 Bienvenue sur la page de mon profile",
@@ -255,7 +263,7 @@
     "section2title": "Carrière Sportive",
     "section2txt": "Athlète en canoë slalom depuis plus de 13 ans. Engagé dans la respect et la protection de l'environnement. Le sport m'a forgé discipline, organisation et résilience.",
     "section2label1": "médaillé international",
-    "section2label2": "13+ ans de pratique",
+    "section2label2": "+ ans de pratique",
     "section3title": "Entrepreneuriat",
     "section3txt1": "Développement de projets innovants mêlant tech et sport. Objectif final: révolutionner l'entraînement sportif par la technologie. Status de'auto-entrepreuneur depuis 2021 - participation a l'incubateur d'innovation entreprenarial organisé par Paris2024 & AFD France ",
     "section3txt2": "Pas de projet Entrepreneuriat en cours pour le moment // en   attente de temps et d'opportunités",
@@ -289,21 +297,12 @@
       "budgetreality": "Réalité budgétaire",
       "budgetrealitytxt1": "Au vu de mes impératifs professionnels et de ma capacité financière, je ne peux pas me permettre une saison complète. Je choisis donc 3 World Cup et les championnats du monde en plus des compétitions en France.",
       "budgetrealitytxt2": "De même, contrairement à un athlète professionnel qui change de bateau chaque année, mon matériel fait 2-3 saisons avant d'être renouvelé.",
-      "c1paddle": "pagaie de canoë",
       "equippement": "Équipement",
-      "helmet":"casque de kayak cross",
-      "hikolifejacket": "gilet",
-      "hikospraydeck": "jupe Kway ",
       "intro": "Découvrez le budget nécessaire pour une saison complète de compétition internationale",
-      "kayakcrossboat": "bateau de kayak cross",
-      "kayakcrossdeck": "jupe Kway de kayak cross",
-      "k1paddle": "pagaie de kayak cross",
       "material": "Matériels",
       "nationale": "5 courses nationales N1/N2",
       "race": "6 semaines de compétition internationale",
-      "racerst": "Jupe Kway de course",
       "seasonbudget": "Budget de saison",
-      "slalomboat": "bateau de slalom",
       "sum&info": "Récapitulatif & Infos",
       "sumchange": "Ces montants sont indicatifs et peuvent varier selon les saisons.",
       "total": "Budget :",
@@ -311,7 +310,7 @@
       "training": "3 semaines de camps d'entraînement",
       "training&race": "Stages & Compétitions",
       "travel": "Déplacement",
-      "viewchart":"Vue graphique",
+      "viewchart": "Vue graphique",
       "viewdetail": "Vue Détaillée",
       "viewtoolpoint": "Vue Interactive"
     },
@@ -344,8 +343,8 @@
     "description": "Description",
     "goto": "Aller à l'objectif",
     "incomingevent": "Événements à venir !",
-    "incommingeventyear": "événement à venir 🚀 dans l'année",
-    "incommingeventyears": "événements à venir 🚀 dans l'année",
+    "incommingeventyear": "événement à venir dans l'année",
+    "incommingeventyears": "événements à venir dans l'année",
     "join": "Coin Partenaires : ",
     "legend": "Légende",
     "moreinfo": "Pour plus d'informations",
@@ -356,7 +355,7 @@
     "price": "Prix",
     "projet&objectif": "Projets & Objectifs",
     "sponsor": "sponsoring",
-    "sponsorhistory":"Notre Histoire",
+    "sponsorhistory": "Notre Histoire",
     "sport_welcome": " Bienvenue sur la page sport"
   },
 
@@ -369,10 +368,10 @@
     "noteText2": "2 = Intermédiaire (< 5h)",
     "noteText3": "3 = Confirmé (5h à 10h)",
     "noteText4": "4 = Avancé (> 10h)",
-    "noteText5": "5 = Expert (> 20h)", 
-    "techno":"Technologies",
-    "cate":"Catégories",
-    "exp":"Années d'expérience",
-    "project":"Projets"
+    "noteText5": "5 = Expert (> 20h)",
+    "techno": "Technologies",
+    "cate": "Catégories",
+    "exp": "Années d'expérience",
+    "project": "Projets"
   }
 }

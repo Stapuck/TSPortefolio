@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-import Experiences from "../components/Experiences.tsx";
+import ExperiencesComponent from "../components/ExperiencesComponent.tsx";
 import HeroSection from "../components/HeroSection.tsx";
 import DownloadButton from "../components/DownloadBtn.tsx";
 import { useTranslation } from "react-i18next";
 import Skills from "../components/Skills.tsx";
-import { skills } from "../medias/databases/index-global";
+import { skills } from "../medias/index-global.ts";
 import Projects from "../components/Projects.tsx";
 // import { Mail } from "lucide-react";
 import { LuLinkedin } from "react-icons/lu";
@@ -46,7 +46,7 @@ export default function Pro() {
           <p className="max-w-4xl mx-auto sm:leading-relaxed flex justify-center text-gray-800 dark:text-slate-100">
             {t("Pro.backgroundtxt")}
           </p>
-          <Experiences />
+          <ExperiencesComponent />
         </section>
 
         <section className="bg-sky-100 dark:bg-sky-900/90 p-8 rounded-3xl">
@@ -91,7 +91,7 @@ export default function Pro() {
               {/* Boutons de contact */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
-                  href="https://linkedin.com/in/terence-saramandif"
+                  href="https://www.linkedin.com/in/terence-saramandif-840a331a8/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-4 bg-white text-gray-800 font-bold rounded-xl border-2 border-gray-300 hover:border-gray-400 dark:bg-sky-400/80 dark:border-sky-500 dark:hover:border-sky-600 hover:scale-105 hover:shadow-lg transition-all duration-300"
@@ -102,11 +102,12 @@ export default function Pro() {
               </div>
 
               <p className="text-lg text-gray-600 dark:text-gray-200 mb-8 max-w-2xl mx-auto">
-                {" "}
-                {t("Pro.downloadcv")}{" "}
+             
+                {t("Pro.downloadcv")}
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-6">
-                <DownloadButton title="CV" description="CV" fileChoice={"CV"} />
+              {/* <div className="flex flex-col sm:flex-row justify-center gap-6"> */}
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 w-full">
+                <DownloadButton title="CV" description={t('DownloadBtn.cvdescription')} fileChoice={"CV"} />
               </div>
             </div>
           </div>

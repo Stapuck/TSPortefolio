@@ -1,4 +1,4 @@
-import { next_date, type EventType } from "../medias/databases/index-global.ts";
+import { next_date, type EventType } from "../medias/index-global.ts";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -19,7 +19,8 @@ const EventList = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [modalFilter, setModalFilter] = useState<string>("sport");
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
 
   const toggleMenu = (menu: string) => {
     setOpenMenu(openMenu === menu ? null : menu);

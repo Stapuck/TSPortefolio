@@ -19,7 +19,9 @@ import { FaInstagram } from "react-icons/fa";
 import { LuLinkedin } from "react-icons/lu";
 const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
   useEffect(() => {
     document.title = "TS - Contact";
     window.scrollTo(0, 0);
@@ -67,7 +69,7 @@ const Contact: React.FC = () => {
       icon: FaInstagram,
       name: "Instagram",
       handle: "@terence_saramandif",
-      url: "https://instagram.com/terence_saramandif",
+      url: "https://www.instagram.com/terence__srmndf/",
       description_fr: "Suivez mon quotidien sportif et professionnel",
       description_en: "Follow my sports and professional routine",
       gradient: "from-pink-500 to-purple-600",
@@ -77,7 +79,7 @@ const Contact: React.FC = () => {
       icon: LuLinkedin,
       name: "LinkedIn",
       handle: "Terence Saramandif",
-      url: "https://linkedin.com/in/terence-saramandif",
+      url: "https://www.linkedin.com/in/terence-saramandif-840a331a8/",
       description_fr: "Mon parcours professionnel et mes projets",
       description_en: "My professional journey and projects",
       gradient: "from-blue-600 to-blue-700",

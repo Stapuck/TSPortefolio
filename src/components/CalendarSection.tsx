@@ -6,7 +6,7 @@ import { format, parse, startOfWeek, getDay } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { next_date, type EventType } from "../medias/databases/index-global";
+import { next_date, type EventType } from "../medias/index-global";
 import {
   Calendar as CalendarIcon,
   MapPin,
@@ -49,7 +49,9 @@ export default function CalendarSection() {
   const [date, setDate] = useState(new Date());
   const [view, setView] = useState<View>("month");
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
   const { t } = useTranslation();
 
   const localizer = createLocalizer(initialLang);

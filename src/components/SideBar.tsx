@@ -50,21 +50,32 @@ export default function Sidebar() {
   }, []);
 
   useEffect(() => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    setDarkMode(true);
-    document.documentElement.classList.add("dark");
-  }
-}, []);
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
 
-useEffect(() => {
-  localStorage.setItem("theme", darkMode ? "dark" : "light");
-  document.documentElement.classList.toggle("dark", darkMode);
-}, [darkMode]);
+  useEffect(() => {
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
+
+  // 🌍 Langue : lire et sauvegarder dans localStorage
+  useEffect(() => {
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+      document.documentElement.lang = savedLang;
+    }
+    console.log(savedLang);
+  }, [i18n]);
 
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
     document.documentElement.lang = code;
+    localStorage.setItem("lang", code); // sauvegarde la langue
   };
 
   // Trouver le lien actif (page courante)
@@ -73,9 +84,7 @@ useEffect(() => {
   return (
     <>
       {/* Sidebar toujours visible pour md+ */}
-      <aside
-        className="hidden lg:flex  bg-gray-900 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"
-      >
+      <aside className="hidden lg:flex  bg-gray-900 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3">
         <nav className="flex flex-col gap-6">
           {links.map((link) => (
             <Link

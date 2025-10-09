@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Medal, Trophy, RotateCcw } from "lucide-react";
-import {achievements} from "../medias/databases/index-global.ts";  
+import {achievements} from "../medias/index-global.ts";  
 
 const AchievementRanking = () => {
   const {t} = useTranslation();
   const [flipped, setFlipped] = useState(false);
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
 
 
   const getMedalIcon = (medal : any) => {
@@ -142,11 +144,11 @@ const AchievementRanking = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.senior')} :</span>
-                    <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">#85</span>
+                    <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">#82</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">U23:</span>
-                    <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">#27</span>
+                    <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">#29</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.continentalranking')} :</span>
@@ -169,15 +171,18 @@ const AchievementRanking = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.senior')} :</span>
-                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#12</span>
+                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span>
+                    {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#12</span> */}
                   </div>
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">U23:</span>
-                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#5</span>
+                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span>
+                    {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#5</span> */}
                   </div>
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.continentalranking')} :</span>
-                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#1</span>
+                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span>
+                    {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#1</span> */}
                   </div>
                 </div>
               </div>
