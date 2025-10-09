@@ -14,7 +14,9 @@ import {
 
 const BudgetEvent = () => {
   const { t } = useTranslation();
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
 
   const [viewMode, setViewMode] = useState("grid");
 

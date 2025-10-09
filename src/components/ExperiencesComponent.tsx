@@ -4,7 +4,9 @@ import type { Experiences } from "../medias/index-global.ts"; //todo revoir pour
 import { useTranslation } from "react-i18next";
 
 const ExperiencesComponent = () => {
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
   const { t } = useTranslation();
 
   const [lang, setLang] = useState(initialLang);

@@ -19,7 +19,9 @@ import { FaInstagram } from "react-icons/fa";
 import { LuLinkedin } from "react-icons/lu";
 const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
   useEffect(() => {
     document.title = "TS - Contact";
     window.scrollTo(0, 0);

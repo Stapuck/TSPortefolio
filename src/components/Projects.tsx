@@ -120,7 +120,9 @@ const Projects = () => {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [projects] = useState(fakeProjects);
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
 
 
   const categories = [

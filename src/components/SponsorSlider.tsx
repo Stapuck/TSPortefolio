@@ -241,7 +241,9 @@ import { sponsors } from '../medias/index-global';
 
 const SponsorSlider = () => {
   const sliderRef = useRef(null);
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
   const duplicatedSponsors = [...sponsors, ...sponsors, ...sponsors];
 
   return (

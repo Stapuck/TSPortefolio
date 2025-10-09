@@ -6,6 +6,8 @@ import { Target, Trophy, Users, Leaf } from "lucide-react";
 
 const SportObjectif = () => {
   const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = localStorage.getItem("lang") || "fr";
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useTranslation();
 

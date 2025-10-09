@@ -10,7 +10,9 @@ export default function Skills({ skills }: SkillsProps) {
   const { t } = useTranslation();
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   const [groupByCategory, setGroupByCategory] = useState(false);
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
 
   const groupedSkills = skills.reduce((acc: any, skill: Skills) => {
     const category = initialLang === "fr"  ? skill.category_fr : skill.category  || "Général";

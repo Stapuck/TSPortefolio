@@ -8,7 +8,9 @@ import { photos } from "../medias/index-global.ts";
 const BudgetMaterial = () => {
   const { t } = useTranslation();
   const [showDetailedView, setShowDetailedView] = useState(false);
-    const initialLang = document.documentElement.lang || "fr";
+    // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
 
 
   useEffect(() => {

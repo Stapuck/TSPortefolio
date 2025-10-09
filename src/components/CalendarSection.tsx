@@ -49,7 +49,9 @@ export default function CalendarSection() {
   const [date, setDate] = useState(new Date());
   const [view, setView] = useState<View>("month");
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
   const { t } = useTranslation();
 
   const localizer = createLocalizer(initialLang);

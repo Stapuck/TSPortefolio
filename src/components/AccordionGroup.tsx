@@ -4,7 +4,9 @@ import Accordion from "../components/Accordion";
 import { useTranslation } from "react-i18next";
 
 const AccordionGroup = () => {
-  const initialLang = document.documentElement.lang || "fr";
+  // const initialLang = document.documentElement.lang || "fr";
+  const initialLang = localStorage.getItem("lang") || "fr";
+
   const { t } = useTranslation();
 
 
