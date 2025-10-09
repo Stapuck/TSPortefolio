@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import Maintenance from "./pages/Maintenance";
 
 export default function App() {
-  const maintenance = false;
+  const maintenance = true;
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 dark:bg-sky-950">
