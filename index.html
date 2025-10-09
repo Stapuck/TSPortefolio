@@ -1,25 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-      
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TS Portfolio</title>
 
-    <link rel="prefetch" as="image" href="/images/profile/terence-11.jpg" type="image/jpg">
-    <link rel="prefetch" as="image" href="/images/profile/pp2.jpg" type="image/jpg">
+    <script>
+      (function () {
+        try {
+          const lang = localStorage.getItem("lang") || "fr";
+          document.documentElement.lang = lang;
+        } catch (e) {}
+      })();
+    </script>
 
-    <meta name="description" content="Portfolio de Terence S. - Étudiant en ingénierie IT, athlète de canoë slalom et entrepreneur passionné par la technologie et le sport." />
-    <meta name="keywords" content="Portfolio, Terence S., Ingénierie IT, Canoë Slalom, Entrepreneur, Technologie, Sport" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="prefetch"
+      as="image"
+      href="/images/profile/terence-11.jpg"
+      type="image/jpg"
+    />
+    <link
+      rel="prefetch"
+      as="image"
+      href="/images/profile/pp2.jpg"
+      type="image/jpg"
+    />
+
+    <meta
+      name="description"
+      content="Portfolio de Terence S. - Étudiant en ingénierie IT, athlète de canoë slalom et entrepreneur passionné par la technologie et le sport."
+    />
+    <meta
+      name="keywords"
+      content="Portfolio, Terence S., Ingénierie IT, Canoë Slalom, Entrepreneur, Technologie, Sport"
+    />
     <meta name="author" content="Terence S." />
   </head>
+
   <body>
     <noscript>
-      <p style="text-align:center; margin-top:1em;">
-        Pour une expérience optimale, veuillez activer JavaScript dans votre navigateur.
+      <p style="text-align: center; margin-top: 1em">
+        Pour une expérience optimale, veuillez activer JavaScript dans votre
+        navigateur.
       </p>
-      <p style="text-align:center; margin-top:1em;">
+      <p style="text-align: center; margin-top: 1em">
         For a better experience, please allow JavaScript in your browser
       </p>
     </noscript>
@@ -27,7 +55,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-</html> 
+</html>
 
 <!-- <!doctype html>
 <html lang="fr">

@@ -1,4 +1,3 @@
-
 // todo : revoir telecharger image d'event
 export interface EventType {
   date: string;
@@ -19,7 +18,9 @@ export interface EventType {
 
 export const next_date: EventType[] = [
   //2028
+
   //2027
+
   // 2026
   {
     lieu_fr: "Pau, France",
@@ -118,7 +119,7 @@ export const next_date: EventType[] = [
     lieu_fr: "Toulouse, France",
     lieu_en: "Toulouse, France",
     date: "November 02, 2025  8:00",
-    date_fin: "November 02, 2025 12:00",
+    date_fin: "November 02, 2025 14:00",
     event_en: "2025 Toulouse Marathon",
     event_fr: "Marathon de Toulouse 2025",
     type: "other",
@@ -648,18 +649,18 @@ export const next_date: EventType[] = [
 ];
 
 // skill
-import css from "/icones/skills/css.png"
-import git from "/icones/skills/git.png"
-import html from "/icones/skills/html.png"
-import javascript from "/icones/skills/javascript.png"
-import mongodb from "/icones/skills/mongodb.png"
-import nodejs from "/icones/skills/nodejs.png"
-import reactjs from "/icones/skills/reactjs.png"
-import redux from "/icones/skills/redux.png"
-import tailwind from "/icones/skills/tailwind.png"
-import typescript from "/icones/skills/typescript.png"
-import backend from "/icones/skills/backend.png"
-import github from "/icones/skills/github.png"
+import css from "/icones/skills/css.png";
+import git from "/icones/skills/git.png";
+import html from "/icones/skills/html.png";
+import javascript from "/icones/skills/javascript.png";
+import mongodb from "/icones/skills/mongodb.png";
+import nodejs from "/icones/skills/nodejs.png";
+import reactjs from "/icones/skills/reactjs.png";
+import redux from "/icones/skills/redux.png";
+import tailwind from "/icones/skills/tailwind.png";
+import typescript from "/icones/skills/typescript.png";
+import backend from "/icones/skills/backend.png";
+import github from "/icones/skills/github.png";
 
 export interface Skills {
   name: string;
@@ -1541,7 +1542,7 @@ export interface Experiences {
   type: string;
 }
 
-export const experiences : Experiences[] = [
+export const experiences: Experiences[] = [
   {
     etablissement_fr: "Safran Helicopter Engines",
     etablissement_en: "Safran Helicopter Engines",
@@ -1960,7 +1961,7 @@ import c1paddle from "/images/budget/c1_paddle.png";
 import slalomboat from "/images/budget/slalom_boat.png";
 import kayakcrossboat from "/images/budget/kayakcross_boat.png";
 import kayakCross from "/images/budget/Foix_kayakCross.jpg";
-import canoeslalom from "/images/budget/Foix_slalom.jpg"; 
+import canoeslalom from "/images/budget/Foix_slalom.jpg";
 
 export const photos = [
   {

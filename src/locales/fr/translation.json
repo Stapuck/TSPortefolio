@@ -11,8 +11,8 @@
   },
 
   "AchievementR": {
-    "clicktoflip": "Click to flip between disciplines",
-    "continentalranking": "Continental",
+    "clicktoflip": "Cliquez pour retourner la carte",
+    "continentalranking": "Continentale",
     "medal&race": "Médailles & Courses",
     "moreachievements": "médailles",
     "senior": "Sénior",
@@ -29,7 +29,7 @@
     "blog_welcome": "Média Zone",
     "important": "Annonce Importante",
     "importanttxt": "Une nouvelle excitante concernant ma prochaine compétition internationale ! Plus de détails arrivent bientôt.",
-    "lastarticle": " Dernier Article",
+    "lastarticle": "Dernier Article",
     "medias": "Médias",
     "nomedia": "Pas d'article actuellement.",
     "specialnews": "News Spéciales",
@@ -209,7 +209,6 @@
     "videotext": "Athlète | Ingénieur | Entrepreneur"
   },
 
-  
   "Maintenance": {
     "contact": "Besoin urgent ?",
     "contactUs": "Contactez-moi",
@@ -230,13 +229,12 @@
   "Pro": {
     "allproject": "Tous les projets",
     "background": "Parcours & Formations",
-    "backgroundtxt" : "Découvrez mon parcours professionnel et les expériences qui m’ont permis de développer mes compétences et de relever des défis concrets. Chaque étape de mon cheminement reflète ma capacité à m’adapter, apprendre et créer des solutions efficaces.", 
+    "backgroundtxt": "Découvrez mon parcours professionnel et les expériences qui m’ont permis de développer mes compétences et de relever des défis concrets. Chaque étape de mon cheminement reflète ma capacité à m’adapter, apprendre et créer des solutions efficaces.",
     "citation": "« L’expérience et la formation sont les fondations sur lesquelles se construisent les projets ambitieux. »",
     "certifications": "Certifications",
     "certificationstxt": "Tout au long de mon parcours, j'ai obtenu diverses certifications qui attestent de mes compétences et de mon engagement envers l'évolution continue ainsi que l'excellence professionnelle.",
     "downloadcv": "Ou téléchargez mon CV",
     "featured": "Mis en avant",
-    "featuredstat": "Mis en avant",
     "noproject": "Aucun projet trouvé dans cette catégorie",
     "project": "Projects",
     "projectnumber": "Projets totaux",
@@ -248,15 +246,14 @@
     "readytocollabtxt": "Je suis joignable pour discuter de vos idées et voir comment nous pouvons travailler ensemble.",
     "skills": "Compétences",
     "skillstxt": "Découvrez les technologies et outils que j'utilise pour créer des solutions innovantes et performantes. Chaque compétence représente une expertise développée à travers des projets concrets et une formation continue.",
-    "txtintro":"Cette page reprend l'intégralité de mon parcours académique, de mes compétences ou encore certifications obtenue ces dernières années. "
-
+    "txtintro": "Cette page reprend l'intégralité de mon parcours académique, de mes compétences ou encore certifications obtenue ces dernières années. "
   },
 
   "Profile": {
     "citation": "« Discipline, curiosité et persévérance guident chacun de mes projets.»",
     "english": "Anglais",
     "faq": "Foire aux questions ",
-    "faqsmall":"F.A.Q",
+    "faqsmall": "F.A.Q",
     "faqtxt": "Découvrez les réponses aux questions les plus courantes",
     "french": "Français",
     "profile_welcome": "📝 Bienvenue sur la page de mon profile",
@@ -313,7 +310,7 @@
       "training": "3 semaines de camps d'entraînement",
       "training&race": "Stages & Compétitions",
       "travel": "Déplacement",
-      "viewchart":"Vue graphique",
+      "viewchart": "Vue graphique",
       "viewdetail": "Vue Détaillée",
       "viewtoolpoint": "Vue Interactive"
     },
@@ -358,7 +355,7 @@
     "price": "Prix",
     "projet&objectif": "Projets & Objectifs",
     "sponsor": "sponsoring",
-    "sponsorhistory":"Notre Histoire",
+    "sponsorhistory": "Notre Histoire",
     "sport_welcome": " Bienvenue sur la page sport"
   },
 
@@ -371,10 +368,10 @@
     "noteText2": "2 = Intermédiaire (< 5h)",
     "noteText3": "3 = Confirmé (5h à 10h)",
     "noteText4": "4 = Avancé (> 10h)",
-    "noteText5": "5 = Expert (> 20h)", 
-    "techno":"Technologies",
-    "cate":"Catégories",
-    "exp":"Années d'expérience",
-    "project":"Projets"
+    "noteText5": "5 = Expert (> 20h)",
+    "techno": "Technologies",
+    "cate": "Catégories",
+    "exp": "Années d'expérience",
+    "project": "Projets"
   }
 }

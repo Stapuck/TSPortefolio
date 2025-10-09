@@ -336,7 +336,7 @@ const Projects = () => {
               {projects.filter((p) => p.featured).length}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
-               {t('Pro.featuredstat')}
+               {t('Pro.featured')}
             </div>
           </div>
         </div>

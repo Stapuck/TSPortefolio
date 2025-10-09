@@ -1,5 +1,14 @@
 import { Award } from "lucide-react";
 
+import CCNA1 from "/images/certifications/CCNA1.pdf"
+import CCNA1_badge from "/images/certifications/CCNAITN__1_.png"
+
+import Cyber from "/images/certifications/cyber.pdf"
+import Cyber_badge from "/images/certifications/cyber_badge.png"
+import OpenScience101 from "/images/certifications/OpenScience101.pdf"
+import OpenScienceEssentials from "/images/certifications/OpenScienceEssentials.pdf"
+
+
 const Certifications = () => {
   const certifications = [
     {
@@ -7,8 +16,7 @@ const Certifications = () => {
       title: "AWS Certified Solutions Architect",
       issuer: "Amazon Web Services",
       date: "2024",
-      image:
-        "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop",
+      image: CCNA1,
       description:
         "Architecture et déploiement d'applications sur AWS avec best practices.",
       link: "#",
@@ -18,8 +26,7 @@ const Certifications = () => {
       title: "React Professional Certificate",
       issuer: "Meta",
       date: "2023",
-      image:
-        "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=400&h=300&fit=crop",
+      image: CCNA1_badge,
       description:
         "Maîtrise avancée de React, hooks, et développement d'applications modernes.",
       link: "#",
@@ -29,8 +36,7 @@ const Certifications = () => {
       title: "Full Stack Web Development",
       issuer: "FreeCodeCamp",
       date: "2023",
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
+      image: Cyber,
       description:
         "Développement full-stack avec Node.js, Express, MongoDB et React.",
       link: "#",
@@ -40,8 +46,27 @@ const Certifications = () => {
       title: "Kubernetes Administrator",
       issuer: "Linux Foundation",
       date: "2024",
-      image:
-        "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400&h=300&fit=crop",
+      image: Cyber_badge,
+      description:
+        "Administration et orchestration de conteneurs avec Kubernetes.",
+      link: "#",
+    },
+    {
+      id: 5,
+      title: "Kubernetes Administrator",
+      issuer: "Linux Foundation",
+      date: "2024",
+      image: OpenScience101,
+      description:
+        "Administration et orchestration de conteneurs avec Kubernetes.",
+      link: "#",
+    },
+    {
+      id: 6,
+      title: "Kubernetes Administrator",
+      issuer: "Linux Foundation",
+      date: "2024",
+      image: OpenScienceEssentials,
       description:
         "Administration et orchestration de conteneurs avec Kubernetes.",
       link: "#",
