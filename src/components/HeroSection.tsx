@@ -1,6 +1,6 @@
 import React from "react";
 import { Trophy, Target, Briefcase, Code, Tv, Mic } from "lucide-react";
-import baniere from "../medias/images/profile/terence-11.jpg";
+import baniere from "/images/profile/terence-11.jpg";
 import { useTranslation } from "react-i18next";
 
 type HeroSectionProps = {

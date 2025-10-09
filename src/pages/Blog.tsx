@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import HeroSection from "../components/HeroSection.tsx";
-import { articles } from "../medias/databases/index-global.ts";
+import { articles } from "../medias/index-global.ts";
 import { useTranslation } from "react-i18next";
 
 import {

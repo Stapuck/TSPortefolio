@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-import Experiences from "../components/Experiences.tsx";
+import ExperiencesComponent from "../components/ExperiencesComponent.tsx";
 import HeroSection from "../components/HeroSection.tsx";
 import DownloadButton from "../components/DownloadBtn.tsx";
 import { useTranslation } from "react-i18next";
 import Skills from "../components/Skills.tsx";
-import { skills } from "../medias/databases/index-global";
+import { skills } from "../medias/index-global.ts";
 import Projects from "../components/Projects.tsx";
 // import { Mail } from "lucide-react";
 import { LuLinkedin } from "react-icons/lu";
@@ -46,7 +46,7 @@ export default function Pro() {
           <p className="max-w-4xl mx-auto sm:leading-relaxed flex justify-center text-gray-800 dark:text-slate-100">
             {t("Pro.backgroundtxt")}
           </p>
-          <Experiences />
+          <ExperiencesComponent />
         </section>
 
         <section className="bg-sky-100 dark:bg-sky-900/90 p-8 rounded-3xl">

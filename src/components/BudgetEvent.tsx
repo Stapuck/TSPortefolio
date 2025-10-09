@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { MapPin, Clock, Zap, PieChart, Grid3x3 } from "lucide-react";
-import { travelExpenses } from "../medias/databases/index-global.ts";
+import { travelExpenses } from "../medias/index-global.ts";
 import {
   PieChart as RechartsPie,
   Pie,

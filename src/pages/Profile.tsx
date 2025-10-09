@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AccordionGroup from "../components/AccordionGroup";
 import { useTranslation } from "react-i18next";
-import pp2 from "../medias/images/profile/pp2.jpg";
+import pp2 from "/images/profile/pp2.jpg";
 import HeroSection from "../components/HeroSection";
 import { MapPin, Calendar, Globe, Code, Award, Zap, Heart } from "lucide-react";
 
@@ -15,6 +15,9 @@ export default function Profile() {
 
   const [years, setYears] = useState<number>(0);
   const fromDate = "2002-03-29T16:30:00";
+  const [yearskayak , setYearskayak] = useState<number>(0);
+
+  const fromDatePractice = "2009-03-30T14:00:00";
 
   useEffect(() => {
     const targetDate = new Date(fromDate);
@@ -27,6 +30,18 @@ export default function Profile() {
     }, 1000);
     return () => clearInterval(interval);
   }, [fromDate]);
+
+  useEffect(() => {
+    const NowDate = new Date(fromDatePractice);
+    const interval = setInterval(() => {
+      const now = new Date();
+      const diff = now.getTime() - NowDate.getTime();
+      const diffInDays = diff / (1000 * 60 * 60 * 24);
+      const diffInYears = diffInDays / 365.25;
+      setYearskayak(diffInYears);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [fromDatePractice]);
 
   return (
     <div>
@@ -93,7 +108,7 @@ export default function Profile() {
               <div className="flex items-center space-x-1 text-gray-800 dark:text-gray-300">
                 <Calendar className="w-4 h-4" />
                 <span>
-                  &{years.toFixed(8)} {t("Profile.years")}
+                  {years.toFixed(8)} {t("Profile.years")}
                 </span>
               </div>
               <div className="flex items-center space-x-1 text-gray-800 dark:text-gray-300">
@@ -167,7 +182,7 @@ export default function Profile() {
             </p>
             <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-slate-300">
               <span className="flex items-center">
-                ⏱️ {t("Profile.section2label2")}
+                ⏱️ {yearskayak.toFixed(1)}{t("Profile.section2label2")}
               </span>
               <span className="flex items-center">
                 🏅 {t("Profile.section2label1")}

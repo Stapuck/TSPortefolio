@@ -191,6 +191,7 @@ const TooltipPoint = ({
           <img
             src={img}
             alt={text}
+            loading="lazy"
             className={`w-full ${currentSize.image} object-cover transition-transform duration-300 hover:scale-105`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

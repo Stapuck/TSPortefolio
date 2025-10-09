@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { type Skills } from "../medias/databases/index-global";
+import { type Skills } from "../medias/index-global";
 
 export interface SkillsProps {
   skills: any[];

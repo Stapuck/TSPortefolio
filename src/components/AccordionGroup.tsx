@@ -1,4 +1,4 @@
-import { accordionData } from "../medias/databases/index-global";
+import { accordionData } from "../medias/index-global";
 import Accordion from "../components/Accordion";
 
 import { useTranslation } from "react-i18next";

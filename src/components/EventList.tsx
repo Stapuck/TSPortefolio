@@ -1,4 +1,4 @@
-import { next_date, type EventType } from "../medias/databases/index-global.ts";
+import { next_date, type EventType } from "../medias/index-global.ts";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {

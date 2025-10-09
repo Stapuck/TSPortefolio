@@ -6,7 +6,7 @@ import { format, parse, startOfWeek, getDay } from "date-fns";
 import { fr, enUS } from "date-fns/locale";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { next_date, type EventType } from "../medias/databases/index-global";
+import { next_date, type EventType } from "../medias/index-global";
 import {
   Calendar as CalendarIcon,
   MapPin,

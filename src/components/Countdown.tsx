@@ -1,7 +1,7 @@
 // last version working with 24h before and after event + sport info display et pluralisation des labels et responsive
 
 import { useEffect, useState } from "react";
-import { next_date, type EventType } from "../medias/databases/index-global";
+import { next_date, type EventType } from "../medias/index-global";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 

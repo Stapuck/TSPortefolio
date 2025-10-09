@@ -54,15 +54,6 @@ export default function Home() {
   return (
     <>
       <section className="relative w-full h-screen sm:h-screen md:h-[100vh] lg:h-[100vh]">
-        {/* <video
-          ref={videoRef}
-          src={videoBg}
-          autoPlay
-          loop
-          muted={!sound}
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        /> */}
         <video
           src="/videos/video_web_streamable.mp4"
           ref={videoRef}
@@ -73,10 +64,6 @@ export default function Home() {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* <video controls preload="auto" autoPlay width="640" height="360">
-          <source src="videos/video_web.mp4" type="video/mp4"></source>
-          Votre navigateur ne supporte pas la vidéo.
-        </video> */}
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70 dark:from-black/40 dark:via-black/60 dark:to-black/80 z-10"></div>
 
