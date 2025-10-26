@@ -123,7 +123,7 @@ const Projects = () => {
   const initialLang = localStorage.getItem("lang") || "fr";
 
   // temp 
-  const [maintenance, setMaintenance] = useState<boolean>(false);
+  const [maintenance] = useState<boolean>(false);
 
   const categories = [
     { id: "all", label: t("Pro.allproject") },
