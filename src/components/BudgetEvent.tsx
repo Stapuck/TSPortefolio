@@ -121,11 +121,12 @@ const BudgetEvent = () => {
                       </span>
                     </div>
                     {/* Tooltip */}
-                    {/* todo : revoir couleur et darkmode  */}
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-72 bg-gray-700 dark:bg-gray-900 text-white text-sm p-3 rounded-lg shadow-xl z-10">
-                      {initialLang === "fr"
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-105 bg-gray-700 dark:bg-gray-900 text-white text-sm p-3 rounded-lg shadow-xl z-10">
+                      <p className="flex justify-center">
+                        {initialLang === "fr"
                         ? expense.tooltip_fr
                         : expense.tooltip_en}
+                        </p>
                     </div>
                   </div>
                 </div>
@@ -140,7 +141,6 @@ const BudgetEvent = () => {
                     cx="50%"
                     cy="50%"
                     labelLine={true}
-                    // todo : revoir si nom ou pas. 
                     // label={({ name, percent }: any) =>
                     label={({percent }: any) =>
                       // `${name} (${(percent * 100).toFixed(0)}%)`

@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 // Import des PDF
 import pdfCV_FR from "/pdfs/TS_CV-FR.pdf";
 import pdfCV_EN from "/pdfs/TS_CV-EN.pdf";
-import pdfBudget_FR from "/pdfs/Receipt_1068-175-144-en.pdf";
-import pdfBudget_EN from "/pdfs/Terence_Saramandif_Flight_Pula-en.pdf";
+import pdfBudget_FR from "/pdfs/Finance_progress_fr.pdf";
+import pdfBudget_EN from "/pdfs/Finance_progress_en.pdf";
 import pdfSponsor_FR from "/pdfs/DossierSponsoring_22092025_TSFRV3.pdf";
 import pdfSponsor_EN from "/pdfs/DossierSponsoring_22092025_TSENV3.pdf";
 
