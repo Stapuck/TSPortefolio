@@ -1,4 +1,12 @@
 // todo : revoir telecharger image d'event
+// import augsburg from "/images/next_event/augsburg.webp"
+// import Foix from "/images/next_event/Foix.png"
+// import Prague from "/images/next_event/Prague.png"
+// import Seu from "/images/next_event/Seu.png"
+// import Tacen from "/images/next_event/Tacen.png"
+// import Pau from "/images/next_event/Stade_dEaux_Vives_Pau_Pyrénées.webp"
+// import mapstacen from "/images/next_event/mapstacen.png"
+
 export interface EventType {
   date: string;
   date_fin?: string;
@@ -112,6 +120,19 @@ export const next_date: EventType[] = [
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
+  {
+    date: "January 22 2026 08:00",
+    date_fin: "January 31, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Underberg, Afrique du Sud",
+    lieu_en: "Underberg, South Africa",
+    event_en: "2026 African championship",
+    event_fr: "Championnat d'Afrique 2026",
+    link_result:
+      "https://www.canoeicf.com/canoe-slalom-ranking-race/underberg-2026",
+    type_event_en: "continental",
+    type_event_fr: "Championnat continental",
+  },
 
   // 2025
 
@@ -180,17 +201,17 @@ export const next_date: EventType[] = [
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
   },
-  // {
-  //   lieu_fr: "Pula, Croatie",
-  //   lieu_en: "Pula, Croatia",
-  //   date: "June 21, 2025 08:00",
-  //   date_fin: "October 17, 2025 18:00",
-  //   event_en: " Pula Internship",
-  //   event_fr: " stage Pula",
-  //   type: "pro",
-  //   type_event_en: "internship",
-  //   type_event_fr: "stage",
-  // },
+  {
+    lieu_fr: "Pula, Croatie",
+    lieu_en: "Pula, Croatia",
+    date: "June 21, 2025 08:00",
+    date_fin: "October 17, 2025 18:00",
+    event_en: " Pula Internship",
+    event_fr: " stage Pula",
+    type: "pro",
+    type_event_en: "internship",
+    type_event_fr: "stage",
+  },
   {
     date: "June 13, 2025 08:00",
     date_fin: "June 15, 2025 18:00",
@@ -601,8 +622,9 @@ export const next_date: EventType[] = [
     type: "sport",
     lieu_fr: "Alger, Algérie",
     lieu_en: "Algiers, Algeria",
-    event_en: "YAG",
-    event_fr: "Jeux African de la jeunesse",
+    event_en: "2018 Youth Africa Games - Canoe Sprint & Slalom",
+    event_fr:
+      "Jeux African de la jeunesse 2018 - Canoë slalom & course en ligne",
     type_event_en: "continental",
     type_event_fr: "course continentale",
   },
@@ -659,8 +681,20 @@ import reactjs from "/icones/skills/reactjs.png";
 import redux from "/icones/skills/redux.png";
 import tailwind from "/icones/skills/tailwind.png";
 import typescript from "/icones/skills/typescript.png";
-import backend from "/icones/skills/backend.png";
 import github from "/icones/skills/github.png";
+import figma from "/icones/skills/figma.png";
+import angular from "/icones/skills/angular.png";
+import expressjs from "/icones/skills/expressjs.png";
+import framer_motion from "/icones/skills/framer_motion.png";
+import nextjs from "/icones/skills/nextjs.png";
+import python from "/icones/skills/python.png";
+import sass from "/icones/skills/sass.png";
+import uiux from "/icones/skills/uxui.png";
+import docker from "/icones/skills/docker.png";
+import postgresql from "/icones/skills/postgresql.png";
+import vercel from "/icones/skills/vercel.png";
+import koyeb from "/icones/skills/koyeb.png";
+import mariadb from "/icones/skills/mariadb.png";
 
 export interface Skills {
   name: string;
@@ -676,28 +710,28 @@ export const skills = [
     imageUrl: css,
     category: "Frontend",
     category_fr: "Frontend",
-    level: "5",
+    level: "3",
   },
   {
     name: "Express",
-    imageUrl: backend,
+    imageUrl: expressjs,
     category: "Backend",
     category_fr: "Backend",
-    level: "5",
+    level: "2",
   },
   {
     name: "Git",
     imageUrl: git,
     category: "Version Control",
     category_fr: "Controle de Version",
-    level: "5",
+    level: "2",
   },
   {
     name: "GitHub",
     imageUrl: github,
     category: "Version Control",
     category_fr: "Controle de Version",
-    level: "5",
+    level: "4",
   },
   {
     name: "HTML",
@@ -717,73 +751,129 @@ export const skills = [
     name: "MongoDB",
     imageUrl: mongodb,
     category: "Database",
-    category_fr: "Base de donnée",
-
-    level: "5",
+    category_fr: "Base de données",
+    level: "4",
   },
   {
     name: "Motion",
-    imageUrl: backend,
+    imageUrl: framer_motion,
     category: "Animation",
     category_fr: "Animation",
-    level: "5",
+    level: "2",
   },
   {
     name: "UX/UI",
-    imageUrl: backend,
+    imageUrl: uiux,
     category: "Frontend",
     category_fr: "Frontend",
     level: "5",
   },
   {
     name: "Next.js",
-    imageUrl: backend,
+    imageUrl: nextjs,
     category_fr: "Frontend",
     category: "Frontend",
-    level: "5",
+    level: "1",
   },
   {
     name: "Node.js",
     imageUrl: nodejs,
     category_fr: "Backend",
     category: "Backend",
-    level: "5",
+    level: "3",
   },
   {
     name: "React",
     imageUrl: reactjs,
     category_fr: "Frontend",
     category: "Frontend",
-    level: "5",
+    level: "3",
   },
   {
     name: "Redux",
     imageUrl: redux,
     category_fr: "Gestion des status",
     category: "State Management",
-    level: "5",
+    level: "1",
   },
   {
     name: "Sass",
-    imageUrl: backend,
+    imageUrl: sass,
     category_fr: "Frontend",
     category: "Frontend",
-    level: "5",
+    level: "2",
   },
   {
     name: "Tailwind",
     imageUrl: tailwind,
     category_fr: "Frontend",
     category: "Frontend",
-    level: "5",
+    level: "4",
   },
   {
     name: "TypeScript",
     imageUrl: typescript,
     category_fr: "Frontend",
     category: "Frontend",
-    level: "5",
+    level: "3",
   },
+  {
+    name: "Python",
+    imageUrl: python,
+    category_fr: "Language de programmation",
+    category: "Programmation Language",
+    level: "3",
+  },
+  {
+    name: "Figma",
+    imageUrl: figma,
+    category: "Design / UI/UX",
+    category_fr: "Design / UI/UX",
+    level: "4",
+  },
+  {
+    name: "Angular",
+    imageUrl: angular,
+    category: "Frontend",
+    category_fr: "Frontend",
+    level: "3",
+  },
+  {
+    name: "Docker",
+    imageUrl: docker,
+    category: "DevOps / Outils",
+    category_fr: "DevOps / Outils",
+    level: "1",
+  },
+  {
+    name: "PostgreSQL",
+    imageUrl: postgresql,
+    category: "Database",
+    category_fr: "Base de données",
+    level: "3",
+  },
+  {
+    name: "Vercel",
+    imageUrl: vercel,
+    category: "DevOps / Outils",
+    category_fr: "DevOps / Outils",
+    level: "1",
+  },
+  {
+    name: "Koyeb",
+    imageUrl: koyeb,
+    category: "DevOps / Outils",
+    category_fr: "DevOps / Outils",
+    level: "1",
+  },
+  {
+    name: "Maria DB",
+    imageUrl: mariadb,
+    category: "Database",
+    category_fr: "Base de données",
+    level: "3",
+  },
+  //todo : rajouter c++, anaconda ou autre truc comme ça
 ];
 
 // articles et blog
@@ -1494,39 +1584,41 @@ export const articles = [
 //accordiondata
 export const accordionData = [
   {
-    title_fr: "D'où viens tu ? ",
+    title_fr: "D'où viens-tu ?",
     text_fr:
-      "Avec des origines Mauriciennes, je vis en France depuis toujours, d'abord de Tours où j'ai passé mes années lycée ainsi que mon bac et ensuite dans le sud, sur Pau pour continuer ma pratique sportive et mes études.",
-    title_en: "Where are you from ? ",
-    text_en: "Mauritius baby ",
+      "Originaire de l'île Maurice par ma famille, j’ai grandi en France. J’ai fait mon lycée et obtenu mon bac à Tours, puis j’ai poursuivi mes études et ma pratique sportive à Pau, dans le sud.",
+    title_en: "Where are you from?",
+    text_en:
+      "My family is from Mauritius, but I was born and raised in France. I studied in Tours and then moved to Pau to continue both my athletic journey and my education.",
   },
   {
     title_fr:
-      "Si tu devais choisir un autre sport que la Canoë-Kayak, lequel choisirais-tu ? ",
+      "Si tu devais choisir un autre sport que le canoë-kayak, lequel choisirais-tu ?",
     text_fr:
-      "Je pense que je me serais tourné vers la course à pied / trail pour le coté dépassement de soi, sinon le surf ou le hockey sur glace.",
+      "Probablement la course à pied ou le trail pour l’aspect dépassement de soi, sinon le surf ou le hockey sur glace, deux sports qui me passionnent aussi.",
     title_en:
-      "If you had to choose an other sport, which one would you choose ? ",
-    text_en: "Running for sur ",
-  },
-
-  {
-    title_fr: "Qu'est ce qui te pousse à te lever le matin",
-    text_fr:
-      "Les plaisirs de la vie que ça soit dans le quotidien, la famille, les amis. Ou encore l'évolution perpetuelle, devenir une meilleur personne (sportif et pro). Repousser mes limites. ou juste connaitre à l'avance le repas du soir suffit parfois ;)",
-    title_en: "What make you go out of your bed the morning",
-    text_en: "Only one think does, the alarm on my phone. ",
-  },
-
-  {
-    title_fr: "La clès de la réussite selon toi ? ",
-    text_fr:
-      "Dans mon cas, je dirais la polyvalence et la résilience. Mais la réussite est tellement subjectif et peut varier d'un jour à l'autre que juste se sentir épanouie sera ma réponse finale.",
-    title_en: "The key of success in your opinion ? ",
+      "If you had to pick another sport besides canoe-kayak, which one would you choose?",
     text_en:
-      "Having close people supporting you, Loving the Day and trusting the process",
+      "Probably running or trail running for the self-improvement aspect — otherwise surfing or ice hockey, two sports I’m also passionate about.",
+  },
+  {
+    title_fr: "Qu’est-ce qui te motive à te lever le matin ?",
+    text_fr:
+      "Profiter des plaisirs simples du quotidien : la famille, les amis, les projets. Continuer de progresser chaque jour, devenir une meilleure version de moi-même, que ce soit sportivement ou professionnellement. Et parfois… juste la perspective du dîner du soir suffit !",
+    title_en: "What motivates you to get out of bed in the morning?",
+    text_en:
+      "Enjoying the simple things in life — family, friends, meaningful projects. Growing every day and becoming a better version of myself as an athlete and a person. And sometimes… knowing what’s for dinner is enough motivation!",
+  },
+  {
+    title_fr: "Quelle est la clé de la réussite selon toi ?",
+    text_fr:
+      "Je dirais la polyvalence, la résilience et la capacité à s’adapter. Mais la réussite étant très subjective, je crois surtout qu’être épanoui dans ce que l’on fait est la plus belle forme de réussite.",
+    title_en: "In your opinion, what is the key to success?",
+    text_en:
+      "Versatility, resilience, and the ability to adapt. But success is subjective — to me, feeling fulfilled in what you do is the greatest achievement.",
   },
 ];
+
 
 //experience
 
@@ -1793,7 +1885,7 @@ export const travelExpenses = [
     label_en: "Other",
     amount: 1200,
     tooltip_fr:
-      "Le prix d'une séances est de 10-25€, avec 1-2 séances/jour → ~120€/semaine",
+      "Une séances = 10-25€ avec 1-2 séances/jour → ~120€/semaine",
     tooltip_en: "Sessions' price is 10-25, with 1-2 sessions/day → ~120€/week",
   },
   {
@@ -1802,9 +1894,9 @@ export const travelExpenses = [
     label_en: "Pau training structure subscription",
     amount: 1250,
     tooltip_fr:
-      "Abonnement annuel, accès à la salle, coaching et prépation physique",
+      "Abonnement annuel, coaching et prépation physique",
     tooltip_en:
-      "annual subscription, acces to the gym, coaching and physical preparation",
+      "annual subscription, coaching and physical preparation",
   },
   {
     key: "Daily",
@@ -1872,7 +1964,7 @@ export const achievements = [
 // projects
 // todo : mettre du vrai projet
 
-//pro: powerjoular, cnc revoir avec Carlo,  safran, hermes,
+//pro: powerjoular, cnc ,safran, hermes,
 //perso: portefolion * 2, pokedex, angular, metéo api, money watcher, +3
 
 //school : intershop , cesieat, CesiOP, Easysave, arduino , big data powerbi
@@ -1889,10 +1981,25 @@ export const projects = [
     image: "",
     description_fr: "",
     description_en: "",
-    technologies: ["", ".", "", "", ""],
+    technologies: ["", "", "", "", ""],
     github: "",
     demo: "",
     featured: true,
+  },
+  {
+    id: 2,
+    title_en: "",
+    title_fr: "",
+    subject_fr: "",
+    subject_en: "",
+    domain: "",
+    image: "",
+    description_fr: "",
+    description_en: "",
+    technologies: ["", "", "", "", ""],
+    github: "",
+    demo: "",
+    featured: false,
   },
 ];
 
@@ -1905,6 +2012,8 @@ import vick from "/images/sponsors/vick.png";
 import olympiccommittee from "/images/sponsors/olympiccommittee.png";
 import MYESR from "/images/sponsors/MYESR-logo.png";
 import mrifede from "/images/sponsors/mauritius_canoe_kayak_federation-removebg-preview.png";
+
+// todo : rajouter Safran ?
 
 export const sponsors = [
   {
@@ -1960,7 +2069,7 @@ import k1paddle from "/images/budget/k1_paddle.png";
 import c1paddle from "/images/budget/c1_paddle.png";
 import slalomboat from "/images/budget/slalom_boat.png";
 import kayakcrossboat from "/images/budget/kayakcross_boat.png";
-import kayakCross from "/images/budget/Foix_kayakCross.jpg";
+import KayakCross from "/images/budget/augsburg_Kayakcross.jpg";
 import canoeslalom from "/images/budget/Foix_slalom.jpg";
 
 export const photos = [
@@ -2003,32 +2112,24 @@ export const photos = [
     ],
   },
   {
-    src: kayakCross,
+    src: KayakCross,
     alt: "Kayak Cross",
     tooltips: [
       {
-        x: "53%",
-        y: "39%",
+        x: "52%",
+        y: "41%",
         img: kayakcrosshelmet,
         price: 120,
         text_fr: "Casque de kayak cross",
         text_en: "Kayak cross helmet",
       },
       {
-        x: "40%",
+        x: "38%",
         y: "54%",
         img: k1paddle,
         price: 500,
         text_fr: "Pagaie de kayak cross",
         text_en: "Kayakcross paddle",
-      },
-      {
-        x: "30%",
-        y: "70%",
-        img: kayakcrossboat,
-        price: 2000,
-        text_fr: "Bateau de kayakcross",
-        text_en: "Kayakcross boat",
       },
       {
         x: "53%",
@@ -2038,6 +2139,93 @@ export const photos = [
         text_fr: "Jupe Kway de kayakcross",
         text_en: "Kayakcross spraydeck",
       },
+      {
+        x: "45%",
+        y: "80%",
+        img: kayakcrossboat,
+        price: 2000,
+        text_fr: "Bateau de kayakcross",
+        text_en: "Kayakcross boat",
+      },
     ],
   },
 ];
+
+
+
+// Certifications 
+
+import CCNAv7 from "/images/certifications/CCNAv7.png";
+import OpenScience101 from "/images/certifications/OpenScience101.png";
+import OpenScienceEssentials from "/images/certifications/OpenScienceEssentials.png";
+import cyber from "/images/certifications/cyber.png";
+// import GreenDesigner from "/images/certifications/test.jpg";
+
+ export const certifications = [
+    {
+      id: 1,
+      title_fr: "CCNA1 : Introduction aux Réseaux",
+      title_en: "CCNA1: Introduction to Networks",
+      issuer_fr: "Cisco Networking Academy",
+      issuer_en: "Cisco Networking Academy",
+      date: "03-2023",
+      image: CCNAv7,
+      description_fr:
+        "Cette formation introduit les concepts fondamentaux du réseau, y compris les protocoles TCP/IP, les modèles OSI, la configuration de routeurs et commutateurs, ainsi que les bases de la sécurité et de la connectivité. Elle constitue la première étape vers la certification CCNA.",
+      description_en:
+        "This course introduces the fundamentals of networking, including TCP/IP protocols, the OSI model, router and switch configuration, and basic security and connectivity concepts. It serves as the first step toward the CCNA certification.",
+    },
+    {
+      id: 2,
+      title_fr: "Introduction à la Cybersécurité",
+      title_en: "Introduction to Cybersecurity",
+      issuer_fr: "CESI / Cisco Networking Academy",
+      issuer_en: "CESI / Cisco Networking Academy",
+      date: "11-2023",
+      image: cyber,
+      description_fr:
+        "Cette introduction à la cybersécurité explore les menaces numériques, les principes de la sécurité des réseaux, la protection des données, et les bonnes pratiques pour sécuriser les environnements personnels et professionnels.",
+      description_en:
+        "This introductory course in cybersecurity explores digital threats, network security principles, data protection, and best practices for securing personal and professional environments.",
+    },
+    // {
+    //   id: 3,
+    //   title_fr: "Certification Designer Responsable",
+    //   title_en: "Responsible Designer Certification",
+    //   issuer_fr: "Green Compagnon",
+    //   issuer_en: "Green Compagnon",
+    //   date: "2024",
+    //   // image: GreenDesigner,
+    //   description_fr:
+    //     "La certification atteste des compétences en éco-conception et en design durable, mettant l’accent sur la responsabilité environnementale et sociale dans les processus de conception numérique et produit.",
+    //   description_en:
+    //     "This certification validates skills in eco-design and sustainable design, emphasizing environmental and social responsibility in digital and product design processes.",
+    // },
+    {
+      id: 4,
+      title_fr: "Open Science Essentials de la NASA",
+      title_en: "NASA's Open Science Essentials",
+      issuer_fr: "NASA",
+      issuer_en: "NASA",
+      date: "09-2025",
+      image: OpenScienceEssentials,
+      description_fr:
+        "Programme complémentaire à Open Science 101, cette formation approfondit les outils, les plateformes et les pratiques de la science ouverte pour promouvoir une recherche collaborative et accessible.",
+      description_en:
+        "A complementary program to Open Science 101, this course delves deeper into tools, platforms, and practices of open science to foster collaborative and accessible research.",
+    },
+    {
+      id: 5,
+      title_fr: "Open Science 101 de la NASA",
+      title_en: "NASA's Open Science 101",
+      issuer_fr: "NASA",
+      issuer_en: "NASA",
+      date: "09-2025",
+      image: OpenScience101,
+      description_fr:
+        "Ce module de la NASA présente les principes fondamentaux de la science ouverte, incluant l’accès libre aux données, la collaboration scientifique, la transparence et la reproductibilité de la recherche.",
+      description_en:
+        "This NASA module introduces the fundamentals of open science, including open data access, scientific collaboration, transparency, and research reproducibility.",
+    },
+   
+  ];

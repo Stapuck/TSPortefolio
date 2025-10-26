@@ -110,7 +110,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Terence Saramandif — {t("Footer.allrights")}
         </div>
         <div className="text-xs">
-          V3.1.2 — {t("Footer.lastupdate")} : 03/10/2025
+          V3.1.2 — {t("Footer.lastupdate")} : 10/10/2025
         </div>
       </div>
     </footer>

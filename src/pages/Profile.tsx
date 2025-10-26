@@ -182,7 +182,7 @@ export default function Profile() {
             </p>
             <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-slate-300">
               <span className="flex items-center">
-                ⏱️ {yearskayak.toFixed(1)}{t("Profile.section2label2")}
+                ⏱️ {yearskayak.toFixed(0)}{t("Profile.section2label2")}
               </span>
               <span className="flex items-center">
                 🏅 {t("Profile.section2label1")}

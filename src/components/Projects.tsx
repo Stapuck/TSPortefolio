@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 
 // import { projects } from "../medias/databases/index-global";
 
-
 //  todo mettre vrai projet index global sauf si image
 const fakeProjects = [
   {
@@ -123,7 +122,8 @@ const Projects = () => {
   // const initialLang = document.documentElement.lang || "fr";
   const initialLang = localStorage.getItem("lang") || "fr";
 
-
+  // temp 
+  const [maintenance, setMaintenance] = useState<boolean>(false);
 
   const categories = [
     { id: "all", label: t("Pro.allproject") },
@@ -150,199 +150,216 @@ const Projects = () => {
         </p>
       </div>
 
-      {/* Filtres */}
-      <div className="mb-8">
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? "bg-blue-600 dark:bg-sky-800 text-white shadow-lg transform scale-105"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-sky-950 dark:text-gray-200 dark:hover:bg-sky-600 hover:shadow-md"
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Grid des projets */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
-        {filteredProjects.map((project, index) => (
-          <div
-            key={project.id}
-            className="group bg-white dark:bg-slate-800 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100  overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
-            {/* Image */}
-            <div className="relative overflow-hidden h-48 bg-gray-100">
-              <img
-                src={project.image}
-                alt={initialLang === "fr" ? project.title_fr : project.title_en}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-
-              {/* Badge domaine */}
-              <div className="absolute top-4 left-4">
-                <span
-                  className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    project.domain === "pro"
-                      ? "bg-green-100 text-green-700 dark:bg-green-300   dark:text-green-900"
-                      : "bg-purple-100 text-purple-700 dark:bg-purple-300   dark:text-purple-900"
+      {maintenance === true ? (
+        <>
+          {/* Filtres */}
+          <div className="mb-8">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? "bg-blue-600 dark:bg-sky-800 text-white shadow-lg transform scale-105"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-sky-950 dark:text-gray-200 dark:hover:bg-sky-600 hover:shadow-md"
                   }`}
                 >
-                  {project.domain === "pro" ? t("Pro.projectpro") : t("Pro.projectperso")}
-                </span>
-              </div>
+                  {category.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
-              {/* Badge featured */}
-              {project.featured && (
-                <div className="absolute top-4 right-4">
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+          {/* Grid des projets */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+            {filteredProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className="group bg-white dark:bg-slate-800 dark:border-gray-500 rounded-2xl shadow-lg border border-gray-100  overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Image */}
+                <div className="relative overflow-hidden h-48 bg-gray-100">
+                  <img
+                    src={project.image}
+                    alt={
+                      initialLang === "fr" ? project.title_fr : project.title_en
+                    }
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+
+                  {/* Badge domaine */}
+                  <div className="absolute top-4 left-4">
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium ${
+                        project.domain === "pro"
+                          ? "bg-green-100 text-green-700 dark:bg-green-300   dark:text-green-900"
+                          : "bg-purple-100 text-purple-700 dark:bg-purple-300   dark:text-purple-900"
+                      }`}
+                    >
+                      {project.domain === "pro"
+                        ? t("Pro.projectpro")
+                        : t("Pro.projectperso")}
+                    </span>
+                  </div>
+
+                  {/* Badge featured */}
+                  {project.featured && (
+                    <div className="absolute top-4 right-4">
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+                    </div>
+                  )}
+
+                  {/* Overlay avec liens */}
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-white rounded-full text-gray-900 hover:bg-gray-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                 </div>
-              )}
 
-              {/* Overlay avec liens */}
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-white rounded-full text-gray-900 hover:bg-gray-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                    </svg>
-                  </a>
-                )}
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75"
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                )}
+                {/* Contenu */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 dark:text-gray-200 dark:group-hover:text-blue-300/80 transition-colors">
+                    {initialLang === "fr" ? project.title_fr : project.title_en}
+                  </h3>
+
+                  <p className="text-sm text-blue-600 dark:text-slate-300 font-medium mb-3">
+                    {initialLang === "fr"
+                      ? project.subject_fr
+                      : project.subject_en}
+                  </p>
+
+                  <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                    {initialLang === "fr"
+                      ? project.description_fr
+                      : project.description_en}
+                  </p>
+
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.slice(0, 4).map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-2 py-1 bg-gray-100 text-gray-700 dark:bg-sky-700/50 dark:text-slate-200 text-xs rounded-lg font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 4 && (
+                      <span className="px-2 py-1 bg-gray-100 text-gray-500 dark:bg-sky-700/50 dark:text-slate-100 text-xs rounded-lg font-medium">
+                        +{project.technologies.length - 4}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Message si aucun projet */}
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-12">
+              <div className="w-20 h-20 bg-gray-100 dark:bg-sky-800/70 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  className="w-8 h-8 text-gray-400 dark:text-gray-800 "
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+              </div>
+              <p className="text-gray-500 dark:text-gray-200">
+                {t("Pro.noproject")}
+              </p>
+            </div>
+          )}
+
+          {/* Statistiques des projets */}
+          <div className="mt-16 bg-gradient-to-r from-blue-200 to-purple-200 dark:from-sky-700/60 dark:via-sky-800/60 dark:to-sky-700/60 rounded-2xl p-6 md:p-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-200 mb-2">
+                  {projects.length}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-200 font-medium">
+                  {t("Pro.projectnumber")}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-green-600 dark:text-slate-200  mb-2">
+                  {projects.filter((p) => p.domain === "pro").length}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
+                  {t("Pro.projectpro")}s
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-slate-200  mb-2">
+                  {projects.filter((p) => p.domain === "perso").length}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
+                  {t("Pro.projectperso")}s
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-slate-200  mb-2">
+                  {projects.filter((p) => p.featured).length}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
+                  {t("Pro.featured")}
+                </div>
               </div>
             </div>
-
-            {/* Contenu */}
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 dark:text-gray-200 dark:group-hover:text-blue-300/80 transition-colors">
-                {initialLang === "fr" ? project.title_fr : project.title_en}
-              </h3>
-
-              <p className="text-sm text-blue-600 dark:text-slate-300 font-medium mb-3">
-                {initialLang === "fr" ? project.subject_fr : project.subject_en}
-              </p>
-
-              <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">
-                {initialLang === "fr" ? project.description_fr : project.description_en}
-              </p>
-
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.slice(0, 4).map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-2 py-1 bg-gray-100 text-gray-700 dark:bg-sky-700/50 dark:text-slate-200 text-xs rounded-lg font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-                {project.technologies.length > 4 && (
-                  <span className="px-2 py-1 bg-gray-100 text-gray-500 dark:bg-sky-700/50 dark:text-slate-100 text-xs rounded-lg font-medium">
-                    +{project.technologies.length - 4}
-                  </span>
-                )}
-              </div>
-            </div>
           </div>
-        ))}
-      </div>
-
-      {/* Message si aucun projet */}
-      {filteredProjects.length === 0 && (
-        <div className="text-center py-12">
-          <div className="w-20 h-20 bg-gray-100 dark:bg-sky-800/70 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg
-              className="w-8 h-8 text-gray-400 dark:text-gray-800 "
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-              />
-            </svg>
-          </div>
-          <p className="text-gray-500 dark:text-gray-200">
-            {t('Pro.noproject')}
-          </p>
-        </div>
-      )}
-
-      {/* Statistiques des projets */}
-      <div className="mt-16 bg-gradient-to-r from-blue-200 to-purple-200 dark:from-sky-700/60 dark:via-sky-800/60 dark:to-sky-700/60 rounded-2xl p-6 md:p-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-slate-200 mb-2">
-              {projects.length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-200 font-medium">
-              {t('Pro.projectnumber')}
-              
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-green-600 dark:text-slate-200  mb-2">
-              {projects.filter((p) => p.domain === "pro").length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
-              {t('Pro.projectpro')}s
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-slate-200  mb-2">
-              {projects.filter((p) => p.domain === "perso").length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">{t('Pro.projectperso')}s</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-slate-200  mb-2">
-              {projects.filter((p) => p.featured).length}
-            </div>
-            <div className="text-sm text-gray-600 dark:text-gray-200  font-medium">
-               {t('Pro.featured')}
-            </div>
-          </div>
-        </div>
-      </div>
+        </>
+      ) : (
+        <>
+        <div className=" flex justify-center items-center">{t("Pro.maintenanceproject")}</div>
+        </>
+      )}  
     </section>
   );
 };

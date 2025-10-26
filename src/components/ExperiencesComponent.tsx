@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { experiences } from "../medias/index-global.ts";
-import type { Experiences } from "../medias/index-global.ts"; //todo revoir pour l'inclure  et deploy
+import type { Experiences } from "../medias/index-global.ts"; 
 import { useTranslation } from "react-i18next";
 
 const ExperiencesComponent = () => {

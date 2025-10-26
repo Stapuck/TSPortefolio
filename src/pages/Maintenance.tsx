@@ -37,7 +37,7 @@ const { t } = useTranslation();
 
       <div className="relative z-10 text-center space-y-8 max-w-2xl">
         <div className="relative">
-          <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent drop-shadow-sm">
+          <h1 className="text-5xl  md:text-7xl font-black bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent drop-shadow-sm">
             {t("Maintenance.title")}
           </h1>
         </div>
@@ -46,26 +46,26 @@ const { t } = useTranslation();
           <div className="group relative">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl transform rotate-4 group-hover:rotate-12 transition-transform duration-300"></div>
             <div className="relative bg-white/80 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/90 transition-all duration-300">
-              <Wrench size={48} className="text-orange-600 animate-pulse" />
+              <Wrench size={40} className="text-orange-600 animate-pulse" />
             </div>
           </div>
 
           <div className="group relative">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl transform -rotate-4 group-hover:-rotate-12 transition-transform duration-300"></div>
             <div className="relative bg-white/80 backdrop-blur-sm border border-white/40 rounded-2xl p-6 hover:bg-white/90 transition-all duration-300">
-              <Code size={48} className="text-blue-600" />
+              <Code size={40} className="text-blue-600" />
             </div>
           </div>
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-slate-200">
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-800 dark:text-slate-200">
             {t("Maintenance.subtitle")}
           </h2>
           <div className="relative max-w-md mx-auto">
             <div className="absolute inset-0 bg-white/50 dark:bg-white/80 backdrop-blur-sm rounded-2xl transform -rotate-3"></div>
             <div className="relative bg-white/90 dark:bg-white/60 backdrop-blur-sm border border-white/40 rounded-2xl p-6">
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-2xl text-gray-600 leading-relaxed">
                 {t("Maintenance.message")}
               </p>
             </div>
@@ -74,7 +74,7 @@ const { t } = useTranslation();
 
         <div className="flex items-center justify-center gap-3 text-gray-600 dark:text-gray-200">
           <Clock size={24} className="animate-pulse" />
-          <span className="text-lg font-medium">
+          <span className="text-lg  sm:text-xl font-medium">
             {t("Maintenance.estimatedTime")}
           </span>
         </div>
@@ -82,7 +82,7 @@ const { t } = useTranslation();
         <div className="pt-4">
           <div className="flex justify-center items-center gap-2">
             <RefreshCw size={20} className="text-orange-500 animate-spin" />
-            <span className="text-gray-600 dark:text-gray-200">
+            <span className="text-gray-600 dark:text-gray-200 text-lg  sm:text-xl">
               {t("Maintenance.working")}
             </span>
           </div>
@@ -90,7 +90,7 @@ const { t } = useTranslation();
 
     
         <div className="pt-6">
-          <p className="text-sm text-gray-500 dark:text-gray-300">
+          <p className="text-sm sm:text-lg text-gray-500 dark:text-gray-300">
             {t("Maintenance.contact")}{" "}
             <button
               onClick={revealEmail}

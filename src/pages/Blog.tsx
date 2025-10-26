@@ -212,9 +212,13 @@ export default function Blog() {
               </div>
             </div>
           ) : (
+            <>
             <div className="text-center py-6 px-4 bg-gray-100 border border-gray-300 rounded-lg text-gray-700 font-medium shadow-sm dark:border-gray-800 dark:bg-sky-900 dark:text-slate-200">
               {t("Blog.nomedia")}
             </div>
+            {/* todo : revoir pour mettre un truc au fond */}
+            </>
+
           )}
         </section>
 

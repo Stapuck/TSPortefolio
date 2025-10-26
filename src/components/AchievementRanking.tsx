@@ -79,7 +79,7 @@ const AchievementRanking = () => {
 
       {/* Rankings Flip Card */}
       {/* <div className="space-y-6"> */}
-        <div className="relative w-full min-h-[480px]  md:min-h-[420px]">
+        <div className="relative w-full min-h-[360px]">
         <div className="flex items-center justify-center gap-3 mb-4">
           <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
            {t('AchievementR.worldrank')}
@@ -146,10 +146,10 @@ const AchievementRanking = () => {
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.senior')} :</span>
                     <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">#82</span>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
+                  {/* <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">U23:</span>
                     <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">#29</span>
-                  </div>
+                  </div> */}
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.continentalranking')} :</span>
                     <span className="font-bold text-2xl text-blue-600 dark:text-blue-400">#3</span>
@@ -174,15 +174,11 @@ const AchievementRanking = () => {
                     <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span>
                     {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#12</span> */}
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
-                    <span className="font-medium text-gray-700 dark:text-slate-200">U23:</span>
-                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span>
-                    {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#5</span> */}
-                  </div>
+                
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.continentalranking')} :</span>
-                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span>
-                    {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#1</span> */}
+                    {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span> */}
+                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#2</span>
                   </div>
                 </div>
               </div>

@@ -1,145 +1,9 @@
 import { Award } from "lucide-react";
-
-import CCNA1 from "/images/certifications/CCNA1.pdf"
-import CCNA1_badge from "/images/certifications/CCNAITN__1_.png"
-
-import Cyber from "/images/certifications/cyber.pdf"
-import Cyber_badge from "/images/certifications/cyber_badge.png"
-import OpenScience101 from "/images/certifications/OpenScience101.pdf"
-import OpenScienceEssentials from "/images/certifications/OpenScienceEssentials.pdf"
+import { certifications } from "../medias/index-global";
 
 
 const Certifications = () => {
-  const certifications = [
-    {
-      id: 1,
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2024",
-      image: CCNA1,
-      description:
-        "Architecture et déploiement d'applications sur AWS avec best practices.",
-      link: "#",
-    },
-    {
-      id: 2,
-      title: "React Professional Certificate",
-      issuer: "Meta",
-      date: "2023",
-      image: CCNA1_badge,
-      description:
-        "Maîtrise avancée de React, hooks, et développement d'applications modernes.",
-      link: "#",
-    },
-    {
-      id: 3,
-      title: "Full Stack Web Development",
-      issuer: "FreeCodeCamp",
-      date: "2023",
-      image: Cyber,
-      description:
-        "Développement full-stack avec Node.js, Express, MongoDB et React.",
-      link: "#",
-    },
-    {
-      id: 4,
-      title: "Kubernetes Administrator",
-      issuer: "Linux Foundation",
-      date: "2024",
-      image: Cyber_badge,
-      description:
-        "Administration et orchestration de conteneurs avec Kubernetes.",
-      link: "#",
-    },
-    {
-      id: 5,
-      title: "Kubernetes Administrator",
-      issuer: "Linux Foundation",
-      date: "2024",
-      image: OpenScience101,
-      description:
-        "Administration et orchestration de conteneurs avec Kubernetes.",
-      link: "#",
-    },
-    {
-      id: 6,
-      title: "Kubernetes Administrator",
-      issuer: "Linux Foundation",
-      date: "2024",
-      image: OpenScienceEssentials,
-      description:
-        "Administration et orchestration de conteneurs avec Kubernetes.",
-      link: "#",
-    },
-    // {
-    //   id: 1,
-    //   title_fr: "CCNA 1 Cisco certification",
-    //   title_en: "",
-    //   issuer_fr: "",
-    //   issuer_en: "",
-    //   date: "2023",
-    //   image: "",
-    //   description_fr: "",
-    //   description_en: "",
-    //   link: "#"
-    // },
-    // {
-    //   id: 2,
-    //   title_fr: "Cyber security Cisco 2023",
-    //   title_en: "",
-    //   issuer_fr: "",
-    //   issuer_en: "",
-    //   date: "2023",
-    //   image: "",
-    //   description_fr: "",
-    //   description_en: "",
-    //   link: "#"
-    // },
-    // {
-    //   id: 3,
-    //   title_fr: "certification Designer responsable",
-    //   title_en: "",
-    //   issuer_fr: "Green compagnon",
-    //   issuer_en: "",
-    //   date: "2024",
-    //   image: "",
-    //   description_fr: "",
-    //   description_en: "",
-    //   link: "#"
-    // },
-    // {
-    //   id: 4,
-    //   title_fr: "",
-    //   title_en: "",
-    //   issuer_fr: "Nasa",
-    //   issuer_en: "Nasa",
-    //   date: "2025",
-    //   image: "",
-    //   description_fr: "",
-    //   description_en: "",
-    //   link: "#"
-    // },
-    // {
-    //   id: 5,
-    //   title_fr: "",
-    //   title_en: "",
-    //   issuer_fr: "Nasa",
-    //   issuer_en: "Nasa",
-    //   date: "2025",
-    //   image: "",
-    //   description_fr: "",
-    //   description_en: "",
-    //   link: "#"
-    // },
-  ];
-
-  // CCNA 1 Cisco certification // année ? 2022 ou 2023
-  // Cyber security Cisco 2023
-  // certification Designer responsable certification Green compagnon // 2023 ou 2024
-  //  Nasa *2  2025 both
-
-  // python to do
-  // javascript
+  const initialLang = localStorage.getItem("lang") || "fr";
 
   return (
     <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 mt-8">
@@ -154,8 +18,8 @@ const Certifications = () => {
             <div className="hidden sm:block relative w-28 md:w-full md:h-48 flex-shrink-0 overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600">
               <img
                 src={cert.image}
-                alt={cert.title}
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 duration-300 group-hover:scale-110 transform transition-transform"
+                alt={initialLang === "fr" ? cert.title_fr : cert.title_en}
+                className="w-full h-full object-cover opacity-95 group-hover:opacity-100 duration-300 group-hover:scale-110 transform transition-transform"
               />
               <div className="absolute top-2 right-2 md:top-4 md:right-4 bg-white dark:bg-slate-800 p-1.5 md:p-2 rounded-full shadow-lg">
                 <Award className="w-4 h-4 md:w-5 md:h-5 text-blue-600 dark:text-blue-400" />
@@ -168,10 +32,10 @@ const Certifications = () => {
                 <div className="flex items-start justify-between mb-2 md:mb-3">
                   <div className="flex-1 pr-2">
                     <h3 className="text-base md:text-xl font-bold text-gray-900 dark:text-slate-100 mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
-                      {cert.title}
+                      {initialLang === "fr" ? cert.title_fr : cert.title_en}
                     </h3>
                     <p className="text-xs md:text-sm font-medium text-blue-600 dark:text-blue-400">
-                      {cert.issuer}
+                      {initialLang === "fr" ? cert.issuer_fr : cert.issuer_en}
                     </p>
                   </div>
                   <span className="text-xs font-semibold text-gray-500 dark:text-slate-400 bg-gray-100 dark:bg-slate-700 px-2 py-1 rounded-full whitespace-nowrap">
@@ -180,7 +44,9 @@ const Certifications = () => {
                 </div>
 
                 <p className="hidden sm:block text-gray-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed mb-2 sm:mb-3 md:mb-4 line-clamp-2 md:line-clamp-none">
-                  {cert.description}
+                  {initialLang === "fr"
+                    ? cert.description_fr
+                    : cert.description_en}
                 </p>
               </div>
             </div>
