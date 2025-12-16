@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
         "Pour toute demande professionnelle, sponsoring ou collaboration",
       description_en:
         "For professional inquiries, sponsorships, or collaborations",
-      action: "mailto:terence.saramandif@email.com",
+      action: "mailto:terencepro@saramandif.com",
       gradient: "from-blue-500 to-blue-600",
       available_fr: "Réponse sous 24h",
       available_en: "Response within 24h",
@@ -101,10 +101,10 @@ const Contact: React.FC = () => {
       icon: MapPin,
       title_fr: "Localisation",
       title_en: "Localisation",
-      value_fr: "Pula, Istrie, Croatie",
-      value_en: "Pula, Istrie, Croatie",
-      description_fr: "Base actuelle pour ma mobilité ",
-      description_en: "Current base for my 4th year internship",
+      value_fr: "Pau, France",
+      value_en: "Pau, France",
+      description_fr: "Vie quotidienne et d'entraînement",
+      description_en: "Daily life and training base",
     },
     {
       icon: Clock,
@@ -184,7 +184,7 @@ const Contact: React.FC = () => {
     <div className=" min-h-screen">
       <HeroSection currentPage={"contact"} />
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-20">
+      <main className="max-w-5xl md:max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-20">
         {/* Informations Pratiques */}
         <section className="space-y-12">
           <div className="text-center">

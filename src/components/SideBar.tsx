@@ -75,7 +75,7 @@ export default function Sidebar() {
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
     document.documentElement.lang = code;
-    localStorage.setItem("lang", code); // sauvegarde la langue
+    localStorage.setItem("lang", code); 
   };
 
   // Trouver le lien actif (page courante)
@@ -170,7 +170,9 @@ export default function Sidebar() {
           <aside
             ref={menuRef}
             // className="bg-gray-900 dark:bg-gray-800 text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"
-            className="bg-gray-900  text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"
+            // className="bg-gray-900  text-white w-16 py-4 px-2 rounded-2xl shadow-lg flex flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-3"
+            className="bg-gray-900 text-white w-14 py-3 px-1 rounded-2xl shadow-lg flex flex-col items-center justify-between fixed top-1/2 -translate-y-1/2 ml-2 scale-90"
+
           >
             {/* Bouton fermer */}
             <button

@@ -147,7 +147,7 @@ export default function Home() {
       {/* Contenu après la vidéo */}
       {/* <main className="max-w-6xl mx-auto px-6 py-12 space-y-20 min-h-screen bg-white dark:bg-sky-950 text-gray-900 dark:text-slate-100"> */}
       <main className="max-w-6xl mx-auto px-6 space-y-20 min-h-screen">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-16">
           <div className="text-center space-y-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 bg-clip-text text-transparent dark:from-slate-100 dark:via-slate-300 dark:to-slate-100">
               {t("Home.home_welcome")}

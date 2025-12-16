@@ -1,4 +1,5 @@
 // todo : revoir telecharger image d'event
+// todo : revoir pour mettre des images pour les events 
 // import augsburg from "/images/next_event/augsburg.webp"
 // import Foix from "/images/next_event/Foix.png"
 // import Prague from "/images/next_event/Prague.png"
@@ -44,6 +45,22 @@ export const next_date: EventType[] = [
     photobg:
       "https://la-rochelle.cesi.fr/wp-content/uploads/sites/12/2024/04/RDD-LR-2024-1.jpg",
   },
+
+    {
+    lieu_fr: "Pau, France",
+    lieu_en: "Pau, France",
+    date: "September 21, 2026 14:00",
+    date_fin: "September 21, 2026 16:00",
+    event_en: "Final Project Defense",
+    event_fr: "Soutenance Projet de Fin d'Études",
+    type: "pro",
+    type_event_en: "examen",
+    type_event_fr: "diplome",
+
+    photobg:
+      "https://la-rochelle.cesi.fr/wp-content/uploads/sites/12/2024/04/RDD-LR-2024-1.jpg",
+  },
+  
   {
     date: "September 11, 2026 08:00",
     date_fin: "September 13, 2026 18:00",
@@ -121,6 +138,32 @@ export const next_date: EventType[] = [
     type_event_fr: "coupe du monde",
   },
   {
+    date: "May 09, 2026 08:00",
+    date_fin: "May 10, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Orthez, France",
+    lieu_en: "Orthez, France",
+    event_en: "N2 French Championship race 3",
+    event_fr: "Championnat de France N2 course 3",
+    photobg:
+      "https://media.larepubliquedespyrenees.fr/15888996/1200x-1/img-8093.jpg",
+    type_event_en: "national",
+    type_event_fr: "national",
+  },
+  {
+    date: "June 06, 2026 08:00",
+    date_fin: "June 07, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Foix, France",
+    lieu_en: "Foix, France",
+    event_en: "N2 French Championship Final ",
+    event_fr: "Final des Championnats de France N2",
+    photobg:
+      "https://www.foix-tourisme.com/app/uploads/2023/10/canoe-kayak-descente-foix-ivan-olivier-1.webp",
+    type_event_en: "national",
+    type_event_fr: "national",
+  },
+  {
     date: "January 22 2026 08:00",
     date_fin: "January 31, 2026 18:00",
     type: "sport",
@@ -132,6 +175,8 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-slalom-ranking-race/underberg-2026",
     type_event_en: "continental",
     type_event_fr: "Championnat continental",
+    photobg:
+      "https://th.bing.com/th/id/OIP.gY-PxMGI42TR3C00T2B52wHaD4?w=325&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
   },
 
   // 2025
@@ -704,6 +749,7 @@ export interface Skills {
   level: string;
 }
 
+//todo : rajouter c++, anaconda ou autre truc comme ça
 export const skills = [
   {
     name: "CSS",
@@ -873,7 +919,6 @@ export const skills = [
     category_fr: "Base de données",
     level: "3",
   },
-  //todo : rajouter c++, anaconda ou autre truc comme ça
 ];
 
 // articles et blog

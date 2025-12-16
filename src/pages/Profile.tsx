@@ -46,7 +46,7 @@ export default function Profile() {
   return (
     <div>
       <HeroSection currentPage={"profile"} />
-      <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
+      <main className="max-w-5xl md:max-w-6xl  mx-auto px-6 py-12 space-y-20">
         {/* <div className="relative mt-20">
           <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-20">
             <img
@@ -108,7 +108,7 @@ export default function Profile() {
               <div className="flex items-center space-x-1 text-gray-800 dark:text-gray-300">
                 <Calendar className="w-4 h-4" />
                 <span>
-                  {years.toFixed(8)} {t("Profile.years")}
+                  {years.toFixed(3)} {t("Profile.years")}
                 </span>
               </div>
               <div className="flex items-center space-x-1 text-gray-800 dark:text-gray-300">

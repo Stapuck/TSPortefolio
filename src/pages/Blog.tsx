@@ -131,7 +131,7 @@ export default function Blog() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300 opacity-80"></div>
 
-                  <div className="relative bg-white dark:bg-red-900 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-3xl transition-all duration-300">
+                  <div className="relative bg-white dark:bg-blue-900 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-3xl transition-all duration-300">
                     <div
                       className={`flex flex-col lg:flex-row items-center gap-8 ${
                         idx % 2 === 1 ? "lg:flex-row-reverse" : ""
@@ -270,7 +270,7 @@ export default function Blog() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-2xl transform rotate-1 group-hover:rotate-3 transition-transform duration-300"></div>
 
-                <div className="relative bg-white dark:bg-green-700 rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300">
+                <div className="relative bg-white dark:bg-cyan-900 rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300">
                   <div className="relative">
                     <img
                       src={a.image}

@@ -171,14 +171,13 @@ const AchievementRanking = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.senior')} :</span>
-                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span>
-                    {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#12</span> */}
+                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#176</span>
                   </div>
                 
                   <div className="flex justify-between items-center p-3 bg-white dark:bg-slate-600 rounded-lg shadow-sm">
                     <span className="font-medium text-gray-700 dark:text-slate-200">{t('AchievementR.continentalranking')} :</span>
                     {/* <span className="font-bold text-2xl text-green-600 dark:text-green-400">#?</span> */}
-                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#2</span>
+                    <span className="font-bold text-2xl text-green-600 dark:text-green-400">#4</span>
                   </div>
                 </div>
               </div>
