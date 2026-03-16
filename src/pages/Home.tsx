@@ -18,6 +18,8 @@ export default function Home() {
   const [sound, setSound] = useState(false);
   const [showFloating, setShowFloating] = useState(true);
   const [showScrollUp, setShowScrollUp] = useState(false);
+  // const [showInfo, setShowInfo] = useState(false);
+  // todo : implemeter le btn pour sm
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,6 +28,7 @@ export default function Home() {
       const y = window.scrollY;
       setShowFloating(y < 100);
       setShowScrollUp(y > 1000);
+      // setShowInfo(false);
     };
 
     document.title = "TS - Home";
@@ -119,6 +122,58 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Info */}
+          {/* <div className="fixed bottom-16 right-4 sm:right-8 z-30">
+            <button
+              onClick={() => setShowInfo(true)}
+              className={`
+      flex items-center justify-center w-12 h-12 rounded-full
+      bg-white/10 backdrop-blur-md border border-white/20
+      hover:bg-white/20 dark:bg-slate-100/10 dark:border-slate-100/20
+      dark:hover:bg-slate-100/20 transition-all duration-300
+      sm:group
+      ${showInfo ? "hidden sm:flex" : "flex"}
+    `}
+            >
+              <CircleHelp
+                size={24}
+                className="text-white dark:text-slate-100"
+              />
+            </button>
+
+            <div
+              className={`
+      sm:hidden mt-3 flex justify-center
+      ${showInfo ? "block animate-fade-in" : "hidden"}
+    `}
+              onClick={() => setShowInfo(false)}
+            >
+              <div className="px-3 py-2 bg-black/80 dark:bg-sky-950/90 backdrop-blur-sm rounded-lg border border-white/20 dark:border-slate-100/20">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/romain.bruneau/"
+                  rel="noreferrer"
+                  className="text-white/90 dark:text-slate-100 text-sm whitespace-nowrap hover:text-white transition-colors duration-300"
+                >
+                  {t("Home.by")} R.B
+                </a>
+              </div>
+            </div>
+
+            <div className="hidden sm:group-hover:flex flex-col items-center mt-3 animate-fade-in">
+              <div className="px-3 py-2 bg-black/80 dark:bg-sky-950/90 backdrop-blur-sm rounded-lg border border-white/20 dark:border-slate-100/20">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/romain.bruneau/"
+                  rel="noreferrer"
+                  className="text-white/90 dark:text-slate-100 text-sm whitespace-nowrap hover:text-white transition-colors duration-300"
+                >
+                  {t("Home.by")} R.B
+                </a>
+              </div>
+            </div>
+          </div> */}
 
           {/* Volume */}
           <div className="fixed bottom-16 left-4 sm:left-8 text-white dark:text-slate-100 z-30">
