@@ -1955,6 +1955,13 @@ export const travelExpenses = [
 
 // achivement
 export const achievements = [
+   {
+    year: "2026",
+    event_fr: "Championnat d'Afrique Canoë Slalom 2026 Underberg",
+    event_en: "African Canoe Slalom Championship 2026 Underberg",
+    medal: "Silver",
+    color: "from-gray-200 to-gray-400",
+  },
   {
     year: "2025",
     event_fr: "Course de Référence Africaine KX1 H2H",
@@ -2058,7 +2065,8 @@ import olympiccommittee from "/images/sponsors/olympiccommittee.png";
 import MYESR from "/images/sponsors/MYESR-logo.png";
 import mrifede from "/images/sponsors/mauritius_canoe_kayak_federation-removebg-preview.png";
 
-// todo : rajouter Safran ?
+// Rajouter Safran ?
+// Rajouter ACMI ?
 
 export const sponsors = [
   {

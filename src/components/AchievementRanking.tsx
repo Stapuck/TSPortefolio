@@ -6,7 +6,6 @@ import {achievements} from "../medias/index-global.ts";
 const AchievementRanking = () => {
   const {t} = useTranslation();
   const [flipped, setFlipped] = useState(false);
-  // const initialLang = document.documentElement.lang || "fr";
   const initialLang = localStorage.getItem("lang") || "fr";
 
 
