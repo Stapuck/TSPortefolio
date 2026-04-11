@@ -7,8 +7,10 @@ import pdfCV_FR from "/pdfs/TS_CV-FR.pdf";
 import pdfCV_EN from "/pdfs/TS_CV-EN.pdf";
 import pdfBudget_FR from "/pdfs/Finance_progress_fr.pdf";
 import pdfBudget_EN from "/pdfs/Finance_progress_en.pdf";
-import pdfSponsor_FR from "/pdfs/DossierSponsoring_22092025_TSFRV3.pdf";
-import pdfSponsor_EN from "/pdfs/DossierSponsoring_22092025_TSENV3.pdf";
+import pdfSponsor_FR from "/pdfs/DossierSponsoring_11042026_TSFRV4.pdf";
+// import pdfSponsor_FR from "/pdfs/DossierSponsoring_22092025_TSFRV3.pdf";
+import pdfSponsor_EN from "/pdfs/DossierSponsoring_11042026_TSENV4.pdf";
+// import pdfSponsor_EN from "/pdfs/DossierSponsoring_22092025_TSENV3.pdf";
 
 export interface DownloadButtonProps {
   fileChoice: "CV" | "Budget" | "Sponsor";
