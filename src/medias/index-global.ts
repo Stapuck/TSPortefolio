@@ -1,5 +1,5 @@
 // todo : revoir telecharger image d'event
-// todo : revoir pour mettre des images pour les events 
+// todo : revoir pour mettre des images pour les events
 // import augsburg from "/images/next_event/augsburg.webp"
 // import Foix from "/images/next_event/Foix.png"
 // import Prague from "/images/next_event/Prague.png"
@@ -26,7 +26,34 @@ export interface EventType {
 }
 
 export const next_date: EventType[] = [
+  //todo :rajouter les photos lorsque les evenement se rapprocheront.  
+  // coming later
   //2028
+
+  // {
+  //   lieu_fr: "",
+  //   lieu_en: "",
+  //   date: "February 2027",
+  //   date_fin: "",
+  //   event_en: "African Championship",
+  //   event_fr: "championnat d’Afrique 2027",
+  //   type: "sport",
+  //   type_event_en: "championship",
+  //   type_event_fr: "championnat",
+  //   photobg: "",
+  // },
+  // {
+  //   lieu_fr: "La Réunion",
+  //   lieu_en: "Reunion",
+  //   date: "January 2027",
+  //   date_fin: "",
+  //   event_en: "Reunion Winter Training Camp",
+  //   event_fr: "stage Réunion hiver 2027",
+  //   type: "sport",
+  //   type_event_en: "training_camp",
+  //   type_event_fr: "stage",
+  //   photobg: "",
+  // },
 
   //2027
 
@@ -45,12 +72,11 @@ export const next_date: EventType[] = [
     photobg:
       "https://la-rochelle.cesi.fr/wp-content/uploads/sites/12/2024/04/RDD-LR-2024-1.jpg",
   },
-
-    {
+  {
     lieu_fr: "Pau, France",
     lieu_en: "Pau, France",
-    date: "September 21, 2026 14:00",
-    date_fin: "September 21, 2026 16:00",
+    date: "September 15, 2026 13:00",
+    date_fin: "September 15, 2026 17:00",
     event_en: "Final Project Defense",
     event_fr: "Soutenance Projet de Fin d'Études",
     type: "pro",
@@ -60,9 +86,20 @@ export const next_date: EventType[] = [
     photobg:
       "https://la-rochelle.cesi.fr/wp-content/uploads/sites/12/2024/04/RDD-LR-2024-1.jpg",
   },
-  
   {
-    date: "September 11, 2026 08:00",
+    lieu_fr: "Passy",
+    lieu_en: "Passy",
+    date: "September 25, 2026 08:00",
+    date_fin: "September 27, 2026 17:00",
+    event_en: "T24",
+    event_fr: "T24",
+    type: "sport",
+    type_event_en: "Race",
+    type_event_fr: "Course",
+    photobg: "",
+  },
+  {
+    date: "September 07, 2026 08:00",
     date_fin: "September 13, 2026 18:00",
     type: "sport",
     lieu_fr: "Seu d'Urgel, Espagne",
@@ -74,8 +111,8 @@ export const next_date: EventType[] = [
     type_event_fr: "Coupe du monde",
   },
   {
-    date: "September 04, 2026 08:00",
-    date_fin: "September 09, 2026 18:00",
+    date: "August 30, 2026 08:00",
+    date_fin: "September 06, 2026 18:00",
     type: "sport",
     lieu_fr: "Paris, France",
     lieu_en: "Paris, France",
@@ -86,6 +123,19 @@ export const next_date: EventType[] = [
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
   },
+  {
+    lieu_fr: "La Ferté-Bernard",
+    lieu_en: "La Ferté-Bernard",
+    date: "August 22, 2026 10:00",
+    date_fin: "August 23, 2026 20:00",
+    event_en: "La Ferté-Bernard Triathlon",
+    event_fr: "Triathlon de la Ferté-Bernard",
+    type: "sport",
+    type_event_en: "Race",
+    type_event_fr: "Course",
+    photobg: "",
+  },
+
   {
     date: "July 21, 2026 08:00",
     date_fin: "July 26, 2026 18:00",
@@ -100,56 +150,56 @@ export const next_date: EventType[] = [
     type_event_fr: "championnat du monde",
   },
   {
-    date: "June 12, 2026 08:00",
-    date_fin: "June 14, 2026 18:00",
+    lieu_fr: "Oklahoma, USA",
+    lieu_en: "Oklahoma, USA",
+    date: "July 10, 2026 10:00",
+    date_fin: "July 20, 2026 20:00",
+    event_en: "US Training Camp before Worlds",
+    event_fr: "Camp d'entrianement USA avant les mondiaux ",
     type: "sport",
-    lieu_fr: "Augsburg, Allemagne",
-    lieu_en: "Augsburg, Germany",
-    event_en: "2026 ICF Canoe Slalom World Cup Augsburg",
-    event_fr: "Coupe du monde 3 à Augsburg",
-    link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2026",
-    type_event_en: "worldcup",
-    type_event_fr: "coupe du monde",
+    type_event_en: "training",
+    type_event_fr: "entrainement",
+    photobg: "",
   },
-  {
-    date: "June 05, 2026 08:00",
-    date_fin: "June 07, 2026 18:00",
-    type: "sport",
-    lieu_fr: "Prague, République tchèque",
-    lieu_en: "Prague, Czech Republic",
-    event_en: "2026 ICF Canoe Slalom World Cup Prague",
-    event_fr: "Coupe du monde 2 à Prague",
-    link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2026",
-    type_event_en: "worldcup",
-    type_event_fr: "coupe du monde",
-  },
-  {
-    date: "May 29, 2026 08:00",
-    date_fin: "May 31, 2026 18:00",
-    type: "sport",
-    lieu_fr: "Tacen, Slovénie",
-    lieu_en: "Tacen, Slovenia",
-    event_en: "2026 ICF Canoe Slalom World Cup Tacen",
-    event_fr: "Coupe du monde 1 à Tacen",
-    link_result:
-      "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-tacen-2026",
-    type_event_en: "worldcup",
-    type_event_fr: "coupe du monde",
-  },
-  {
-    date: "May 09, 2026 08:00",
-    date_fin: "May 10, 2026 18:00",
-    type: "sport",
-    lieu_fr: "Orthez, France",
-    lieu_en: "Orthez, France",
-    event_en: "N2 French Championship race 3",
-    event_fr: "Championnat de France N2 course 3",
-    photobg:
-      "https://media.larepubliquedespyrenees.fr/15888996/1200x-1/img-8093.jpg",
-    type_event_en: "national",
-    type_event_fr: "national",
-  },
+  // {
+  //   date: "June 12, 2026 08:00",
+  //   date_fin: "June 14, 2026 18:00",
+  //   type: "sport",
+  //   lieu_fr: "Augsburg, Allemagne",
+  //   lieu_en: "Augsburg, Germany",
+  //   event_en: "2026 ICF Canoe Slalom World Cup Augsburg",
+  //   event_fr: "Coupe du monde 3 à Augsburg",
+  //   link_result:
+  //     "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2026",
+  //   type_event_en: "worldcup",
+  //   type_event_fr: "coupe du monde",
+  // },
+  // {
+  //   date: "June 05, 2026 08:00",
+  //   date_fin: "June 07, 2026 18:00",
+  //   type: "sport",
+  //   lieu_fr: "Prague, République tchèque",
+  //   lieu_en: "Prague, Czech Republic",
+  //   event_en: "2026 ICF Canoe Slalom World Cup Prague",
+  //   event_fr: "Coupe du monde 2 à Prague",
+  //   link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/prague-2026",
+  //   type_event_en: "worldcup",
+  //   type_event_fr: "coupe du monde",
+  // },
+  // {
+  //   date: "May 29, 2026 08:00",
+  //   date_fin: "May 31, 2026 18:00",
+  //   type: "sport",
+  //   lieu_fr: "Tacen, Slovénie",
+  //   lieu_en: "Tacen, Slovenia",
+  //   event_en: "2026 ICF Canoe Slalom World Cup Tacen",
+  //   event_fr: "Coupe du monde 1 à Tacen",
+  //   link_result:
+  //     "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-tacen-2026",
+  //   type_event_en: "worldcup",
+  //   type_event_fr: "coupe du monde",
+
+  // },
   {
     date: "June 06, 2026 08:00",
     date_fin: "June 07, 2026 18:00",
@@ -164,6 +214,55 @@ export const next_date: EventType[] = [
     type_event_fr: "national",
   },
   {
+    date: "May 16, 2026 08:00",
+    date_fin: "May 17, 2026 18:00",
+    type: "sport",
+    lieu_fr: "Orthez, France",
+    lieu_en: "Orthez, France",
+    event_en: "N2 French Championship race 3",
+    event_fr: "Championnat de France N2 course 3",
+    photobg:
+      "https://media.larepubliquedespyrenees.fr/15888996/1200x-1/img-8093.jpg",
+    type_event_en: "national",
+    type_event_fr: "national",
+  },
+  {
+    lieu_fr: "Seu d'Urgell",
+    lieu_en: "Seu d'Urgell",
+    date: "April 23, 2026 14:00",
+    date_fin: "April 27, 2026 15:00",
+    event_en: "Training Camp Seu",
+    event_fr: "Camp d'entrainement à Seu",
+    type: "sport",
+    type_event_en: "training",
+    type_event_fr: "entrainement",
+    photobg: "",
+  },
+  {
+    lieu_fr: "Pau",
+    lieu_en: "Pau",
+    date: "March 15, 2026 13:00",
+    date_fin: "March 15, 2026 21:00",
+    event_en: "Championship race",
+    event_fr: "championnat race mars",
+    type: "sport",
+    type_event_en: "Race",
+    type_event_fr: "Course",
+    photobg: "",
+  },
+  {
+    lieu_fr: "Saint-Pierre",
+    lieu_en: "Saint-Pierre",
+    date: "April 17, 2026 12:00",
+    date_fin: "April 19, 2026 20:00",
+    event_en: "N2 Saint Pierre",
+    event_fr: "N2 Saint Pierre ",
+    type: "sport",
+    type_event_en: "Race",
+    type_event_fr: "Course",
+    photobg: "",
+  },
+  {
     date: "January 22 2026 08:00",
     date_fin: "January 31, 2026 18:00",
     type: "sport",
@@ -176,7 +275,7 @@ export const next_date: EventType[] = [
     type_event_en: "continental",
     type_event_fr: "Championnat continental",
     photobg:
-      "https://th.bing.com/th/id/OIP.gY-PxMGI42TR3C00T2B52wHaD4?w=325&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+      "https://th.bing.com/th/id/OIP.gY-PxMGI42TR3C00T2B52wHaD4?w=325&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3",
   },
 
   // 2025
@@ -240,7 +339,7 @@ export const next_date: EventType[] = [
     lieu_fr: "Foix, France",
     lieu_en: "Foix, France",
     event_en: "2025 ICF Junior & U23 Canoe Slalom World Championships",
-    event_fr: "Championnat du monde U23 2026",
+    event_fr: "Championnat du monde U23 2025",
     link_result:
       "https://www.canoeicf.com/canoe-slalom-world-championships/foix-2025/results",
     type_event_en: "worldchamp",
@@ -1664,7 +1763,6 @@ export const accordionData = [
   },
 ];
 
-
 //experience
 
 export interface Experiences {
@@ -1929,8 +2027,7 @@ export const travelExpenses = [
     label_fr: "Autres",
     label_en: "Other",
     amount: 1200,
-    tooltip_fr:
-      "Une séances = 10-25€ avec 1-2 séances/jour → ~120€/semaine",
+    tooltip_fr: "Une séances = 10-25€ avec 1-2 séances/jour → ~120€/semaine",
     tooltip_en: "Sessions' price is 10-25, with 1-2 sessions/day → ~120€/week",
   },
   {
@@ -1938,10 +2035,8 @@ export const travelExpenses = [
     label_fr: "Abonnement Pau structure d'entraînement",
     label_en: "Pau training structure subscription",
     amount: 1250,
-    tooltip_fr:
-      "Abonnement annuel, coaching et prépation physique",
-    tooltip_en:
-      "annual subscription, coaching and physical preparation",
+    tooltip_fr: "Abonnement annuel, coaching et prépation physique",
+    tooltip_en: "annual subscription, coaching and physical preparation",
   },
   {
     key: "Daily",
@@ -1955,7 +2050,7 @@ export const travelExpenses = [
 
 // achivement
 export const achievements = [
-   {
+  {
     year: "2026",
     event_fr: "Championnat d'Afrique Canoë Slalom 2026 Underberg",
     event_en: "African Canoe Slalom Championship 2026 Underberg",
@@ -2204,9 +2299,7 @@ export const photos = [
   },
 ];
 
-
-
-// Certifications 
+// Certifications
 
 import CCNAv7 from "/images/certifications/CCNAv7.png";
 import OpenScience101 from "/images/certifications/OpenScience101.png";
@@ -2214,71 +2307,70 @@ import OpenScienceEssentials from "/images/certifications/OpenScienceEssentials.
 import cyber from "/images/certifications/cyber.png";
 // import GreenDesigner from "/images/certifications/test.jpg";
 
- export const certifications = [
-    {
-      id: 1,
-      title_fr: "CCNA1 : Introduction aux Réseaux",
-      title_en: "CCNA1: Introduction to Networks",
-      issuer_fr: "Cisco Networking Academy",
-      issuer_en: "Cisco Networking Academy",
-      date: "03-2023",
-      image: CCNAv7,
-      description_fr:
-        "Cette formation introduit les concepts fondamentaux du réseau, y compris les protocoles TCP/IP, les modèles OSI, la configuration de routeurs et commutateurs, ainsi que les bases de la sécurité et de la connectivité. Elle constitue la première étape vers la certification CCNA.",
-      description_en:
-        "This course introduces the fundamentals of networking, including TCP/IP protocols, the OSI model, router and switch configuration, and basic security and connectivity concepts. It serves as the first step toward the CCNA certification.",
-    },
-    {
-      id: 2,
-      title_fr: "Introduction à la Cybersécurité",
-      title_en: "Introduction to Cybersecurity",
-      issuer_fr: "CESI / Cisco Networking Academy",
-      issuer_en: "CESI / Cisco Networking Academy",
-      date: "11-2023",
-      image: cyber,
-      description_fr:
-        "Cette introduction à la cybersécurité explore les menaces numériques, les principes de la sécurité des réseaux, la protection des données, et les bonnes pratiques pour sécuriser les environnements personnels et professionnels.",
-      description_en:
-        "This introductory course in cybersecurity explores digital threats, network security principles, data protection, and best practices for securing personal and professional environments.",
-    },
-    // {
-    //   id: 3,
-    //   title_fr: "Certification Designer Responsable",
-    //   title_en: "Responsible Designer Certification",
-    //   issuer_fr: "Green Compagnon",
-    //   issuer_en: "Green Compagnon",
-    //   date: "2024",
-    //   // image: GreenDesigner,
-    //   description_fr:
-    //     "La certification atteste des compétences en éco-conception et en design durable, mettant l’accent sur la responsabilité environnementale et sociale dans les processus de conception numérique et produit.",
-    //   description_en:
-    //     "This certification validates skills in eco-design and sustainable design, emphasizing environmental and social responsibility in digital and product design processes.",
-    // },
-    {
-      id: 4,
-      title_fr: "Open Science Essentials de la NASA",
-      title_en: "NASA's Open Science Essentials",
-      issuer_fr: "NASA",
-      issuer_en: "NASA",
-      date: "09-2025",
-      image: OpenScienceEssentials,
-      description_fr:
-        "Programme complémentaire à Open Science 101, cette formation approfondit les outils, les plateformes et les pratiques de la science ouverte pour promouvoir une recherche collaborative et accessible.",
-      description_en:
-        "A complementary program to Open Science 101, this course delves deeper into tools, platforms, and practices of open science to foster collaborative and accessible research.",
-    },
-    {
-      id: 5,
-      title_fr: "Open Science 101 de la NASA",
-      title_en: "NASA's Open Science 101",
-      issuer_fr: "NASA",
-      issuer_en: "NASA",
-      date: "09-2025",
-      image: OpenScience101,
-      description_fr:
-        "Ce module de la NASA présente les principes fondamentaux de la science ouverte, incluant l’accès libre aux données, la collaboration scientifique, la transparence et la reproductibilité de la recherche.",
-      description_en:
-        "This NASA module introduces the fundamentals of open science, including open data access, scientific collaboration, transparency, and research reproducibility.",
-    },
-   
-  ];
+export const certifications = [
+  {
+    id: 1,
+    title_fr: "CCNA1 : Introduction aux Réseaux",
+    title_en: "CCNA1: Introduction to Networks",
+    issuer_fr: "Cisco Networking Academy",
+    issuer_en: "Cisco Networking Academy",
+    date: "03-2023",
+    image: CCNAv7,
+    description_fr:
+      "Cette formation introduit les concepts fondamentaux du réseau, y compris les protocoles TCP/IP, les modèles OSI, la configuration de routeurs et commutateurs, ainsi que les bases de la sécurité et de la connectivité. Elle constitue la première étape vers la certification CCNA.",
+    description_en:
+      "This course introduces the fundamentals of networking, including TCP/IP protocols, the OSI model, router and switch configuration, and basic security and connectivity concepts. It serves as the first step toward the CCNA certification.",
+  },
+  {
+    id: 2,
+    title_fr: "Introduction à la Cybersécurité",
+    title_en: "Introduction to Cybersecurity",
+    issuer_fr: "CESI / Cisco Networking Academy",
+    issuer_en: "CESI / Cisco Networking Academy",
+    date: "11-2023",
+    image: cyber,
+    description_fr:
+      "Cette introduction à la cybersécurité explore les menaces numériques, les principes de la sécurité des réseaux, la protection des données, et les bonnes pratiques pour sécuriser les environnements personnels et professionnels.",
+    description_en:
+      "This introductory course in cybersecurity explores digital threats, network security principles, data protection, and best practices for securing personal and professional environments.",
+  },
+  // {
+  //   id: 3,
+  //   title_fr: "Certification Designer Responsable",
+  //   title_en: "Responsible Designer Certification",
+  //   issuer_fr: "Green Compagnon",
+  //   issuer_en: "Green Compagnon",
+  //   date: "2024",
+  //   // image: GreenDesigner,
+  //   description_fr:
+  //     "La certification atteste des compétences en éco-conception et en design durable, mettant l’accent sur la responsabilité environnementale et sociale dans les processus de conception numérique et produit.",
+  //   description_en:
+  //     "This certification validates skills in eco-design and sustainable design, emphasizing environmental and social responsibility in digital and product design processes.",
+  // },
+  {
+    id: 4,
+    title_fr: "Open Science Essentials de la NASA",
+    title_en: "NASA's Open Science Essentials",
+    issuer_fr: "NASA",
+    issuer_en: "NASA",
+    date: "09-2025",
+    image: OpenScienceEssentials,
+    description_fr:
+      "Programme complémentaire à Open Science 101, cette formation approfondit les outils, les plateformes et les pratiques de la science ouverte pour promouvoir une recherche collaborative et accessible.",
+    description_en:
+      "A complementary program to Open Science 101, this course delves deeper into tools, platforms, and practices of open science to foster collaborative and accessible research.",
+  },
+  {
+    id: 5,
+    title_fr: "Open Science 101 de la NASA",
+    title_en: "NASA's Open Science 101",
+    issuer_fr: "NASA",
+    issuer_en: "NASA",
+    date: "09-2025",
+    image: OpenScience101,
+    description_fr:
+      "Ce module de la NASA présente les principes fondamentaux de la science ouverte, incluant l’accès libre aux données, la collaboration scientifique, la transparence et la reproductibilité de la recherche.",
+    description_en:
+      "This NASA module introduces the fundamentals of open science, including open data access, scientific collaboration, transparency, and research reproducibility.",
+  },
+];
