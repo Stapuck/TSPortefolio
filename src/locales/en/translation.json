@@ -277,6 +277,18 @@
     "theme": "Theme",
     "settings": "Settings"
   },  
+  "Sponsor": {
+    "all": "All Partners",
+    "alltxt": "Discover all my partners and sponsors who accompany me in my sports career. Each collaboration is a source of motivation and support to achieve my goals.",
+    "becomepartner": "Become a Partner",
+    "becomepartnerTxt": "Do you want to support my sports career? Discover how to become a partner and contribute to my journey towards excellence.",
+    "currentpartners": "Current Partners",
+    "currentpartnerstxt": "I am proud to collaborate with brands and companies that share my values and support my sporting commitment.",
+    "join": "Join my partners : ",
+    "moreinfo": "For more information on partnership opportunities, feel free to contact me.",
+    "sponsor_welcome": " Welcome to the sponsor page",
+    "seemore": "See more"
+  },
   "Sport": {
     "budget": {
       "budgetreality": "Budget Reality",

@@ -26,7 +26,7 @@ export interface EventType {
 }
 
 export const next_date: EventType[] = [
-  //todo :rajouter les photos lorsque les evenement se rapprocheront.  
+  //todo :rajouter les photos lorsque les evenement se rapprocheront.
   // coming later
   //2028
 
@@ -2168,42 +2168,70 @@ export const sponsors = [
     id: 1,
     name_fr: "Lycée Grandmont",
     name_en: "Lycée Grandmont",
+    description_fr: "Mon lycée de Tours, qui m’a soutenu dans mes débuts en canoë-kayak et m’a permis de concilier études et sport de haut niveau.",
+    description_en: "My high school in Tours, which supported me in my early canoeing days and allowed me to balance studies and high-level sport.",
+    deb_collab: "2017",
+    fin_collab: "2020",
     logo: grandmont,
   },
   {
     id: 2,
     name_fr: "Lunaar",
     name_en: "Lunaar",
+    description_fr: "test",
+    description_en: "test",
+    deb_collab: "2020",
+    fin_collab: "2023",
     logo: lunaar,
   },
   {
     id: 3,
     name_fr: "Pôle de Tours",
     name_en: "Pôle de Tours",
+    description_fr: "test",
+    description_en: "test",
+    deb_collab: "2017",
+    fin_collab: "2020",
     logo: poletour,
   },
   {
     id: 4,
     name_fr: "Val d'Indre Canoë-Kayak",
     name_en: "Val d'Indre Canoë-Kayak",
+    description_fr: "test",
+    description_en: "test",
+    deb_collab: "2017",
+    fin_collab: "2020",
     logo: vick,
   },
   {
     id: 5,
     name_fr: "Comité Olympic Mauricien",
     name_en: "Mauritius Olympic committee",
+    description_fr: "test",
+    description_en: "test",
+    deb_collab: "2017",
+    fin_collab: "2020",
     logo: olympiccommittee,
   },
   {
     id: 6,
     name_fr: "Ministère de la jeunesse et du sport mauricien",
     name_en: "Mauritius Ministry of Youth Empowerment, Sport & Recreation",
+    description_fr: "test",
+    description_en: "test",
+    deb_collab: "2017",
+    fin_collab: "2020",
     logo: MYESR,
   },
   {
     id: 7,
     name_fr: "Fédération Mauricienne de canoë-kayak ",
     name_en: "Canoe Kayak Mauritius federation",
+    description_fr: "test",
+    description_en: "test",
+    deb_collab: "2017",
+    fin_collab: "2020",
     logo: mrifede,
   },
 ];

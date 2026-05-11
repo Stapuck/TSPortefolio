@@ -294,6 +294,19 @@
     "settings": "Reglages"
   },
 
+  "Sponsor": {
+    "all": "Tous les partenaires",
+    "alltxt": "Découvrez tous mes partenaires et sponsors qui m'accompagnent dans ma carrière sportive. Chaque collaboration est une source de motivation et de soutien pour atteindre mes objectifs.",
+    "becomepartner": "Devenir Partenaire",
+    "becomepartnerTxt": "Vous souhaitez soutenir ma carrière sportive ? Découvrez comment devenir partenaire et contribuer à mon parcours vers l'excellence.",
+    "currentpartners": "Partenaires Actuels",
+    "currentpartnerstxt": "Je suis fier de collaborer avec des marques et entreprises qui partagent mes valeurs et soutiennent mon engagement sportif.",
+    "join": "Rejoignez mes partenaires : ",
+    "moreinfo": "Pour plus d'informations sur les opportunités de partenariat, n'hésitez pas à me contacter.",
+    "sponsor_welcome": " Bienvenue sur la page sponsor",
+    "seemore": "Voir plus"
+  },
+
   "Sport": {
     "budget": {
       "budgetreality": "Réalité budgétaire",
@@ -361,6 +374,7 @@
     "sport_welcome": " Bienvenue sur la page sport"
   },
 
+
   "Skills": {
     "category": "Afficher par catégorie",
     "global": "Vue globale",
@@ -376,4 +390,5 @@
     "exp": "Années d'expérience",
     "project": "Projets"
   }
+
 }
