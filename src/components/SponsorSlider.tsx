@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { sponsors } from "../medias/index-global";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 const SponsorSlider = () => {
   const sliderRef = useRef(null);
   const initialLang = localStorage.getItem("lang") || "fr";
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const duplicatedSponsors = [...sponsors, ...sponsors, ...sponsors];
 
