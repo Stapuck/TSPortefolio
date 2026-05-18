@@ -26,9 +26,14 @@ export default function Home() {
 
     const handleScroll = () => {
       const y = window.scrollY;
+
       setShowFloating(y < 100);
       setShowScrollUp(y > 1000);
-      // setShowInfo(false);
+
+      if (y > 0 && sound && videoRef.current) {
+        videoRef.current.muted = true;
+        setSound(false);
+      }
     };
 
     document.title = "TS - Home";

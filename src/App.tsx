@@ -10,6 +10,7 @@ import "./i18n";
 import Profile from "./pages/Profile";
 import Footer from "./components/Footer";
 import Maintenance from "./pages/Maintenance";
+import { Sponsor } from "./pages/Sponsor";
 
 export default function App() {
   const maintenance = false;
@@ -41,6 +42,8 @@ export default function App() {
               <Route path="/pro" element={<Pro />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/sponsors" element={<Sponsor />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
