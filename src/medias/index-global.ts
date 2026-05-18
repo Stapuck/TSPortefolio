@@ -68,7 +68,6 @@ export const next_date: EventType[] = [
     type: "pro",
     type_event_en: "graduation",
     type_event_fr: "diplome",
-
     photobg:
       "https://la-rochelle.cesi.fr/wp-content/uploads/sites/12/2024/04/RDD-LR-2024-1.jpg",
   },
@@ -96,7 +95,7 @@ export const next_date: EventType[] = [
     type: "sport",
     type_event_en: "Race",
     type_event_fr: "Course",
-    photobg: "",
+    photobg: "https://tse4.mm.bing.net/th/id/OIP.QDUgfmkycIQv4VCmO75pYAHaE5?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   {
     date: "September 07, 2026 08:00",
@@ -109,6 +108,7 @@ export const next_date: EventType[] = [
     link_result: "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2026",
     type_event_en: "worldcup",
     type_event_fr: "Coupe du monde",
+    photobg: "https://tse2.mm.bing.net/th/id/OIP.j6yTVkRBq6sg2M4gJEML3gHaFY?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   {
     date: "August 30, 2026 08:00",
@@ -122,6 +122,7 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-slalom-world-cup/vaires-sur-marne-2026",
     type_event_en: "worldcup",
     type_event_fr: "coupe du monde",
+    photobg: "https://tse4.mm.bing.net/th/id/OIP.-KpneWofLtXLHZyq9ukSLwHaEo?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   {
     lieu_fr: "La Ferté-Bernard",
@@ -148,6 +149,8 @@ export const next_date: EventType[] = [
       "https://www.canoeicf.com/canoe-slalom-world-championships/oklahoma-city-2026",
     type_event_en: "worldchamp",
     type_event_fr: "championnat du monde",
+    photobg: "https://tse3.mm.bing.net/th/id/OIP.XYuvIfB4qfVkDNRgnVVp5AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
+
   },
   {
     lieu_fr: "Oklahoma, USA",
@@ -159,7 +162,7 @@ export const next_date: EventType[] = [
     type: "sport",
     type_event_en: "training",
     type_event_fr: "entrainement",
-    photobg: "",
+    photobg: "https://tse3.mm.bing.net/th/id/OIP.XYuvIfB4qfVkDNRgnVVp5AHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   // {
   //   date: "June 12, 2026 08:00",
