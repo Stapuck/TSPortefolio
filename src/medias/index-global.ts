@@ -212,7 +212,7 @@ export const next_date: EventType[] = [
     event_en: "N2 French Championship Final ",
     event_fr: "Final des Championnats de France N2",
     photobg:
-      "https://www.foix-tourisme.com/app/uploads/2023/10/canoe-kayak-descente-foix-ivan-olivier-1.webp",
+      "https://tse1.mm.bing.net/th/id/OIP.iqa7ouW7fNTsZRLPE7Pg8AHaE7?rs=1&pid=ImgDetMain&o=7&rm=3",
     type_event_en: "national",
     type_event_fr: "national",
   },

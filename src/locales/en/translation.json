@@ -159,10 +159,13 @@
   },
   "Footer": {
     "allrights": "All rights reserved.",
+    "contact": "Contact Page",
     "lastupdate": "Last update",
     "navigation": "Navigation",
-    "news": "Media",
+    "news": "Media Page",
+    "pro": "Professional Path",
     "social": "Social",
+    "sport": "Athletic Path",
     "txt": "Athlete | Engineer | Entrepreneur"
   },
   "HeroSection": {

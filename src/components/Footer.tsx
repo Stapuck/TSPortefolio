@@ -36,10 +36,10 @@ export default function Footer() {
           </h4>
           <nav className="flex flex-col space-y-2 text-gray-600 dark:text-gray-300 font-medium">
             {[
-              { to: "/pro", label: "Pro" },
-              { to: "/sport", label: "Sport" },
+              { to: "/pro", label: t("Footer.pro") },
+              { to: "/sport", label: t("Footer.sport") },
               { to: "/news", label: t("Footer.news") },
-              { to: "/contact", label: "Contact" },
+              { to: "/contact", label: t("Footer.contact") },
             ].map((item) => (
               <Link
                 key={item.to}

@@ -168,10 +168,13 @@
 
   "Footer": {
     "allrights": "Tous droits réservés.",
+    "contact": "Page Contact",
     "lastupdate": "Dernières mise à jour",
     "navigation": "Navigation",
-    "news": "Média",
+    "news": "Page Média",
+    "pro": "Parcours Professionnel",
     "social": "Réseaux",
+    "sport": "Parcours Sportif",
     "txt": "Athlète | Ingénieur | Entrepreneur"
   },
 
