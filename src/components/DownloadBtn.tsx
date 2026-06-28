@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next";
 // Import des PDF
 import pdfCV_FR from "/pdfs/TS_CV-FR.pdf";
 import pdfCV_EN from "/pdfs/TS_CV-EN.pdf";
-import pdfBudget_FR from "/pdfs/Finance_progress_fr.pdf";
-import pdfBudget_EN from "/pdfs/Finance_progress_en.pdf";
+// import pdfBudget_FR from "/pdfs/Finance_progress_fr.pdf";
+// import pdfBudget_EN from "/pdfs/Finance_progress_en.pdf";
+// import excelBudget from ""
 import pdfSponsor_FR from "/pdfs/DossierSponsoring_11052026_TSFRV5.pdf";
 // import pdfSponsor_FR from "/pdfs/DossierSponsoring_11042026_TSFRV4.pdf";
 // import pdfSponsor_FR from "/pdfs/DossierSponsoring_22092025_TSFRV3.pdf";
@@ -54,7 +55,8 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
         fileToDownload = lang === "en" ? pdfCV_EN : pdfCV_FR;
         break;
       case "Budget":
-        fileToDownload = lang === "en" ? pdfBudget_EN : pdfBudget_FR;
+        // fileToDownload = lang === "en" ? pdfBudget_EN : pdfBudget_FR;
+        fileToDownload = "/pdfs/Finance_season.xlsx"; // Always download the Excel file for Budget
         break;
       case "Sponsor":
         fileToDownload = lang === "en" ? pdfSponsor_EN : pdfSponsor_FR;
